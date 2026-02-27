@@ -1,0 +1,48 @@
+name: Deploy Documentation
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install fish
+        run: |
+          sudo apt-add-repository ppa:fish-shell/release-3 -y
+          sudo apt-get update
+          sudo apt-get install -y fish
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Build HTML
+        run: |
+          # ディレクトリ構成のデバッグ出力（念のため）
+          ls -R doc_src/locale/ja/
+
+          # 日本語ドキュメントをビルド
+          uv run sphinx-build -v -b html -D language=ja -D locale_dirs=locale doc_src _build/html
+
+          # GitHub Pages 用の空ファイル作成
+          touch _build/html/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_build/html'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 14:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/commands.rst:2
+msgid "Commands"
+msgstr ""
+
+#: ../../doc_src/commands.rst:4
+msgid "This is a list of all the commands fish ships with."
+msgstr ""
+
+#: ../../doc_src/commands.rst:6
+msgid "Broadly speaking, these fall into a few categories:"
+msgstr ""
+
+#: ../../doc_src/commands.rst:9
+msgid "Keywords"
+msgstr ""
+
+#: ../../doc_src/commands.rst:11
+msgid "Core language keywords that make up the syntax, like"
+msgstr ""
+
+#: ../../doc_src/commands.rst:13
+msgid ":doc:`if <cmds/if>` and :doc:`else <cmds/else>` for conditions."
+msgstr ""
+
+#: ../../doc_src/commands.rst:14
+msgid ":doc:`for <cmds/for>` and :doc:`while <cmds/while>` for loops."
+msgstr ""
+
+#: ../../doc_src/commands.rst:15
+msgid ""
+":doc:`break <cmds/break>` and :doc:`continue <cmds/continue>` to control "
+"loops."
+msgstr ""
+
+#: ../../doc_src/commands.rst:16
+msgid ":doc:`function <cmds/function>` to define functions."
+msgstr ""
+
+#: ../../doc_src/commands.rst:17
+msgid ":doc:`return <cmds/return>` to return a status from a function."
+msgstr ""
+
+#: ../../doc_src/commands.rst:18
+msgid ""
+":doc:`begin <cmds/begin>` to begin a block and :doc:`end <cmds/end>` to "
+"end any block (including ifs and loops)."
+msgstr ""
+
+#: ../../doc_src/commands.rst:19
+msgid ""
+":doc:`and <cmds/and>`, :doc:`or <cmds/or>` and :doc:`not <cmds/not>` to "
+"combine commands logically."
+msgstr ""
+
+#: ../../doc_src/commands.rst:20
+msgid ""
+":doc:`switch <cmds/switch>` and :doc:`case <cmds/case>` to make multiple "
+"blocks depending on the value of a variable."
+msgstr ""
+
+#: ../../doc_src/commands.rst:21
+msgid ""
+":doc:`command <cmds/command>` or :doc:`builtin <cmds/builtin>` to tell "
+"fish what sort of thing to execute"
+msgstr ""
+
+#: ../../doc_src/commands.rst:22
+msgid ":doc:`time <cmds/time>` to time execution"
+msgstr ""
+
+#: ../../doc_src/commands.rst:23
+msgid ":doc:`exec <cmds/exec>` tells fish to replace itself with a command."
+msgstr ""
+
+#: ../../doc_src/commands.rst:24
+msgid ":doc:`end <cmds/end>` to end a block"
+msgstr ""
+
+#: ../../doc_src/commands.rst:27
+msgid "Tools"
+msgstr ""
+
+#: ../../doc_src/commands.rst:29
+msgid "Builtins to do a task, like"
+msgstr ""
+
+#: ../../doc_src/commands.rst:31
+msgid ":doc:`cd <cmds/cd>` to change the current directory."
+msgstr ""
+
+#: ../../doc_src/commands.rst:32
+msgid ":doc:`echo <cmds/echo>` or :doc:`printf <cmds/printf>` to produce output."
+msgstr ""
+
+#: ../../doc_src/commands.rst:33
+msgid ":doc:`set_color <cmds/set_color>` to colorize output."
+msgstr ""
+
+#: ../../doc_src/commands.rst:34
+msgid ":doc:`set <cmds/set>` to set, query or erase variables."
+msgstr ""
+
+#: ../../doc_src/commands.rst:35
+msgid ":doc:`read <cmds/read>` to read input."
+msgstr ""
+
+#: ../../doc_src/commands.rst:36
+msgid ":doc:`string <cmds/string>` for string manipulation."
+msgstr ""
+
+#: ../../doc_src/commands.rst:37
+msgid ":doc:`path <cmds/path>` for filtering paths and handling their components."
+msgstr ""
+
+#: ../../doc_src/commands.rst:38
+msgid ":doc:`math <cmds/math>` does arithmetic."
+msgstr ""
+
+#: ../../doc_src/commands.rst:39
+msgid ":doc:`argparse <cmds/argparse>` to make arguments easier to handle."
+msgstr ""
+
+#: ../../doc_src/commands.rst:40
+msgid ":doc:`count <cmds/count>` to count arguments."
+msgstr ""
+
+#: ../../doc_src/commands.rst:41
+msgid ""
+":doc:`type <cmds/type>` to find out what sort of thing (command, builtin "
+"or function) fish would call, or if it exists at all."
+msgstr ""
+
+#: ../../doc_src/commands.rst:42
+msgid ""
+":doc:`test <cmds/test>` checks conditions like if a file exists or a "
+"string is empty."
+msgstr ""
+
+#: ../../doc_src/commands.rst:43
+msgid ":doc:`contains <cmds/contains>` to see if a list contains an entry."
+msgstr ""
+
+#: ../../doc_src/commands.rst:44
+msgid ""
+":doc:`eval <cmds/eval>` and :doc:`source <cmds/source>` to run fish code "
+"from a string or file."
+msgstr ""
+
+#: ../../doc_src/commands.rst:45
+msgid ""
+":doc:`status <cmds/status>` to get shell information, like whether it's "
+"interactive or a login shell, or which file it is currently running."
+msgstr ""
+
+#: ../../doc_src/commands.rst:46
+msgid ":doc:`abbr <cmds/abbr>` manages :ref:`abbreviations`."
+msgstr ""
+
+#: ../../doc_src/commands.rst:47
+msgid ":doc:`bind <cmds/bind>` to change bindings."
+msgstr ""
+
+#: ../../doc_src/commands.rst:48
+msgid ""
+":doc:`complete <cmds/complete>` manages :ref:`completions <tab-"
+"completion>`."
+msgstr ""
+
+#: ../../doc_src/commands.rst:49
+msgid ""
+":doc:`commandline <cmds/commandline>` to get or change the commandline "
+"contents."
+msgstr ""
+
+#: ../../doc_src/commands.rst:50
+msgid ""
+":doc:`fish_config <cmds/fish_config>` to easily change fish's "
+"configuration, like the prompt or colorscheme."
+msgstr ""
+
+#: ../../doc_src/commands.rst:51
+msgid ""
+":doc:`random <cmds/random>` to generate random numbers or pick from a "
+"list."
+msgstr ""
+
+#: ../../doc_src/commands.rst:54
+msgid "Known functions"
+msgstr ""
+
+#: ../../doc_src/commands.rst:56
+msgid ""
+"Known functions are a customization point. You can change them to change "
+"how your fish behaves. This includes:"
+msgstr ""
+
+#: ../../doc_src/commands.rst:58
+msgid ""
+":doc:`fish_prompt <cmds/fish_prompt>` and :doc:`fish_right_prompt "
+"<cmds/fish_right_prompt>` and :doc:`fish_mode_prompt "
+"<cmds/fish_mode_prompt>` to print your prompt."
+msgstr ""
+
+#: ../../doc_src/commands.rst:59
+msgid ""
+":doc:`fish_command_not_found <cmds/fish_command_not_found>` to tell fish "
+"what to do when a command is not found."
+msgstr ""
+
+#: ../../doc_src/commands.rst:60
+msgid ":doc:`fish_title <cmds/fish_title>` to change the terminal's title."
+msgstr ""
+
+#: ../../doc_src/commands.rst:61
+msgid ""
+":doc:`fish_tab_title <cmds/fish_tab_title>` to change the terminal tab's "
+"title."
+msgstr ""
+
+#: ../../doc_src/commands.rst:62
+msgid ""
+":doc:`fish_greeting <cmds/fish_greeting>` to show a greeting when fish "
+"starts."
+msgstr ""
+
+#: ../../doc_src/commands.rst:63
+msgid ""
+":doc:`fish_should_add_to_history <cmds/fish_should_add_to_history>` to "
+"determine if a command should be added to history"
+msgstr ""
+
+#: ../../doc_src/commands.rst:66
+msgid "Helper functions"
+msgstr ""
+
+#: ../../doc_src/commands.rst:68
+msgid ""
+"Some helper functions, often to give you information for use in your "
+"prompt:"
+msgstr ""
+
+#: ../../doc_src/commands.rst:70
+msgid ""
+":doc:`fish_git_prompt <cmds/fish_git_prompt>` and :doc:`fish_hg_prompt "
+"<cmds/fish_hg_prompt>` to print information about the current git or "
+"mercurial repository."
+msgstr ""
+
+#: ../../doc_src/commands.rst:71
+msgid ""
+":doc:`fish_vcs_prompt <cmds/fish_vcs_prompt>` to print information for "
+"either."
+msgstr ""
+
+#: ../../doc_src/commands.rst:72
+msgid ""
+":doc:`fish_svn_prompt <cmds/fish_svn_prompt>` to print information about "
+"the current svn repository."
+msgstr ""
+
+#: ../../doc_src/commands.rst:73
+msgid ""
+":doc:`fish_status_to_signal <cmds/fish_status_to_signal>` to give a "
+"signal name from a return status."
+msgstr ""
+
+#: ../../doc_src/commands.rst:74
+msgid ""
+":doc:`prompt_pwd <cmds/prompt_pwd>` to give the current directory in a "
+"nicely formatted and shortened way."
+msgstr ""
+
+#: ../../doc_src/commands.rst:75
+msgid ""
+":doc:`prompt_login <cmds/prompt_login>` to describe the current login, "
+"with user and hostname, and to explain if you are in a chroot or "
+"connected via ssh."
+msgstr ""
+
+#: ../../doc_src/commands.rst:76
+msgid ""
+":doc:`prompt_hostname <cmds/prompt_hostname>` to give the hostname, "
+"shortened for use in the prompt."
+msgstr ""
+
+#: ../../doc_src/commands.rst:77
+msgid ""
+":doc:`fish_is_root_user <cmds/fish_is_root_user>` to check if the current"
+" user is an administrator user like root."
+msgstr ""
+
+#: ../../doc_src/commands.rst:78
+msgid ":doc:`fish_add_path <cmds/fish_add_path>` to easily add a path to $PATH."
+msgstr ""
+
+#: ../../doc_src/commands.rst:79
+msgid ""
+":doc:`alias <cmds/alias>` to quickly define wrapper functions "
+"(\"aliases\")."
+msgstr ""
+
+#: ../../doc_src/commands.rst:80
+msgid ""
+":doc:`fish_delta <cmds/fish_delta>` to show what you have changed from "
+"the default configuration."
+msgstr ""
+
+#: ../../doc_src/commands.rst:81
+msgid ":doc:`export <cmds/export>` as a compatibility function for other shells."
+msgstr ""
+
+#: ../../doc_src/commands.rst:84
+msgid "Helper commands"
+msgstr ""
+
+#: ../../doc_src/commands.rst:86
+msgid ""
+"fish also ships some things as external commands so they can be easily "
+"called from elsewhere."
+msgstr ""
+
+#: ../../doc_src/commands.rst:88
+msgid ""
+"This includes :doc:`fish_indent <cmds/fish_indent>` to format fish code "
+"and :doc:`fish_key_reader <cmds/fish_key_reader>` to show you what escape"
+" sequence a keypress produces."
+msgstr ""
+
+#: ../../doc_src/commands.rst:91
+msgid "The full list"
+msgstr ""
+
+#: ../../doc_src/commands.rst:93
+msgid "And here is the full list:"
+msgstr ""
+

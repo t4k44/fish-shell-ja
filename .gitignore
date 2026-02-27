@@ -107,3 +107,7 @@ target/
 
 # AI slop
 .claude/
+
+# trancerate
+_build/
+*.mo
