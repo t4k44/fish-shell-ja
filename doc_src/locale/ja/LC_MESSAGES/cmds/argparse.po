@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: fish-shell 4.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-01 03:45+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-03-01 03:45+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../../doc_src/cmds/argparse.rst:2
 msgid "argparse - parse options passed to a fish script or function"
-msgstr ""
+msgstr "argparse - fishスクリプトまたは関数に渡されたオプションを解析"
 
 #: ../../doc_src/cmds/argparse.rst:5
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../doc_src/cmds/argparse.rst:13
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../doc_src/cmds/argparse.rst:15
 msgid ""
@@ -41,6 +41,12 @@ msgid ""
 "and their values, and sets ``$argv`` to the remaining arguments. See the "
 ":ref:`usage <cmd-argparse-usage>` section below."
 msgstr ""
+"このコマンドを使用すると、fishスクリプトや関数で引数を簡単に処理できるようになります。"
+"既知のオプションを定義する引数を渡し、リテラルの **--** を続けた後に、解析対象の"
+"引数(これ自体にリテラルの **--** が含まれる場合もあります)を渡します。 "
+"``argparse`` は、渡されたオプションとその値を示す変数を設定し、``$argv_opts`` に"
+"オプションとその値を設定し、``$argv`` に残りの引数を設定します。詳細は以下の "
+":ref:`使用法 <cmd-argparse-usage>` セクションを参照してください。"
 
 #: ../../doc_src/cmds/argparse.rst:17
 msgid ""
@@ -50,6 +56,10 @@ msgid ""
 "and before the ``--`` that separates them from the arguments to be "
 "parsed."
 msgstr ""
+"各オプション仕様(``OPTION_SPEC``)は、後述する :ref:`ドメイン言語 "
+"<cmd-argparse-option-specification>` で記述されます。すべての OPTION_SPEC は、"
+"argparse自体のフラグの後、かつ解析対象の引数とを区切る ``--`` よりも前に記述"
+"する必要があります。"
 
 #: ../../doc_src/cmds/argparse.rst:19
 msgid ""
@@ -59,6 +69,10 @@ msgid ""
 "argparse to define one variable called ``_flag_h`` and another called "
 "``_flag_help``."
 msgstr ""
+"引数(ARG)リスト内で見つかった各オプションは、 ``_flag_X`` という名前の変数"
+"になります。ここで **X** は、短縮フラグの文字またはロングフラグの名前(定義されて"
+"いる場合)です。例えば、 **--help** オプションによって、argparseが ``_flag_h`` "
+"と ``_flag_help`` という2つの変数を定義する場合があります。"
 
 #: ../../doc_src/cmds/argparse.rst:21
 msgid ""
@@ -69,30 +83,40 @@ msgid ""
 "values corresponding to the values collected when the ARG list is "
 "processed. If the flag was not seen the flag variable will not be set."
 msgstr ""
+"これらの変数はローカルスコープで設定されます（つまり、スクリプトが ``set -l "
+"_flag_X`` を実行したかのように扱われます）。フラグがbool値（値を持たず、"
+"指定されたか否かのみを判別するもの）の場合、値は実際に渡された短縮フラグや"
+"長いフラグになります。オプションがbool値でない場合、値は ARG リストの処理時"
+"に収集された0個以上の値になります。フラグが指定されなかった場合、そのフラグ"
+"変数は設定されません。"
 
 #: ../../doc_src/cmds/argparse.rst:24
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: ../../doc_src/cmds/argparse.rst:26
 msgid ""
 "The following ``argparse`` options are available. They must appear before"
 " all *OPTION_SPEC*\\ s:"
 msgstr ""
+"以下の ``argparse`` 自体に対するオプションが利用可能です。これらはすべての "
+"*OPTION_SPEC* よりも前に記述する必要があります。"
 
 #: ../../doc_src/cmds/argparse.rst:28
 msgid "**-n** or **--name** *NAME*"
-msgstr ""
+msgstr "**-n** または **--name** *NAME*"
 
 #: ../../doc_src/cmds/argparse.rst:29
 msgid ""
 "Use *NAME* in error messages. By default the current function name will "
 "be used, or ``argparse`` if run outside of a function."
 msgstr ""
+"エラーメッセージで使用する名前（*NAME*）を指定します。デフォルトでは現在の"
+"関数名が使用されます。関数の外で実行された場合は ``argparse`` が使用されます。"
 
 #: ../../doc_src/cmds/argparse.rst:31
 msgid "**-x** or **--exclusive** *OPTIONS*"
-msgstr ""
+msgstr "**-x** または **--exclusive** *OPTIONS*"
 
 #: ../../doc_src/cmds/argparse.rst:32
 msgid ""
@@ -101,30 +125,34 @@ msgid ""
 "options. You give either the short or long version of each option, and "
 "you still need to otherwise define the options."
 msgstr ""
+"互いに排他的なオプションをカンマ区切りのリストで指定します。これを複数回使用"
+"して、排他的なオプションのセットを複数定義することもできます。各オプションは"
+"短縮形式とロング形式のどちらでも指定できますが、別途そのオプション自体の定義も"
+"必要です。"
 
 #: ../../doc_src/cmds/argparse.rst:35
 msgid "**-N** or **--min-args** *NUMBER*"
-msgstr ""
+msgstr "**-N** または **--min-args** *NUMBER*"
 
 #: ../../doc_src/cmds/argparse.rst:36
 msgid ""
 "The minimum number of acceptable non-option arguments. The default is "
 "zero."
-msgstr ""
+msgstr "許容される非オプション引数の最小数です。デフォルトは 0 です。"
 
 #: ../../doc_src/cmds/argparse.rst:38
 msgid "**-X** or **--max-args** *NUMBER*"
-msgstr ""
+msgstr "**-X** または **--max-args** *NUMBER*"
 
 #: ../../doc_src/cmds/argparse.rst:39
 msgid ""
 "The maximum number of acceptable non-option arguments. The default is "
 "infinity."
-msgstr ""
+msgstr "許容される非オプション引数の最大数です。デフォルトは 無制限 です。"
 
 #: ../../doc_src/cmds/argparse.rst:41
 msgid "**-u** or **--move-unknown**"
-msgstr ""
+msgstr "**-u** または **--move-unknown**"
 
 #: ../../doc_src/cmds/argparse.rst:42
 msgid ""
@@ -132,6 +160,9 @@ msgid ""
 " default, Unknown options are treated as if they take optional arguments "
 "(i.e. have option spec ``=?``)."
 msgstr ""
+"未知のオプションを許可し、それらを ``$argv`` から ``$argv_opts`` へ移動します。"
+"デフォルトでは、未知のオプションはオプション引数を取るもの（つまりオプション仕様 "
+"``=?`` を持つもの）として扱われます。"
 
 #: ../../doc_src/cmds/argparse.rst:44
 msgid ""
@@ -143,10 +174,17 @@ msgid ""
 "not take any arguments), the known option will be recognised (e.g. "
 "``argparse --move-unknown h -- -ho`` *will* set ``$_flag_h`` to ``-h``)"
 msgstr ""
+"これは、短縮オプションのグループ内に未知の短縮オプションが含まれ、その「後ろ」"
+"に既知の短縮オプションが続く場合、既知のオプションは未知のオプションへの引数"
+"として扱われることを意味します（例： ``--move-unknown h -- -oh`` では、 ``h`` "
+"は ``-o`` への引数として扱われるため、 ``_flag_h`` は設定「されません」）。"
+"対照的に、既知のオプションが先に来る場合（かつ引数を取らない場合）、既知の"
+"オプションは正しく認識されます（例： ``argparse --move-unknown h -- -ho`` "
+"では、 ``$_flag_h`` に ``-h`` が設定「されます」）。"
 
 #: ../../doc_src/cmds/argparse.rst:48
 msgid "**-i** or **--ignore-unknown**"
-msgstr ""
+msgstr "**-i** または **--ignore-unknown**"
 
 #: ../../doc_src/cmds/argparse.rst:49
 msgid ""
@@ -157,10 +195,15 @@ msgid ""
 "argument that starts with a ``-`` (since any ``--`` seperator in "
 "``$argv`` will be removed)."
 msgstr ""
+"非推奨です。これは **--move-unknown** と似ていますが、未知のオプションとその"
+"引数が ``$argv`` に保持され、 ``$argv_opts`` に移動されない点が異なります。"
+"**--move-unknown** とは異なり、このオプションを使用すると、未知のオプションと "
+"``-`` で始まる非オプション引数との区別ができなくなります（ ``$argv`` 内の "
+"``--`` セパレータがすべて削除されるためです）。"
 
 #: ../../doc_src/cmds/argparse.rst:51
 msgid "**-S** or **--strict-longopts**"
-msgstr ""
+msgstr "**-S** または **--strict-longopts**"
 
 #: ../../doc_src/cmds/argparse.rst:52
 msgid ""
@@ -168,12 +211,16 @@ msgid ""
 "*without* this flag, if ``long`` is a known long option flag, ``--long`` "
 "and ``--long=<value>`` can be abbreviated as:"
 msgstr ""
+"長い形式のオプションの解析をより厳密にします。具体的には、このフラグが「ない」"
+"場合、 ``long`` という既知の長い形式のオプションフラグは以下のように省略可能です::"
 
 #: ../../doc_src/cmds/argparse.rst:54
 msgid ""
 "``-long`` and ``-long=<value>``, but *only* if there is no short flag "
 "``l``."
 msgstr ""
+"``-long`` および ``-long=<value>`` （ただし、短縮フラグ ``l`` が存在しない場合"
+"「のみ」）。"
 
 #: ../../doc_src/cmds/argparse.rst:56
 msgid ""
@@ -181,10 +228,12 @@ msgid ""
 "that starts with ``lo``. Similarly with any other non-empty prefix of "
 "``long``."
 msgstr ""
+"``--lo`` および ``--lo=<value>`` （ただし、 ``lo`` で始まる他の長い形式のフラグ"
+"が存在しない場合「のみ」）。 ``long`` の他の空でない接頭辞についても同様です。"
 
 #: ../../doc_src/cmds/argparse.rst:58
 msgid "``-lo`` and ``-lo=<value>`` (i.e. combining the above two)."
-msgstr ""
+msgstr "``-lo`` および ``-lo=<value>`` （上記2つの組み合わせ）。"
 
 #: ../../doc_src/cmds/argparse.rst:60
 msgid ""
@@ -192,22 +241,29 @@ msgid ""
 "one must use the syntax ``--long`` or ``--long=<value>`` to use a long "
 "option called ``long``."
 msgstr ""
+"``--strict-longopts`` フラグを指定すると、上記の3つは解析エラーになります。"
+"``long`` という名前の長い形式のオプションを使用するには、 ``--long`` または "
+"``--long=<value>`` という構文を使用しなければなりません。"
 
 #: ../../doc_src/cmds/argparse.rst:62
 msgid ""
 "This flag has no effect on the parsing of unknown options (which are "
 "parsed as if this flag is on)."
 msgstr ""
+"このフラグは、未知のオプションの解析には影響しません（未知のオプションは、常に"
+"このフラグが有効であるかのように解析されます）。"
 
 #: ../../doc_src/cmds/argparse.rst:64
 msgid ""
 "This option may be on all the time in the future, so do not rely on the "
 "behaviour without it."
 msgstr ""
+"このオプションは将来的に常に有効になる可能性があるため、これが無効な状態の"
+"挙動に依存しないでください。"
 
 #: ../../doc_src/cmds/argparse.rst:66
 msgid "**--unknown-arguments** *KIND*"
-msgstr ""
+msgstr "**--unknown-arguments** *KIND*"
 
 #: ../../doc_src/cmds/argparse.rst:67
 msgid ""
@@ -215,6 +271,9 @@ msgid ""
 "also given. This will modify the parsing behaviour of unknown options "
 "depending on the value of *KIND*:"
 msgstr ""
+"**--ignore-unknown** が同時に指定されない限り、このオプションは "
+"**--move-unknown** を包含します。これは、 *KIND* の値に応じて未知のオプション"
+"の解析挙動を変更します。"
 
 #: ../../doc_src/cmds/argparse.rst:70
 msgid ""
