@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/contains.rst:2
+msgid "contains - test if a word is present in a list"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:12
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:14
+msgid ""
+"``contains`` tests whether the set *VALUES* contains the string *KEY*. If"
+" so, ``contains`` exits with code 0; if not, it exits with code 1."
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:17
+msgid "The following options are available:"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:19
+msgid "**-i** or **--index**"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:20
+msgid ""
+"Print the index (number of the element in the set) of the first matching "
+"element."
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:22
+msgid "**-h** or **--help**"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:23
+msgid "Displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:25
+msgid ""
+"Note that ``contains`` interprets all arguments starting with a **-** as "
+"an option to ``contains``, until an **--** argument is reached."
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:27
+msgid "See the examples below."
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:30
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:32
+msgid ""
+"If *animals* is a list of animals, the following will test if *animals* "
+"contains \"cat\":"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:41
+msgid ""
+"This code will add some directories to :envvar:`PATH` if they aren't yet "
+"included:"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:52
+msgid ""
+"While this will check if function ``hasargs`` is being ran with the "
+"**-q** option:"
+msgstr ""
+
+#: ../../doc_src/cmds/contains.rst:63
+msgid ""
+"The **--** here stops ``contains`` from treating **-q** to an option to "
+"itself. Instead it treats it as a normal string to check."
+msgstr ""
+

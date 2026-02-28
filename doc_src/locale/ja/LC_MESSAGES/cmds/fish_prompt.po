@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_prompt.rst:2
+msgid "fish_prompt - define the appearance of the command line prompt"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:19
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:21
+msgid ""
+"The ``fish_prompt`` function is executed when the prompt is to be shown, "
+"and the output is used as a prompt."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:23
+msgid ""
+"The exit status of commands within ``fish_prompt`` will not modify the "
+"value of :ref:`$status <variables-status>` outside of the ``fish_prompt``"
+" function."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:25
+msgid ""
+"If :envvar:`fish_transient_prompt` is set to 1, ``fish_prompt --final-"
+"rendering`` is run before executing the commandline."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:27
+msgid ""
+"``fish`` ships with a number of example prompts that can be chosen with "
+"the ``fish_config`` command."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:31
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_prompt.rst:33
+msgid "A simple prompt:"
+msgstr ""
+

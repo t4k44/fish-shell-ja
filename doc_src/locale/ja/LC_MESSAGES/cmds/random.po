@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/random.rst:2
+msgid "random - generate random number"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:16
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:18
+msgid ""
+"``random`` generates a pseudo-random integer from a uniform distribution."
+" The range (inclusive) depends on the arguments."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:21
+msgid "No arguments indicate a range of 0 to 32767 (inclusive)."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:23
+msgid ""
+"If one argument is specified, the internal engine will be seeded with the"
+" argument for future invocations of ``random`` and no output will be "
+"produced."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:26
+msgid ""
+"Two arguments indicate a range from *START* to *END* (both *START* and "
+"*END* included)."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:28
+msgid ""
+"Three arguments indicate a range from *START* to *END* with a spacing of "
+"*STEP* between possible outputs."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:31
+msgid ""
+"``random choice`` will select one random item from the succeeding "
+"arguments."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:33
+msgid "The **-h** or **--help** option displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:35
+msgid ""
+"Note that seeding the engine will NOT give the same result across "
+"different systems."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:38
+msgid ""
+"You should not consider ``random`` cryptographically secure, or even "
+"statistically accurate."
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:42
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:44
+msgid ""
+"The following code will count down from a random even number between 10 "
+"and 20 to 1:"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:53
+msgid "And this will open a random picture from any of the subdirectories:"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:60
+msgid "Or, to only get even numbers from 2 to 20::"
+msgstr ""
+
+#: ../../doc_src/cmds/random.rst:64
+msgid "Or odd numbers from 1 to 3::"
+msgstr ""
+

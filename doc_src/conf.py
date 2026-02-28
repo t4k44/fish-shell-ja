@@ -157,6 +157,9 @@ exclude_patterns = [fish_exclude_patterns]
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
+# language = 'ja'
+# locale_dirs = ['doc_src/locale/']
+gettext_compact = False
 
 # -- Options for HTML output -------------------------------------------------
 

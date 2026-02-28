@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/export.rst:2
+msgid "export - compatibility function for exporting variables"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:14
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:16
+msgid ""
+"``export`` is a function included for compatibility with POSIX shells. In"
+" general, the :doc:`set <set>` builtin should be used instead."
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:19
+msgid ""
+"When called without arguments, ``export`` prints a list of currently-"
+"exported variables, like ``set -x``."
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:22
+msgid ""
+"When called with a ``NAME=VALUE`` pair, the variable ``NAME`` is set to "
+"``VALUE`` in the global scope, and exported as an environment variable to"
+" other commands."
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:25
+msgid "There are no options available."
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:28
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:30
+msgid "The following commands have an identical effect."
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:37
+msgid ""
+"Note: If you want to add to e.g. ``$PATH``, you need to be careful to "
+":ref:`combine the list <cartesian-product>`. Quote it, like so::"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:41
+msgid "Or just use ``set``, which avoids this::"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:46
+msgid "See more"
+msgstr ""
+
+#: ../../doc_src/cmds/export.rst:48
+msgid "The :doc:`set <set>` command."
+msgstr ""
+

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:2
+msgid ""
+"fish_should_add_to_history - decide whether a command should be added to "
+"the history"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:19
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:21
+msgid ""
+"The ``fish_should_add_to_history`` function is executed before fish adds "
+"a command to history, and its return status decides whether that is done."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:23
+msgid ""
+"If it returns 0, the command is stored in history, when it returns "
+"anything else, it is not. In the latter case the command can still be "
+"recalled for one command."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:25
+msgid ""
+"The first argument to ``fish_should_add_to_history`` is the commandline. "
+"History is added *before* a command is run, so e.g. :envvar:`status` "
+"can't be checked. This is so commands that don't finish like :doc:`exec` "
+"and long-running commands are available in new sessions immediately."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:27
+msgid ""
+"If ``fish_should_add_to_history`` doesn't exist, fish will save a command"
+" to history unless it starts with a space. If it does exist, this "
+"function takes over all of the duties, so commands starting with space "
+"are saved unless ``fish_should_add_to_history`` says otherwise."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:30
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:32
+msgid "A simple example:"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_should_add_to_history.rst:43
+msgid ""
+"This refuses to store any immediate \"vault\", \"mysql\" or \"ls\" calls."
+" Commands starting with space would be stored."
+msgstr ""
+

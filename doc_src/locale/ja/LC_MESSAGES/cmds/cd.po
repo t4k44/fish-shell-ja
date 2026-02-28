@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/cd.rst:2
+msgid "cd - change directory"
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:12
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:16
+msgid ""
+"NOTE: This page documents the fish builtin ``cd``. To see the "
+"documentation on any non-fish versions, use ``command man cd``."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:19
+msgid "``cd`` changes the current working directory."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:21
+msgid ""
+"If *DIRECTORY* is given, it will become the new directory. If no "
+"parameter is given, the :envvar:`HOME` environment variable will be used."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:23
+msgid ""
+"If *DIRECTORY* is a relative path, all the paths in the :envvar:`CDPATH` "
+"will be tried as prefixes for it, in addition to :envvar:`PWD`. It is "
+"recommended to keep **.** as the first element of :envvar:`CDPATH`, or "
+":envvar:`PWD` will be tried last."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:26
+msgid ""
+"Fish will also try to change directory if given a command that looks like"
+" a directory (starting with **.**, **/** or **~**, or ending with **/**),"
+" without explicitly requiring **cd**."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:28
+msgid ""
+"Fish also ships a wrapper function around the builtin **cd** that "
+"understands ``cd -`` as changing to the previous directory. See also "
+":doc:`prevd <prevd>`. This wrapper function maintains a history of the 25"
+" most recently visited directories in the ``$dirprev`` and ``$dirnext`` "
+"global variables. If you make those universal variables your **cd** "
+"history is shared among all fish instances."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:33
+msgid ""
+"As a special case, ``cd .`` is equivalent to ``cd $PWD``, which is useful"
+" in cases where a mountpoint has been recycled or a directory has been "
+"removed and recreated."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:35
+msgid ""
+"The **--help** or **-h** option displays help about using this command, "
+"and does not change the directory."
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:38
+msgid "Examples"
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:49
+msgid "See Also"
+msgstr ""
+
+#: ../../doc_src/cmds/cd.rst:51
+msgid ""
+"Navigate directories using the :ref:`directory history <directory-"
+"history>` or the :ref:`directory stack <directory-stack>`"
+msgstr ""
+

@@ -1,0 +1,610 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/math.rst:2
+msgid "math - perform mathematics calculations"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:13
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:15
+msgid ""
+"``math`` performs mathematical calculations. It supports simple "
+"operations such as addition, subtraction, and so on, as well as functions"
+" like ``abs()``, ``sqrt()`` and ``ln()``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:18
+msgid ""
+"By default, the output shows up to 6 decimal places. To change the number"
+" of decimal places, use the ``--scale`` option, including ``--scale=0`` "
+"for integer output."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:21
+msgid ""
+"Keep in mind that parameter expansion happens before expressions are "
+"evaluated. This can be very useful in order to perform calculations "
+"involving shell variables or the output of command substitutions, but it "
+"also means that parenthesis (``()``) and the asterisk (``*``) glob "
+"character have to be escaped or quoted. ``x`` can also be used to denote "
+"multiplication, but it needs to be followed by whitespace to distinguish "
+"it from hexadecimal numbers."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:25
+msgid ""
+"Parentheses for functions are optional - ``math sin pi`` prints ``0``. "
+"However, a comma will bind to the inner function, so ``math pow sin 3, "
+"5`` is an error because it tries to give ``sin`` the arguments ``3`` and "
+"``5``. When in doubt, use parentheses."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:29
+msgid ""
+"``math`` ignores whitespace between arguments and takes its input as "
+"multiple arguments (internally joined with a space), so ``math 2 +2`` and"
+" ``math \"2 +    2\"`` work the same. ``math 2 2`` is an error."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:34
+msgid ""
+"math is a simple tool for simple uses, provided for convenience. It "
+"internally works with floats for simplicity of implementation and can't "
+"do a number of things real calculators can. If you find yourself limited "
+"by that, use a more full-featured tool."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:37
+msgid "The following options are available:"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:39
+msgid "**-s** *N* or **--scale** *N*"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:40
+msgid ""
+"Sets the scale of the result. ``N`` must be an integer or the word "
+"\"max\" for the maximum scale. A scale of zero causes results to be "
+"truncated by default. Any non-integer component is thrown away. So "
+"``3/2`` returns ``1`` by default, rather than ``2`` which ``1.5`` would "
+"normally round to. This is for compatibility with ``bc`` which was the "
+"basis for this command prior to fish 3.0.0. Scale values greater than "
+"zero causes the result to be rounded using the usual rules to the "
+"specified number of decimal places."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:47
+msgid "**-b** *BASE* or **--base** *BASE*"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:48
+msgid ""
+"Sets the numeric base used for output (``math`` always understands "
+"hexadecimal numbers as input). It currently understands \"hex\" or \"16\""
+" for hexadecimal and \"octal\" or \"8\" for octal and implies a scale of "
+"0 (other scales cause an error), so it will truncate the result down to "
+"an integer. This might change in the future. Hex numbers will be printed "
+"with a ``0x`` prefix. Octal numbers will have a prefix of ``0`` but "
+"aren't understood by ``math`` as input."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:54
+msgid "**-m** *MODE* or **--scale-mode** *MODE*"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:55
+msgid ""
+"Sets scale behavior. The ``MODE`` can be ``truncate``, ``round``, "
+"``floor``, ``ceiling``. The default value of scale mode is ``round`` with"
+" non zero scale and ``truncate`` with zero scale."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:59
+msgid "**-h** or **--help**"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:60
+msgid "Displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:63
+msgid "Return Values"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:65
+msgid ""
+"If the expression is successfully evaluated and doesn't over/underflow or"
+" return NaN the return ``status`` is zero (success) else one."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:68
+msgid "Syntax"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:70
+msgid ""
+"``math`` knows some operators, constants, functions and can (obviously) "
+"read numbers."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:72
+msgid ""
+"For numbers, ``.`` is always the radix character regardless of locale - "
+"``2.5``, not ``2,5``. Scientific notation (``10e5``) and hexadecimal "
+"(``0xFF``) are also available."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:75
+msgid ""
+"``math`` allows you to use underscores as visual separators for digit "
+"grouping. For example, you can write ``1_000_000``, ``0x_89_AB_CD_EF``, "
+"and ``1.234_567_e89``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:78
+msgid "Operators"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:80
+msgid "``math`` knows the following operators:"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:82
+msgid "``+``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:83
+msgid "for addition"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:84
+msgid "``-``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:85
+msgid "for subtraction"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:86
+msgid "``*`` or ``x``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:87
+msgid ""
+"for multiplication. ``*`` is the glob character and needs to be quoted or"
+" escaped, ``x`` needs to be followed by whitespace or it looks like "
+"``0x`` hexadecimal notation."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:88
+msgid "``/``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:89
+msgid "for division"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:90
+msgid "``^``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:91
+msgid "for exponentiation"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:92
+msgid "``%``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:93
+msgid "for modulo"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:94
+msgid "``(`` or ``)``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:95
+msgid ""
+"for grouping. These need to be quoted or escaped because ``()`` denotes a"
+" command substitution."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:97
+msgid "They are all used in an infix manner - ``5 + 2``, not ``+ 5 2``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:100
+msgid "Constants"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:102
+msgid "``math`` knows the following constants:"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:104
+msgid "``e``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:105
+msgid "Euler's number"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:106
+msgid "``pi``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:107
+msgid "π, you know this one. Half of Tau"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:109
+msgid "``tau``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:110
+msgid "Equivalent to 2π, or the number of radians in a circle"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:112
+msgid "Use them without a leading ``$`` - ``pi - 3`` should be about 0."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:115
+msgid "Functions"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:117
+msgid "``math`` supports the following functions:"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:119
+msgid "``abs``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:120
+msgid "the absolute value, with positive sign"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:121
+msgid "``acos``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:122
+msgid "arc cosine"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:123
+msgid "``asin``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:124
+msgid "arc sine"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:125
+msgid "``atan``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:126
+msgid "arc tangent"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:127
+msgid "``atan2``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:128
+msgid "arc tangent of two variables"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:129
+msgid "``bitand``, ``bitor`` and ``bitxor``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:130
+msgid ""
+"perform bitwise operations. These will throw away any non-integer parts "
+"and interpret the rest as an int."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:133
+msgid ""
+"Note: ``bitnot`` and ``bitnand`` don't exist. This is because numbers in "
+"math don't really have a *width* in terms of bits, and these operations "
+"necessarily care about leading zeroes."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:136
+msgid ""
+"If you need to negate a specific number you can do it with an xor with a "
+"mask, e.g.::"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:146
+msgid "``ceil``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:147
+msgid "round number up to the nearest integer"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:148
+msgid "``cos``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:149
+msgid "the cosine"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:150
+msgid "``cosh``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:151
+msgid "hyperbolic cosine"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:152
+msgid "``exp``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:153
+msgid "the base-e exponential function"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:154
+msgid "``fac``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:155
+msgid "factorial - also known as ``x!`` (``x * (x - 1) * (x - 2) * ... * 1``)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:156
+msgid "``floor``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:157
+msgid "round number down to the nearest integer"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:158
+msgid "``ln``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:159
+msgid "the base-e logarithm"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:160
+msgid "``log`` or ``log10``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:161
+msgid ""
+"the base-10 logarithm. To compute the logarithm for an arbitrary base "
+"``b``, use ``log(x) / log(b)``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:162
+msgid "``log2``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:163
+msgid "the base-2 logarithm"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:164
+msgid "``max``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:165
+msgid ""
+"returns the largest of the given numbers - this takes an arbitrary number"
+" of arguments (but at least one)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:166
+msgid "``min``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:167
+msgid ""
+"returns the smallest of the given numbers - this takes an arbitrary "
+"number of arguments (but at least one)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:168
+msgid "``ncr``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:169
+msgid ""
+"\"from n choose r\" combination function - how many subsets of size r can"
+" be taken from n (order doesn't matter)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:170
+msgid "``npr``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:171
+msgid ""
+"the number of subsets of size r that can be taken from a set of n "
+"elements (including different order)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:172
+msgid "``pow(x,y)``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:173
+msgid "returns x to the y (and can be written as ``x ^ y``)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:174
+msgid "``round``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:175
+msgid "rounds to the nearest integer, away from 0"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:176
+msgid "``sin``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:177
+msgid "the sine function"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:178
+msgid "``sinh``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:179
+msgid "the hyperbolic sine"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:180
+msgid "``sqrt``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:181
+msgid "the square root - (can also be written as ``x ^ 0.5``)"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:182
+msgid "``tan``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:183
+msgid "the tangent"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:184
+msgid "``tanh``"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:185
+msgid "the hyperbolic tangent"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:187
+msgid ""
+"All of the trigonometric functions use radians (the pi-based scale, not "
+"360°)."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:190
+msgid "Examples"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:192
+msgid "``math 1+1`` outputs 2."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:194
+msgid ""
+"``math $status - 128`` outputs the numerical exit status of the last "
+"command minus 128."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:196
+msgid "``math 10 / 6`` outputs ``1.666667``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:198
+msgid "``math -s0 10.0 / 6.0`` outputs ``1``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:200
+msgid "``math -s3 10 / 6`` outputs ``1.667``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:202
+msgid "``math \"sin(pi)\"`` outputs ``0``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:204
+msgid ""
+"``math 5 \\* 2`` or ``math \"5 * 2\"`` or ``math 5 \"*\" 2`` all output "
+"``10``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:206
+msgid ""
+"``math 0xFF`` outputs 255, ``math 0 x 3`` outputs 0 (because it computes "
+"0 multiplied by 3)."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:208
+msgid "``math bitand 0xFE, 0x2e`` outputs 46."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:210
+msgid "``math \"bitor(9,2)\"`` outputs 11."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:212
+msgid "``math --base=hex 192`` prints ``0xc0``."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:214
+msgid ""
+"``math 'ncr(49,6)'`` prints 13983816 - that's the number of possible "
+"picks in 6-from-49 lotto."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:216
+msgid "``math max 5,2,3,1`` prints 5."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:219
+msgid "Compatibility notes"
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:221
+msgid ""
+"Fish 1.x and 2.x releases relied on the ``bc`` command for handling "
+"``math`` expressions. Starting with fish 3.0.0 fish uses the tinyexpr "
+"library and evaluates the expression without the involvement of any "
+"external commands."
+msgstr ""
+
+#: ../../doc_src/cmds/math.rst:223
+msgid ""
+"You don't need to use ``--`` before the expression, even if it begins "
+"with a minus sign which might otherwise be interpreted as an invalid "
+"option. If you do insert ``--`` before the expression, it will cause "
+"option scanning to stop just like for every other command and it won't be"
+" part of the expression."
+msgstr ""
+

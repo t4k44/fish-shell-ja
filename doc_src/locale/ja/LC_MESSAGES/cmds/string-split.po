@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/string-split.rst:2
+msgid "string-split - split strings by delimiter"
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:19
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:23
+msgid ""
+"``string split`` splits each *STRING* on the separator *SEP*, which can "
+"be an empty string. If **-m** or **--max** is specified, at most MAX "
+"splits are done on each *STRING*. If **-r** or **--right** is given, "
+"splitting is performed right-to-left. This is only useful in combination "
+"with **-m** or **--max**. With **-n** or **--no-empty**, empty results "
+"are excluded from consideration (e.g. ``hello\\n\\nworld`` would expand "
+"to two strings and not three). Exit status: 0 if at least one split was "
+"performed, or 1 otherwise."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:25
+msgid ""
+"Use **-f** or **--fields** to print out specific fields. FIELDS is a "
+"comma-separated string of field numbers and/or spans. Each field is one-"
+"indexed, and will be printed on separate lines. If a given field does not"
+" exist, then the command exits with status 1 and does not print anything,"
+" unless **--allow-empty** is used."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:27
+msgid "See also the **--delimiter** option of the :doc:`read <read>` command."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:29
+msgid ""
+"``string split0`` splits each *STRING* on the zero byte (NUL). Options "
+"are the same as ``string split`` except that no separator is given."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:31
+msgid ""
+"``split0`` has the important property that its output is not further "
+"split when used in a command substitution, allowing for the command "
+"substitution to produce elements containing newlines. This is most useful"
+" when used with Unix tools that produce zero bytes, such as ``find "
+"-print0`` or ``sort -z``. See split0 examples below."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:33
+msgid ""
+"Be aware that commandline arguments cannot include NULs, so you likely "
+"want to pass to ``string split0`` via a pipe, not a command substitution."
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:38
+msgid "Examples"
+msgstr ""
+
+#: ../../doc_src/cmds/string-split.rst:64
+msgid "NUL Delimited Examples"
+msgstr ""
+

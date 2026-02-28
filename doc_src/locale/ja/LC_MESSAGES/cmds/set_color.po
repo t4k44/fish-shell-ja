@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/set_color.rst:2
+msgid "set_color - set the terminal color"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:12
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:14
+msgid ""
+"``set_color`` is used to control the color and styling of text in the "
+"terminal. *VALUE* describes that styling. *VALUE* can be a reserved color"
+" name like **red** or an RGB color value given as 3 or 6 hexadecimal "
+"digits (\"F27\" or \"FF2277\"). A special keyword **normal** resets text "
+"formatting to terminal defaults."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:16
+msgid "Valid colors include:"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:18
+msgid ""
+"**black**, **red**, **green**, **yellow**, **blue**, **magenta**, "
+"**cyan**, **white**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:19
+msgid ""
+"**brblack**, **brred**, **brgreen**, **bryellow**, **brblue**, "
+"**brmagenta**, **brcyan**, **brwhite**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:21
+msgid ""
+"The *br*- (as in 'bright') forms are full-brightness variants of the 8 "
+"standard-brightness colors on many terminals. **brblack** has higher "
+"brightness than **black** - towards gray."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:23
+msgid ""
+"An RGB value with three or six hex digits, such as A0FF33 or f2f can be "
+"used. A three digit value is equivalent to specifying each digit twice; "
+"e.g., ``set_color 2BC`` is the same as ``set_color 22BBCC``. Hexadecimal "
+"RGB values can be in lower or uppercase."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:27
+msgid ""
+"If :envvar:`fish_term24bit` is set to 0, fish will translate RGB values "
+"to the nearest color on the 256-color palette. If :envvar:`fish_term256` "
+"is also set to 0, fish will translate them to the 16-color palette "
+"instead. Fish launched as ``fish -d term_support`` will include "
+"diagnostic messages that indicate the color support mode in use."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:31
+msgid ""
+"If multiple colors are specified, fish prefers the first RGB one. However"
+" if :envvar:`fish_term256` is set to 0, fish prefers the first named "
+"color specified."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:34
+msgid "The following options are available:"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:36
+msgid "**-b** or **--background** *COLOR*"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:37
+msgid "Sets the background color."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:39
+msgid "**--underline-color** *COLOR*"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:40
+msgid "Set the underline color."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:42
+msgid "**-c** or **--print-colors**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:43
+msgid "Prints the given colors or a colored list of the 16 named colors."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:45
+msgid "**-o** or **--bold**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:46
+msgid "Sets bold mode."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:48
+msgid "**-d** or **--dim**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:49
+msgid "Sets dim mode."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:51
+msgid "**-i** or **--italics**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:52
+msgid "Sets italics mode."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:54
+msgid "**-r** or **--reverse**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:55
+msgid "Sets reverse mode."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:57
+msgid "**-s** or **--strikethrough**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:58
+msgid "Sets strikethrough mode."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:60
+msgid "**-u** or **--underline**, or **-uSTYLE** or **--underline=STYLE**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:61
+msgid ""
+"Set the underline mode; supported styles are **single** (default), "
+"**double**, **curly**, **dotted** and **dashed**."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:63
+msgid "**--theme=THEME**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:64
+msgid ""
+"Ignored. :ref:`Color variables <variables-color>` that contain only this "
+"option are treated like missing / empty color variables, i.e. fish will "
+"use the fallback color instead. :doc:`fish_config theme choose "
+"<fish_config>` erases all :ref:`color variable <fish_config-color-"
+"variables>` whose value includes this option, and adds this option to all"
+" color variables it sets. This allows identifying variables set by a "
+"theme, and it allows fish to update color variables whenever "
+":envvar:`fish_terminal_color_theme` changes."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:72
+msgid "**-h** or **--help**"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:73
+msgid "Displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:76
+msgid "Notes"
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:78
+msgid ""
+"Using **set_color normal** will reset all colors and modes to the "
+"terminal's default."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:79
+msgid ""
+"Setting the background color only affects subsequently written "
+"characters. Fish provides no way to set the background color for the "
+"entire terminal window. Configuring the window background color (and "
+"other attributes such as its opacity) has to be done using whatever "
+"mechanisms the terminal provides. Look for a config option."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:80
+msgid ""
+"Some terminals use the ``--bold`` escape sequence to switch to a brighter"
+" color set rather than increasing the weight of text."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:81
+msgid ""
+"``set_color`` works by printing sequences of characters to standard "
+"output. If used in command substitution or a pipe, these characters will "
+"also be captured. This may or may not be desirable. Checking the exit "
+"status of ``isatty stdout`` before using ``set_color`` can be useful to "
+"decide not to colorize output in a script."
+msgstr ""
+
+#: ../../doc_src/cmds/set_color.rst:84
+msgid "Examples"
+msgstr ""
+
