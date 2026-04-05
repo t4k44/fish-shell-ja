@@ -1,0 +1,1546 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/bind.rst:2
+msgid "bind - handle fish key bindings"
+msgstr "bind - fish のキーバインドを扱う"
+
+#: ../../doc_src/cmds/bind.rst:4
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/bind.rst:17
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/bind.rst:19
+msgid "``bind`` manages key bindings."
+msgstr "``bind`` はキーバインドを管理します。"
+
+#: ../../doc_src/cmds/bind.rst:21
+msgid ""
+"If both ``KEYS`` and ``COMMAND`` are given, ``bind`` adds (or replaces) a"
+" binding in ``MODE``. If only ``KEYS`` is given, ``bind`` lists any "
+"existing bindings for those keys in ``MODE`` or in all modes. If no "
+"``KEYS`` argument is provided, ``bind`` lists all bindings in ``MODE`` or"
+" in all modes."
+msgstr ""
+"``KEYS`` と ``COMMAND`` の両方が指定された場合、 ``bind`` は指定された ``MODE`` "
+"にバインドを追加(または置換)します。 ``KEYS`` のみが指定された場合、 ``bind`` はそのキーに対して ``MODE`` "
+"またはすべてのモードに存在するバインドを表示します。 ``KEYS`` 引数が提供されない場合、 ``bind`` は ``MODE`` "
+"またはすべてのモードの全バインドを表示します。"
+
+#: ../../doc_src/cmds/bind.rst:25
+msgid ""
+"``KEYS`` is a comma-separated list of key names. Modifier keys can be "
+"specified by prefixing a key name with a combination of ``ctrl-``, "
+"``alt-``, ``shift-`` and ``super-`` (i.e. the \"windows\" or \"command\" "
+"key). For example, pressing :kbd:`w` while holding the Alt modifier is "
+"written as ``alt-w``. Key names are case-sensitive; for example ``alt-W``"
+" is the same as ``alt-shift-w``. ``ctrl-x,ctrl-e`` would mean pressing "
+":kbd:`ctrl-x` followed by :kbd:`ctrl-e`."
+msgstr ""
+"``KEYS`` はカンマ区切りのキー名のリストです。修飾キーは、キー名の前に ``ctrl-`` 、 ``alt-`` 、 ``shift-``"
+" 、 ``super-`` (WindowsキーやCommandキー)を組み合わせて指定できます。例えば、 Alt キーを押しながら "
+":kbd:`w` を押す操作は ``alt-w`` と記述します。キー名は大小文字を区別します。例えば ``alt-W`` は ``alt-"
+"shift-w`` と同じです。 ``ctrl-x,ctrl-e`` は、 :kbd:`ctrl-x` を押した後に :kbd:`ctrl-e` "
+"を押すことを意味します。"
+
+#: ../../doc_src/cmds/bind.rst:31
+msgid ""
+"Some keys have names, usually because they don't have an obvious "
+"printable character representation. They are:"
+msgstr "いくつかのキーには名前が付いています。通常、それらは印字可能な文字として表現できないためです。以下がその一覧です。"
+
+#: ../../doc_src/cmds/bind.rst:34
+msgid "the arrow keys ``up``, ``down``, ``left`` and ``right``,"
+msgstr "矢印キー: ``up``, ``down``, ``left``, ``right``"
+
+#: ../../doc_src/cmds/bind.rst:35
+msgid "``backspace``,"
+msgstr "``backspace``"
+
+#: ../../doc_src/cmds/bind.rst:36
+msgid "``comma`` (``,``),"
+msgstr "``comma`` (``,``)"
+
+#: ../../doc_src/cmds/bind.rst:37
+msgid "``delete``,"
+msgstr "``delete``"
+
+#: ../../doc_src/cmds/bind.rst:38
+msgid "``end``,"
+msgstr "``end``"
+
+#: ../../doc_src/cmds/bind.rst:39
+msgid "``enter``,"
+msgstr "``enter``"
+
+#: ../../doc_src/cmds/bind.rst:40
+msgid "``escape``,"
+msgstr "``escape``"
+
+#: ../../doc_src/cmds/bind.rst:41
+msgid "``f1`` through ``f12``."
+msgstr "``f1`` から ``f12``"
+
+#: ../../doc_src/cmds/bind.rst:42
+msgid "``home``,"
+msgstr "``home``"
+
+#: ../../doc_src/cmds/bind.rst:43
+msgid "``insert``,"
+msgstr "``insert``"
+
+#: ../../doc_src/cmds/bind.rst:44
+msgid "``menu``,"
+msgstr "``menu``"
+
+#: ../../doc_src/cmds/bind.rst:45
+msgid "``minus`` (``-``),"
+msgstr "``minus`` (``-``)"
+
+#: ../../doc_src/cmds/bind.rst:46
+msgid "``pageup``,"
+msgstr "``pageup``"
+
+#: ../../doc_src/cmds/bind.rst:47
+msgid "``pagedown``,"
+msgstr "``pagedown``"
+
+#: ../../doc_src/cmds/bind.rst:48
+msgid "``printscreen``,"
+msgstr "``printscreen``"
+
+#: ../../doc_src/cmds/bind.rst:49
+msgid "``space`` and"
+msgstr "``space``"
+
+#: ../../doc_src/cmds/bind.rst:50
+msgid "``tab``,"
+msgstr "``tab``"
+
+#: ../../doc_src/cmds/bind.rst:52
+msgid "These names are case-sensitive."
+msgstr "これらの名前は大小文字を区別します。"
+
+#: ../../doc_src/cmds/bind.rst:54
+msgid ""
+"An empty value (``''``) for ``KEYS`` designates the generic binding that "
+"will be used if nothing else matches. For most bind modes, it makes sense"
+" to bind this to the ``self-insert`` function (i.e. ``bind '' self-"
+"insert``). This will insert any keystrokes that have no bindings "
+"otherwise. Non-printable characters are ignored by the editor, so this "
+"will not result in control sequences being inserted."
+msgstr ""
+"``KEYS`` "
+"に空の値(``''``)を指定すると、他に一致するものがない場合に使用される汎用バインド(デフォルトの挙動)を指定できます。ほとんどのバインドモードでは、これを"
+" ``self-insert`` 関数にバインドするのが妥当です(例: ``bind '' self-insert``)。"
+"これにより、他のバインドがないキー入力はそのまま文字として挿入されます。"
+"非印字文字はエディタによって無視されるため、これによって制御シーケンスがそのまま挿入されることはありません。"
+
+#: ../../doc_src/cmds/bind.rst:56
+msgid ""
+"To find the name of a key combination you can use :doc:`fish_key_reader "
+"<fish_key_reader>`."
+msgstr "キーコンビネーションの名前を調べるには、 :doc:`fish_key_reader <fish_key_reader>` を使用できます。"
+
+#: ../../doc_src/cmds/bind.rst:58
+msgid ""
+"``COMMAND`` can be any fish command, but it can also be one of a set of "
+"special input functions. These include functions for moving the cursor, "
+"operating on the kill-ring, performing tab completion, etc. Use ``bind "
+"--function-names`` or :ref:`see below <special-input-functions>` for a "
+"list of these input functions."
+msgstr ""
+"``COMMAND`` には任意の fishコマンドを指定できますが、一連の特別な入力用関数を指定することもできます。"
+"これらには、カーソルの移動、キルリング(クリップボード履歴)の操作、タブ補完の実行などを行う関数が含まれます。"
+"これら入力用関数の一覧については、"
+" ``bind --function-names`` を実行するか、 :ref:`以下を参照 <special-input-functions>`"
+" してください。"
+
+#: ../../doc_src/cmds/bind.rst:61
+msgid ""
+"If a script changes the commandline, it should finish by calling the "
+"``repaint`` special input function."
+msgstr "スクリプトがコマンドラインの内容を変更する場合、最後に特別な入力用関数である ``repaint`` "
+"を呼び出して終了する必要があります。"
+
+#: ../../doc_src/cmds/bind.rst:63
+msgid ""
+"Key bindings may use \"modes\", which mimics vi's modal input behavior. "
+"The default mode is \"default\" (in vi-mode, that's vi's \"normal\" "
+"mode). Every key binding applies to a single mode; you can specify which "
+"one with ``-M MODE``. If the key binding should change the mode, you can "
+"specify the new mode with ``-m NEW_MODE``. The mode can be viewed and "
+"changed via the ``$fish_bind_mode`` variable. If you want to change the "
+"mode from inside a fish function, use ``set fish_bind_mode MODE``."
+msgstr ""
+"キーバインドには、vi のモーダル入力を模した「モード(modes)」を使用できます。デフォルトのモードは "
+"\"default\" です(vi モードでは、これは vi の「ノーマル」モードに相当します)。"
+"すべてのキーバインドは単一のモードに対して適用されます。適用するモードは ``-M "
+"MODE`` で指定できます。キーバインドによってモードを変更したい場合は、 ``-m NEW_MODE`` "
+"で新しいモードを指定できます。現在のモードは ``$fish_bind_mode`` 変数で確認および変更できます。fish "
+"関数内からモードを変更したい場合は、 ``set fish_bind_mode MODE`` を使用してください。"
+
+#: ../../doc_src/cmds/bind.rst:65
+msgid ""
+"To save custom key bindings, put the ``bind`` statements into "
+":ref:`config.fish <configuration>`. Alternatively, fish also "
+"automatically executes a function called ``fish_user_key_bindings`` if it"
+" exists."
+msgstr ""
+"カスタムキーバインドを保存するには、 ``bind`` 文を :ref:`config.fish <configuration>` "
+"に記述してください。あるいは、 ``fish_user_key_bindings`` という名前の関数が存在する場合、 fish "
+"はそれも自動的に実行します。"
+
+#: ../../doc_src/cmds/bind.rst:68
+msgid "Options"
+msgstr "オプション"
+
+#: ../../doc_src/cmds/bind.rst:69
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です: "
+
+#: ../../doc_src/cmds/bind.rst:71
+msgid "**-f** or **--function-names**"
+msgstr "**-f** 、 **--function-names**"
+
+#: ../../doc_src/cmds/bind.rst:72
+msgid "Display a list of available input functions"
+msgstr "利用可能な入力用関数の一覧を表示します"
+
+#: ../../doc_src/cmds/bind.rst:74
+msgid "**-K** or **--key-names**"
+msgstr "**-K** 、 **--key-names**"
+
+#: ../../doc_src/cmds/bind.rst:75
+msgid "Display a list of available named keys such as ``backspace``."
+msgstr "``backspace`` のような、利用可能な名前付きキーの一覧を表示します。"
+
+#: ../../doc_src/cmds/bind.rst:77
+msgid "**-L** or **--list-modes**"
+msgstr "**-L** 、 **--list-modes**"
+
+#: ../../doc_src/cmds/bind.rst:78
+msgid "Display a list of defined bind modes"
+msgstr "定義されているバインドモードの一覧を表示します"
+
+#: ../../doc_src/cmds/bind.rst:80
+msgid "**-M MODE** or **--mode** *MODE*"
+msgstr "**-M MODE** 、 **--mode** *MODE*"
+
+#: ../../doc_src/cmds/bind.rst:81
+msgid ""
+"Specify a bind mode that the bind is used in. Defaults to \"default\". If"
+" you use :ref:`vi bindings <vi-mode>`, that's the *command* mode, what vi"
+" calls \"normal\" mode."
+msgstr ""
+"バインドを使用するバインドモードを指定します。デフォルトは \"default\" です。 :ref:`vi バインド <vi-mode>` "
+"を使用している場合、これは vi で言うところの「ノーマル」モードである *コマンド* モードに相当します。"
+
+#: ../../doc_src/cmds/bind.rst:85
+msgid "**-m NEW_MODE** or **--sets-mode** *NEW_MODE*"
+msgstr "**-m NEW_MODE** 、 **--sets-mode** *NEW_MODE*"
+
+#: ../../doc_src/cmds/bind.rst:86
+msgid "Change the current mode to *NEW_MODE* after this binding is executed"
+msgstr "このバインドが実行された後、現在のモードを *NEW_MODE* に変更します。"
+
+#: ../../doc_src/cmds/bind.rst:88
+msgid "**-e** or **--erase**"
+msgstr "**-e** 、 **--erase**"
+
+#: ../../doc_src/cmds/bind.rst:89
+msgid ""
+"Erase the binding with the given sequence and mode instead of defining a "
+"new one. Multiple sequences can be specified with this flag. Specifying "
+"**-a** or **--all** with **-M** or **--mode** erases all binds in the "
+"given mode regardless of sequence. Specifying **-a** or **--all** without"
+" **-M** or **--mode** erases all binds in all modes regardless of "
+"sequence."
+msgstr ""
+"新しく定義する代わりに、指定されたシーケンスとモードのバインドを削除します。このフラグを使用して複数のシーケンスを指定できます。**-M** 、 "
+"**--mode** と併せて **-a** 、 **--all** "
+"を指定すると、シーケンスに関係なく、指定されたモードのすべてのバインドを削除します。**-M** 、 **--mode** なしで **-a** "
+"、 **--all** を指定すると、シーケンスに関係なく、すべてのモードのすべてのバインドを削除します。"
+
+#: ../../doc_src/cmds/bind.rst:94
+msgid "**-a** or **--all**"
+msgstr "**-a** 、 **--all**"
+
+#: ../../doc_src/cmds/bind.rst:95
+msgid "See **--erase**"
+msgstr "**--erase** を参照してください"
+
+#: ../../doc_src/cmds/bind.rst:97
+msgid "**--preset** and **--user**"
+msgstr "**--preset** 、 **--user**"
+
+#: ../../doc_src/cmds/bind.rst:98
+msgid ""
+"Specify if bind should operate on user or preset bindings. User bindings "
+"take precedence over preset bindings when fish looks up mappings. By "
+"default, all ``bind`` invocations work on the \"user\" level except for "
+"listing, which will show both levels. All invocations except for "
+"inserting new bindings can operate on both levels at the same time (if "
+"both **--preset** and **--user** are given). **--preset** should only be "
+"used in full binding sets (like when working on "
+"``fish_vi_key_bindings``)."
+msgstr ""
+"バインド操作をユーザーレベルで行うか、プリセットレベルで行うかを指定します。fish "
+"がマッピングを検索する際、ユーザーバインドはプリセットバインドよりも優先されます。デフォルトでは、一覧表示(両方のレベルが表示されます)を除き、すべての"
+" ``bind`` の呼び出しは「ユーザー」レベルで動作します。新しいバインドの挿入を除き、すべての呼び出しは(**--preset** と "
+"**--user** の両方が指定されている場合)両方のレベルで同時に動作できます。**--preset** "
+"は、完全なバインドセット(``fish_vi_key_bindings`` の作成時など)でのみ使用すべきです。"
+
+#: ../../doc_src/cmds/bind.rst:104
+msgid "**-s** or **--silent**"
+msgstr "**-s** 、 **--silent**"
+
+#: ../../doc_src/cmds/bind.rst:105
+msgid "Silences error message for unbound sequences."
+msgstr "未バインドのシーケンスに対するエラーメッセージを抑制します。"
+
+#: ../../doc_src/cmds/bind.rst:107
+msgid "**--color** *WHEN*"
+msgstr "**--color** *WHEN*"
+
+#: ../../doc_src/cmds/bind.rst:108
+msgid ""
+"Controls when to use syntax highlighting colors when listing bindings. "
+"*WHEN* can be ``auto`` (the default, colorize if the output :doc:`is a "
+"terminal <isatty>`), ``always``, or ``never``."
+msgstr ""
+"バインドを一覧表示する際にシンタックスハイライトの色を使用するかどうかを制御します。"
+"*WHEN* には、 ``auto`` (デフォルト。出力先が :doc:`ターミナルの場合 <isatty>` に着色)、"
+" ``always`` 、または ``never`` を指定できます。"
+
+#: ../../doc_src/cmds/bind.rst:111
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/bind.rst:112
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/bind.rst:117
+msgid "Special input functions"
+msgstr "特殊入力関数"
+
+#: ../../doc_src/cmds/bind.rst:118
+msgid "The following special input functions are available:"
+msgstr "以下の特殊入力関数が利用可能です。"
+
+#: ../../doc_src/cmds/bind.rst:120
+msgid "``and``"
+msgstr "``and``"
+
+#: ../../doc_src/cmds/bind.rst:121
+msgid ""
+"only execute the next function if the previous succeeded (note: only some"
+" functions report success)"
+msgstr ""
+"直前の関数が成功した場合のみ、次の関数を実行します(注意: 成功を報告するのは一部の関数のみです)。"
+
+#: ../../doc_src/cmds/bind.rst:123
+msgid "``accept-autosuggestion``"
+msgstr "``accept-autosuggestion``"
+
+#: ../../doc_src/cmds/bind.rst:124
+msgid ""
+"accept the current autosuggestion. Returns false when there was nothing "
+"to accept."
+msgstr ""
+"現在の自動提案(autosuggestion)を受け入れます。受け入れるものがない場合は false を返します。"
+
+#: ../../doc_src/cmds/bind.rst:126
+msgid "``backward-char``"
+msgstr "``backward-char``"
+
+#: ../../doc_src/cmds/bind.rst:127
+msgid ""
+"move one character to the left. If the completion pager is active, select"
+" the previous completion instead."
+msgstr ""
+"左に 1 文字移動します。補完ページャがアクティブな場合は、代わりに前の補完候補を選択します。"
+
+#: ../../doc_src/cmds/bind.rst:130
+msgid "``backward-char-passive``"
+msgstr "``backward-char-passive``"
+
+#: ../../doc_src/cmds/bind.rst:131
+msgid ""
+"move one character to the left, but do not trigger any non-movement-"
+"related operations. If the cursor is at the start of the commandline, "
+"does nothing. Does not change the selected item in the completion pager "
+"UI when shown."
+msgstr ""
+"左に 1 文字移動しますが、移動に関連しない操作はトリガーしません。"
+"カーソルがコマンドラインの先頭にある場合は何もしません。補完ページャの UI が表示されている場合でも、選択項目を変更しません。"
+
+#: ../../doc_src/cmds/bind.rst:134
+msgid "``backward-token``"
+msgstr "``backward-token``"
+
+#: ../../doc_src/cmds/bind.rst:135
+msgid "move one argument to the left"
+msgstr "左に 1 引数分移動します。"
+
+#: ../../doc_src/cmds/bind.rst:137
+msgid "``backward-delete-char``"
+msgstr "``backward-delete-char``"
+
+#: ../../doc_src/cmds/bind.rst:138
+msgid "deletes one character of input to the left of the cursor"
+msgstr "カーソルの左側にある 1 文字を削除します。"
+
+#: ../../doc_src/cmds/bind.rst:140
+msgid "``backward-kill-token``"
+msgstr "``backward-kill-token``"
+
+#: ../../doc_src/cmds/bind.rst:141
+msgid "move the argument to the left of the cursor to the killring"
+msgstr "カーソルの左側にある引数をキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:143
+msgid "``backward-kill-line``"
+msgstr "``backward-kill-line``"
+
+#: ../../doc_src/cmds/bind.rst:144
+msgid ""
+"move everything from the beginning of the line to the cursor to the "
+"killring"
+msgstr "行頭からカーソル位置までのすべてをキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:148
+msgid "``backward-kill-path-component``"
+msgstr "``backward-kill-path-component``"
+
+#: ../../doc_src/cmds/bind.rst:149
+#, python-brace-format
+msgid ""
+"move one path component to the left of the cursor to the killring. A path"
+" component is everything likely to belong to a path component, i.e. not "
+"any of the following: `/={,}'\\\":@ |;<>&`, plus newlines and tabs."
+msgstr ""
+"カーソルの左側にあるパスの構成要素(パスコンポーネント)を 1 つキルリングへ移動します。"
+"パスコンポーネントとは、パスの一部になり得るすべての文字を指し、具体的には "
+"``/={,}'\\\":@ |;<>&`` および改行、タブ以外の文字の連続です。"
+
+#: ../../doc_src/cmds/bind.rst:151
+msgid "``backward-kill-word``"
+msgstr "``backward-kill-word``"
+
+#: ../../doc_src/cmds/bind.rst:152
+msgid ""
+"move the word to the left of the cursor to the killring, until the start "
+"of the current word (like vim's ``db``)"
+msgstr "現在の単語の先頭まで、カーソルの左側にある単語をキルリングへ移動します(Vim の ``db`` と同様の動作です)。"
+
+#: ../../doc_src/cmds/bind.rst:154
+msgid "``backward-kill-bigword``"
+msgstr "``backward-kill-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:155
+msgid ""
+"move the whitespace-delimited word to the left of the cursor to the "
+"killring, until the start of the current word (like vim's ``dB``)"
+msgstr ""
+"空白で区切られた現在の単語の先頭まで、カーソルの左側にある単語をキルリングへ移動します(Vim の ``dB`` と同様の動作です)。"
+
+#: ../../doc_src/cmds/bind.rst:157
+msgid "``backward-path-component``"
+msgstr "``backward-path-component``"
+
+#: ../../doc_src/cmds/bind.rst:158
+msgid ""
+"move one :ref:`path component <cmd-bind-backward-kill-path-component>` to"
+" the left"
+msgstr "カーソルを 1 つ左の :ref:`パス構成要素 <cmd-bind-backward-kill-path-component>` へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:160
+msgid "``backward-word``"
+msgstr "``backward-word``"
+
+#: ../../doc_src/cmds/bind.rst:161
+msgid ""
+"move one word to the left, stopping at the start of the previous word "
+"(like vim's ``b``, or Emacs' ``M-b`` but differs slightly in word "
+"division rules)"
+msgstr ""
+"前の単語の先頭で止まるように、カーソルを 1 単語分左へ移動します(vim の ``b`` や Emacs の ``M-b`` "
+"と同様ですが、単語の区切りルールがわずかに異なります)。"
+
+#: ../../doc_src/cmds/bind.rst:163
+msgid "``backward-bigword``"
+msgstr "``backward-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:164
+msgid ""
+"move one whitespace-delimited word to the left, stopping at the start of "
+"the previous word (like vim's ``B``)"
+msgstr "前の単語の先頭で止まるように、カーソルを 1 つ左の「空白区切りの単語(bigword)」へ移動します(vim の ``B`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:166
+msgid "``backward-word-end``"
+msgstr "``backward-word-end``"
+
+#: ../../doc_src/cmds/bind.rst:167
+msgid "move to the end of the previous word (like vim's ``ge``)"
+msgstr "前の単語の末尾へ移動します(vim の ``ge`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:169
+msgid "``backward-bigword-end``"
+msgstr "``backward-bigword-end``"
+
+#: ../../doc_src/cmds/bind.rst:170
+msgid ""
+"move to the end of the previous whitespace-delimited word (like vim's "
+"``gE``)"
+msgstr "前の「空白区切りの単語(bigword)」の末尾へ移動します(vim の ``gE`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:172
+msgid "``beginning-of-buffer``"
+msgstr "``beginning-of-buffer``"
+
+#: ../../doc_src/cmds/bind.rst:173
+msgid "moves to the beginning of the buffer, i.e. the start of the first line"
+msgstr "バッファの先頭、つまり 1 行目の最初へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:175
+msgid "``beginning-of-history``"
+msgstr "``beginning-of-history``"
+
+#: ../../doc_src/cmds/bind.rst:176
+msgid "move to the beginning of the history"
+msgstr "履歴の最初へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:178
+msgid "``beginning-of-line``"
+msgstr "``beginning-of-line``"
+
+#: ../../doc_src/cmds/bind.rst:179
+msgid "move to the beginning of the line"
+msgstr "行頭へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:181
+msgid "``begin-selection``"
+msgstr "``begin-selection``"
+
+#: ../../doc_src/cmds/bind.rst:182
+msgid "start selecting text"
+msgstr "テキストの選択を開始します。"
+
+#: ../../doc_src/cmds/bind.rst:184
+msgid "``cancel``"
+msgstr "``cancel``"
+
+#: ../../doc_src/cmds/bind.rst:185
+msgid ""
+"close the pager if it is open, or undo the most recent completion if one "
+"was just inserted"
+msgstr "ページャが開いている場合は閉じ、補完が挿入された直後であればその補完を取り消します。"
+
+#: ../../doc_src/cmds/bind.rst:187
+msgid "``cancel-commandline``"
+msgstr "``cancel-commandline``"
+
+#: ../../doc_src/cmds/bind.rst:188
+msgid ""
+"cancel the current commandline and replace it with a new empty one, "
+"leaving the old one in place with a marker to show that it was cancelled"
+msgstr "現在のコマンドラインをキャンセルして新しい空のコマンドラインに置き換えます。元の内容は、キャンセルされたことを示すマーカーと共にその場に残されます。"
+
+#: ../../doc_src/cmds/bind.rst:190
+msgid "``capitalize-word``"
+msgstr "``capitalize-word``"
+
+#: ../../doc_src/cmds/bind.rst:191
+msgid "make the current word begin with a capital letter"
+msgstr "現在の単語の先頭を大文字にします。"
+
+#: ../../doc_src/cmds/bind.rst:193
+msgid "``clear-commandline``"
+msgstr "``clear-commandline``"
+
+#: ../../doc_src/cmds/bind.rst:194
+msgid "empty the entire commandline"
+msgstr "コマンドライン全体を空にします。"
+
+#: ../../doc_src/cmds/bind.rst:196
+msgid "``clear-screen``"
+msgstr "``clear-screen``"
+
+#: ../../doc_src/cmds/bind.rst:197
+msgid "clears the screen and redraws the prompt."
+msgstr "画面を消去し、プロンプトを再描画します。"
+
+#: ../../doc_src/cmds/bind.rst:201
+msgid "``scrollback-push``"
+msgstr "``scrollback-push``"
+
+#: ../../doc_src/cmds/bind.rst:202
+msgid ""
+"pushes earlier output to the terminal scrollback, positioning the prompt "
+"at the top. This requires the terminal to implement the ECMA-48 "
+":ref:`SCROLL UP <term-compat-indn>` command and :ref:`cursor position "
+"reporting <term-compat-cursor-position-report>`."
+msgstr ""
+"以前の出力をターミナルのスクロールバックに押し出し、プロンプトを一番上に配置します。これには、ターミナルが ECMA-48 "
+":ref:`SCROLL UP <term-compat-indn>` コマンドおよび :ref:`カーソル位置レポート <term-"
+"compat-cursor-position-report>` を実装している必要があります。"
+
+#: ../../doc_src/cmds/bind.rst:205
+msgid "``complete``"
+msgstr "``complete``"
+
+#: ../../doc_src/cmds/bind.rst:206
+msgid "guess the remainder of the current token"
+msgstr "現在のトークンの残りの部分を推測(補完)します。"
+
+#: ../../doc_src/cmds/bind.rst:208
+msgid "``complete-and-search``"
+msgstr "``complete-and-search``"
+
+#: ../../doc_src/cmds/bind.rst:209
+msgid ""
+"invoke the searchable pager on completion options (for convenience, this "
+"also moves backwards in the completion pager)"
+msgstr "補完オプションに対して検索可能なページャを起動します(利便性のため、この関数は補完ページャ内で逆方向への移動も行います)。"
+
+#: ../../doc_src/cmds/bind.rst:211
+msgid "``delete-char``"
+msgstr "``delete-char``"
+
+#: ../../doc_src/cmds/bind.rst:212
+msgid "delete one character to the right of the cursor"
+msgstr "カーソルの右側にある文字を 1 文字削除します。"
+
+#: ../../doc_src/cmds/bind.rst:214
+msgid "``delete-or-exit``"
+msgstr "``delete-or-exit``"
+
+#: ../../doc_src/cmds/bind.rst:215
+msgid ""
+"delete one character to the right of the cursor, or exit the shell if the"
+" commandline is empty"
+msgstr "カーソルの右側にある文字を 1 文字削除します。コマンドラインが空の場合はシェルを終了します。"
+
+#: ../../doc_src/cmds/bind.rst:217
+msgid "``down-line``"
+msgstr "``down-line``"
+
+#: ../../doc_src/cmds/bind.rst:218
+msgid "move down one line"
+msgstr "1 行下に移動します。"
+
+#: ../../doc_src/cmds/bind.rst:220
+msgid "``downcase-word``"
+msgstr "``downcase-word``"
+
+#: ../../doc_src/cmds/bind.rst:221
+msgid "make the current word lowercase"
+msgstr "現在の単語を小文字にします。"
+
+#: ../../doc_src/cmds/bind.rst:223
+msgid "``end-of-buffer``"
+msgstr "``end-of-buffer``"
+
+#: ../../doc_src/cmds/bind.rst:224
+msgid ""
+"moves to the end of the buffer, i.e. the end of the last line; or if "
+"already at the end of the commandline, accept the current autosuggestion."
+msgstr "バッファの最後(つまり最終行の末尾)へ移動します。すでにコマンドラインの末尾にいる場合は、現在のオートサジェスチョン(自動提案)を確定します。"
+
+#: ../../doc_src/cmds/bind.rst:227
+msgid "``end-of-history``"
+msgstr "``end-of-history``"
+
+#: ../../doc_src/cmds/bind.rst:228
+msgid "move to the end of the history"
+msgstr "履歴の末尾(最新の項目)へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:230
+msgid "``end-of-line``"
+msgstr "``end-of-line``"
+
+#: ../../doc_src/cmds/bind.rst:231
+msgid "move to the end of the line"
+msgstr "行末へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:233
+msgid "``end-selection``"
+msgstr "``end-selection``"
+
+#: ../../doc_src/cmds/bind.rst:234
+msgid "end selecting text"
+msgstr "テキストの選択を終了します。"
+
+#: ../../doc_src/cmds/bind.rst:236
+msgid "``expand-abbr``"
+msgstr "``expand-abbr``"
+
+#: ../../doc_src/cmds/bind.rst:237
+msgid "expands any abbreviation currently under the cursor"
+msgstr "現在カーソル下にある省略形(abbreviation)を展開します。"
+
+#: ../../doc_src/cmds/bind.rst:239
+msgid "``execute``"
+msgstr "``execute``"
+
+#: ../../doc_src/cmds/bind.rst:240
+msgid "run the current commandline"
+msgstr "現在のコマンドラインを実行します。"
+
+#: ../../doc_src/cmds/bind.rst:242
+msgid "``exit``"
+msgstr "``exit``"
+
+#: ../../doc_src/cmds/bind.rst:243
+msgid "exit the shell"
+msgstr "シェルを終了します。"
+
+#: ../../doc_src/cmds/bind.rst:245
+msgid "``forward-token``"
+msgstr "``forward-token``"
+
+#: ../../doc_src/cmds/bind.rst:246
+msgid "move one argument to the right"
+msgstr "カーソルを 1 つ右の引数(トークン)へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:248
+msgid "``forward-char``"
+msgstr "``forward-char``"
+
+#: ../../doc_src/cmds/bind.rst:249
+msgid ""
+"move one character to the right; or if at the end of the commandline, "
+"accept the current autosuggestion. If the completion pager is active, "
+"select the next completion instead."
+msgstr ""
+"カーソルを 1 "
+"文字右に移動します。コマンドラインの末尾にいる場合は、現在のオートサジェスチョンを確定します。補完ページャがアクティブな場合は、代わりに次の補完候補を選択します。"
+
+#: ../../doc_src/cmds/bind.rst:252
+msgid "``forward-char-passive``"
+msgstr "``forward-char-passive``"
+
+#: ../../doc_src/cmds/bind.rst:253
+msgid ""
+"move one character to the right, but do not trigger any non-movement-"
+"related operations. If the cursor is at the end of the commandline, does "
+"not accept the current autosuggestion (if any). Does not change the "
+"selected item in the completion pager, if shown."
+msgstr ""
+"カーソルを 1 "
+"文字右に移動しますが、移動以外の操作(確定など)をトリガーしません。カーソルがコマンドラインの末尾にいても、オートサジェスチョンを確定しません。補完ページャが表示されていても、選択項目を変更しません。"
+
+#: ../../doc_src/cmds/bind.rst:257
+msgid "``forward-path-component``"
+msgstr "``forward-path-component``"
+
+#: ../../doc_src/cmds/bind.rst:258
+msgid ""
+"move one :ref:`path component <cmd-bind-backward-kill-path-component>` to"
+" the right; or if at the end of the commandline, accept a path component "
+"from the current autosuggestion."
+msgstr ""
+"カーソルを 1 つ右の :ref:`パス構成要素 <cmd-bind-backward-kill-path-component>` "
+"へ移動します。コマンドラインの末尾にいる場合は、オートサジェスチョンからパス構成要素 1 つ分を確定します。"
+
+#: ../../doc_src/cmds/bind.rst:260
+msgid "``forward-single-char``"
+msgstr "``forward-single-char``"
+
+#: ../../doc_src/cmds/bind.rst:261
+msgid ""
+"move one character to the right; or if at the end of the commandline, "
+"accept a single char from the current autosuggestion."
+msgstr "カーソルを 1 文字右に移動します。コマンドラインの末尾にいる場合は、オートサジェスチョンから 1 文字分だけを確定します。"
+
+#: ../../doc_src/cmds/bind.rst:265
+msgid "``forward-word``"
+msgstr "``forward-word``"
+
+#: ../../doc_src/cmds/bind.rst:266
+msgid ""
+"move one word to the right, stopping after the end of the current word; "
+"or if at the end of the commandline, accept one word from the current "
+"autosuggestion."
+msgstr ""
+"現在の単語の末尾を越えた位置まで、カーソルを 1 単語分右へ移動します。コマンドラインの末尾にいる場合は、オートサジェスチョンから 1 "
+"単語分を確定します。"
+
+#: ../../doc_src/cmds/bind.rst:269
+msgid "``forward-word-vi``"
+msgstr "``forward-word-vi``"
+
+#: ../../doc_src/cmds/bind.rst:270
+msgid ""
+"like :ref:`forward-word <cmd-bind-forward-word>`, but stops at the start "
+"of the next word (like vim's ``w``)"
+msgstr ""
+":ref:`forward-word <cmd-bind-forward-word>` と同様ですが、次の単語の先頭で止まります(vim の "
+"``w`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:272
+msgid "``forward-word-end``"
+msgstr "``forward-word-end``"
+
+#: ../../doc_src/cmds/bind.rst:273
+msgid ""
+"like :ref:`forward-word <cmd-bind-forward-word>`, but stops at the end of"
+" the next word (like vim's ``e``)"
+msgstr ""
+":ref:`forward-word <cmd-bind-forward-word>` と同様ですが、次の単語の末尾で止まります(vim の "
+"``e`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:277
+msgid "``forward-bigword``"
+msgstr "``forward-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:278
+msgid ""
+"move one whitespace-delimited word to the right, stopping after the end "
+"of the current word; or if at the end of the commandline, accept one word"
+" from the current autosuggestion."
+msgstr ""
+"現在の単語の末尾を越えた位置まで、カーソルを 1 "
+"つ右の「空白区切りの単語(bigword)」へ移動します。コマンドラインの末尾にいる場合は、オートサジェスチョンから 1 単語分を確定します。"
+
+#: ../../doc_src/cmds/bind.rst:280
+msgid "``forward-bigword-vi``"
+msgstr "``forward-bigword-vi``"
+
+#: ../../doc_src/cmds/bind.rst:281
+msgid ""
+"like :ref:`forward-bigword <cmd-bind-forward-bigword>`, but stops at the "
+"start of the next word (like vim's ``W``)"
+msgstr ""
+":ref:`forward-bigword <cmd-bind-forward-bigword>` "
+"と同様ですが、次の単語の先頭で止まります(vim の ``W`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:283
+msgid "``forward-bigword-end``"
+msgstr "``forward-bigword-end``"
+
+#: ../../doc_src/cmds/bind.rst:284
+msgid ""
+"like :ref:`forward-bigword <cmd-bind-forward-bigword>`, but stops at the "
+"end of the next word (like vim's ``E``)"
+msgstr ""
+":ref:`forward-bigword <cmd-bind-forward-bigword>` "
+"と同様ですが、次の単語の末尾で止まります(vim の ``E`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:286
+msgid "``history-pager``"
+msgstr "``history-pager``"
+
+#: ../../doc_src/cmds/bind.rst:287
+msgid ""
+"invoke the searchable pager on history (incremental search); or if the "
+"history pager is already active, search further backwards in time."
+msgstr "履歴に対して検索可能なページャを起動します(インクリメンタル検索)。履歴ページャがすでにアクティブな場合は、さらに過去へと遡って検索します。"
+
+#: ../../doc_src/cmds/bind.rst:289
+msgid "``history-delete``"
+msgstr "``history-delete``"
+
+#: ../../doc_src/cmds/bind.rst:290
+msgid ""
+"permanently delete the current history item, either from the history "
+"pager or from an active up-arrow history search"
+msgstr "履歴ページャ内、または上矢印キーによる履歴検索で選択中の履歴項目を永久に削除します。"
+
+#: ../../doc_src/cmds/bind.rst:292
+msgid "``history-search-backward``"
+msgstr "``history-search-backward``"
+
+#: ../../doc_src/cmds/bind.rst:293
+msgid "search the history for the previous match"
+msgstr "履歴を遡って前の一致項目を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:295
+msgid "``history-search-forward``"
+msgstr "``history-search-forward``"
+
+#: ../../doc_src/cmds/bind.rst:296
+msgid "search the history for the next match"
+msgstr "履歴を先へ進んで次の一致項目を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:298
+msgid "``history-prefix-search-backward``"
+msgstr "``history-prefix-search-backward``"
+
+#: ../../doc_src/cmds/bind.rst:299
+msgid "search the history for the previous prefix match"
+msgstr "現在の入力内容を接頭辞(前方一致)として履歴を遡り、前の一致項目を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:301
+msgid "``history-prefix-search-forward``"
+msgstr "``history-prefix-search-forward``"
+
+#: ../../doc_src/cmds/bind.rst:302
+msgid "search the history for the next prefix match"
+msgstr "現在の入力内容を接頭辞(前方一致)として履歴を先へ進み、次の一致項目を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:304
+msgid "``history-token-search-backward``"
+msgstr "``history-token-search-backward``"
+
+#: ../../doc_src/cmds/bind.rst:305
+msgid "search the history for the previous matching argument"
+msgstr "履歴を遡って、一致する前の引数(トークン)を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:307
+msgid "``history-token-search-forward``"
+msgstr "``history-token-search-forward``"
+
+#: ../../doc_src/cmds/bind.rst:308
+msgid "search the history for the next matching argument"
+msgstr "履歴を先へ進んで、一致する次の引数(トークン)を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:310
+msgid "``history-last-token-search-backward``"
+msgstr "``history-last-token-search-backward``"
+
+#: ../../doc_src/cmds/bind.rst:311
+msgid "search the history for the previous matching last argument"
+msgstr "履歴を遡って、一致する前の「最後の引数」を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:313
+msgid "``history-last-token-search-forward``"
+msgstr "``history-last-token-search-forward``"
+
+#: ../../doc_src/cmds/bind.rst:314
+msgid "search the history for the next matching last argument"
+msgstr "履歴を先へ進んで、一致する次の「最後の引数」を検索します。"
+
+#: ../../doc_src/cmds/bind.rst:316
+msgid "``forward-jump`` and ``backward-jump``"
+msgstr "``forward-jump`` および ``backward-jump``"
+
+#: ../../doc_src/cmds/bind.rst:317
+msgid ""
+"read another character and jump to its next occurrence after/before the "
+"cursor"
+msgstr "もう 1 文字読み取り、カーソルの後/前にあるその文字の次の出現箇所へジャンプします。"
+
+#: ../../doc_src/cmds/bind.rst:319
+msgid "``forward-jump-till`` and ``backward-jump-till``"
+msgstr "``forward-jump-till`` および ``backward-jump-till``"
+
+#: ../../doc_src/cmds/bind.rst:320
+msgid "jump to right *before* the next occurrence"
+msgstr "次の出現箇所の「直前」までジャンプします。"
+
+#: ../../doc_src/cmds/bind.rst:322
+msgid "``repeat-jump`` and ``repeat-jump-reverse``"
+msgstr "``repeat-jump`` および ``repeat-jump-reverse``"
+
+#: ../../doc_src/cmds/bind.rst:323
+msgid "redo the last jump in the same/opposite direction"
+msgstr "最後のジャンプを同じ方向、または逆方向でもう一度行います。"
+
+#: ../../doc_src/cmds/bind.rst:325
+msgid "``jump-to-matching-bracket``"
+msgstr "``jump-to-matching-bracket``"
+
+#: ../../doc_src/cmds/bind.rst:326
+#, python-brace-format
+msgid ""
+"jump to matching bracket if the character under the cursor is bracket; "
+"otherwise, jump to the next occurrence of *any right* bracket after the "
+"cursor. The following brackets are considered: ``([{}])``"
+msgstr ""
+"カーソル下の文字が括弧であれば、対応する括弧へジャンプします。そうでなければ、カーソルの後にある「いずれかの閉じ括弧」の次の出現箇所へジャンプします。対象となる括弧は"
+" ``([{}])`` です。"
+
+#: ../../doc_src/cmds/bind.rst:330
+msgid "``jump-till-matching-bracket``"
+msgstr "``jump-till-matching-bracket``"
+
+#: ../../doc_src/cmds/bind.rst:331
+#, python-brace-format
+msgid ""
+"the same as ``jump-to-matching-bracket`` but offset cursor to the right "
+"for left bracket, and offset cursor to the left for right bracket. The "
+"offset is applied for both the position we jump from and position we jump"
+" to. In other words, the cursor will continuously jump inside the "
+"brackets but won't reach them by 1 character. The input function is "
+"useful to emulate ``ib`` vi text object. The following brackets are "
+"considered: ``([{}])``"
+msgstr ""
+"``jump-to-matching-bracket`` "
+"と同様ですが、開き括弧の場合は右へ、閉じ括弧の場合は左へカーソルをオフセットします。このオフセットはジャンプ元とジャンプ先の両方に適用されます。言い換えれば、カーソルは常に括弧の内側でジャンプし、括弧の"
+" 1 文字手前で止まります。この入力用関数は、vi のテキストオブジェクト ``ib`` をエミュレートするのに便利です。対象となる括弧は "
+"``([{}])`` です。"
+
+#: ../../doc_src/cmds/bind.rst:337
+msgid "``kill-token``"
+msgstr "``kill-token``"
+
+#: ../../doc_src/cmds/bind.rst:338
+msgid "move the next argument to the killring"
+msgstr "次の引数(トークン)をキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:340
+msgid "``kill-line``"
+msgstr "``kill-line``"
+
+#: ../../doc_src/cmds/bind.rst:341
+msgid "move everything from the cursor to the end of the line to the killring"
+msgstr "カーソル位置から行末までのすべてをキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:343
+msgid "``kill-path-component``"
+msgstr "``kill-path-component``"
+
+#: ../../doc_src/cmds/bind.rst:344
+msgid ""
+"move one :ref:`path component <cmd-bind-backward-kill-path-component>` to"
+" the killring."
+msgstr ":ref:`パス構成要素 <cmd-bind-backward-kill-path-component>` を 1 つキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:346
+msgid "``kill-selection``"
+msgstr "``kill-selection``"
+
+#: ../../doc_src/cmds/bind.rst:347
+msgid "move the selected text to the killring"
+msgstr "選択されたテキストをキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:349
+msgid "``kill-whole-line``"
+msgstr "``kill-whole-line``"
+
+#: ../../doc_src/cmds/bind.rst:350
+msgid ""
+"move the line (including the following newline) to the killring. If the "
+"line is the last line, its preceding newline is also removed"
+msgstr "行全体(後に続く改行を含む)をキルリングへ移動します。その行が最終行である場合は、前にある改行も削除されます。"
+
+#: ../../doc_src/cmds/bind.rst:352
+msgid "``kill-inner-line``"
+msgstr "``kill-inner-line``"
+
+#: ../../doc_src/cmds/bind.rst:353
+msgid "move the line (without the following newline) to the killring"
+msgstr "行全体(後に続く改行を含まない)をキルリングへ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:355
+msgid "``kill-word``"
+msgstr "``kill-word``"
+
+#: ../../doc_src/cmds/bind.rst:356
+msgid ""
+"move the next word to the killring, stopping after the end of the killed "
+"word"
+msgstr "次の単語をキルリングへ移動し、削除された単語の末尾の直後で止まります。"
+
+#: ../../doc_src/cmds/bind.rst:358
+msgid "``kill-word-vi``"
+msgstr "``kill-word-vi``"
+
+#: ../../doc_src/cmds/bind.rst:359
+msgid ""
+"move the next word to the killring, stopping at the start of the next "
+"word (like vim's ``dw``)"
+msgstr "次の単語をキルリングへ移動し、次の単語の先頭で止まります(vim の ``dw`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:361
+msgid "``kill-bigword``"
+msgstr "``kill-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:362
+msgid ""
+"move the next whitespace-delimited word to the killring, stopping after "
+"the end of the current word"
+msgstr "次の空白区切りの単語(bigword)をキルリングへ移動し、現在の単語の末尾の直後で止まります。"
+
+#: ../../doc_src/cmds/bind.rst:364
+msgid "``kill-bigword-vi``"
+msgstr "``kill-bigword-vi``"
+
+#: ../../doc_src/cmds/bind.rst:365
+msgid ""
+"move the next whitespace-delimited word to the killring, stopping at the "
+"start of the next word (like vim's ``dW``)"
+msgstr "次の空白区切りの単語(bigword)をキルリングへ移動し、次の単語の先頭で止まります(vim の ``dW`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:367
+msgid "``kill-inner-word``"
+msgstr "``kill-inner-word``"
+
+#: ../../doc_src/cmds/bind.rst:368
+msgid "delete the word under the cursor (like vim's ``diw``)"
+msgstr "カーソル下の単語を削除します(vim の ``diw`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:370
+msgid "``kill-inner-bigword``"
+msgstr "``kill-inner-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:371
+msgid "delete the whitespace-delimited word under the cursor (like vim's ``diW``)"
+msgstr "カーソル下の空白区切りの単語(bigword)を削除します(vim の ``diW`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:373
+msgid "``kill-a-word``"
+msgstr "``kill-a-word``"
+
+#: ../../doc_src/cmds/bind.rst:374
+msgid ""
+"delete the word under the cursor plus surrounding whitespace (like vim's "
+"``daw``)"
+msgstr "カーソル下の単語と、その周囲の空白を削除します(vim の ``daw`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:376
+msgid "``kill-a-bigword``"
+msgstr "``kill-a-bigword``"
+
+#: ../../doc_src/cmds/bind.rst:377
+msgid ""
+"delete the whitespace-delimited word under the cursor plus surrounding "
+"whitespace (like vim's ``daW``)"
+msgstr "カーソル下の空白区切りの単語(bigword)と、その周囲の空白を削除します(vim の ``daW`` と同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:379
+msgid "``nextd-or-forward-word``"
+msgstr "``nextd-or-forward-word``"
+
+#: ../../doc_src/cmds/bind.rst:380
+msgid ""
+"if the commandline is empty, then move forward in the directory history, "
+"otherwise move one word to the right; or if at the end of the "
+"commandline, accept one word from the current autosuggestion."
+msgstr ""
+"コマンドラインが空の場合はディレクトリ履歴を先に進み、空でない場合は 1 "
+"単語右へ移動します。コマンドラインの末尾にいる場合は、現在のオートサジェスチョンから 1 単語分を確定します。"
+
+#: ../../doc_src/cmds/bind.rst:383
+msgid "``or``"
+msgstr "``or``"
+
+#: ../../doc_src/cmds/bind.rst:384
+msgid ""
+"only execute the next function if the previous did not succeed (note: "
+"only some functions report failure)"
+msgstr "直前の関数が成功しなかった場合のみ、次の関数を実行します(Note: 失敗を報告する関数は一部のみです)。"
+
+#: ../../doc_src/cmds/bind.rst:386
+msgid "``pager-toggle-search``"
+msgstr "``pager-toggle-search``"
+
+#: ../../doc_src/cmds/bind.rst:387
+msgid ""
+"toggles the search field if the completions pager is visible; or if used "
+"after ``history-pager``, search forwards in time."
+msgstr ""
+"補完ページャが表示されている場合は検索フィールドの表示/非表示を切り替えます。 ``history-pager`` "
+"の後に使用された場合は、履歴を新しい方に向かって検索します。"
+
+#: ../../doc_src/cmds/bind.rst:389
+msgid "``prevd-or-backward-word``"
+msgstr "``prevd-or-backward-word``"
+
+#: ../../doc_src/cmds/bind.rst:390
+msgid ""
+"if the commandline is empty, then move backward in the directory history,"
+" otherwise move one word to the left"
+msgstr "コマンドラインが空の場合はディレクトリ履歴を遡り、空でない場合は 1 単語左へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:392
+msgid "``repaint``"
+msgstr "``repaint``"
+
+#: ../../doc_src/cmds/bind.rst:393
+msgid ""
+"reexecutes the prompt functions and redraws the prompt (also ``force-"
+"repaint`` for backwards-compatibility)"
+msgstr "プロンプト関数を再実行し、プロンプトを再描画します(後方互換性のための ``force-repaint`` も同様です)。"
+
+#: ../../doc_src/cmds/bind.rst:395
+msgid "``repaint-mode``"
+msgstr "``repaint-mode``"
+
+#: ../../doc_src/cmds/bind.rst:396
+msgid ""
+"reexecutes the :doc:`fish_mode_prompt <fish_mode_prompt>` and redraws the"
+" prompt. This is useful for vi mode. If no ``fish_mode_prompt`` exists or"
+" it prints nothing, it acts like a normal repaint."
+msgstr ""
+":doc:`fish_mode_prompt <fish_mode_prompt>` を再実行し、プロンプトを再描画します。これは vi "
+"モードで便利です。 ``fish_mode_prompt`` が存在しないか、何も出力しない場合は、通常の repaint と同様に動作します。"
+
+#: ../../doc_src/cmds/bind.rst:398
+msgid "``self-insert``"
+msgstr "``self-insert``"
+
+#: ../../doc_src/cmds/bind.rst:399
+msgid "inserts the matching sequence into the command line"
+msgstr "一致したシーケンスをコマンドラインに挿入します。"
+
+#: ../../doc_src/cmds/bind.rst:401
+msgid "``self-insert-notfirst``"
+msgstr "``self-insert-notfirst``"
+
+#: ../../doc_src/cmds/bind.rst:402
+msgid ""
+"inserts the matching sequence into the command line, unless the cursor is"
+" at the beginning"
+msgstr "カーソルが行頭にある場合を除き、一致したシーケンスをコマンドラインに挿入します。"
+
+#: ../../doc_src/cmds/bind.rst:404
+msgid "``get-key``"
+msgstr "``get-key``"
+
+#: ../../doc_src/cmds/bind.rst:405
+msgid ""
+"sets :envvar:`fish_key` to the key that was pressed to trigger this "
+"binding. Example use::"
+msgstr "このバインドをトリガーするために押されたキーを環境変数 :envvar:`fish_key` にセットします。使用例: "
+
+#: ../../doc_src/cmds/bind.rst:411
+msgid "``suppress-autosuggestion``"
+msgstr "``suppress-autosuggestion``"
+
+#: ../../doc_src/cmds/bind.rst:412
+msgid ""
+"remove the current autosuggestion. Returns true if there was a suggestion"
+" to remove."
+msgstr "現在のオートサジェスチョンを削除します。削除すべき提案があった場合は真(true)を返します。"
+
+#: ../../doc_src/cmds/bind.rst:414
+msgid "``swap-selection-start-stop``"
+msgstr "``swap-selection-start-stop``"
+
+#: ../../doc_src/cmds/bind.rst:415
+msgid "go to the other end of the highlighted text without changing the selection"
+msgstr "選択範囲を変更せずに、ハイライトされたテキストの反対側の端へ移動します。"
+
+#: ../../doc_src/cmds/bind.rst:417
+msgid "``transpose-chars``"
+msgstr "``transpose-chars``"
+
+#: ../../doc_src/cmds/bind.rst:418
+msgid "transpose two characters to the left of the cursor"
+msgstr "カーソルの左側にある 2 つの文字を入れ替えます。"
+
+#: ../../doc_src/cmds/bind.rst:420
+msgid "``transpose-words``"
+msgstr "``transpose-words``"
+
+#: ../../doc_src/cmds/bind.rst:421
+msgid "transpose two words to the left of the cursor"
+msgstr "カーソルの左側にある 2 つの単語を入れ替えます。"
+
+#: ../../doc_src/cmds/bind.rst:423
+msgid "``togglecase-char``"
+msgstr "``togglecase-char``"
+
+#: ../../doc_src/cmds/bind.rst:424
+msgid "toggle the capitalisation (case) of the character under the cursor"
+msgstr "カーソル下の文字の大文字・小文字を切り替えます。"
+
+#: ../../doc_src/cmds/bind.rst:426
+msgid "``togglecase-selection``"
+msgstr "``togglecase-selection``"
+
+#: ../../doc_src/cmds/bind.rst:427
+msgid "toggle the capitalisation (case) of the selection"
+msgstr "選択範囲の文字の大文字・小文字を切り替えます。"
+
+#: ../../doc_src/cmds/bind.rst:429
+msgid "``insert-line-under``"
+msgstr "``insert-line-under``"
+
+#: ../../doc_src/cmds/bind.rst:430
+msgid "add a new line under the current line"
+msgstr "現在の行の下に新しい行を追加します。"
+
+#: ../../doc_src/cmds/bind.rst:432
+msgid "``insert-line-over``"
+msgstr "``insert-line-over``"
+
+#: ../../doc_src/cmds/bind.rst:433
+msgid "add a new line over the current line"
+msgstr "現在の行の上に新しい行を追加します。"
+
+#: ../../doc_src/cmds/bind.rst:435
+msgid "``up-line``"
+msgstr "``up-line``"
+
+#: ../../doc_src/cmds/bind.rst:436
+msgid "move up one line"
+msgstr "1 行上に移動します。"
+
+#: ../../doc_src/cmds/bind.rst:438
+msgid "``undo`` and ``redo``"
+msgstr "``undo`` および ``redo``"
+
+#: ../../doc_src/cmds/bind.rst:439
+msgid "revert or redo the most recent edits on the command line"
+msgstr "コマンドライン上の直近の編集を取り消す、またはやり直します。"
+
+#: ../../doc_src/cmds/bind.rst:441
+msgid "``upcase-word``"
+msgstr "``upcase-word``"
+
+#: ../../doc_src/cmds/bind.rst:442
+msgid "make the current word uppercase"
+msgstr "現在の単語を大文字にします。"
+
+#: ../../doc_src/cmds/bind.rst:444
+msgid "``yank``"
+msgstr "``yank``"
+
+#: ../../doc_src/cmds/bind.rst:445
+msgid "insert the latest entry of the killring into the buffer"
+msgstr "キルリングの最新の項目をバッファに挿入(貼り付け)します。"
+
+#: ../../doc_src/cmds/bind.rst:447
+msgid "``yank-pop``"
+msgstr "``yank-pop``"
+
+#: ../../doc_src/cmds/bind.rst:448
+msgid "rotate to the previous entry of the killring"
+msgstr "キルリングを回転させ、一つ前の項目を取り出します。"
+
+#: ../../doc_src/cmds/bind.rst:451
+msgid "Additional functions"
+msgstr "追加の関数"
+
+#: ../../doc_src/cmds/bind.rst:452
+msgid ""
+"The following functions are included as normal functions, but are "
+"particularly useful for input editing:"
+msgstr "以下の関数は通常の関数として含まれていますが、特に入力編集において有用です。"
+
+#: ../../doc_src/cmds/bind.rst:454
+msgid "``up-or-search`` and ``down-or-search``"
+msgstr "``up-or-search`` および ``down-or-search``"
+
+#: ../../doc_src/cmds/bind.rst:455
+msgid ""
+"move the cursor or search the history depending on the cursor position "
+"and current mode"
+msgstr "カーソル位置と現在のモードに応じて、カーソル移動または履歴検索を行います。"
+
+#: ../../doc_src/cmds/bind.rst:457
+msgid "``edit_command_buffer``"
+msgstr "``edit_command_buffer``"
+
+#: ../../doc_src/cmds/bind.rst:458
+msgid ""
+"open the visual editor (controlled by the :envvar:`VISUAL` or "
+":envvar:`EDITOR` environment variables) with the current command-line "
+"contents"
+msgstr ""
+"現在のコマンドラインの内容を保持した状態で、ビジュアルエディタ(環境変数 :envvar:`VISUAL` 、 :envvar:`EDITOR` "
+"で指定されたもの)を開きます。"
+
+#: ../../doc_src/cmds/bind.rst:460
+msgid "``fish_clipboard_copy``"
+msgstr "``fish_clipboard_copy``"
+
+#: ../../doc_src/cmds/bind.rst:461
+msgid "copy the current selection to the system clipboard"
+msgstr "現在の選択範囲をシステムクリップボードにコピーします。"
+
+#: ../../doc_src/cmds/bind.rst:463
+msgid "``fish_clipboard_paste``"
+msgstr "``fish_clipboard_paste``"
+
+#: ../../doc_src/cmds/bind.rst:464
+msgid "paste the current selection from the system clipboard before the cursor"
+msgstr "システムクリップボードの現在の選択内容をカーソルの前に貼り付けます。"
+
+#: ../../doc_src/cmds/bind.rst:466
+msgid "``fish_commandline_append``"
+msgstr "``fish_commandline_append``"
+
+#: ../../doc_src/cmds/bind.rst:467
+msgid ""
+"append the argument to the command-line. If the command-line already ends"
+" with the argument, this removes the suffix instead. Starts with the last"
+" command from history if the command-line is empty."
+msgstr "引数をコマンドラインの末尾に追加します。コマンドラインがすでにその引数で終わっている場合は、代わりにその末尾部分を削除します。コマンドラインが空の場合は、履歴の最後のコマンドから開始します。"
+
+#: ../../doc_src/cmds/bind.rst:469
+msgid "``fish_commandline_prepend``"
+msgstr "``fish_commandline_prepend``"
+
+#: ../../doc_src/cmds/bind.rst:470
+msgid ""
+"prepend the argument to the command-line. If the command-line already "
+"starts with the argument, this removes the prefix instead. Starts with "
+"the last command from history if the command-line is empty."
+msgstr "引数をコマンドラインの先頭に追加します。コマンドラインがすでにその引数で始まっている場合は、代わりにその先頭部分を削除します。コマンドラインが空の場合は、履歴の最後のコマンドから開始します。"
+
+#: ../../doc_src/cmds/bind.rst:473
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/bind.rst:475
+msgid "Exit the shell when :kbd:`ctrl-d` is pressed::"
+msgstr ":kbd:`ctrl-d` が押されたときにシェルを終了するようにします。::"
+
+#: ../../doc_src/cmds/bind.rst:479
+msgid "Perform a history search when :kbd:`pageup` is pressed::"
+msgstr ":kbd:`pageup` が押されたときに履歴検索を実行するようにします。::"
+
+#: ../../doc_src/cmds/bind.rst:483
+msgid ""
+"Turn on :ref:`vi key bindings <vi-mode>` and rebind :kbd:`ctrl-c` to "
+"clear the input line::"
+msgstr ":ref:`vi キーバインド <vi-mode>` を有効にし、 :kbd:`ctrl-c` を入力行の消去に再割り当てします。::"
+
+#: ../../doc_src/cmds/bind.rst:488
+msgid ""
+"Launch ``git diff`` and repaint the commandline afterwards when "
+":kbd:`ctrl-g` is pressed::"
+msgstr ":kbd:`ctrl-g` が押されたときに ``git diff`` を実行し、その後にコマンドラインを再描画します。::"
+
+#: ../../doc_src/cmds/bind.rst:492
+msgid ""
+"Swap :kbd:`tab` and :kbd:`shift-tab`, making tab focus the search field. "
+"But if the search field is already active, keep the behavior (:kbd:`tab` "
+"cycles forward, :kbd:`shift-tab` backward).::"
+msgstr ""
+":kbd:`tab` と :kbd:`shift-tab` を入れ替え、tab "
+"キーで検索フィールドにフォーカスするようにします。ただし、すでに検索フィールドがアクティブな場合は、元の挙動(:kbd:`tab` で次へ、 "
+":kbd:`shift-tab` で前へ)を維持します。::"
+
+#: ../../doc_src/cmds/bind.rst:513
+msgid "Terminal Limitations"
+msgstr "ターミナルの制限"
+
+#: ../../doc_src/cmds/bind.rst:515
+msgid ""
+"Unix terminals, like the ones fish operates in, are at heart 70s "
+"technology. They have some limitations that applications running inside "
+"them can't workaround."
+msgstr ""
+"fish が動作する Unix ターミナルは、その根幹において 70 "
+"年代の技術です。そのため、内部で実行されるアプリケーション側では回避できない制限がいくつか存在します。"
+
+#: ../../doc_src/cmds/bind.rst:517
+msgid ""
+"For instance, historically the control key modifies a character by "
+"setting the top three bits to 0. This means:"
+msgstr "例えば歴史的に、コントロールキーは上位 3 ビットを 0 に設定することで文字を修飾します。これは以下のことを意味します。"
+
+#: ../../doc_src/cmds/bind.rst:519
+msgid ""
+"Many characters + control are indistinguishable from other keys: "
+":kbd:`ctrl-i` *is* :kbd:`tab`, :kbd:`ctrl-j` *is* newline (``\\n``)."
+msgstr ""
+"多くの文字とコントロールキーの組み合わせは、他のキーと区別がつきません。例:  :kbd:`ctrl-i` は :kbd:`tab` "
+"と「同じ」であり、 :kbd:`ctrl-j` は改行(``\\n``)と「同じ」です。"
+
+#: ../../doc_src/cmds/bind.rst:520
+msgid ""
+"Control and shift don't work simultaneously - :kbd:`ctrl-X` is the same "
+"as :kbd:`ctrl-x`."
+msgstr "コントロールキーとシフトキーは同時には機能しません。 :kbd:`ctrl-X` は :kbd:`ctrl-x` と同一です。"
+
+#: ../../doc_src/cmds/bind.rst:522
+msgid ""
+"Other keys don't have a direct encoding, and are sent as escape "
+"sequences. For example :kbd:`right` (``→``) usually sends ``\\e\\[C``."
+msgstr ""
+"その他のキーには直接的なエンコーディングがなく、エスケープシーケンスとして送信されます。例えば、右矢印キー(:kbd:`right`, "
+"``→``)は通常 ``\\e\\[C`` を送信します。"
+
+#: ../../doc_src/cmds/bind.rst:524
+msgid ""
+"Some modern terminals support newer encodings for keys, that allow "
+"distinguishing more characters and modifiers, and fish enables as many of"
+" these as it can, automatically."
+msgstr ""
+"一部のモダンなターミナルは、より多くの文字や修飾キーを区別できる新しいキーエンコーディングをサポートしており、fish "
+"は可能な限りそれらを自動的に有効にします。"
+
+#: ../../doc_src/cmds/bind.rst:526
+msgid ""
+"When in doubt, run :doc:`fish_key_reader`. If that tells you that "
+"pressing :kbd:`ctrl-i` sends tab, your terminal does not support these "
+"better encodings, and so fish is limited to what it sends."
+msgstr ""
+"確信が持てない場合は、 :doc:`fish_key_reader` を実行してください。もし :kbd:`ctrl-i` を押したときに tab"
+" が送信されると表示されるなら、お使いのターミナルは新しいエンコーディングをサポートしておらず、fish "
+"はターミナルから送られてくる情報に制限されることになります。"
+
+#: ../../doc_src/cmds/bind.rst:531
+msgid "Key timeout"
+msgstr "キーのタイムアウト"
+
+#: ../../doc_src/cmds/bind.rst:533
+msgid ""
+"When you've bound a sequence of multiple characters, there is always the "
+"possibility that fish has only seen a part of it, and then it needs to "
+"disambiguate between the full sequence and part of it."
+msgstr ""
+"複数の文字からなるシーケンスをバインドした場合、fish "
+"がその一部しか受信していない可能性が常にあります。その際、完全なシーケンスなのか、その一部なのかを判別する必要があります。"
+
+#: ../../doc_src/cmds/bind.rst:535
+msgid "For example::"
+msgstr "例::"
+
+#: ../../doc_src/cmds/bind.rst:540
+msgid ""
+"will bind the sequence ``jk`` to insert \"foo\" into the commandline. "
+"When you've only pressed \"j\", fish doesn't know if it should insert the"
+" \"j\" (because of the default self-insert), or wait for the \"k\"."
+msgstr ""
+"これは ``jk`` というシーケンスに、コマンドラインへの \"foo\" の挿入をバインドします。 \"j\" だけが押されたとき、fish "
+"は(デフォルトの self-insert に従って) \"j\" を挿入すべきか、それとも \"k\" を待つべきか判断できません。"
+
+#: ../../doc_src/cmds/bind.rst:542
+msgid ""
+"You can enable a timeout for this, by setting the "
+":envvar:`fish_sequence_key_delay_ms` variable to the timeout in "
+"milliseconds. If the timeout elapses, fish will no longer wait for the "
+"sequence to be completed, and do what it can with the characters it "
+"already has."
+msgstr ""
+"これにはタイムアウトを有効にできます。 :envvar:`fish_sequence_key_delay_ms` "
+"変数にミリ秒単位でタイムアウト時間を設定してください。タイムアウト時間を過ぎると、fish "
+"はシーケンスの完了を待つのをやめ、すでに受け取っている文字で可能な処理を行います。"
+
+#: ../../doc_src/cmds/bind.rst:544
+msgid ""
+"The escape key is a special case, because it can be used standalone as a "
+"real key or as part of a longer escape sequence, like function or arrow "
+"keys. Holding alt and something else also typically sends escape, for "
+"example holding alt+a will send an escape character and then an \"a\". So"
+" the escape character has its own timeout configured with "
+":envvar:`fish_escape_delay_ms`."
+msgstr ""
+"Escape "
+"キーは特殊なケースです。単独のキーとしても使われますが、ファンクションキーや矢印キーなどの長いエスケープシーケンスの一部としても使われるからです。また、Alt"
+" キーと他のキーを同時に押すと(例: Alt+a)、通常はエスケープ文字に続いて \"a\" が送信されます。そのため、エスケープ文字には "
+":envvar:`fish_escape_delay_ms` で設定される独自のタイムアウトが用意されています。"
+
+#: ../../doc_src/cmds/bind.rst:546
+msgid "See also :ref:`Key sequences <interactive-key-sequences>`."
+msgstr ":ref:`キーシーケンス <interactive-key-sequences>` も参照してください。"

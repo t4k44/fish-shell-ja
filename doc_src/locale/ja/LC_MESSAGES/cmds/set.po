@@ -1,0 +1,505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/set.rst:2
+msgid "set - display and change shell variables"
+msgstr "set - シェル変数の表示と変更"
+
+#: ../../doc_src/cmds/set.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/set.rst:20
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/set.rst:22
+msgid "``set`` manipulates :ref:`shell variables <variables>`."
+msgstr "``set`` は :ref:`シェル変数 <variables>` を操作します。"
+
+#: ../../doc_src/cmds/set.rst:24
+msgid ""
+"If both *NAME* and *VALUE* are provided, ``set`` assigns any values to "
+"variable *NAME*. Variables in fish are :ref:`lists <variables-lists>`, "
+"multiple values are allowed. One or more variable *INDEX* can be "
+"specified including ranges (not for all options.)"
+msgstr ""
+"*NAME* (変数名)と *VALUE* (値)の両方が指定された場合、 ``set`` はその値を変数 *NAME* に代入します。"
+"fish の変数は :ref:`リスト <variables-lists>` であるため、複数の値を保持できます。"
+"範囲指定を含む 1 つ以上の変数 *INDEX* (インデックス)を指定することも可能です(一部のオプションを除く)。"
+
+#: ../../doc_src/cmds/set.rst:28
+msgid "If no *VALUE* is given, the variable will be set to the empty list."
+msgstr "*VALUE* が指定されない場合、その変数は空のリストに設定されます。"
+
+#: ../../doc_src/cmds/set.rst:30
+msgid ""
+"If ``set`` is ran without arguments, it prints the names and values of "
+"all shell variables in sorted order. Passing :ref:`scope <variables-"
+"scope>` or :ref:`export <variables-export>` flags allows filtering this "
+"to only matching variables, so ``set --local`` would only show local "
+"variables."
+msgstr ""
+"引数なしで ``set`` を実行すると、すべてのシェル変数の名前と値をソート順で表示します。"
+":ref:`スコープ <variables-scope>` や :ref:`エクスポート <variables-export>` フラグを渡すことで、"
+"表示対象をフィルタリングできます。例えば ``set --local`` はローカル変数のみを表示します。"
+
+#: ../../doc_src/cmds/set.rst:33
+msgid ""
+"With ``--erase`` and optionally a scope flag ``set`` will erase the "
+"matching variable (or the variable of that name in the smallest possible "
+"scope)."
+msgstr ""
+"``--erase`` を指定すると(必要に応じてスコープフラグを併用)、一致する変数を削除します"
+"(スコープ指定がない場合は、該当する名前を持つ最も狭いスコープの変数を削除します)。"
+
+#: ../../doc_src/cmds/set.rst:35
+msgid ""
+"With ``--show``, ``set`` will describe the given variable names, "
+"explaining how they have been defined - in which scope with which values "
+"and options."
+msgstr ""
+"``--show`` を指定すると、 ``set`` は指定された変数の詳細(どのスコープで、どのような値やオプションで定義されているか)を説明します。"
+
+#: ../../doc_src/cmds/set.rst:37
+msgid "The following options control variable scope:"
+msgstr "以下のオプションは変数のスコープを制御します。"
+
+#: ../../doc_src/cmds/set.rst:39
+msgid "**-U** or **--universal**"
+msgstr "**-U** 、 **--universal**"
+
+#: ../../doc_src/cmds/set.rst:40
+msgid ""
+"Sets a universal variable. The variable will be immediately available to "
+"all the user's ``fish`` instances on the machine, and will be persisted "
+"across restarts of the shell."
+msgstr ""
+"ユニバーサル変数を設定します。この変数は、そのマシン上のユーザーのすべての ``fish`` インスタンスですぐに利用可能になり、"
+"シェルの再起動後も保持されます。"
+
+#: ../../doc_src/cmds/set.rst:43
+msgid "**-f** or **--function**"
+msgstr "**-f** 、 **--function**"
+
+#: ../../doc_src/cmds/set.rst:44
+msgid ""
+"Sets a variable scoped to the executing function. It is erased when the "
+"function ends."
+msgstr "実行中の関数にスコープされた変数を設定します。関数が終了すると削除されます。"
+
+#: ../../doc_src/cmds/set.rst:47
+msgid "**-l** or **--local**"
+msgstr "**-l** 、 **--local**"
+
+#: ../../doc_src/cmds/set.rst:48
+msgid ""
+"Sets a locally-scoped variable in this block. It is erased when the block"
+" ends. Outside of a block, this is the same as **--function**."
+msgstr ""
+"現在のブロック内にローカルスコープの変数を設定します。ブロックが終了すると削除されます。"
+"ブロックの外側では、 **--function** と同じ動作になります。"
+
+#: ../../doc_src/cmds/set.rst:52
+msgid "**-g** or **--global**"
+msgstr "**-g** 、 **--global**"
+
+#: ../../doc_src/cmds/set.rst:53
+msgid ""
+"Sets a globally-scoped variable. Global variables are available to all "
+"functions running in the same shell. They can be modified or erased."
+msgstr ""
+"グローバルスコープの変数を設定します。グローバル変数は、同じシェル内で実行されているすべての関数から利用可能です。"
+"これらは変更や削除が可能です。"
+
+#: ../../doc_src/cmds/set.rst:57
+msgid "These options modify how variables operate:"
+msgstr "以下のオプションは変数の動作を変更します。"
+
+#: ../../doc_src/cmds/set.rst:59
+msgid "**--export** or **-x**"
+msgstr "**--export** 、 **-x**"
+
+#: ../../doc_src/cmds/set.rst:60
+msgid ""
+"Causes the specified shell variable to be exported to child processes "
+"(making it an \"environment variable\")."
+msgstr "指定されたシェル変数を子プロセスにエクスポートします(これにより「環境変数」となります)。"
+
+#: ../../doc_src/cmds/set.rst:62
+msgid "**--unexport** or **-u**"
+msgstr "**--unexport** 、 **-u**"
+
+#: ../../doc_src/cmds/set.rst:63
+msgid "Causes the specified shell variable to NOT be exported to child processes."
+msgstr "指定されたシェル変数を子プロセスにエクスポート**しない**ようにします。"
+
+#: ../../doc_src/cmds/set.rst:65
+msgid "**--path**"
+msgstr "**--path**"
+
+#: ../../doc_src/cmds/set.rst:66
+msgid ""
+"Treat specified variable as a :ref:`path variable <variables-path>`; "
+"variable will be split on colons (``:``) and will be displayed joined by "
+"colons when quoted (``echo \"$PATH\"``) or exported."
+msgstr ""
+"指定された変数を :ref:`パス変数 <variables-path>` として扱います。"
+"変数はコロン( ``:`` )で分割され、ダブルクォートで囲んで表示( ``echo \"$PATH\"`` )したり、"
+"エクスポートしたりする際にはコロンで結合されます。"
+
+#: ../../doc_src/cmds/set.rst:68
+msgid "**--unpath**"
+msgstr "**--unpath**"
+
+#: ../../doc_src/cmds/set.rst:69
+msgid ""
+"Causes variable to no longer be treated as a :ref:`path variable "
+"<variables-path>`. Note: variables ending in \"PATH\" are automatically "
+"path variables."
+msgstr ""
+"変数を :ref:`パス変数 <variables-path>` として扱わないようにします。"
+"注意: 名前が \"PATH\" で終わる変数は、自動的にパス変数として扱われます。"
+
+#: ../../doc_src/cmds/set.rst:72
+msgid "Further options:"
+msgstr "その他のオプション:"
+
+#: ../../doc_src/cmds/set.rst:74
+msgid "**-a** or **--append** *NAME* *VALUE* ..."
+msgstr "**-a** 、 **--append** *NAME* *VALUE* ..."
+
+#: ../../doc_src/cmds/set.rst:75
+msgid ""
+"Appends *VALUES* to the current set of values for variable **NAME**. Can "
+"be used with **--prepend** to both append and prepend at the same time. "
+"This cannot be used when assigning to a variable slice."
+msgstr ""
+"変数 **NAME** の現在の値セットの末尾に *VALUES* を追加します。"
+"**--prepend** と併用して、先頭と末尾に同時に値を追加することも可能です。"
+"変数のスライスに代入する場合には使用できません。"
+
+#: ../../doc_src/cmds/set.rst:79
+msgid "**-p** or **--prepend** *NAME* *VALUE* ..."
+msgstr "**-p** 、 **--prepend** *NAME* *VALUE* ..."
+
+#: ../../doc_src/cmds/set.rst:80
+msgid ""
+"Prepends *VALUES* to the current set of values for variable **NAME**. "
+"This can be used with **--append** to both append and prepend at the same"
+" time. This cannot be used when assigning to a variable slice."
+msgstr ""
+"変数 **NAME** の現在の値セットの先頭に *VALUES* を追加します。"
+"**--append** と併用して、先頭と末尾に同時に値を追加することも可能です。"
+"変数のスライスに代入する場合には使用できません。"
+
+#: ../../doc_src/cmds/set.rst:84
+msgid "**-e** or **--erase** *NAME*\\[*INDEX*\\]"
+msgstr "**-e** 、 **--erase** *NAME*\\[*INDEX*\\]"
+
+#: ../../doc_src/cmds/set.rst:85
+msgid ""
+"Causes the specified shell variables to be erased. Supports erasing from "
+"multiple scopes at once. Individual items in a variable at *INDEX* in "
+"brackets can be specified."
+msgstr ""
+"指定されたシェル変数を削除します。複数のスコープから一度に削除することも可能です。"
+"括弧内の *INDEX* を指定することで、変数内の特定の項目のみを削除できます。"
+
+#: ../../doc_src/cmds/set.rst:89
+msgid "**-q** or **--query** *NAME*\\[*INDEX*\\]"
+msgstr "**-q** 、 **--query** *NAME*\\[*INDEX*\\]"
+
+#: ../../doc_src/cmds/set.rst:90
+msgid ""
+"Test if the specified variable names are defined. If an *INDEX* is "
+"provided, check for items at that slot. With a given scope (like "
+"**--global**) or attribute (like **--export** or **--path**) check only "
+"variables that match. Does not output anything, but the shell status is "
+"set to the number of variables specified that were not defined, up to a "
+"maximum of 255. If no variable was given, it also returns 255."
+msgstr ""
+"指定された変数名が定義されているかどうかをテストします。 *INDEX* が指定されている場合は、そのスロットに項目があるかを確認します。"
+"特定のスコープ( **--global** など)や属性( **--export** や **--path** など)が指定された場合は、"
+"それらに一致する変数のみをチェックします。何も出力しませんが、終了ステータスには、定義されていなかった変数の数が"
+"最大 255 まで設定されます。変数が指定されなかった場合も 255 を返します。"
+
+#: ../../doc_src/cmds/set.rst:96
+msgid "**-n** or **--names**"
+msgstr "**-n** 、 **--names**"
+
+#: ../../doc_src/cmds/set.rst:97
+msgid ""
+"List only the names of all defined variables, not their value. The names "
+"are guaranteed to be sorted."
+msgstr ""
+"定義されているすべての変数の名前のみを表示し、値は表示しません。名前は必ずソートされた状態で表示されます。"
+
+#: ../../doc_src/cmds/set.rst:100
+msgid "**-S** or **--show**"
+msgstr "**-S** 、 **--show**"
+
+#: ../../doc_src/cmds/set.rst:101
+msgid ""
+"Shows information about the given variables. If no variable names are "
+"given then all variables are shown in sorted order. It shows the scopes "
+"the given variables are set in, along with the values in each and whether"
+" or not it is exported. No other flags can be used with this option."
+msgstr ""
+"指定された変数に関する情報を表示します。変数名が指定されない場合は、すべての変数がソート順で表示されます。"
+"指定された変数が設定されているスコープ、それぞれの値、およびエクスポートされているかどうかが表示されます。"
+"このオプションと他のフラグを併用することはできません。"
+
+#: ../../doc_src/cmds/set.rst:106
+msgid "**--no-event**"
+msgstr "**--no-event**"
+
+#: ../../doc_src/cmds/set.rst:107
+msgid ""
+"Don't generate a variable change event when setting or erasing a "
+"variable. We recommend using this carefully because the event handlers "
+"are usually set up for a reason. Possible uses include modifying the "
+"variable inside a variable handler."
+msgstr ""
+"変数の設定または削除時に、変数の変更イベントを発生させません。イベントハンドラには通常、設定されている理由があるため、"
+"このオプションの使用には注意が必要です。変数ハンドラ内でその変数自体を書き換える場合などに利用されます。"
+
+#: ../../doc_src/cmds/set.rst:111
+msgid "**-L** or **--long**"
+msgstr "**-L** 、 **--long**"
+
+#: ../../doc_src/cmds/set.rst:112
+msgid "Do not abbreviate long values when printing set variables."
+msgstr "設定されている変数を表示する際、長い値を省略せずに表示します。"
+
+#: ../../doc_src/cmds/set.rst:114
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/set.rst:115
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/set.rst:117
+msgid ""
+"If a variable is set to more than one value, the variable will be a list "
+"with the specified elements. If a variable is set to zero elements, it "
+"will become a list with zero elements."
+msgstr ""
+"変数に複数の値が設定された場合、その変数は指定された要素を持つリストになります。"
+"要素数が 0 の場合、その変数は要素数 0 のリストになります。"
+
+#: ../../doc_src/cmds/set.rst:120
+msgid ""
+"If the variable name is one or more list elements, such as ``PATH[1 3 "
+"7]``, only those list elements specified will be changed. If you specify "
+"a negative index when expanding or assigning to a list variable, the "
+"index will be calculated from the end of the list. For example, the index"
+" -1 means the last index of a list."
+msgstr ""
+"``PATH[1 3 7]`` のように、変数名として 1 つ以上のリスト要素を指定した場合、指定された要素のみが変更されます。"
+"リスト変数の展開や代入時に負のインデックスを指定した場合、リストの末尾から計算されます。"
+"例えば、インデックス -1 はリストの最後の要素を指します。"
+
+#: ../../doc_src/cmds/set.rst:124
+msgid "The scoping rules when creating or updating a variable are:"
+msgstr "変数を作成または更新する際のスコープ規則は以下の通りです。"
+
+#: ../../doc_src/cmds/set.rst:126
+msgid ""
+"Variables may be explicitly set as universal, global, function, or local."
+" Variables with the same name but in a different scope will not be "
+"changed."
+msgstr ""
+"変数は、ユニバーサル、グローバル、関数、またはローカルとして明示的に設定できます。"
+"同じ名前であっても、異なるスコープにある変数は変更されません。"
+
+#: ../../doc_src/cmds/set.rst:129
+msgid ""
+"If the scope of a variable is not explicitly set *but a variable by that "
+"name has been previously defined*, the scope of the existing variable is "
+"used. If the variable is already defined in multiple scopes, the variable"
+" with the narrowest scope will be updated."
+msgstr ""
+"変数のスコープが明示的に設定されていない場合でも、 *同じ名前の変数が既に定義されている* ならば、"
+"既存の変数のスコープが使用されます。複数のスコープで定義されている場合は、最も狭いスコープの変数が更新されます。"
+
+#: ../../doc_src/cmds/set.rst:132
+msgid ""
+"If a variable's scope is not explicitly set and there is no existing "
+"variable by that name, the variable will be local to the currently "
+"executing function. Note that this is different from using the ``-l`` or "
+"``--local`` flag, in which case the variable will be local to the most-"
+"inner currently executing block, while without them the variable will be "
+"local to the function as a whole. If no function is executing, the "
+"variable will be set in the global scope."
+msgstr ""
+"変数のスコープが明示的に設定されておらず、かつ同じ名前の変数が存在しない場合、その変数は現在実行中の関数に対して"
+"ローカルになります。これは ``-l`` や ``--local`` フラグを使用した場合とは異なることに注意してください。"
+"フラグを使用した場合は「現在実行中の最も内側のブロック」に対してローカルになりますが、フラグなしの場合は"
+"「関数全体」に対してローカルになります。実行中の関数がない場合、変数はグローバルスコープで設定されます。"
+
+#: ../../doc_src/cmds/set.rst:137
+msgid ""
+"The exporting rules when creating or updating a variable are identical to"
+" the scoping rules for variables:"
+msgstr ""
+"変数を作成または更新する際のエクスポート(エクスポート属性)規則は、変数のスコープ規則と同様です。"
+
+#: ../../doc_src/cmds/set.rst:139
+msgid ""
+"Variables may be explicitly set to either exported or not exported. When "
+"an exported variable goes out of scope, it is unexported."
+msgstr ""
+"変数は、エクスポートするかしないかを明示的に設定できます。エクスポートされた変数がスコープ外になると、"
+"そのエクスポートは解除されます。"
+
+#: ../../doc_src/cmds/set.rst:142
+msgid ""
+"If a variable is not explicitly set to be exported or not exported, but "
+"has been previously defined, the previous exporting rule for the variable"
+" is kept."
+msgstr ""
+"エクスポート設定が明示的に行われていない場合でも、既に定義されている変数の場合は、以前のエクスポート設定が維持されます。"
+
+#: ../../doc_src/cmds/set.rst:144
+msgid ""
+"If a variable is not explicitly set to be either exported or unexported "
+"and has never before been defined, the variable will not be exported."
+msgstr "明示的な設定がなく、かつ新規に作成される変数の場合、その変数はエクスポートされません。"
+
+#: ../../doc_src/cmds/set.rst:146
+msgid ""
+"In query mode, the scope to be examined can be specified. Whether the "
+"variable has to be a path variable or exported can also be specified."
+msgstr ""
+"照会(query)モードでは、調査対象のスコープを指定できます。また、パス変数である必要があるか、"
+"またはエクスポートされている必要があるかも指定可能です。"
+
+#: ../../doc_src/cmds/set.rst:149
+msgid ""
+"In erase mode, if variable indices are specified, only the specified "
+"slices of the list variable will be erased."
+msgstr "削除(erase)モードで変数インデックスが指定された場合、リスト変数の指定されたスライスのみが削除されます。"
+
+#: ../../doc_src/cmds/set.rst:151
+msgid ""
+"``set`` requires all options to come before any other arguments. For "
+"example, ``set flags -l`` will have the effect of setting the value of "
+"the variable :envvar:`flags` to '-l', not making the variable local."
+msgstr ""
+"``set`` では、すべてのオプションを他のどの引数よりも前に配置する必要があります。"
+"例えば、 ``set flags -l`` とすると、変数 :envvar:`flags` の値に '-l' が設定されるだけで、"
+"変数がローカルになるわけではありません。"
+
+#: ../../doc_src/cmds/set.rst:155
+msgid "Exit status"
+msgstr "終了ステータス"
+
+#: ../../doc_src/cmds/set.rst:157
+msgid ""
+"In assignment mode, ``set`` does not modify the exit status, but passes "
+"along whatever :envvar:`status` was set, including by command "
+"substitutions. This allows capturing the output and exit status of a "
+"subcommand, like in ``if set output (command)``."
+msgstr ""
+"代入(assignment)モードでは、 ``set`` は終了ステータスを変更せず、コマンド置換などによって設定された"
+"既存の :envvar:`status` をそのまま引き継ぎます。これにより、 ``if set output (command)`` "
+"のようにサブコマンドの出力と終了ステータスの両方をキャプチャすることが可能になります。"
+
+#: ../../doc_src/cmds/set.rst:160
+msgid ""
+"In query mode, the exit status is the number of variables that were not "
+"found."
+msgstr "照会モードにおける終了ステータスは、見つからなかった変数の数になります。"
+
+#: ../../doc_src/cmds/set.rst:162
+msgid ""
+"In erase mode, ``set`` exits with a zero exit status in case of success, "
+"with a non-zero exit status if the commandline was invalid, if any of the"
+" variables did not exist or was a :ref:`special read-only variable "
+"<variables-special>`."
+msgstr ""
+"削除モードでは、成功した場合は 0 を返し、コマンドラインが無効な場合、指定した変数が存在しない場合、"
+"あるいは指定した変数が :ref:`特殊な読み取り専用変数 <variables-special>` である場合は 0 以外を返します。"
+
+#: ../../doc_src/cmds/set.rst:166
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/set.rst:168
+msgid "Print all global, exported variables::"
+msgstr "すべてのグローバルかつエクスポートされた変数を表示する: "
+
+#: ../../doc_src/cmds/set.rst:172
+msgid "Set the value of the variable _$foo_ to be 'hi'.::"
+msgstr "変数 $foo の値に 'hi' を設定する: "
+
+#: ../../doc_src/cmds/set.rst:176
+msgid "Append the value \"there\" to the variable $foo::"
+msgstr "変数 $foo の末尾に \"there\" を追加する: "
+
+#: ../../doc_src/cmds/set.rst:180
+msgid "Remove _$smurf_ from the scope::"
+msgstr "スコープから $smurf を削除する: "
+
+#: ../../doc_src/cmds/set.rst:184
+msgid "Remove _$smurf_ from the global and universal scopes::"
+msgstr "グローバルおよびユニバーサルスコープから $smurf を削除する: "
+
+#: ../../doc_src/cmds/set.rst:188
+msgid "Change the fourth element of the $PATH list to ~/bin::"
+msgstr "$PATH リストの 4 番目の要素を ~/bin に変更する: "
+
+#: ../../doc_src/cmds/set.rst:192
+msgid "Outputs the path to Python if ``type -p`` returns true::"
+msgstr "``type -p`` が真を返した場合、Python へのパスを出力する: "
+
+#: ../../doc_src/cmds/set.rst:198
+msgid ""
+"Setting a variable doesn't modify $status; a command substitution still "
+"will, though::"
+msgstr ""
+"変数への代入自体は $status を変更しませんが、コマンド置換は変更します: "
+
+#: ../../doc_src/cmds/set.rst:211
+msgid ""
+"``VAR=VALUE command`` sets a variable for just one command, like other "
+"shells. This runs fish with a temporary home directory::"
+msgstr ""
+"``VAR=VALUE command`` という形式で、他のシェルと同様に 1 つのコマンドに対してのみ変数を設定できます。"
+"以下の例では、一時的なホームディレクトリで fish を実行します: "
+
+#: ../../doc_src/cmds/set.rst:216
+msgid "(which is essentially the same as)::"
+msgstr "(これは実質的に以下と同じです): "
+
+#: ../../doc_src/cmds/set.rst:221
+msgid "Notes"
+msgstr "備考"
+
+#: ../../doc_src/cmds/set.rst:222
+msgid ""
+"Fish versions prior to 3.0 supported the syntax ``set PATH[1] PATH[4] "
+"/bin /sbin``, which worked like ``set PATH[1 4] /bin /sbin``."
+msgstr ""
+"3.0 より前のバージョンの fish では、 ``set PATH[1] PATH[4] /bin /sbin`` という構文をサポートしていました。"
+"これは ``set PATH[1 4] /bin /sbin`` と同様に動作していました。"
+

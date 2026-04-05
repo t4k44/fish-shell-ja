@@ -1,0 +1,654 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/math.rst:2
+msgid "math - perform mathematics calculations"
+msgstr "math - 数学計算を実行する"
+
+#: ../../doc_src/cmds/math.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/math.rst:13
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/math.rst:15
+msgid ""
+"``math`` performs mathematical calculations. It supports simple "
+"operations such as addition, subtraction, and so on, as well as functions"
+" like ``abs()``, ``sqrt()`` and ``ln()``."
+msgstr ""
+"``math`` は数学計算を実行します。加算、減算などの単純な演算に加えて、 ``abs()`` 、 ``sqrt()`` 、 ``ln()``"
+" などの関数をサポートしています。"
+
+#: ../../doc_src/cmds/math.rst:18
+msgid ""
+"By default, the output shows up to 6 decimal places. To change the number"
+" of decimal places, use the ``--scale`` option, including ``--scale=0`` "
+"for integer output."
+msgstr ""
+"デフォルトでは、結果は小数点以下 6 桁まで表示されます。小数点以下の桁数を変更するには、 ``--scale`` "
+"オプションを使用します。整数で出力する場合は ``--scale=0`` を指定します。"
+
+#: ../../doc_src/cmds/math.rst:21
+msgid ""
+"Keep in mind that parameter expansion happens before expressions are "
+"evaluated. This can be very useful in order to perform calculations "
+"involving shell variables or the output of command substitutions, but it "
+"also means that parenthesis (``()``) and the asterisk (``*``) glob "
+"character have to be escaped or quoted. ``x`` can also be used to denote "
+"multiplication, but it needs to be followed by whitespace to distinguish "
+"it from hexadecimal numbers."
+msgstr ""
+"式の評価よりも前にパラメータ展開が行われる点に注意してください。これはシェル変数やコマンド置換の結果を用いた計算を行う際に非常に便利ですが、同時に括弧("
+" ``()`` )やアスタリスク( ``*`` )のグロブ文字をエスケープするか引用符で囲む必要があることも意味します。乗算を表すために "
+"``x`` を使用することもできますが、16 進数と区別するために後ろに空白を入れる必要があります。"
+
+#: ../../doc_src/cmds/math.rst:25
+msgid ""
+"Parentheses for functions are optional - ``math sin pi`` prints ``0``. "
+"However, a comma will bind to the inner function, so ``math pow sin 3, "
+"5`` is an error because it tries to give ``sin`` the arguments ``3`` and "
+"``5``. When in doubt, use parentheses."
+msgstr ""
+"関数の括弧は省略可能です。例えば ``math sin pi`` は ``0`` を出力します。ただし、カンマは内側の関数に結合するため、 "
+"``math pow sin 3, 5`` はエラーになります( ``sin`` に引数 ``3`` と ``5`` "
+"を渡そうとするため)。迷った場合は、括弧を使用してください。"
+
+#: ../../doc_src/cmds/math.rst:29
+msgid ""
+"``math`` ignores whitespace between arguments and takes its input as "
+"multiple arguments (internally joined with a space), so ``math 2 +2`` and"
+" ``math \"2 +    2\"`` work the same. ``math 2 2`` is an error."
+msgstr ""
+"``math`` は引数間の空白を無視し、入力を複数の引数として受け取ります(内部的にはスペースで結合されます)。"
+"そのため、 ``math 2 +2`` と ``math \"2 +    2\"`` は同じように動作します。"
+"ただし、 ``math 2 2`` (演算子がない状態)はエラーとなります。"
+
+#: ../../doc_src/cmds/math.rst:34
+msgid ""
+"math is a simple tool for simple uses, provided for convenience. It "
+"internally works with floats for simplicity of implementation and can't "
+"do a number of things real calculators can. If you find yourself limited "
+"by that, use a more full-featured tool."
+msgstr ""
+"math "
+"は利便性のために提供されている、簡単な用途向けのシンプルなツールです。実装を単純にするために内部で浮動小数点数(float)として処理されており、本格的な計算機ができることのすべてができるわけではありません。制限を感じる場合は、より多機能なツールを使用してください。"
+
+#: ../../doc_src/cmds/math.rst:37
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です。"
+
+#: ../../doc_src/cmds/math.rst:39
+msgid "**-s** *N* or **--scale** *N*"
+msgstr "**-s** *N* 、 **--scale** *N*"
+
+#: ../../doc_src/cmds/math.rst:40
+msgid ""
+"Sets the scale of the result. ``N`` must be an integer or the word "
+"\"max\" for the maximum scale. A scale of zero causes results to be "
+"truncated by default. Any non-integer component is thrown away. So "
+"``3/2`` returns ``1`` by default, rather than ``2`` which ``1.5`` would "
+"normally round to. This is for compatibility with ``bc`` which was the "
+"basis for this command prior to fish 3.0.0. Scale values greater than "
+"zero causes the result to be rounded using the usual rules to the "
+"specified number of decimal places."
+msgstr ""
+"結果のスケール(小数点以下の桁数)を設定します。 ``N`` は整数、または最大スケールを表す \"max\" である必要があります。スケールを "
+"0 に設定すると、デフォルトで結果は切り捨てられます。整数以外の部分は破棄されます。そのため、デフォルトの ``3/2`` は、 ``1.5`` "
+"の一般的な四捨五入結果である ``2`` ではなく ``1`` を返します。これは、fish 3.0.0 より前にこのコマンドのベースとなっていた"
+" ``bc`` との互換性を保つためです。スケール値が 0 "
+"より大きい場合、結果は一般的な規則(四捨五入など)に従って指定された桁数に丸められます。"
+
+#: ../../doc_src/cmds/math.rst:47
+msgid "**-b** *BASE* or **--base** *BASE*"
+msgstr "**-b** *BASE* 、 **--base** *BASE*"
+
+#: ../../doc_src/cmds/math.rst:48
+msgid ""
+"Sets the numeric base used for output (``math`` always understands "
+"hexadecimal numbers as input). It currently understands \"hex\" or \"16\""
+" for hexadecimal and \"octal\" or \"8\" for octal and implies a scale of "
+"0 (other scales cause an error), so it will truncate the result down to "
+"an integer. This might change in the future. Hex numbers will be printed "
+"with a ``0x`` prefix. Octal numbers will have a prefix of ``0`` but "
+"aren't understood by ``math`` as input."
+msgstr ""
+"出力に使用する数値の基数を設定します( ``math`` は入力としての 16 進数を常に理解します)。現在、16 進数として \"hex\" 、"
+" \"16\" 、8 進数として \"octal\" 、 \"8\" を指定できます。このオプションを指定するとスケールは強制的に 0 "
+"になり(他のスケールを指定するとエラーになります)、結果は切り捨てられて整数になります。この仕様は将来変更される可能性があります。16 進数は "
+"``0x`` プレフィックス付きで出力されます。8 進数は ``0`` プレフィックス付きで出力されますが、現在の ``math`` は 8 "
+"進数での入力を理解しません。"
+
+#: ../../doc_src/cmds/math.rst:54
+msgid "**-m** *MODE* or **--scale-mode** *MODE*"
+msgstr "**-m** *MODE* 、 **--scale-mode** *MODE*"
+
+#: ../../doc_src/cmds/math.rst:55
+msgid ""
+"Sets scale behavior. The ``MODE`` can be ``truncate``, ``round``, "
+"``floor``, ``ceiling``. The default value of scale mode is ``round`` with"
+" non zero scale and ``truncate`` with zero scale."
+msgstr ""
+"スケールの動作を設定します。 ``MODE`` には ``truncate`` (切り捨て)、 ``round`` (四捨五入)、 "
+"``floor`` (床関数/切り下げ)、 ``ceiling`` (天井関数/切り上げ)を指定できます。デフォルトのスケールモードは、スケールが"
+" 0 以外の場合は ``round`` 、スケールが 0 の場合は ``truncate`` です。"
+
+#: ../../doc_src/cmds/math.rst:59
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/math.rst:60
+msgid "Displays help about using this command."
+msgstr "このコマンドのヘルプを表示します。"
+
+#: ../../doc_src/cmds/math.rst:63
+msgid "Return Values"
+msgstr "戻り値"
+
+#: ../../doc_src/cmds/math.rst:65
+msgid ""
+"If the expression is successfully evaluated and doesn't over/underflow or"
+" return NaN the return ``status`` is zero (success) else one."
+msgstr ""
+"式の評価に成功し、オーバーフロー/アンダーフローが発生せず、かつ NaN(非数)を返さない場合、終了ステータスは "
+"0(成功)になります。それ以外の場合は 1 になります。"
+
+#: ../../doc_src/cmds/math.rst:68
+msgid "Syntax"
+msgstr "構文"
+
+#: ../../doc_src/cmds/math.rst:70
+msgid ""
+"``math`` knows some operators, constants, functions and can (obviously) "
+"read numbers."
+msgstr "``math`` はいくつかの演算子、定数、関数を認識し、(当然ながら)数値を読み取ることができます。"
+
+#: ../../doc_src/cmds/math.rst:72
+msgid ""
+"For numbers, ``.`` is always the radix character regardless of locale - "
+"``2.5``, not ``2,5``. Scientific notation (``10e5``) and hexadecimal "
+"(``0xFF``) are also available."
+msgstr ""
+"数値において、ロケールに関わらず基数文字(小数点)は常に ``.`` です( ``2,5`` ではなく ``2.5`` )。科学的記数法( "
+"``10e5`` )や16進数( ``0xFF`` )も利用可能です。"
+
+#: ../../doc_src/cmds/math.rst:75
+msgid ""
+"``math`` allows you to use underscores as visual separators for digit "
+"grouping. For example, you can write ``1_000_000``, ``0x_89_AB_CD_EF``, "
+"and ``1.234_567_e89``."
+msgstr ""
+"``math`` では、数字をグループ化して見やすくするためのセパレータとしてアンダースコアを使用できます。例えば、 ``1_000_000`` "
+"、 ``0x_89_AB_CD_EF`` 、 ``1.234_567_e89`` と記述できます。"
+
+#: ../../doc_src/cmds/math.rst:78
+msgid "Operators"
+msgstr "演算子"
+
+#: ../../doc_src/cmds/math.rst:80
+msgid "``math`` knows the following operators:"
+msgstr "``math`` は以下の演算子を認識します。"
+
+#: ../../doc_src/cmds/math.rst:82
+msgid "``+``"
+msgstr "``+``"
+
+#: ../../doc_src/cmds/math.rst:83
+msgid "for addition"
+msgstr "加算"
+
+#: ../../doc_src/cmds/math.rst:84
+msgid "``-``"
+msgstr "``-``"
+
+#: ../../doc_src/cmds/math.rst:85
+msgid "for subtraction"
+msgstr "減算"
+
+#: ../../doc_src/cmds/math.rst:86
+msgid "``*`` or ``x``"
+msgstr "``*`` 、 ``x``"
+
+#: ../../doc_src/cmds/math.rst:87
+msgid ""
+"for multiplication. ``*`` is the glob character and needs to be quoted or"
+" escaped, ``x`` needs to be followed by whitespace or it looks like "
+"``0x`` hexadecimal notation."
+msgstr ""
+"乗算。 ``*`` はグロブ文字であるため、引用符で囲むかエスケープする必要があります。 ``x`` は、後ろに空白を入れないと16進数表記の "
+"``0x`` のように見えてしまうため注意が必要です。"
+
+#: ../../doc_src/cmds/math.rst:88
+msgid "``/``"
+msgstr "``/``"
+
+#: ../../doc_src/cmds/math.rst:89
+msgid "for division"
+msgstr "除算"
+
+#: ../../doc_src/cmds/math.rst:90
+msgid "``^``"
+msgstr "``^``"
+
+#: ../../doc_src/cmds/math.rst:91
+msgid "for exponentiation"
+msgstr "べき乗"
+
+#: ../../doc_src/cmds/math.rst:92
+msgid "``%``"
+msgstr "``%``"
+
+#: ../../doc_src/cmds/math.rst:93
+msgid "for modulo"
+msgstr "剰余(余り)"
+
+#: ../../doc_src/cmds/math.rst:94
+msgid "``(`` or ``)``"
+msgstr "``(`` 、 ``)``"
+
+#: ../../doc_src/cmds/math.rst:95
+msgid ""
+"for grouping. These need to be quoted or escaped because ``()`` denotes a"
+" command substitution."
+msgstr "グループ化。 ``()`` はコマンド置換を意味するため、引用符で囲むかエスケープする必要があります。"
+
+#: ../../doc_src/cmds/math.rst:97
+msgid "They are all used in an infix manner - ``5 + 2``, not ``+ 5 2``."
+msgstr "これらはすべて中置記法で使用されます(例:  ``+ 5 2`` ではなく ``5 + 2`` )。"
+
+#: ../../doc_src/cmds/math.rst:100
+msgid "Constants"
+msgstr "定数"
+
+#: ../../doc_src/cmds/math.rst:102
+msgid "``math`` knows the following constants:"
+msgstr "``math`` は以下の定数を認識します。"
+
+#: ../../doc_src/cmds/math.rst:104
+msgid "``e``"
+msgstr "``e``"
+
+#: ../../doc_src/cmds/math.rst:105
+msgid "Euler's number"
+msgstr "ネイピア数(オイラー数)"
+
+#: ../../doc_src/cmds/math.rst:106
+msgid "``pi``"
+msgstr "``pi``"
+
+#: ../../doc_src/cmds/math.rst:107
+msgid "π, you know this one. Half of Tau"
+msgstr "円周率(π)。おなじみの定数です。Tau(タウ)の半分です。"
+
+#: ../../doc_src/cmds/math.rst:109
+msgid "``tau``"
+msgstr "``tau``"
+
+#: ../../doc_src/cmds/math.rst:110
+msgid "Equivalent to 2π, or the number of radians in a circle"
+msgstr "2πに相当します。つまり円のラジアン数です。"
+
+#: ../../doc_src/cmds/math.rst:112
+msgid "Use them without a leading ``$`` - ``pi - 3`` should be about 0."
+msgstr "先頭に ``$`` を付けずに使用してください(例:  ``pi - 3`` は約 0 になります)。"
+
+#: ../../doc_src/cmds/math.rst:115
+msgid "Functions"
+msgstr "関数"
+
+#: ../../doc_src/cmds/math.rst:117
+msgid "``math`` supports the following functions:"
+msgstr "``math`` は以下の関数をサポートしています。"
+
+#: ../../doc_src/cmds/math.rst:119
+msgid "``abs``"
+msgstr "``abs``"
+
+#: ../../doc_src/cmds/math.rst:120
+msgid "the absolute value, with positive sign"
+msgstr "絶対値(正の符号を伴う値)"
+
+#: ../../doc_src/cmds/math.rst:121
+msgid "``acos``"
+msgstr "``acos``"
+
+#: ../../doc_src/cmds/math.rst:122
+msgid "arc cosine"
+msgstr "逆余弦(アークコサイン)"
+
+#: ../../doc_src/cmds/math.rst:123
+msgid "``asin``"
+msgstr "``asin``"
+
+#: ../../doc_src/cmds/math.rst:124
+msgid "arc sine"
+msgstr "逆正弦(アークサイン)"
+
+#: ../../doc_src/cmds/math.rst:125
+msgid "``atan``"
+msgstr "``atan``"
+
+#: ../../doc_src/cmds/math.rst:126
+msgid "arc tangent"
+msgstr "逆正接(アークタンジェント)"
+
+#: ../../doc_src/cmds/math.rst:127
+msgid "``atan2``"
+msgstr "``atan2``"
+
+#: ../../doc_src/cmds/math.rst:128
+msgid "arc tangent of two variables"
+msgstr "2つの変数に対する逆正接(アークタンジェント)"
+
+#: ../../doc_src/cmds/math.rst:129
+msgid "``bitand``, ``bitor`` and ``bitxor``"
+msgstr "``bitand``, ``bitor`` および ``bitxor``"
+
+#: ../../doc_src/cmds/math.rst:130
+msgid ""
+"perform bitwise operations. These will throw away any non-integer parts "
+"and interpret the rest as an int."
+msgstr "ビット演算を行います。これらの関数は整数以外の部分を切り捨て、残りを整数(int)として解釈します。"
+
+#: ../../doc_src/cmds/math.rst:133
+msgid ""
+"Note: ``bitnot`` and ``bitnand`` don't exist. This is because numbers in "
+"math don't really have a *width* in terms of bits, and these operations "
+"necessarily care about leading zeroes."
+msgstr ""
+"注意:  ``bitnot`` および ``bitnand`` は存在しません。これは、 ``math`` "
+"における数値にはビット単位の「幅」という概念が実質的になく、これらの演算には先行ゼロ(leading zeroes)の考慮が不可欠であるためです。"
+
+#: ../../doc_src/cmds/math.rst:136
+msgid ""
+"If you need to negate a specific number you can do it with an xor with a "
+"mask, e.g.::"
+msgstr "特定の数値を反転(否定)させる必要がある場合は、マスク値との XOR 演算で行うことができます。例: ::"
+
+#: ../../doc_src/cmds/math.rst:146
+msgid "``ceil``"
+msgstr "``ceil``"
+
+#: ../../doc_src/cmds/math.rst:147
+msgid "round number up to the nearest integer"
+msgstr "天井関数。数値を最も近い大きな整数に切り上げます。"
+
+#: ../../doc_src/cmds/math.rst:148
+msgid "``cos``"
+msgstr "``cos``"
+
+#: ../../doc_src/cmds/math.rst:149
+msgid "the cosine"
+msgstr "余弦(コサイン)"
+
+#: ../../doc_src/cmds/math.rst:150
+msgid "``cosh``"
+msgstr "``cosh``"
+
+#: ../../doc_src/cmds/math.rst:151
+msgid "hyperbolic cosine"
+msgstr "双曲線余弦(ハイパボリックコサイン)"
+
+#: ../../doc_src/cmds/math.rst:152
+msgid "``exp``"
+msgstr "``exp``"
+
+#: ../../doc_src/cmds/math.rst:153
+msgid "the base-e exponential function"
+msgstr "eを底とする指数関数"
+
+#: ../../doc_src/cmds/math.rst:154
+msgid "``fac``"
+msgstr "``fac``"
+
+#: ../../doc_src/cmds/math.rst:155
+msgid "factorial - also known as ``x!`` (``x * (x - 1) * (x - 2) * ... * 1``)"
+msgstr "階乗。 ``x!`` としても知られています( ``x * (x - 1) * (x - 2) * ... * 1`` )。"
+
+#: ../../doc_src/cmds/math.rst:156
+msgid "``floor``"
+msgstr "``floor``"
+
+#: ../../doc_src/cmds/math.rst:157
+msgid "round number down to the nearest integer"
+msgstr "床関数。数値を最も近い小さな整数に切り下げます。"
+
+#: ../../doc_src/cmds/math.rst:158
+msgid "``ln``"
+msgstr "``ln``"
+
+#: ../../doc_src/cmds/math.rst:159
+msgid "the base-e logarithm"
+msgstr "eを底とする自然対数"
+
+#: ../../doc_src/cmds/math.rst:160
+msgid "``log`` or ``log10``"
+msgstr "``log`` 、 ``log10``"
+
+#: ../../doc_src/cmds/math.rst:161
+msgid ""
+"the base-10 logarithm. To compute the logarithm for an arbitrary base "
+"``b``, use ``log(x) / log(b)``."
+msgstr "10を底とする常用対数。任意の底 ``b`` における対数を計算するには、 ``log(x) / log(b)`` を使用してください。"
+
+#: ../../doc_src/cmds/math.rst:162
+msgid "``log2``"
+msgstr "``log2``"
+
+#: ../../doc_src/cmds/math.rst:163
+msgid "the base-2 logarithm"
+msgstr "2を底とする 2 進対数"
+
+#: ../../doc_src/cmds/math.rst:164
+msgid "``max``"
+msgstr "``max``"
+
+#: ../../doc_src/cmds/math.rst:165
+msgid ""
+"returns the largest of the given numbers - this takes an arbitrary number"
+" of arguments (but at least one)"
+msgstr "与えられた数値の中で最大値を返します。任意の数の引数を取ることができます(ただし、少なくとも 1 つ以上必要です)。"
+
+#: ../../doc_src/cmds/math.rst:166
+msgid "``min``"
+msgstr "``min``"
+
+#: ../../doc_src/cmds/math.rst:167
+msgid ""
+"returns the smallest of the given numbers - this takes an arbitrary "
+"number of arguments (but at least one)"
+msgstr "与えられた数値の中で最小値を返します。任意の数の引数を取ることができます(ただし、少なくとも 1 つ以上必要です)。"
+
+#: ../../doc_src/cmds/math.rst:168
+msgid "``ncr``"
+msgstr "``ncr``"
+
+#: ../../doc_src/cmds/math.rst:169
+msgid ""
+"\"from n choose r\" combination function - how many subsets of size r can"
+" be taken from n (order doesn't matter)"
+msgstr "組み合わせ(コンビネーション)。n 個の中から r 個を選ぶ組み合わせの数(順序は考慮しません)を返します。"
+
+#: ../../doc_src/cmds/math.rst:170
+msgid "``npr``"
+msgstr "``npr``"
+
+#: ../../doc_src/cmds/math.rst:171
+msgid ""
+"the number of subsets of size r that can be taken from a set of n "
+"elements (including different order)"
+msgstr "順列(パーミュテーション)。n 個の中から r 個を選ぶ順列の数(順序を考慮します)を返します。"
+
+#: ../../doc_src/cmds/math.rst:172
+msgid "``pow(x,y)``"
+msgstr "``pow(x,y)``"
+
+#: ../../doc_src/cmds/math.rst:173
+msgid "returns x to the y (and can be written as ``x ^ y``)"
+msgstr "x の y 乗を返します( ``x ^ y`` と記述することも可能です)。"
+
+#: ../../doc_src/cmds/math.rst:174
+msgid "``round``"
+msgstr "``round``"
+
+#: ../../doc_src/cmds/math.rst:175
+msgid "rounds to the nearest integer, away from 0"
+msgstr "最も近い整数に丸めます(0 から遠い方へ丸めます)。"
+
+#: ../../doc_src/cmds/math.rst:176
+msgid "``sin``"
+msgstr "``sin``"
+
+#: ../../doc_src/cmds/math.rst:177
+msgid "the sine function"
+msgstr "正弦(サイン)関数"
+
+#: ../../doc_src/cmds/math.rst:178
+msgid "``sinh``"
+msgstr "``sinh``"
+
+#: ../../doc_src/cmds/math.rst:179
+msgid "the hyperbolic sine"
+msgstr "双曲線正弦(ハイパボリックサイン)"
+
+#: ../../doc_src/cmds/math.rst:180
+msgid "``sqrt``"
+msgstr "``sqrt``"
+
+#: ../../doc_src/cmds/math.rst:181
+msgid "the square root - (can also be written as ``x ^ 0.5``)"
+msgstr "平方根( ``x ^ 0.5`` と記述することも可能です)。"
+
+#: ../../doc_src/cmds/math.rst:182
+msgid "``tan``"
+msgstr "``tan``"
+
+#: ../../doc_src/cmds/math.rst:183
+msgid "the tangent"
+msgstr "正接(タンジェント)"
+
+#: ../../doc_src/cmds/math.rst:184
+msgid "``tanh``"
+msgstr "``tanh``"
+
+#: ../../doc_src/cmds/math.rst:185
+msgid "the hyperbolic tangent"
+msgstr "双曲線正接(ハイパボリックタンジェント)"
+
+#: ../../doc_src/cmds/math.rst:187
+msgid ""
+"All of the trigonometric functions use radians (the pi-based scale, not "
+"360°)."
+msgstr "すべての三角関数はラジアン(360度法ではなく、πに基づくスケール)を使用します。"
+
+#: ../../doc_src/cmds/math.rst:190
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/math.rst:192
+msgid "``math 1+1`` outputs 2."
+msgstr "``math 1+1`` は 2 を出力します。"
+
+#: ../../doc_src/cmds/math.rst:194
+msgid ""
+"``math $status - 128`` outputs the numerical exit status of the last "
+"command minus 128."
+msgstr "``math $status - 128`` は、直前のコマンドの終了ステータスの数値から 128 を引いた値を出力します。"
+
+#: ../../doc_src/cmds/math.rst:196
+msgid "``math 10 / 6`` outputs ``1.666667``."
+msgstr "``math 10 / 6`` は ``1.666667`` を出力します。"
+
+#: ../../doc_src/cmds/math.rst:198
+msgid "``math -s0 10.0 / 6.0`` outputs ``1``."
+msgstr "``math -s0 10.0 / 6.0`` は ``1`` を出力します。"
+
+#: ../../doc_src/cmds/math.rst:200
+msgid "``math -s3 10 / 6`` outputs ``1.667``."
+msgstr "``math -s3 10 / 6`` は ``1.667`` を出力します。"
+
+#: ../../doc_src/cmds/math.rst:202
+msgid "``math \"sin(pi)\"`` outputs ``0``."
+msgstr "``math \"sin(pi)\"`` は ``0`` を出力します。"
+
+#: ../../doc_src/cmds/math.rst:204
+msgid ""
+"``math 5 \\* 2`` or ``math \"5 * 2\"`` or ``math 5 \"*\" 2`` all output "
+"``10``."
+msgstr ""
+"``math 5 \\* 2`` 、 ``math \"5 * 2\"`` 、 ``math 5 \"*\" 2`` はすべて ``10`` "
+"を出力します。"
+
+#: ../../doc_src/cmds/math.rst:206
+msgid ""
+"``math 0xFF`` outputs 255, ``math 0 x 3`` outputs 0 (because it computes "
+"0 multiplied by 3)."
+msgstr "``math 0xFF`` は 255 を出力し、 ``math 0 x 3`` は 0 を出力します(これは 0 に 3 を掛けた計算結果です)。"
+
+#: ../../doc_src/cmds/math.rst:208
+msgid "``math bitand 0xFE, 0x2e`` outputs 46."
+msgstr "``math bitand 0xFE, 0x2e`` は 46 を出力します。"
+
+#: ../../doc_src/cmds/math.rst:210
+msgid "``math \"bitor(9,2)\"`` outputs 11."
+msgstr "``math \"bitor(9,2)\"`` は 11 を出力します。"
+
+#: ../../doc_src/cmds/math.rst:212
+msgid "``math --base=hex 192`` prints ``0xc0``."
+msgstr "``math --base=hex 192`` は ``0xc0`` を表示します。"
+
+#: ../../doc_src/cmds/math.rst:214
+msgid ""
+"``math 'ncr(49,6)'`` prints 13983816 - that's the number of possible "
+"picks in 6-from-49 lotto."
+msgstr "``math 'ncr(49,6)'`` は 13983816 を表示します。これは「49 個の中から 6 個選ぶ」ロトの全組み合わせ数です。"
+
+#: ../../doc_src/cmds/math.rst:216
+msgid "``math max 5,2,3,1`` prints 5."
+msgstr "``math max 5,2,3,1`` は 5 を表示します。"
+
+#: ../../doc_src/cmds/math.rst:219
+msgid "Compatibility notes"
+msgstr "互換性に関する注意"
+
+#: ../../doc_src/cmds/math.rst:221
+msgid ""
+"Fish 1.x and 2.x releases relied on the ``bc`` command for handling "
+"``math`` expressions. Starting with fish 3.0.0 fish uses the tinyexpr "
+"library and evaluates the expression without the involvement of any "
+"external commands."
+msgstr ""
+"fish 1.x および 2.x リリースでは、 ``math`` 式の処理を ``bc`` コマンドに依存していました。 fish 3.0.0 "
+"以降、fish は tinyexpr ライブラリを使用し、外部コマンドを介さずに式を評価します。"
+
+#: ../../doc_src/cmds/math.rst:223
+msgid ""
+"You don't need to use ``--`` before the expression, even if it begins "
+"with a minus sign which might otherwise be interpreted as an invalid "
+"option. If you do insert ``--`` before the expression, it will cause "
+"option scanning to stop just like for every other command and it won't be"
+" part of the expression."
+msgstr ""
+"式がマイナス記号で始まる場合でも、式の前に ``--`` "
+"を置く必要はありません(マイナス記号が無効なオプションとして解釈されることはありません)。もし式の前に ``--`` "
+"を挿入した場合、他のコマンドと同様にオプションのスキャンがそこで停止し、その ``--`` 自体は式の一部とはみなされません。"
+

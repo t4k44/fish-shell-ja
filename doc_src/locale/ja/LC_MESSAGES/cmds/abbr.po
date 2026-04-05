@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/abbr.rst:2
+msgid "abbr - manage fish abbreviations"
+msgstr "abbr - fish の省略形(abbreviation)を管理する"
+
+#: ../../doc_src/cmds/abbr.rst:5
+msgid "Synopsis"
+msgstr "書式"
+
+#: ../../doc_src/cmds/abbr.rst:18
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/abbr.rst:20
+msgid ""
+"``abbr`` manages abbreviations - user-defined words that are replaced "
+"with longer phrases when entered."
+msgstr "``abbr`` は省略形(abbreviation)を管理します。省略形とは、入力時により長いフレーズに置き換えられるユーザー定義の単語のことです。"
+
+#: ../../doc_src/cmds/abbr.rst:23
+msgid ""
+"Only typed-in commands use abbreviations. Abbreviations are not expanded "
+"in scripts."
+msgstr "省略形が使用されるのは、直接入力されたコマンドのみです。スクリプト内では省略形は展開されません。"
+
+#: ../../doc_src/cmds/abbr.rst:25
+msgid ""
+"For example, a frequently-run command like ``git checkout`` can be "
+"abbreviated to ``gco``. After entering ``gco`` and pressing :kbd:`space` "
+"or :kbd:`enter`, the full text ``git checkout`` will appear in the "
+"command line. To avoid expanding something that looks like an "
+"abbreviation, the default :kbd:`ctrl-space` binding inserts a space "
+"without expanding."
+msgstr "例えば、よく実行する ``git checkout`` のようなコマンドを ``gco`` と省略できます。 ``gco`` と入力して :kbd:`space` 、 :kbd:`enter` を押すと、コマンドライン上に完全なテキスト ``git checkout`` が表示されます。省略形のように見える単語を展開させたくない場合は、デフォルトの :kbd:`ctrl-space` バインドを使用することで、展開せずにスペースを挿入できます。"
+
+#: ../../doc_src/cmds/abbr.rst:29
+msgid ""
+"An abbreviation may match a literal word, or it may match a pattern given"
+" by a regular expression. When an abbreviation matches a word, that word "
+"is replaced by new text, called its *expansion*. This expansion may be a "
+"fixed new phrase, or it can be dynamically created via a fish function. "
+"This expansion occurs after pressing space or enter."
+msgstr "省略形は、リテラルな(そのままの)単語に一致させることも、正規表現によるパターンに一致させることもできます。省略形が単語に一致すると、その単語は「展開(expansion)」と呼ばれる新しいテキストに置き換えられます。この展開後のテキストは固定のフレーズにすることも、fish 関数を介して動的に生成することも可能です。展開はスペースまたは Enter キーを押した後に実行されます。"
+
+#: ../../doc_src/cmds/abbr.rst:31
+msgid ""
+"Combining these features, it is possible to create custom syntaxes, where"
+" a regular expression recognizes matching tokens, and the expansion "
+"function interprets them. See the `Examples`_ section."
+msgstr "これらの機能を組み合わせることで、正規表現で特定のトークンを認識し、展開用の関数でそれを解釈するというカスタム構文を作成することも可能です。詳細は `Examples`_ セクションを参照してください。"
+
+#: ../../doc_src/cmds/abbr.rst:33
+msgid ""
+"Previous versions of this allowed saving abbreviations in universal "
+"variables. That's no longer possible. Existing variables will still be "
+"imported and ``abbr --erase`` will also erase the variables. We recommend"
+" adding abbreviations to :ref:`config.fish <configuration>` by just "
+"adding the ``abbr --add`` command. When you run ``abbr``, you will see "
+"output like this"
+msgstr "以前のバージョンではユニバーサル変数に省略形を保存できましたが、現在は不可能です。既存の変数は引き続きインポートされ、 ``abbr --erase`` を実行するとそれらの変数も削除されます。現在は、単に ``abbr --add`` コマンドを :ref:`config.fish <configuration>` に追加することをお勧めします。 ``abbr`` を実行すると、次のような出力が表示されます。"
+
+#: ../../doc_src/cmds/abbr.rst:44
+msgid ""
+"In that case you should take the part before the ``#`` comment and save "
+"it in :ref:`config.fish <configuration>`, then you can run ``abbr "
+"--erase`` to remove the universal variable::"
+msgstr "その場合は、 ``#`` コメントより前の部分をコピーして :ref:`config.fish <configuration>` に保存してください。その後、 ``abbr --erase`` を実行してユニバーサル変数を削除できます。"
+
+#: ../../doc_src/cmds/abbr.rst:50
+msgid ""
+"Alternatively you can keep them in a separate :ref:`configuration file "
+"<configuration>` by doing something like the following::"
+msgstr "または、次のようにして別の :ref:`設定ファイル <configuration>` に保存しておくこともできます。"
+
+msgid ""
+"This will save all your abbreviations in \"myabbrs.fish\", overwriting the "
+"whole file so it doesn't leave any duplicates, or restore abbreviations you "
+"had erased. Of course any functions will have to be saved separately, see "
+":doc:`funcsave <funcsave>`."
+msgstr ""
+"これにより、すべての省略形が \"myabbrs.fish\" に保存されます。ファイル全体を"
+"上書きするため、重複が残ったり、削除したはずの省略形が復活したりすることはあ"
+"りません。もちろん、関数については別途保存する必要があります。詳細は "
+":doc:`funcsave <funcsave>` を参照してください。"
+
+#: ../../doc_src/cmds/abbr.rst:59
+msgid "\"add\" subcommand"
+msgstr "\"add\" サブコマンド"
+
+#: ../../doc_src/cmds/abbr.rst:66
+msgid ""
+"``abbr --add`` creates a new abbreviation. With no other options, the "
+"string **NAME** is replaced by **EXPANSION**."
+msgstr "``abbr --add`` は新しい省略形を作成します。他のオプションを指定しない場合、文字列 **NAME** は **EXPANSION** (展開後のフレーズ)に置き換えられます。"
+
+#: ../../doc_src/cmds/abbr.rst:68
+msgid ""
+"With **--position command**, the abbreviation will only expand when it is"
+" positioned as a command, not as an argument to another command. With "
+"**--position anywhere** the abbreviation may expand anywhere in the "
+"command line. The default is **command**."
+msgstr "**--position command** を指定すると、その省略形はコマンドの位置にあるときのみ展開され、他のコマンドの引数であるときは展開されません。 **--position anywhere** を指定すると、コマンドライン上のどこにあっても展開されます。デフォルトは **command** です。"
+
+#: ../../doc_src/cmds/abbr.rst:70
+msgid ""
+"With **--command COMMAND**, the abbreviation will only expand when it is "
+"used as an argument to the given COMMAND. Multiple **--command** can be "
+"used together, and the abbreviation will expand for each. An empty "
+"**COMMAND** means it will expand only when there is no command. "
+"**--command** implies **--position anywhere** and disallows **--position "
+"command**. Even with different **COMMANDS**, the **NAME** of the "
+"abbreviation needs to be unique. Consider using **--regex** if you want "
+"to expand the same word differently for multiple commands."
+msgstr "**--command COMMAND** を指定すると、その省略形は指定された COMMAND の引数として使用された場合のみ展開されます。複数の **--command** を併用でき、その場合は各コマンドに対して展開が有効になります。 **COMMAND** が空の場合は、コマンドが入力されていない状態でのみ展開されます。 **--command** を使用すると **--position anywhere** が暗黙的に指定され、 **--position command** は使用できなくなります。異なる **COMMAND** を指定する場合でも、省略形の **NAME** は一意(ユニーク)である必要があります。同じ単語を複数のコマンドで異なる内容に展開したい場合は、 **--regex** の使用を検討してください。"
+
+#: ../../doc_src/cmds/abbr.rst:72
+msgid ""
+"With **--regex**, the abbreviation matches using the regular expression "
+"given by **PATTERN**, instead of the literal **NAME**. The pattern is "
+"interpreted using PCRE2 syntax and must match the entire token. If "
+"multiple abbreviations match the same token, the last abbreviation added "
+"is used."
+msgstr "**--regex** を指定すると、省略形はリテラルな **NAME** ではなく、 **PATTERN** で指定された正規表現を使用してマッチングを行います。パターンは PCRE2 構文として解釈され、トークン全体に一致する必要があります。複数の省略形が同じトークンに一致した場合は、最後に追加された省略形が使用されます。"
+
+#: ../../doc_src/cmds/abbr.rst:74
+msgid ""
+"With **--set-cursor=MARKER**, the cursor is moved to the first occurrence"
+" of **MARKER** in the expansion. The **MARKER** value is erased. The "
+"**MARKER** may be omitted (i.e. simply ``--set-cursor``), in which case "
+"it defaults to ``%``."
+msgstr "**--set-cursor=MARKER** を指定すると、展開後のテキスト内で最初に出現する **MARKER** の位置にカーソルが移動します。 **MARKER** 自体は削除されます。 **MARKER** は省略可能(単に ``--set-cursor`` と記述)で、その場合のデフォルトは ``%`` です。"
+
+#: ../../doc_src/cmds/abbr.rst:76
+msgid ""
+"With **-f FUNCTION** or **--function FUNCTION**, **FUNCTION** is treated "
+"as the name of a fish function instead of a literal replacement. When the"
+" abbreviation matches, the function will be called with the matching "
+"token as an argument. If the function's exit status is 0 (success), the "
+"token will be replaced by the function's output; otherwise the token will"
+" be left unchanged. No **EXPANSION** may be given separately."
+msgstr "**-f FUNCTION** 、 **--function FUNCTION** を指定すると、 **FUNCTION** はリテラルな置換テキストではなく、fish 関数の名前として扱われます。省略形が一致すると、一致したトークンを引数としてその関数が呼び出されます。関数の終了ステータスが 0(成功)の場合、トークンは関数の出力に置き換えられます。そうでない場合、トークンは変更されません。このとき **EXPANSION** を別途指定することはできません。"
+
+#: ../../doc_src/cmds/abbr.rst:79
+msgid "Examples"
+msgstr "例"
+#: ../../doc_src/cmds/abbr.rst:85
+msgid ""
+"Add a new abbreviation where ``gco`` will be replaced with ``git "
+"checkout``."
+msgstr "``gco`` を ``git checkout`` に置き換える新しい省略形を追加します。"
+
+#: ../../doc_src/cmds/abbr.rst:91
+msgid ""
+"Add a new abbreviation where ``-C`` will be replaced with ``--color``. "
+"The ``--`` allows ``-C`` to be treated as the name of the abbreviation, "
+"instead of an option."
+msgstr "``-C`` を ``--color`` に置き換える新しい省略形を追加します。 ``--`` を置くことで、 ``-C`` がオプションではなく省略形の名前として扱われるようになります。"
+
+#: ../../doc_src/cmds/abbr.rst:97
+msgid ""
+"Add a new abbreviation where ``L`` will be replaced with ``| less``, "
+"placing the cursor before the pipe."
+msgstr "``L`` を ``| less`` に置き換える新しい省略形を追加し、カーソルをパイプの前に配置します。"
+
+#: ../../doc_src/cmds/abbr.rst:107
+msgid ""
+"This first creates a function ``last_history_item`` which outputs the "
+"last entered command. It then adds an abbreviation which replaces ``!!`` "
+"with the result of calling this function. Taken together, this is similar"
+" to the ``!!`` history expansion feature of bash."
+msgstr "まず、最後に入力されたコマンドを出力する関数 ``last_history_item`` を作成します。次に、 ``!!`` をこの関数の呼び出し結果に置き換える省略形を追加します。これらを組み合わせることで、bash の ``!!`` 履歴展開機能と同様の動作になります。"
+
+#: ../../doc_src/cmds/abbr.rst:116
+msgid ""
+"This first creates a function ``vim_edit`` which prepends ``vim`` before "
+"its argument. It then adds an abbreviation which matches commands ending "
+"in ``.txt``, and replaces the command with the result of calling this "
+"function. This allows text files to be \"executed\" as a command to open "
+"them in vim, similar to the \"suffix alias\" feature in zsh."
+msgstr "まず、引数の前に ``vim`` を付加する関数 ``vim_edit`` を作成します。次に、 ``.txt`` で終わるコマンドにマッチし、そのコマンドをこの関数の呼び出し結果で置き換える省略形を追加します。これにより、zsh の「サフィックス・エイリアス」機能のように、テキストファイルをコマンドとして「実行」して vim で開くことができます。"
+
+#: ../../doc_src/cmds/abbr.rst:122
+msgid ""
+"This creates an abbreviation \"4DIRS\" which expands to a multi-line loop"
+" \"template.\" The template enters each directory and then leaves it. The"
+" cursor is positioned ready to enter the command to run in each "
+"directory, at the location of the ``!``, which is itself erased."
+msgstr "「4DIRS」という省略形を作成し、複数行のループ「テンプレート」に展開します。このテンプレートは各ディレクトリに入ってから抜ける構造です。カーソルは各ディレクトリで実行するコマンドを入力できる位置( ``!`` があった場所)に配置され、 ``!`` 自体は削除されます。"
+
+#: ../../doc_src/cmds/abbr.rst:128
+#, python-brace-format
+msgid ""
+"Turns \"co\" as an argument to \"git\" into \"checkout\". Multiple "
+"commands are possible, ``--command={git,hg}`` would expand \"co\" to "
+"\"checkout\" for both git and hg."
+msgstr "「git」の引数としての「co」を「checkout」に変換します。複数のコマンドを指定することも可能で、 ``--command={git,hg}`` とすれば git と hg の両方で「co」が「checkout」に展開されます。"
+
+#: ../../doc_src/cmds/abbr.rst:131
+msgid "Other subcommands"
+msgstr "その他のサブコマンド"
+
+#: ../../doc_src/cmds/abbr.rst:138
+msgid ""
+"Renames an abbreviation, from *OLD_NAME* to *NEW_NAME*. For command-"
+"specific abbreviations, the ``--command`` options must be provided to "
+"disambiguate which abbreviation to rename."
+msgstr "省略形の名前を *OLD_NAME* から *NEW_NAME* に変更します。コマンド固有の省略形の場合、どの省略形を変更するかを特定するために ``--command`` オプションを指定する必要があります。"
+
+#: ../../doc_src/cmds/abbr.rst:145
+msgid "Show all abbreviations in a manner suitable for import and export"
+msgstr "インポートおよびエクスポートに適した形式ですべての省略形を表示します"
+
+#: ../../doc_src/cmds/abbr.rst:151
+msgid "Prints the names of all abbreviation"
+msgstr "すべての省略形の名前を表示します"
+
+#: ../../doc_src/cmds/abbr.rst:157
+msgid ""
+"Erases the abbreviation with the given name. For command-specific "
+"abbreviations, the ``--command`` options must be provided to disambiguate"
+" which abbreviation to rename."
+msgstr "指定された名前の省略形を削除します。コマンド固有の省略形の場合、どの省略形を削除するかを特定するために ``--command`` オプションを指定する必要があります。"
+
+#: ../../doc_src/cmds/abbr.rst:164
+msgid "Return 0 (true) if one of the *NAME* is an abbreviation."
+msgstr "指定された *NAME* のいずれかが省略形であれば 0 (真) を返します。"
+
+#: ../../doc_src/cmds/abbr.rst:170
+msgid "Displays help for the `abbr` command."
+msgstr "`abbr` コマンドのヘルプを表示します。"

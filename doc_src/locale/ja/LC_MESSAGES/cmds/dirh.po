@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/dirh.rst:2
+msgid "dirh - print directory history"
+msgstr "dirh - ディレクトリ履歴を表示する"
+
+#: ../../doc_src/cmds/dirh.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/dirh.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/dirh.rst:14
+msgid ""
+"``dirh`` prints the current :ref:`directory history <directory-history>`."
+" The current position in the history is highlighted using the color "
+"defined in the ``fish_color_history_current`` environment variable."
+msgstr ""
+"``dirh`` は現在の :ref:`ディレクトリ履歴 <directory-history>` を表示します。"
+"履歴内の現在位置は、環境変数 ``fish_color_history_current`` で定義された色でハイライトされます。"
+
+#: ../../doc_src/cmds/dirh.rst:16
+msgid "``dirh`` does not accept any parameters."
+msgstr "``dirh`` はパラメータを受け付けません。"
+
+#: ../../doc_src/cmds/dirh.rst:18
+msgid ""
+"Note that the :doc:`cd <cd>` command limits directory history to the 25 "
+"most recently visited directories. The history is stored in the "
+"``$dirprev`` and ``$dirnext`` variables."
+msgstr ""
+"注意:  :doc:`cd <cd>` コマンドは、ディレクトリ履歴を最近訪れた最大 25 個のディレクトリに制限します。"
+"履歴は変数 ``$dirprev`` および ``$dirnext`` に保存されます。"
+
+#: ../../doc_src/cmds/dirh.rst:21
+msgid "See Also"
+msgstr "関連項目"
+
+#: ../../doc_src/cmds/dirh.rst:23
+msgid ""
+"the :doc:`cdh <cdh>` command to display a prompt to quickly navigate the "
+"history"
+msgstr ":doc:`cdh <cdh>` コマンド: 履歴を素早く移動するためのプロンプトを表示します"
+
+#: ../../doc_src/cmds/dirh.rst:24
+msgid "the :doc:`prevd <prevd>` command to move backward"
+msgstr ":doc:`prevd <prevd>` コマンド: 履歴を一つ戻ります"
+
+#: ../../doc_src/cmds/dirh.rst:25
+msgid "the :doc:`nextd <nextd>` command to move forward"
+msgstr ":doc:`nextd <nextd>` コマンド: 履歴を一つ進みます"

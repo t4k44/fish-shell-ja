@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/builtin.rst:2
+msgid "builtin - run a builtin command"
+msgstr "builtin - 組み込みコマンドを実行する"
+
+#: ../../doc_src/cmds/builtin.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/builtin.rst:14
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/builtin.rst:16
+msgid ""
+"``builtin`` forces the shell to use a builtin command named *BUILTIN*, "
+"rather than a function or external program."
+msgstr "``builtin`` は、関数や外部プログラムではなく、 *BUILTIN* という名前の組み込みコマンドを強制的に使用させます。"
+
+#: ../../doc_src/cmds/builtin.rst:18
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です: "
+
+#: ../../doc_src/cmds/builtin.rst:20
+msgid "**-n** or **--names**"
+msgstr "**-n** 、 **--names**"
+
+#: ../../doc_src/cmds/builtin.rst:21
+msgid "Lists the names of all defined builtins."
+msgstr "定義されているすべての組み込みコマンドの名前を一覧表示します。"
+
+#: ../../doc_src/cmds/builtin.rst:23
+msgid "**-q** or **--query** *BUILTIN*"
+msgstr "**-q** 、 **--query** *BUILTIN*"
+
+#: ../../doc_src/cmds/builtin.rst:24
+msgid ""
+"Tests if any of the specified builtins exist. If any exist, it returns 0,"
+" 1 otherwise."
+msgstr "指定された組み込みコマンドが存在するかどうかをテストします。いずれかが存在すれば 0 を、そうでなければ 1 を返します。"
+
+#: ../../doc_src/cmds/builtin.rst:26
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/builtin.rst:27
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/builtin.rst:30
+msgid "Example"
+msgstr "例"

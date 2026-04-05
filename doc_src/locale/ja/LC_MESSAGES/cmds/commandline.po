@@ -1,0 +1,429 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/commandline.rst:2
+msgid "commandline - set or get the current command line buffer"
+msgstr "commandline - 現在のコマンドラインバッファを取得、設定する"
+
+#: ../../doc_src/cmds/commandline.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/commandline.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/commandline.rst:14
+msgid ""
+"``commandline`` can be used to set or get the current contents of the "
+"command line buffer."
+msgstr ""
+"``commandline`` は、現在のコマンドラインバッファの内容を設定または取得するために使用できます。"
+
+#: ../../doc_src/cmds/commandline.rst:16
+msgid ""
+"With no parameters, ``commandline`` returns the current value of the "
+"command line."
+msgstr ""
+"引数を指定しない場合、 ``commandline`` はコマンドラインの現在の値を返します。"
+
+#: ../../doc_src/cmds/commandline.rst:18
+msgid ""
+"With **CMD** specified, the command line buffer is erased and replaced "
+"with the contents of **CMD**."
+msgstr ""
+"**CMD** が指定された場合、コマンドラインバッファは消去され、 **CMD** の内容に置き換えられます。"
+
+#: ../../doc_src/cmds/commandline.rst:20
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です:"
+
+#: ../../doc_src/cmds/commandline.rst:22
+msgid "**-C** or **--cursor**"
+msgstr "**-C** 、 **--cursor**"
+
+#: ../../doc_src/cmds/commandline.rst:23
+msgid ""
+"Set or get the current cursor position, not the contents of the buffer. "
+"If no argument is given, the current cursor position is printed, "
+"otherwise the argument is interpreted as the new cursor position. If one "
+"of the options **-j**, **-p** or **-t** is given, the position is "
+"relative to the respective substring instead of the entire command line "
+"buffer."
+msgstr ""
+"バッファの内容ではなく、現在のカーソル位置を設定または取得します。引数が与えられない場合は現在のカーソル位置が表示され、それ以外の場合は引数が新しいカーソル位置として解釈されます。 **-j** 、 **-p** 、 **-t** オプションのいずれかが指定されている場合、位置はコマンドラインバッファ全体ではなく、それぞれの部分文字列に対する相対的なものになります。"
+
+#: ../../doc_src/cmds/commandline.rst:27
+msgid "**-B** or **--selection-start**"
+msgstr "**-B** 、 **--selection-start**"
+
+#: ../../doc_src/cmds/commandline.rst:28
+msgid "Get current position of the selection start in the buffer."
+msgstr "バッファ内の選択開始の現在位置を取得します。"
+
+#: ../../doc_src/cmds/commandline.rst:30
+msgid "**-E** or **--selection-end**"
+msgstr "**-E** 、 **--selection-end**"
+
+#: ../../doc_src/cmds/commandline.rst:31
+msgid "Get current position of the selection end in the buffer."
+msgstr "バッファ内の選択終了の現在位置を取得します。"
+
+#: ../../doc_src/cmds/commandline.rst:33
+msgid "**-f** or **--function**"
+msgstr "**-f** 、 **--function**"
+
+#: ../../doc_src/cmds/commandline.rst:34
+msgid ""
+"Causes any additional arguments to be interpreted as input functions, and"
+" puts them into the queue, so that they will be read before any "
+"additional actual key presses are. This option cannot be combined with "
+"any other option. See :doc:`bind <bind>` for a list of input functions."
+msgstr ""
+"追加の引数を入力関数として解釈させ、それらをキューに入れます。これにより、実際のキー入力が行われる前にそれらが読み取られます。このオプションは他のオプションと組み合わせることはできません。入力関数の一覧については、 :doc:`bind <bind>` を参照してください。"
+
+#: ../../doc_src/cmds/commandline.rst:38
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/commandline.rst:39
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/commandline.rst:41
+msgid ""
+"The following options change the way ``commandline`` updates the command "
+"line buffer:"
+msgstr ""
+"以下のオプションは、 ``commandline`` がコマンドラインバッファを更新する方法を変更します:"
+
+#: ../../doc_src/cmds/commandline.rst:43
+msgid "**-a** or **--append**"
+msgstr "**-a** 、 **--append**"
+
+#: ../../doc_src/cmds/commandline.rst:44
+msgid ""
+"Do not remove the current commandline, append the specified string at the"
+" end of it."
+msgstr ""
+"現在のコマンドラインを削除せず、その末尾に指定した文字列を追加します。"
+
+#: ../../doc_src/cmds/commandline.rst:46
+msgid "**-i**, **--insert** or **--insert-smart**"
+msgstr "**-i** 、 **--insert** 、 **--insert-smart**"
+
+#: ../../doc_src/cmds/commandline.rst:47
+msgid ""
+"Do not remove the current commandline, insert the specified string at the"
+" current cursor position. The **--insert-smart** option turns on a Do-"
+"What-I-Mean (DWIM) mode: it strips any **$** prefix from the first "
+"command on each line."
+msgstr ""
+"現在のコマンドラインを削除せず、現在のカーソル位置に指定した文字列を挿入します。 **--insert-smart** オプションは、DWIM(Do-What-I-Mean)モードを有効にします。これは、各行の最初のコマンドから **$** プレフィックスを取り除きます。"
+
+#: ../../doc_src/cmds/commandline.rst:50
+msgid "**-r** or **--replace**"
+msgstr "**-r** 、 **--replace**"
+
+#: ../../doc_src/cmds/commandline.rst:51
+msgid ""
+"Remove the current commandline and replace it with the specified string "
+"(default)"
+msgstr ""
+"現在のコマンドラインを削除し、指定した文字列に置き換えます(デフォルト)。"
+
+#: ../../doc_src/cmds/commandline.rst:53
+msgid ""
+"The following options change what part of the commandline is printed or "
+"updated:"
+msgstr ""
+"以下のオプションは、コマンドラインのどの部分を表示または更新するかを変更します:"
+
+#: ../../doc_src/cmds/commandline.rst:55
+msgid "**-b** or **--current-buffer**"
+msgstr "**-b** 、 **--current-buffer**"
+
+#: ../../doc_src/cmds/commandline.rst:56
+msgid ""
+"Select the entire commandline, not including any displayed autosuggestion"
+" (default)."
+msgstr ""
+"表示されている自動提案(autosuggestion)を含まない、コマンドライン全体を選択します(デフォルト)。"
+
+#: ../../doc_src/cmds/commandline.rst:58
+msgid "**-j** or **--current-job**"
+msgstr "**-j** 、 **--current-job**"
+
+#: ../../doc_src/cmds/commandline.rst:59
+msgid ""
+"Select the current job - a **job** here is one pipeline. Stops at logical"
+" operators or terminators (**;**, **&**, and newlines)."
+msgstr ""
+"現在のジョブを選択します。ここでの**ジョブ**とは1つのパイプラインを指します。論理演算子または終端文字( **;** 、 **&** 、および改行)で停止します。"
+
+#: ../../doc_src/cmds/commandline.rst:62
+msgid "**-p** or **--current-process**"
+msgstr "**-p** 、 **--current-process**"
+
+#: ../../doc_src/cmds/commandline.rst:63
+msgid ""
+"Select the current process - a **process** here is one command. Stops at "
+"logical operators, terminators, and pipes."
+msgstr ""
+"現在のプロセスを選択します。ここでの **プロセス** とは1つのコマンドを指します。論理演算子、終端文字、およびパイプで停止します。"
+
+#: ../../doc_src/cmds/commandline.rst:66
+msgid "**-s** or **--current-selection**"
+msgstr "**-s** 、 **--current-selection**"
+
+#: ../../doc_src/cmds/commandline.rst:67
+msgid "Selects the current selection"
+msgstr "現在の選択範囲を選択します"
+
+#: ../../doc_src/cmds/commandline.rst:69
+msgid "**-t** or **--current-token**"
+msgstr "**-t** 、 **--current-token**"
+
+#: ../../doc_src/cmds/commandline.rst:70
+msgid "Selects the current token"
+msgstr "現在のトークンを選択します"
+
+#: ../../doc_src/cmds/commandline.rst:72
+msgid "**--search-field**"
+msgstr "**--search-field**"
+
+#: ../../doc_src/cmds/commandline.rst:73
+msgid ""
+"Use the pager search field instead of the command line. Returns false if "
+"the search field is not shown."
+msgstr ""
+"コマンドラインの代わりにページャの検索フィールドを使用します。検索フィールドが表示されていない場合は偽(false)を返します。"
+
+#: ../../doc_src/cmds/commandline.rst:75
+msgid "**--input=INPUT**"
+msgstr "**--input=INPUT**"
+
+#: ../../doc_src/cmds/commandline.rst:76
+msgid ""
+"Operate on this string instead of the commandline. Useful for using "
+"options like **--tokens-expanded**."
+msgstr ""
+"コマンドラインの代わりにこの文字列に対して操作を行います。 **--tokens-expanded** のようなオプションを使用する場合に便利です。"
+
+#: ../../doc_src/cmds/commandline.rst:78
+msgid ""
+"The following options change the way ``commandline`` prints the current "
+"commandline buffer:"
+msgstr ""
+"以下のオプションは、 ``commandline`` が現在のコマンドラインバッファを表示する方法を変更します:"
+
+#: ../../doc_src/cmds/commandline.rst:80
+msgid "**-c** or **--cut-at-cursor**"
+msgstr "**-c** 、 **--cut-at-cursor**"
+
+#: ../../doc_src/cmds/commandline.rst:81
+msgid ""
+"Only print selection up until the current cursor position. If combined "
+"with ``--tokens-expanded``, this will print up until the last completed "
+"token - excluding the token the cursor is in. This is typically what you "
+"would want for instance in completions. To get both, use both "
+"``commandline --cut-at-cursor --tokens-expanded; commandline --cut-at-"
+"cursor --current-token``, or ``commandline -cx; commandline -ct`` for "
+"short."
+msgstr ""
+"現在のカーソル位置までの選択範囲のみを表示します。 ``--tokens-expanded`` と組み合わせた場合、カーソルがあるトークンを除いた、最後に完了したトークンまでを表示します。これは通常、補完(completions)などで必要になる動作です。両方を取得するには、 ``commandline --cut-at-cursor --tokens-expanded; commandline --cut-at-cursor --current-token`` を使用するか、短縮形の ``commandline -cx; commandline -ct`` を使用してください。"
+
+#: ../../doc_src/cmds/commandline.rst:87
+msgid "**-x** or **--tokens-expanded**"
+msgstr "**-x** 、 **--tokens-expanded**"
+
+#: ../../doc_src/cmds/commandline.rst:88
+msgid ""
+"Perform argument expansion on the selection and print one argument per "
+"line. Command substitutions are not expanded but forwarded as-is."
+msgstr ""
+"選択範囲に対して引数展開を実行し、1行に1つの引数を表示します。コマンド置換(command substitutions)は展開されず、そのまま渡されます。"
+
+#: ../../doc_src/cmds/commandline.rst:91
+msgid "**-o**, **tokenize**, **--tokens-raw**"
+msgstr "**-o** 、 **tokenize** 、 **--tokens-raw**"
+
+#: ../../doc_src/cmds/commandline.rst:92
+msgid "Deprecated; do not use."
+msgstr "非推奨です。使用しないでください。"
+
+#: ../../doc_src/cmds/commandline.rst:94
+msgid ""
+"If ``commandline`` is called during a call to complete a given string "
+"using ``complete -C STRING``, ``commandline`` will consider the specified"
+" string to be the current contents of the command line."
+msgstr ""
+"``complete -C STRING`` を使用して特定の文字列を補完する呼び出しの最中に ``commandline`` が呼び出された場合、 ``commandline`` は指定された文字列をコマンドラインの現在の内容として扱います。"
+
+#: ../../doc_src/cmds/commandline.rst:96
+msgid "The following options output metadata about the commandline state:"
+msgstr "以下のオプションは、コマンドラインの状態に関するメタデータを出力します:"
+
+#: ../../doc_src/cmds/commandline.rst:98
+msgid "**-L** or **--line**"
+msgstr "**-L** 、 **--line**"
+
+#: ../../doc_src/cmds/commandline.rst:99
+msgid ""
+"If no argument is given, print the line that the cursor is on, with the "
+"topmost line starting at 1. Otherwise, set the cursor to the given line."
+msgstr ""
+"引数が与えられない場合、カーソルがある行を表示します。最上位の(topmost)行を1として数えます。それ以外の場合は、カーソルを指定された行に設定します。"
+
+#: ../../doc_src/cmds/commandline.rst:102
+msgid "**--column**"
+msgstr "**--column**"
+
+#: ../../doc_src/cmds/commandline.rst:103
+msgid ""
+"If no argument is given, print the 1-based offset from the start of the "
+"line to the cursor position in Unicode code points. Otherwise, set the "
+"cursor to the given code point offset."
+msgstr ""
+"引数が与えられない場合、行の先頭からカーソル位置までのオフセットをUnicodeコードポイント単位(1から開始)で表示します。それ以外の場合は、カーソルを指定されたコードポイントオフセットに設定します。"
+
+#: ../../doc_src/cmds/commandline.rst:106
+msgid "**-S** or **--search-mode**"
+msgstr "**-S** 、 **--search-mode**"
+
+#: ../../doc_src/cmds/commandline.rst:107
+msgid "Evaluates to true if the commandline is performing a history search."
+msgstr "コマンドラインが履歴検索を実行している場合、真(true)と評価されます。"
+
+#: ../../doc_src/cmds/commandline.rst:109
+msgid "**-P** or **--paging-mode**"
+msgstr "**-P** 、 **--paging-mode**"
+
+#: ../../doc_src/cmds/commandline.rst:110
+msgid ""
+"Evaluates to true if the commandline is showing pager contents, such as "
+"tab completions."
+msgstr ""
+"コマンドラインがタブ補完(completions)などのページャの内容を表示している場合、真(true)と評価されます。"
+
+#: ../../doc_src/cmds/commandline.rst:112
+msgid "**--paging-full-mode**"
+msgstr "**--paging-full-mode**"
+
+#: ../../doc_src/cmds/commandline.rst:113
+msgid ""
+"Evaluates to true if the commandline is showing pager contents, such as "
+"tab completions and all lines are shown (no \"<n> more rows\" message)."
+msgstr ""
+"コマンドラインがタブ補完(completions)などのページャの内容を表示しており、かつすべての行が表示されている(「あと <n> 行」というメッセージがない)場合、真(true)と評価されます。"
+
+#: ../../doc_src/cmds/commandline.rst:115
+msgid "**--is-valid**"
+msgstr "**--is-valid**"
+
+#: ../../doc_src/cmds/commandline.rst:116
+msgid ""
+"Returns true when the commandline is syntactically valid and complete. If"
+" it is, it would be executed when the ``execute`` bind function is "
+"called. If the commandline is incomplete, return 2, if erroneous, return "
+"1."
+msgstr ""
+"コマンドラインが構文的に有効で完了している場合に真(true)を返します。その場合、 ``execute`` バインド関数が呼び出されたときに実行されます。コマンドラインが未完了の場合は2を返し、エラーがある場合は1を返します。"
+
+#: ../../doc_src/cmds/commandline.rst:120
+msgid "**--showing-suggestion**"
+msgstr "**--showing-suggestion**"
+
+#: ../../doc_src/cmds/commandline.rst:121
+msgid ""
+"Evaluates to true (i.e. returns 0) when the shell is currently showing an"
+" automatic history completion/suggestion, available to be consumed via "
+"one of the `forward-` bindings. For example, can be used to determine if "
+"moving the cursor to the right when already at the end of the line would "
+"have no effect or if it would cause a completion to be accepted (note "
+"that `forward-char-passive` does this automatically)."
+msgstr ""
+"シェルが現在、自動的な履歴補完/提案(suggestion)を表示しており、 `forward-` 系のバインドを通じてそれを受け入れ可能な場合、真(true、すなわち0)と評価されます。例えば、すでに行末にいる状態でカーソルを右に移動させたときに、何も起こらないのか、あるいは提案された補完を受け入れるのかを判断するために使用できます( `forward-char-passive` はこれを自動的に行うことに注意してください)。"
+
+#: ../../doc_src/cmds/commandline.rst:125
+msgid "Example"
+msgstr "例"
+
+#: ../../doc_src/cmds/commandline.rst:127
+msgid ""
+"``commandline -j $history[3]`` replaces the job under the cursor with the"
+" third item from the command line history."
+msgstr ""
+"``commandline -j $history[3]`` は、カーソル位置にあるジョブ(job)を、コマンドライン履歴の3番目の項目で置き換えます。"
+
+#: ../../doc_src/cmds/commandline.rst:129
+msgid "If the commandline contains"
+msgstr "コマンドラインに以下が含まれている場合"
+
+#: ../../doc_src/cmds/commandline.rst:137
+msgid "(with the cursor on the \"o\" of \"flounder\")"
+msgstr "(カーソルが \"flounder\" の \"o\" の上にある場合)"
+
+#: ../../doc_src/cmds/commandline.rst:139
+msgid ""
+"The ``echo $flounder >&`` is the first process, ``less`` the second and "
+"``and echo $catfish`` the third."
+msgstr ""
+"``echo $flounder >&`` が第1プロセス(process)、 ``less`` が第2プロセス、 ``and echo $catfish`` が第3プロセスとなります。"
+
+#: ../../doc_src/../doc_src/cmds/commandline.rst:141
+msgid ""
+"``echo $flounder >&2 | less`` is the first job, ``and echo $catfish`` the"
+" second."
+msgstr ""
+"``echo $flounder >&2 | less`` が第1ジョブ(job)、 ``and echo $catfish`` が第2ジョブとなります。"
+
+#: ../../doc_src/cmds/commandline.rst:143
+msgid "**$flounder** is the current token."
+msgstr "**$flounder** が現在のトークン(token)です。"
+
+#: ../../doc_src/cmds/commandline.rst:145
+msgid "The most common use for something like completions is"
+msgstr "補完(completions)などで最も一般的な使い方は以下の通りです"
+
+#: ../../doc_src/cmds/commandline.rst:151
+msgid ""
+"which gives the current *process* (what is being completed), tokenized "
+"into separate entries, up to but excluding the currently being completed "
+"token"
+msgstr ""
+"これは、現在のプロセス(process)(補完の対象となっているもの)を個別のエントリにトークン化(tokenized)して取得しますが、現在補完中のトークン自体は含みません。"
+
+#: ../../doc_src/cmds/commandline.rst:153
+msgid "If you are then also interested in the in-progress token, add"
+msgstr "現在入力中のトークンにも関心がある場合は、以下を追加します"
+
+#: ../../doc_src/cmds/commandline.rst:159
+msgid ""
+"Note that this makes it easy to render fish's infix matching moot - if "
+"possible it's best if the completions just print all possibilities and "
+"leave the matching to the current token up to fish's logic."
+msgstr ""
+"これにより、fishの中間一致(infix matching)を無効化しやすくなることに注意してください。可能であれば、補完では単にすべての候補を表示し、現在のトークンとのマッチングはfish自体のロジックに任せるのが最善です。"
+
+#: ../../doc_src/cmds/commandline.rst:161
+msgid "More examples:"
+msgstr "その他の例:"
+

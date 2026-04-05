@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/emit.rst:2
+msgid "emit - emit a generic event"
+msgstr "emit - 汎用イベントを発生させる"
+
+#: ../../doc_src/cmds/emit.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/emit.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/emit.rst:14
+msgid ""
+"``emit`` emits, or fires, an event. Events are delivered to, or caught "
+"by, special functions called :ref:`event handlers <event>`. The arguments"
+" are passed to the event handlers as function arguments."
+msgstr ""
+"``emit`` は、イベントを発生(発火)させます。イベントは、 :ref:`イベントハンドラ <event>` と呼ばれる特殊な関数に送られ、そこで捕捉されます。引数は、関数引数としてイベントハンドラに渡されます。"
+
+#: ../../doc_src/cmds/emit.rst:16
+msgid "The **--help** or **-h** option displays help about using this command."
+msgstr "**--help** 、 **-h** オプションは、このコマンドのヘルプを表示します。"
+
+#: ../../doc_src/cmds/emit.rst:19
+msgid "Example"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/emit.rst:21
+msgid ""
+"The following code first defines an event handler for the generic event "
+"named 'test_event', and then emits an event of that type."
+msgstr ""
+"以下のコードでは、まず 'test_event' という名前の汎用イベントに対するイベントハンドラを定義し、次にその型のイベントを発生させます。"
+
+#: ../../doc_src/cmds/emit.rst:36
+msgid "Notes"
+msgstr "注意点"
+
+#: ../../doc_src/cmds/emit.rst:38
+msgid ""
+"Note that events are only sent to the current fish process as there is no"
+" way to send events from one fish process to another."
+msgstr ""
+"イベントは現在の fish プロセスにのみ送信されることに注意してください。ある fish プロセスから別のプロセスへイベントを送信する方法はありません。"

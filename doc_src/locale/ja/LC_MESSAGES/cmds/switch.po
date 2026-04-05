@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/switch.rst:2
+msgid "switch - conditionally execute a block of commands"
+msgstr "switch - 条件に応じてコマンドブロックを実行"
+
+#: ../../doc_src/cmds/switch.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/switch.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/switch.rst:14
+msgid ""
+"``switch`` performs one of several blocks of commands, depending on "
+"whether a specified value equals one of several globbed values. ``case`` "
+"is used together with the ``switch`` statement in order to determine "
+"which block should be executed."
+msgstr ""
+"``switch`` は、指定された値がいくつかのグロブ(ワイルドカード)値のいずれかと一致するかどうかに応じて、"
+"複数のコマンドブロックのうちの1つを実行します。どのブロックを実行するかを決定するために、 "
+"``case`` が ``switch`` 文とともに使用されます。"
+
+#: ../../doc_src/cmds/switch.rst:16
+msgid ""
+"Each ``case`` command is given one or more parameters. The first ``case``"
+" command with a parameter that matches the string specified in the switch"
+" command will be evaluated. ``case`` parameters may contain globs. These "
+"need to be escaped or quoted in order to avoid regular glob expansion "
+"using filenames."
+msgstr ""
+"各 ``case`` コマンドには1つ以上のパラメータが与えられます。 switchコマンドで指定された文字列に一致する"
+"パラメータを持つ最初の ``case`` コマンドが評価されます。 ``case`` のパラメータにはグロブを含めることができます。 "
+"ファイル名を使用した通常のグロブ展開を避けるために、これらはエスケープするか引用符で囲む必要があります。"
+
+#: ../../doc_src/cmds/switch.rst:18
+msgid ""
+"Note that fish does not fall through on case statements. Only the first "
+"matching case is executed."
+msgstr ""
+"fishのcase文ではフォールスルー(次のcaseへ継続すること)は行われないことに注意してください。 "
+"最初に一致したcaseのみが実行されます。"
+
+#: ../../doc_src/cmds/switch.rst:20
+msgid ""
+"Note that :doc:`break <break>` cannot be used to exit a case/switch block"
+" early like in other languages. It can only be used in loops."
+msgstr ""
+"他の言語のように、 :doc:`break <break>` を使用してcase/switchブロックを途中で抜けることは"
+"できないことに注意してください。 breakはループ内でのみ使用できます。"
+
+#: ../../doc_src/cmds/switch.rst:22
+msgid ""
+"Note that command substitutions in a case statement will be evaluated "
+"even if its body is not taken. All substitutions, including command "
+"substitutions, must be performed before the value can be compared against"
+" the parameter."
+msgstr ""
+"case文内のコマンド置換は、その中身が実行されない場合でも評価されることに注意してください。 "
+"コマンド置換を含むすべての置換は、値をパラメータと比較する前に実行される必要があります。"
+
+#: ../../doc_src/cmds/switch.rst:26
+msgid "Example"
+msgstr "例"
+
+#: ../../doc_src/cmds/switch.rst:28
+msgid ""
+"If the variable ``$animal`` contains the name of an animal, the following"
+" code would attempt to classify it:"
+msgstr ""
+"変数 ``$animal`` に動物の名前が含まれている場合、次のコードはそれを分類しようと試みます:"
+
+#: ../../doc_src/cmds/switch.rst:46
+msgid ""
+"If the above code was run with ``$animal`` set to ``whale``, the output "
+"would be ``mammal``."
+msgstr ""
+"上記のコードを ``$animal`` を ``whale`` に設定して実行した場合、出力は ``mammal`` になります。"

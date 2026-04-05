@@ -1,0 +1,1097 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/tutorial.rst:4
+msgid "Tutorial"
+msgstr "チュートリアル"
+
+#: ../../doc_src/tutorial.rst:7
+msgid "Why fish?"
+msgstr "なぜ fish なのか？"
+
+#: ../../doc_src/tutorial.rst:9
+msgid ""
+"Fish is a fully-equipped command line shell (like bash or zsh) that is "
+"smart and user-friendly. Fish supports powerful features like syntax "
+"highlighting, autosuggestions, and tab completions that just work, with "
+"nothing to learn or configure."
+msgstr ""
+"fish は、bash や zsh のような、スマートでユーザーフレンドリーな機能をフル装備したコマンドラインシェルです。fish "
+"は、構文ハイライト、オートサジェスチョン(自動提案)、タブ補完といった強力な機能をサポートしており、学習や設定をすることなく、使い始めた瞬間からそれらが「いい感じに」動作します。"
+
+#: ../../doc_src/tutorial.rst:11
+msgid ""
+"If you want to make your command line more productive, more useful, and "
+"more fun, without learning a bunch of arcane syntax and configuration "
+"options, then fish might be just what you're looking for!"
+msgstr ""
+"難解な構文や設定オプションを大量に覚えることなく、コマンドラインをもっと生産的で、便利で、楽しいものにしたいなら、fish "
+"はまさにあなたが探し求めていたものかもしれません。"
+
+#: ../../doc_src/tutorial.rst:15
+msgid "Getting started"
+msgstr "はじめに"
+
+#: ../../doc_src/tutorial.rst:17
+msgid ""
+"Once installed, just type in ``fish`` into your current shell to try it "
+"out!"
+msgstr "インストールしたら、現在のシェルで ``fish`` と入力するだけで試すことができます。"
+
+#: ../../doc_src/tutorial.rst:19
+msgid ""
+"You will be greeted by the standard fish prompt, which means you are all "
+"set up and can start using fish::"
+msgstr "標準的な fish プロンプトが表示されれば、準備は完了です。すぐに fish を使い始めることができます。"
+
+#: ../../doc_src/tutorial.rst:28
+msgid ""
+"This prompt that you see above is the fish default prompt: it shows your "
+"username, hostname, and working directory. You can customize it, see "
+":ref:`how to change your prompt <prompt>`."
+msgstr ""
+"上に表示されているのは fish "
+"のデフォルトのプロンプトです。ユーザー名、ホスト名、および作業ディレクトリが表示されます。これはカスタマイズ可能です。詳細は "
+":ref:`プロンプトの変更方法 <prompt>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:30
+msgid "From now on, we'll pretend your prompt is just a ``>`` to save space."
+msgstr "これ以降、スペースを節約するために、プロンプトは単に ``>`` であるものとして説明します。"
+
+#: ../../doc_src/tutorial.rst:34
+msgid "Learning fish"
+msgstr "fish を学ぶ"
+
+#: ../../doc_src/tutorial.rst:36
+msgid ""
+"This tutorial assumes a basic understanding of command line shells and "
+"Unix commands, and that you have a working copy of fish."
+msgstr "このチュートリアルは、コマンドラインシェルと Unix コマンドの基本的な理解があり、手元に動作する fish があることを前提としています。"
+
+#: ../../doc_src/tutorial.rst:38
+msgid ""
+"If you have a strong understanding of other shells, and want to know what"
+" fish does differently, search for the magic phrase *unlike other "
+"shells*, which is used to call out important differences."
+msgstr ""
+"他のシェルに精通しており、fish との違いを知りたい場合は、重要な違いを指摘するために使われている「*他のシェルとは異なり(unlike "
+"other shells)*」というフレーズを検索してみてください。"
+
+#: ../../doc_src/tutorial.rst:40
+msgid ""
+"Or, if you want a quick overview over the differences to other shells "
+"like Bash, see :doc:`Fish For Bash Users <fish_for_bash_users>`."
+msgstr ""
+"あるいは、bash などの他のシェルとの違いを素早く把握したい場合は、 :doc:`bash ユーザーのための fish "
+"<fish_for_bash_users>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:42
+msgid ""
+"For the full, detailed description of how to use fish interactively, see "
+":doc:`Interactive Use <interactive>`."
+msgstr "fish を対話的に使用する方法の完全かつ詳細な説明については、 :doc:`対話的な使用 <interactive>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:44
+msgid ""
+"For a comprehensive description of fish's scripting language, see "
+":doc:`The Fish Language <language>`."
+msgstr "fish のスクリプト言語に関する包括的な説明については、 :doc:`fish 言語 <language>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:47
+msgid "Running Commands"
+msgstr "コマンドの実行"
+
+#: ../../doc_src/tutorial.rst:49
+msgid ""
+"Fish runs commands like other shells: you type a command, followed by its"
+" arguments. Spaces are separators::"
+msgstr "fish は他のシェルと同様にコマンドを実行します。コマンドを入力し、その後に引数を続けます。スペースが区切り文字となります。"
+
+#: ../../doc_src/tutorial.rst:55
+msgid ""
+"This runs the command ``echo`` with the arguments ``hello`` and "
+"``world``. In this case that's the same as one argument ``hello world``, "
+"but in many cases it's not. If you need to pass an argument that includes"
+" a space, you can :ref:`escape <escapes>` with a backslash, or "
+":ref:`quote <quotes>` it using single or double quotes::"
+msgstr ""
+"これは、引数 ``hello`` と ``world`` を指定して ``echo`` コマンドを実行します。この例では、単一の引数 "
+"``hello world`` "
+"を渡すのと同じ結果になりますが、多くの場合そうではありません。スペースを含む引数を渡す必要がある場合は、バックスラッシュで :ref:`エスケープ"
+" <escapes>` するか、シングルクォートまたはダブルクォートで :ref:`引用符で囲みます <quotes>`。"
+
+#: ../../doc_src/tutorial.rst:66
+msgid "Getting Help"
+msgstr "ヘルプの表示"
+
+#: ../../doc_src/tutorial.rst:68
+msgid ""
+"Run ``help`` to open fish's help in a web browser, and ``man`` with the "
+"page (like ``fish-language``) to open it in a man page. You can also ask "
+"for help with a specific command, for example, ``help set`` to open in a "
+"web browser, or ``man set`` to see it in the terminal."
+msgstr ""
+"``help`` を実行すると、Web ブラウザで fish のヘルプが開きます。 ``man`` にページ名( ``fish-"
+"language`` など)を指定して実行すると、man ページとして開きます。特定のコマンドについてヘルプが必要な場合は、例えば ``help "
+"set`` と入力するとブラウザで、``man set`` と入力するとターミナル上でその説明を確認できます。"
+
+#: ../../doc_src/tutorial.rst:76
+msgid "To open this section, use ``help getting-help``."
+msgstr "このセクションを開くには、 ``help getting-help`` を使用してください。"
+
+#: ../../doc_src/tutorial.rst:78
+msgid ""
+"This only works for fish's own documentation for itself and its built-in "
+"commands (the \"builtins\"). For any other commands on your system, they "
+"should provide their own documentation, often in the man system. For "
+"example ``man ls`` should tell you about your computer's ``ls`` command."
+msgstr ""
+"これは fish "
+"自体のドキュメントと、その組み込みコマンド(\"builtins\")に対してのみ機能します。システム上の他のコマンドについては、通常 man "
+"システムなどで独自のドキュメントが提供されています。例えば、 ``man ls`` を実行すれば、お使いのコンピュータの ``ls`` "
+"コマンドについて知ることができます。"
+
+#: ../../doc_src/tutorial.rst:81
+msgid "Syntax Highlighting"
+msgstr "構文ハイライト"
+
+#: ../../doc_src/tutorial.rst:90
+msgid ""
+"You'll quickly notice that fish performs syntax highlighting as you type."
+" Invalid commands are colored red by default:"
+msgstr "入力中に fish が構文ハイライト(色分け)を行っていることにすぐ気づくでしょう。無効なコマンドは、デフォルトで赤色で表示されます。"
+
+#: ../../doc_src/tutorial.rst:97
+msgid ""
+"A command may be invalid because it does not exist, or refers to a file "
+"that you cannot execute. When the command becomes valid, it is shown in a"
+" different color::"
+msgstr "コマンドが無効である理由としては、そのコマンドが存在しないか、実行権限のないファイルを参照していることなどが考えられます。コマンドが有効になると、別の色で表示されます。"
+
+#: ../../doc_src/tutorial.rst:102
+msgid "Valid file paths are underlined as you type them:"
+msgstr "有効なファイルパスを入力すると、下線が表示されます。"
+
+#: ../../doc_src/tutorial.rst:110
+msgid ""
+"This tells you that there exists a file that starts with ``somefi``, "
+"which is useful feedback as you type."
+msgstr "これは ``somefi`` で始まるファイルが存在することを教えてくれます。入力中のフィードバックとして非常に便利です。"
+
+#: ../../doc_src/tutorial.rst:112
+msgid ""
+"These colors, and many more, can be changed by running ``fish_config``, "
+"or by modifying :ref:`color variables <variables-color>` directly."
+msgstr ""
+"これらの色やその他の多くの設定は、 ``fish_config`` を実行するか、 :ref:`カラー変数 <variables-color>` "
+"を直接変更することでカスタマイズできます。"
+
+#: ../../doc_src/tutorial.rst:114
+msgid "For example, if you want to disable (almost) all coloring::"
+msgstr "例えば、(ほぼ)すべての色付けを無効にしたい場合は次のようにします。"
+
+#: ../../doc_src/tutorial.rst:118
+msgid "This picks the \"none\" theme. To see all themes::"
+msgstr "これにより \"none\" テーマが選択されます。すべてのテーマを確認するには次のように入力します。"
+
+#: ../../doc_src/tutorial.rst:122
+msgid ""
+"Just running ``fish_config`` will open up a browser interface that allows"
+" you to pick from the available themes."
+msgstr "単に ``fish_config`` を実行するとブラウザインターフェースが開き、利用可能なテーマから好きなものを選択できます。"
+
+#: ../../doc_src/tutorial.rst:125
+msgid "Autosuggestions"
+msgstr "オートサジェスチョン(自動提案)"
+
+#: ../../doc_src/tutorial.rst:127
+msgid ""
+"As you type fish will suggest commands to the right of the cursor, in "
+"gray. For example:"
+msgstr "入力中、fish はカーソルの右側にコマンドの候補を灰色で表示します。例: "
+
+#: ../../doc_src/tutorial.rst:135
+msgid "It knows about paths and options:"
+msgstr "パスやオプションについても認識します。"
+
+#: ../../doc_src/tutorial.rst:143
+msgid ""
+"And history too. Type a command once, and you can re-summon it by just "
+"typing a few letters:"
+msgstr "さらに履歴も対象になります。一度コマンドを入力すれば、次からは数文字入力するだけでそのコマンドを呼び戻すことができます。"
+
+#: ../../doc_src/tutorial.rst:151
+msgid ""
+"To accept the autosuggestion, hit :kbd:`right` (``→``) or :kbd:`ctrl-f`. "
+"To accept a single word of the autosuggestion, :kbd:`alt-right` (``→``). "
+"If the autosuggestion is not what you want, just ignore it."
+msgstr ""
+"オートサジェスチョンを採用するには、 :kbd:`right` (``→``) 、 :kbd:`ctrl-f` "
+"を押します。オートサジェスチョンのうち単語1つ分だけを採用するには、 :kbd:`alt-right` (``→``) "
+"を押します。提案された内容が望むものでない場合は、単に無視して入力を続けてください。"
+
+#: ../../doc_src/tutorial.rst:153
+msgid ""
+"If you don't like autosuggestions, you can disable them by setting "
+"``$fish_autosuggestion_enabled`` to 0::"
+msgstr "オートサジェスチョンが不要な場合は、 ``$fish_autosuggestion_enabled`` を 0 に設定することで無効にできます。"
+
+#: ../../doc_src/tutorial.rst:158
+msgid "Tab Completions"
+msgstr "タブ補完"
+
+#: ../../doc_src/tutorial.rst:160
+msgid "A rich set of tab completions work \"out of the box\"."
+msgstr "豊富なタブ補完機能が、設定なしですぐに利用できます。"
+
+#: ../../doc_src/tutorial.rst:162
+msgid ""
+"Press :kbd:`tab` and fish will attempt to complete the command, argument,"
+" or path:"
+msgstr ":kbd:`tab` キーを押すと、fish はコマンド、引数、またはパスの補完を試みます。"
+
+#: ../../doc_src/tutorial.rst:170
+msgid "If there's more than one possibility, it will list them:"
+msgstr "候補が複数ある場合は、それらが一覧表示されます。"
+
+#: ../../doc_src/tutorial.rst:179
+msgid ""
+"Hit tab again to cycle through the possibilities. The part in parentheses"
+" there (that \"command\" and \"directory\") is the completion "
+"description. It's just a short hint to explain what kind of argument it "
+"is."
+msgstr ""
+"もう一度タブキーを押すと、候補を順番に切り替えることができます。括弧内の部分( \"command\" や \"directory\" "
+"など)は「補完の説明」です。それがどのような種類の引数であるかを示す短いヒントです。"
+
+#: ../../doc_src/tutorial.rst:181
+msgid "fish can also complete many commands, like git branches:"
+msgstr "fish は git のブランチなど、多くのコマンド固有の補完も行えます。"
+
+#: ../../doc_src/tutorial.rst:190
+msgid "Try hitting tab and see what fish can do!"
+msgstr "タブキーを叩いて、fish に何ができるか試してみてください！"
+
+#: ../../doc_src/tutorial.rst:193
+msgid "Variables"
+msgstr "変数"
+
+#: ../../doc_src/tutorial.rst:195
+msgid ""
+"Like other shells, a dollar sign followed by a variable name is replaced "
+"with the value of that variable::"
+msgstr "他のシェルと同様に、ドル記号に続く変数名は、その変数の値に置き換えられます。"
+
+#: ../../doc_src/tutorial.rst:200
+msgid ""
+"This is known as variable substitution, and it also happens in double "
+"quotes, but not single quotes::"
+msgstr "これは「変数置換」と呼ばれます。ダブルクォート内でも行われますが、シングルクォート内では行われません。"
+
+#: ../../doc_src/tutorial.rst:207
+msgid ""
+"Unlike other shells, fish has an ordinary command to set variables: "
+"``set``, which takes a variable name, and then its value."
+msgstr ""
+"他のシェルとは異なり、fish には変数値を設定するための標準的なコマンド ``set`` があります。``set`` "
+"は変数名を受け取り、その後に値を指定します。"
+
+#: ../../doc_src/tutorial.rst:216
+msgid ""
+"(Notice the quotes: without them, ``Mister`` and ``Noodle`` would have "
+"been separate arguments, and ``$name`` would have been made into a list "
+"of two elements.)"
+msgstr ""
+"(引用符に注目してください。引用符がない場合、 ``Mister`` と ``Noodle`` は別々の引数になり、``$name`` "
+"は2つの要素を持つリストになります。)"
+
+#: ../../doc_src/tutorial.rst:218
+msgid "Unlike other shells, variables are not further split after substitution::"
+msgstr "他のシェルとは異なり、変数は置換された後に(スペースなどで)さらに分割されることはありません。"
+
+#: ../../doc_src/tutorial.rst:224
+msgid ""
+"In bash, this would have created two directories \"Mister\" and "
+"\"Noodle\". In fish, it created only one: the variable had the value "
+"\"Mister Noodle\", so that is the argument that was passed to ``mkdir``, "
+"spaces and all."
+msgstr ""
+"bash の場合、これは \"Mister\" と \"Noodle\" という2つのディレクトリを作成します。fish "
+"では1つだけ作成されます。変数の値は \"Mister Noodle\" であったため、スペースを含んだその値全体が一つの引数として "
+"``mkdir`` に渡されたからです。"
+
+#: ../../doc_src/tutorial.rst:226
+msgid "You can erase (or \"delete\") a variable with ``-e`` or ``--erase``"
+msgstr "変数を消去(または「削除」)するには、 ``-e`` 、 ``--erase`` を使用します。"
+
+#: ../../doc_src/tutorial.rst:234
+msgid "For more, see :ref:`Variable expansion <expand-variable>`."
+msgstr "詳細は :ref:`変数の展開 <expand-variable>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:239
+msgid "Exports (Shell Variables)"
+msgstr "エクスポート(シェル変数)"
+
+#: ../../doc_src/tutorial.rst:241
+msgid ""
+"Sometimes you need to have a variable available to an external command, "
+"often as a setting. For example many programs like ``git`` or ``man`` "
+"read the ``$PAGER`` variable to figure out your preferred pager (the "
+"program that lets you scroll text). Other variables used like this "
+"include ``$BROWSER``, ``$LANG`` (to configure your language) and "
+"``$PATH``. You'll note these are written in ALLCAPS, but that's just a "
+"convention."
+msgstr ""
+"設定値などとして、外部コマンドから変数を利用可能にしたい場合があります。例えば、 ``git`` や ``man`` "
+"といった多くのプログラムは、好みのページャ(テキストをスクロール表示するプログラム)を特定するために ``$PAGER`` "
+"変数を読み取ります。このように使われる変数には、他に ``$BROWSER`` や ``$LANG`` (言語設定)、``$PATH`` "
+"などがあります。これらはすべて大文字で書かれていますが、これは単なる慣習です。"
+
+#: ../../doc_src/tutorial.rst:243
+msgid ""
+"To give a variable to an external command, it needs to be \"exported\". "
+"This is done with a flag to ``set``, either ``--export`` or just ``-x``."
+msgstr ""
+"変数を外部コマンドに渡すには、その変数を「エクスポート」する必要があります。これを行うには、 ``set`` に ``--export`` "
+"または単に ``-x`` フラグを付けます。"
+
+#: ../../doc_src/tutorial.rst:251
+msgid "It can also be unexported with ``--unexport`` or ``-u``."
+msgstr "また、 ``--unexport`` 、 ``-u`` でエクスポートを解除することもできます。"
+
+#: ../../doc_src/tutorial.rst:253
+msgid ""
+"This works the other way around as well! If fish is started by something "
+"else, it inherits that parents exported variables. So if your terminal "
+"emulator starts fish, and it exports ``$LANG`` set to ``en_US.UTF-8``, "
+"fish will receive that setting. And whatever started your terminal "
+"emulator also gave *it* some variables that it will then pass on unless "
+"it specifically decides not to. This is how fish usually receives the "
+"values for things like ``$LANG``, ``$PATH`` and ``$TERM``, without you "
+"having to specify them again."
+msgstr ""
+"これは逆方向にも機能します！ fish "
+"が他のプロセスから起動された場合、親プロセスのエクスポートされた変数を継承します。例えば、ターミナルエミュレータが fish "
+"を起動し、そのターミナルが ``$LANG`` を ``en_US.UTF-8`` としてエクスポートしていれば、fish "
+"はその設定を受け取ります。そして、ターミナルエミュレータを起動したものもまた、明示的に拒否しない限り、ターミナルに変数を受け渡しています。このようにして、fish"
+" は通常 ``$LANG`` 、 ``$PATH`` 、 ``$TERM`` といった値を、あなたが再指定することなく受け取っています。"
+
+#: ../../doc_src/tutorial.rst:255
+msgid ""
+"Exported variables can be local or global or universal - \"exported\" is "
+"not a :ref:`scope <variables-scope>`! Usually you'd make them global via "
+"``set -gx MyVariable SomeValue``."
+msgstr ""
+"エクスポートされた変数は、ローカル、グローバル、またはユニバーサルのいずれかになります。「エクスポート」は :ref:`スコープ "
+"<variables-scope>` ではありません！ 通常は ``set -gx MyVariable SomeValue`` "
+"のようにしてグローバル変数として作成します。"
+
+#: ../../doc_src/tutorial.rst:257
+msgid "For more, see :ref:`Exporting variables <variables-export>`."
+msgstr "詳細は :ref:`変数のエクスポート <variables-export>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:262
+msgid "Lists"
+msgstr "リスト"
+
+#: ../../doc_src/tutorial.rst:264
+msgid ""
+"The ``set`` command above used quotes to ensure that ``Mister Noodle`` "
+"was one argument. If it had been two arguments, then ``name`` would have "
+"been a list of length 2.  In fact, all variables in fish are really "
+"lists, that can contain any number of values, or none at all."
+msgstr ""
+"上記の ``set`` コマンドでは、クォートを使用することで ``Mister Noodle`` が"
+"1つの引数として扱われるようにしています。もしこれが2つの引数であったなら、"
+"``name`` は長さ 2 のリストになっていたでしょう。実のところ、 fish の変数は"
+"すべてリストであり、任意の数の値を持たせることも、値を一つも持たせないことも可能です。"
+
+#: ../../doc_src/tutorial.rst:266
+msgid ""
+"Some variables, like ``$PWD``, only have one value. By convention, we "
+"talk about that variable's value, but we really mean its first (and only)"
+" value."
+msgstr "``$PWD`` のように値を一つしか持たない変数もあります。慣習的にその変数の「値」と呼びますが、実際にはその「最初で唯一の」値を指しています。"
+
+#: ../../doc_src/tutorial.rst:268
+msgid ""
+"Other variables, like ``$PATH``, really do have multiple values. During "
+"variable expansion, the variable expands to become multiple arguments::"
+msgstr "一方で、 ``$PATH`` のように実際に複数の値を持つ変数もあります。変数展開の際、その変数は展開されて複数の引数になります。"
+
+#: ../../doc_src/tutorial.rst:273
+msgid ""
+"Variables whose name ends in \"PATH\" are automatically split on colons "
+"to become lists. They are joined using colons when exported to "
+"subcommands. This is for compatibility with other tools, which expect "
+"$PATH to use colons. You can also explicitly add this quirk to a variable"
+" with ``set --path``, or remove it with ``set --unpath``."
+msgstr ""
+"名前が \"PATH\" "
+"で終わる変数は、自動的にコロンで分割されてリストになります。外部コマンド(サブプロセス)にエクスポートされる際は、コロンで結合されます。これは、 "
+"``$PATH`` がコロン区切りであることを期待する他のツールとの互換性を保つためです。この挙動(quirk)は、 ``set --path``"
+" で明示的に変数に追加したり、``set --unpath`` で削除したりすることもできます。"
+
+#: ../../doc_src/tutorial.rst:275
+msgid ""
+"Lists cannot contain other lists: there is no recursion.  A variable is a"
+" list of strings, full stop."
+msgstr "リストに他のリストを含めることはできません。つまり、再帰構造は存在しません。"
+"変数は「文字列のリスト」である、それだけのことです。"
+
+#: ../../doc_src/tutorial.rst:277
+msgid "Get the length of a list with ``count``::"
+msgstr "リストの長さ(要素数)を取得するには ``count`` を使用します。"
+
+#: ../../doc_src/tutorial.rst:282
+msgid ""
+"You can append (or prepend) to a list by setting the list to itself, with"
+" some additional arguments. Here we append /usr/local/bin to $PATH::"
+msgstr ""
+"追加の引数を指定して自分自身を再設定することで、リストに要素を追記(または先頭に追加)できます。ここでは、 ``$PATH`` に "
+"``/usr/local/bin`` を追記しています。"
+
+#: ../../doc_src/tutorial.rst:286
+msgid ""
+"You can access individual elements with square brackets. Indexing starts "
+"at 1 from the beginning, and -1 from the end::"
+msgstr ""
+"角括弧(スクエアブラケット)を使用して、個々の要素にアクセスできます。インデックスは先頭から数える場合は 1 から始まり、末尾から数える場合は "
+"-1 から始まります。"
+
+#: ../../doc_src/tutorial.rst:295
+msgid "You can also access ranges of elements, known as \"slices\":"
+msgstr "「スライス」と呼ばれる、要素の範囲にアクセスすることもできます。"
+
+#: ../../doc_src/tutorial.rst:304
+msgid "You can iterate over a list (or a slice) with a for loop::"
+msgstr "for ループを使って、リスト(またはスライス)を反復処理できます。"
+
+#: ../../doc_src/tutorial.rst:316
+msgid ""
+"One particular bit is that you can use lists like :ref:`Brace expansion "
+"<expand-brace>`. If you attach another string to a list, it'll combine "
+"every element of the list with the string::"
+msgstr ""
+"特筆すべき点として、リストを :ref:`ブレース展開 <expand-brace>` "
+"のように使用できることがあります。リストに別の文字列を繋げると、リストの各要素とその文字列が結合されます。"
+
+#: ../../doc_src/tutorial.rst:322
+msgid "This also means that, if the list is empty, there will be no argument::"
+msgstr "これはまた、リストが空の場合、引数が存在しなくなることも意味します。"
+
+#: ../../doc_src/tutorial.rst:327
+msgid ""
+"If you quote the list, it will be used as one string and so you'll get "
+"one argument even if it is empty."
+msgstr "リストを引用符で囲むと、一つの文字列として扱われるため、たとえリストが空であっても一つの引数となります。"
+
+#: ../../doc_src/tutorial.rst:329
+msgid ""
+"For more, see :ref:`Lists <variables-lists>`. For more on combining lists"
+" with strings (or even other lists), see :ref:`cartesian products "
+"<cartesian-product>` and :ref:`Variable expansion <expand-variable>`."
+msgstr ""
+"詳細は :ref:`リスト <variables-lists>` "
+"を参照してください。リストと文字列(あるいは他のリスト)の結合についての詳細は、:ref:`直積展開 <cartesian-product>` "
+"および :ref:`変数の展開 <expand-variable>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:333
+msgid "Wildcards"
+msgstr "ワイルドカード"
+
+#: ../../doc_src/tutorial.rst:335
+msgid "Fish supports the familiar wildcard ``*``. To list all JPEG files::"
+msgstr "fish はおなじみのワイルドカード ``*`` をサポートしています。すべての JPEG ファイルを一覧表示するには次のようにします。"
+
+#: ../../doc_src/tutorial.rst:343
+msgid "You can include multiple wildcards::"
+msgstr "複数のワイルドカードを含めることもできます。"
+
+#: ../../doc_src/tutorial.rst:350
+msgid "The recursive wildcard ``**`` searches directories recursively::"
+msgstr "再帰的ワイルドカード ``**`` は、ディレクトリを再帰的に検索します。"
+
+#: ../../doc_src/tutorial.rst:357
+msgid ""
+"If that directory traversal is taking a long time, you can :kbd:`ctrl-c` "
+"out of it."
+msgstr "ディレクトリの走査(トラバーサル)に時間がかかりすぎている場合は、 :kbd:`ctrl-c` で中断できます。"
+
+#: ../../doc_src/tutorial.rst:359
+msgid "For more, see :ref:`Wildcards <expand-wildcard>`."
+msgstr "詳細は :ref:`ワイルドカード <expand-wildcard>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:362
+msgid "Pipes and Redirections"
+msgstr "パイプとリダイレクト"
+
+#: ../../doc_src/tutorial.rst:364
+msgid "You can pipe between commands with the usual vertical bar::"
+msgstr "通常の垂直バー(パイプ記号)を使って、コマンド間でパイプラインを作成できます。"
+
+#: ../../doc_src/tutorial.rst:369
+msgid ""
+"stdin and stdout can be redirected via the familiar ``<`` and ``>``. "
+"stderr is redirected with a ``2>``."
+msgstr ""
+"標準入力(stdin)と標準出力(stdout)は、おなじみの ``<`` と ``>`` "
+"でリダイレクトできます。標準エラー出力(stderr)は ``2>`` でリダイレクトします。"
+
+#: ../../doc_src/tutorial.rst:375
+msgid "To redirect stdout and stderr into one file, you can use ``&>``::"
+msgstr "標準出力と標準エラー出力を一つのファイルにまとめてリダイレクトするには、 ``&>`` を使用します。"
+
+#: ../../doc_src/tutorial.rst:379
+msgid ""
+"For more, see :ref:`Input and output redirections <redirects>` and "
+":ref:`Pipes <pipes>`."
+msgstr "詳細は :ref:`入出力リダイレクト <redirects>` および :ref:`パイプ <pipes>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:383
+msgid "Command Substitutions"
+msgstr "コマンド置換"
+
+#: ../../doc_src/tutorial.rst:385
+msgid ""
+"Command substitutions use the output of one command as an argument to "
+"another. Unlike other shells, fish does not use backticks `` for command "
+"substitutions. Instead, it uses parentheses with or without a dollar::"
+msgstr ""
+"コマンド置換は、あるコマンドの出力を別のコマンドの引数として使用します。他のシェルとは異なり、fish はコマンド置換にバッククォート( `` "
+")を使用しません。代わりに、ドルの有無にかかわらず括弧を使用します。"
+
+#: ../../doc_src/tutorial.rst:390
+msgid "A common idiom is to capture the output of a command in a variable::"
+msgstr "よく使われる慣用句(イディオム)は、コマンドの出力を変数に格納することです。"
+
+#: ../../doc_src/tutorial.rst:396
+msgid ""
+"Command substitutions without a dollar are not expanded within quotes, so"
+" the version with a dollar is simpler::"
+msgstr "ドルなしのコマンド置換は引用符内では展開されないため、ドル付きのバージョンの方がシンプルです。"
+
+#: ../../doc_src/tutorial.rst:402
+msgid ""
+"Unlike other shells, fish does not split command substitutions on any "
+"whitespace (like spaces or tabs), only newlines. Usually this is a big "
+"help because unix commands operate on a line-by-line basis. Sometimes it "
+"can be an issue with commands like ``pkg-config`` that print what is "
+"meant to be multiple arguments on a single line. To split it on spaces "
+"too, use ``string split``."
+msgstr ""
+"他のシェルとは異なり、fish はコマンド置換の結果を任意の空白(スペースやタブなど)で分割せず、改行でのみ分割します。Unix "
+"コマンドは行単位で動作することが多いため、通常これは大きな助けになります。ただし、 ``pkg-config`` "
+"のように「本来複数の引数であるべきものを1行にまとめて出力する」コマンドでは問題になることがあります。スペースでも分割したい場合は、 "
+"``string split`` を使用してください。"
+
+#: ../../doc_src/tutorial.rst:413
+msgid ""
+"If you need a command substitutions output as one argument, without any "
+"splits, use quoted command substitution::"
+msgstr "コマンド置換の出力を(改行による分割も行わず)一つの引数として扱いたい場合は、引用符で囲んだコマンド置換を使用してください。"
+
+#: ../../doc_src/tutorial.rst:422
+msgid "For more, see :ref:`Command substitution <expand-command-substitution>`."
+msgstr "詳細は :ref:`コマンド置換 <expand-command-substitution>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:427
+msgid "Separating Commands (Semicolon)"
+msgstr "コマンドの区切り(セミコロン)"
+
+#: ../../doc_src/tutorial.rst:429
+msgid ""
+"Like other shells, fish allows multiple commands either on separate lines"
+" or the same line."
+msgstr "他のシェルと同様に、fish では複数のコマンドを別々の行に書くことも、同じ行に書くこともできます。"
+
+#: ../../doc_src/tutorial.rst:431
+msgid ""
+"To write them on the same line, use the semicolon (\";\"). That means the"
+" following two examples are equivalent::"
+msgstr "同じ行に書く場合は、セミコロン( \";\" )を使用します。つまり、以下の2つの例は等価です。"
+
+#: ../../doc_src/tutorial.rst:439
+msgid ""
+"This is useful interactively to enter multiple commands. In a script it's"
+" easier to read if the commands are on separate lines."
+msgstr "これは対話的に複数のコマンドを入力する際に便利です。スクリプト内では、別々の行に書いた方が読みやすくなります。"
+
+#: ../../doc_src/tutorial.rst:442
+msgid "Exit Status"
+msgstr "終了ステータス"
+
+#: ../../doc_src/tutorial.rst:444
+msgid ""
+"When a command exits, it returns a status code as a non-negative integer "
+"(that's a whole number >= 0)."
+msgstr "コマンドが終了すると、非負の整数(0以上の整数)としてステータスコードを返します。"
+
+#: ../../doc_src/tutorial.rst:446
+msgid ""
+"Unlike other shells, fish stores the exit status of the last command in "
+"``$status`` instead of ``$?``."
+msgstr "他のシェルとは異なり、fish は直前のコマンドの終了ステータスを ``$?`` ではなく ``$status`` に格納します。"
+
+#: ../../doc_src/tutorial.rst:454
+msgid ""
+"This indicates how the command fared - 0 usually means success, while the"
+" others signify kinds of failure. For instance fish's ``set --query`` "
+"returns the number of variables it queried that weren't set - ``set "
+"--query PATH`` usually returns 0, ``set --query arglbargl boogagoogoo`` "
+"usually returns 2."
+msgstr ""
+"これはコマンドの結果を示します。通常、0 は成功を意味し、それ以外は何らかの失敗を意味します。例えば、fish の ``set --query``"
+" は、照会した変数のうち設定されていなかったものの数を返します。``set --query PATH`` は通常 0 を返し、 ``set "
+"--query arglbargl boogagoogoo`` は通常 2 を返します。"
+
+#: ../../doc_src/tutorial.rst:456
+msgid ""
+"There is also a ``$pipestatus`` list variable for the exit statuses [#]_ "
+"of processes in a pipe."
+msgstr "また、パイプ内の各プロセスの終了ステータス [#]_ を保持するリスト変数 ``$pipestatus`` もあります。"
+
+#: ../../doc_src/tutorial.rst:458
+msgid "For more, see :ref:`The status variable <variables-status>`."
+msgstr "詳細は :ref:`status 変数 <variables-status>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:460
+msgid ""
+"or \"stati\" if you prefer, or \"statūs\" if you've time-travelled from "
+"ancient Rome or work as a latin teacher"
+msgstr ""
+"(英語の原文Note: status の複数形として、お好みで \"stati\"、あるいは古代ローマからのタイムトラベラーやラテン語教師の方なら "
+"\"statūs\" と呼んでも構いません)"
+
+#: ../../doc_src/tutorial.rst:465
+msgid "Combiners (And, Or, Not)"
+msgstr "結合構文 (And, Or, Not)"
+
+#: ../../doc_src/tutorial.rst:467
+msgid ""
+"fish supports the familiar ``&&`` and ``||`` to combine commands, and "
+"``!`` to negate them::"
+msgstr "fish は、コマンドを組み合わせるためのおなじみの ``&&`` や ``||`` 、および否定の ``!`` をサポートしています。"
+
+#: ../../doc_src/tutorial.rst:471
+msgid ""
+"Here, ``make`` is only executed if ``./configure`` succeeds (returns 0), "
+"and ``sudo make install`` is only executed if both ``./configure`` and "
+"``make`` succeed."
+msgstr ""
+"ここで、 ``make`` は ``./configure`` が成功(0 を返却)した場合のみ実行され、 ``sudo make "
+"install`` は ``./configure`` と ``make`` の両方が成功した場合のみ実行されます。"
+
+#: ../../doc_src/tutorial.rst:473
+msgid ""
+"fish also supports :doc:`and <cmds/and>`, :doc:`or <cmds/or>`, and "
+":doc:`not <cmds/not>`. The first two are job modifiers and have lower "
+"precedence. Example usage::"
+msgstr ""
+"fish は :doc:`and <cmds/and>` 、 :doc:`or <cmds/or>` 、 :doc:`not "
+"<cmds/not>` もサポートしています。最初の2つはジョブ修飾子であり、優先順位が低くなっています。使用例: "
+
+#: ../../doc_src/tutorial.rst:479
+msgid ""
+"As mentioned in :ref:`the section on the semicolon <tut-semicolon>`, this"
+" can also be written in multiple lines, like so::"
+msgstr ":ref:`セミコロンのセクション <tut-semicolon>` で述べたように、これは次のように複数行で書くこともできます。"
+
+#: ../../doc_src/tutorial.rst:486
+msgid "Conditionals (If, Else, Switch)"
+msgstr "条件文 (If, Else, Switch)"
+
+#: ../../doc_src/tutorial.rst:488
+msgid ""
+"Use :doc:`if <cmds/if>` and :doc:`else <cmds/else>` to conditionally "
+"execute code, based on the exit status of a command."
+msgstr ""
+"コマンドの終了ステータスに基づいてコードを条件付きで実行するには、 :doc:`if <cmds/if>` と :doc:`else "
+"<cmds/else>` を使用します。"
+
+#: ../../doc_src/tutorial.rst:500
+msgid ""
+"To compare strings or numbers or check file properties (whether a file "
+"exists or is writeable and such), use :doc:`test <cmds/test>`, like"
+msgstr ""
+"文字列や数値の比較、またはファイル属性のチェック(ファイルが存在するか、書き込み可能かなど)を行うには、次のように :doc:`test "
+"<cmds/test>` を使用します。"
+
+#: ../../doc_src/tutorial.rst:526
+msgid ""
+":ref:`Combiners <tut-combiners>` can also be used to make more complex "
+"conditions, like"
+msgstr ":ref:`結合構文 <tut-combiners>` を使って、次のようなより複雑な条件を作ることもできます。"
+
+#: ../../doc_src/tutorial.rst:534
+msgid ""
+"For even more complex conditions, use :doc:`begin <cmds/begin>` and "
+":doc:`end <cmds/end>` to group parts of them."
+msgstr ""
+"さらに複雑な条件の場合は、 :doc:`begin <cmds/begin>` と :doc:`end <cmds/end>` "
+"を使って部分的にグループ化します。"
+
+#: ../../doc_src/tutorial.rst:536
+msgid "There is also a :doc:`switch <cmds/switch>` command::"
+msgstr "また、 :doc:`switch <cmds/switch>` コマンドもあります。"
+
+#: ../../doc_src/tutorial.rst:549
+msgid ""
+"As you see, :doc:`case <cmds/case>` does not fall through, and can accept"
+" multiple arguments or (quoted) wildcards."
+msgstr ""
+"見ての通り、 :doc:`case <cmds/case>` "
+"はフォールスルー(次のケースへ続けて実行すること)をせず、複数の引数や(引用符で囲まれた)ワイルドカードを受け入れることができます。"
+
+#: ../../doc_src/tutorial.rst:551
+msgid "For more, see :ref:`Conditions <syntax-conditional>`."
+msgstr "詳細は :ref:`条件文 <syntax-conditional>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:554
+msgid "Functions"
+msgstr "関数"
+
+#: ../../doc_src/tutorial.rst:556
+msgid ""
+"A fish function is a list of commands, which may optionally take "
+"arguments. Unlike other shells, arguments are not passed in \"numbered "
+"variables\" like ``$1``, but instead in a single list ``$argv``. To "
+"create a function, use the :doc:`function <cmds/function>` builtin::"
+msgstr ""
+"fish の関数はコマンドのリストであり、オプションで引数を取ることができます。他のシェルとは異なり、引数は ``$1`` "
+"のような「番号付き変数」ではなく、単一のリスト ``$argv`` として渡されます。関数を作成するには、組み込みコマンドの "
+":doc:`function <cmds/function>` を使用します。"
+
+#: ../../doc_src/tutorial.rst:566
+msgid ""
+"Unlike other shells, fish does not have aliases or special prompt syntax."
+" Functions take their place. [#]_"
+msgstr "他のシェルとは異なり、fish にはエイリアス(別名)やプロンプト専用の特殊な構文はありません。代わりに関数がその役割を担います [#]_ 。"
+
+#: ../../doc_src/tutorial.rst:568
+msgid ""
+"You can list the names of all functions with the :doc:`functions "
+"<cmds/functions>` builtin (note the plural!). fish starts out with a "
+"number of functions::"
+msgstr ""
+"組み込みコマンドの :doc:`functions <cmds/functions>` "
+"(複数形であることに注意！)を使えば、すべての関数の名前を一覧表示できます。fish には最初から多くの関数が用意されています。"
+
+#: ../../doc_src/tutorial.rst:573
+msgid ""
+"You can see the source for any function by passing its name to "
+"``functions``::"
+msgstr "関数の名前を ``functions`` に渡すことで、その関数のソースコードを確認できます。"
+
+#: ../../doc_src/tutorial.rst:580
+msgid "For more, see :ref:`Functions <syntax-function>`."
+msgstr "詳細は :ref:`関数 <syntax-function>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:582
+msgid ""
+"There is a function called :doc:`alias <cmds/alias>`, but it's just a "
+"shortcut to make functions. fish also provides :ref:`abbreviations "
+"<abbreviations>`, through the :doc:`abbr <cmds/abbr>` command."
+msgstr ""
+"``alias`` という名前のコマンドも存在しますが、これは単に関数を作成するためのショートカット( :doc:`alias "
+"<cmds/alias>` )です。また fish は、 :doc:`abbr <cmds/abbr>` コマンドを通じた "
+":ref:`abbreviations (省略形) <abbreviations>` も提供しています。"
+
+#: ../../doc_src/tutorial.rst:585
+msgid "Loops"
+msgstr "ループ"
+
+#: ../../doc_src/tutorial.rst:587
+msgid "While loops::"
+msgstr "while ループ: "
+
+#: ../../doc_src/tutorial.rst:598
+msgid ""
+"For loops can be used to iterate over a list. For example, a list of "
+"files::"
+msgstr "for ループは、リストを反復処理するために使用できます。例えば、ファイルのリストなどです。"
+
+#: ../../doc_src/tutorial.rst:604
+msgid "Iterating over a list of numbers can be done with ``seq``::"
+msgstr "数値のリストを反復処理するには、 ``seq`` を使用します。"
+
+#: ../../doc_src/tutorial.rst:610
+msgid "For more, see :ref:`Loops and blocks <syntax-loops-and-blocks>`."
+msgstr "詳細は :ref:`ループとブロック <syntax-loops-and-blocks>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:613
+msgid "Prompt"
+msgstr "プロンプト"
+
+#: ../../doc_src/tutorial.rst:617
+msgid ""
+"Unlike other shells, there is no prompt variable like ``PS1``. To display"
+" your prompt, fish executes the :doc:`fish_prompt <cmds/fish_prompt>` "
+"function and uses its output as the prompt. And if it exists, fish also "
+"executes the :doc:`fish_right_prompt <cmds/fish_right_prompt>` function "
+"and uses its output as the right prompt."
+msgstr ""
+"他のシェルとは異なり、 ``PS1`` のようなプロンプト用の変数はありません。プロンプトを表示するために、fish は "
+":doc:`fish_prompt <cmds/fish_prompt>` 関数を実行し、その出力をプロンプトとして使用します。また、 "
+":doc:`fish_right_prompt <cmds/fish_right_prompt>` "
+"関数が存在すればそれも実行し、その出力を右プロンプトとして使用します。"
+
+#: ../../doc_src/tutorial.rst:619
+msgid "You can define your own prompt from the command line:"
+msgstr "コマンドラインから独自のプロンプトを定義することもできます。"
+
+#: ../../doc_src/tutorial.rst:628
+msgid ""
+"Then, if you are happy with it, you can save it to disk by typing "
+"``funcsave fish_prompt``. This saves the prompt in "
+"``~/.config/fish/functions/fish_prompt.fish``. (Or, if you want, you can "
+"create that file manually from the start.)"
+msgstr ""
+"作成したプロンプトが気に入ったら、 ``funcsave fish_prompt`` と入力してディスクに保存できます。これにより、プロンプトが "
+"``~/.config/fish/functions/fish_prompt.fish`` "
+"に保存されます。(あるいは、最初から手動でそのファイルを作成することも可能です。)"
+
+#: ../../doc_src/tutorial.rst:630
+msgid ""
+"Multiple lines are OK. Colors can be set via :doc:`set_color "
+"<cmds/set_color>` by passing it named ANSI colors, or hex RGB values::"
+msgstr ""
+"複数行のプロンプトも可能です。色は :doc:`set_color <cmds/set_color>` を使い、名前付きの ANSI カラーや "
+"16 進数の RGB 値を渡すことで設定できます。"
+
+#: ../../doc_src/tutorial.rst:640
+msgid "This prompt would look like:"
+msgstr "このプロンプトは次のようになります。"
+
+#: ../../doc_src/tutorial.rst:649
+msgid "See also :doc:`Writing your own prompt <prompt>`."
+msgstr "詳細は :doc:`プロンプトの作成 <prompt>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:651
+msgid ""
+"You can choose among sample prompts by running ``fish_config`` for a web "
+"UI or ``fish_config prompt`` for a simpler version inside your terminal."
+msgstr ""
+"``fish_config`` を実行して Web UI 上で、あるいはターミナル内で簡潔に設定できる ``fish_config "
+"prompt`` を実行して、サンプルの中からプロンプトを選ぶこともできます。"
+
+#: ../../doc_src/tutorial.rst:654
+msgid "$PATH"
+msgstr "$PATH"
+
+#: ../../doc_src/tutorial.rst:656
+msgid ""
+"``$PATH`` is an environment variable containing the directories that fish"
+" searches for commands. Unlike other shells, $PATH is a :ref:`list <tut-"
+"lists>`, not a colon-delimited string."
+msgstr ""
+"``$PATH`` は、fish がコマンドを検索するディレクトリ群を含む環境変数です。他のシェルとは異なり、 ``$PATH`` "
+"はコロン区切りの文字列ではなく :ref:`リスト <tut-lists>` です。"
+
+#: ../../doc_src/tutorial.rst:658
+msgid ""
+"Fish takes care to set ``$PATH`` to a default, but typically it is just "
+"inherited from fish's parent process and is set to a value that makes "
+"sense for the system - see :ref:`Exports <tut-exports>`."
+msgstr ""
+"fish は ``$PATH`` をデフォルト値に設定しようとしますが、通常は fish "
+"の親プロセスから継承され、そのシステムに適した値になっています。詳細は :ref:`エクスポート <tut-exports>` "
+"を参照してください。"
+
+#: ../../doc_src/tutorial.rst:660
+msgid "To prepend /usr/local/bin and /usr/sbin to ``$PATH``, you can write::"
+msgstr "``$PATH`` の先頭に ``/usr/local/bin`` と ``/usr/sbin`` を追加するには、次のように記述します。"
+
+#: ../../doc_src/tutorial.rst:665
+msgid "To remove /usr/local/bin from ``$PATH``, you can write::"
+msgstr "``$PATH`` から ``/usr/local/bin`` を削除するには、次のように記述します。"
+
+#: ../../doc_src/tutorial.rst:669
+msgid ""
+"For compatibility with other shells and external commands, $PATH is a "
+":ref:`path variable<variables-path>`, and so will be joined with colons "
+"(not spaces) when you quote it::"
+msgstr ""
+"他のシェルや外部コマンドとの互換性のため、 ``$PATH`` は :ref:`パス変数 <variables-path>` "
+"として扱われます。そのため、引用符で囲んだ場合は(スペースではなく)コロンで結合されます。"
+
+#: ../../doc_src/tutorial.rst:674
+msgid ""
+"and it will be exported like that, and when fish starts it splits the "
+"$PATH it receives into a list on colon."
+msgstr ""
+"エクスポートされる際もその形式(コロン区切り)になります。逆に fish の起動時には、受け取った ``$PATH`` "
+"をコロンで分割してリストにします。"
+
+#: ../../doc_src/tutorial.rst:676
+msgid ""
+"You can do so directly in ``config.fish``, like you might do in other "
+"shells with ``.profile``. See :ref:`this example <path_example>`."
+msgstr ""
+"他のシェルの ``.profile`` と同様に、 ``config.fish`` 内で直接設定することも可能です。:ref:`こちらの例 "
+"<path_example>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:678
+msgid ""
+"A faster way is to use the :doc:`fish_add_path <cmds/fish_add_path>` "
+"function, which adds given directories to the path if they aren't already"
+" included. It does this by modifying the ``$fish_user_paths`` "
+":ref:`universal variable <tut-universal>`, which is automatically "
+"prepended to ``$PATH``. For example, to permanently add "
+"``/usr/local/bin`` to your ``$PATH``, you could write::"
+msgstr ""
+"より素早い方法は、 :doc:`fish_add_path <cmds/fish_add_path>` "
+"関数を使用することです。これは指定されたディレクトリがまだ含まれていない場合のみ、パスに追加します。具体的には、 ``$PATH`` "
+"の先頭に自動で付与される :ref:`ユニバーサル変数 <tut-universal>` の ``$fish_user_paths`` "
+"を書き換えます。例えば、 ``/usr/local/bin`` を恒久的に ``$PATH`` に追加するには次のように記述します。"
+
+#: ../../doc_src/tutorial.rst:683
+msgid ""
+"The advantage is that you don't have to go mucking around in files: just "
+"run this once at the command line, and it will affect the current session"
+" and all future instances too. You can also add this line to "
+":ref:`config.fish <tut-config>`, as it only adds the component if "
+"necessary."
+msgstr ""
+"利点は、設定ファイルをいじくり回す必要がないことです。コマンドラインで一度実行するだけで、現在のセッションだけでなく将来起動するすべてのインスタンスにも反映されます。また、この関数は必要な場合のみ要素を追加するため、この行を"
+" :ref:`config.fish <tut-config>` に記述しておくこともできます。"
+
+#: ../../doc_src/tutorial.rst:685
+msgid ""
+"Or you can modify $fish_user_paths yourself, but you should be careful "
+"*not* to append to it unconditionally in config.fish, or it will grow "
+"longer and longer."
+msgstr ""
+"あるいは ``$fish_user_paths`` を自分で変更することもできますが、 ``config.fish`` "
+"の中で無条件に要素を追記(append)しないよう注意してください。さもないと、起動するたびにパスがどんどん長くなってしまいます。"
+
+#: ../../doc_src/tutorial.rst:690
+msgid "Startup (Where's .bashrc?)"
+msgstr "起動時の設定 (.bashrc はどこ？)"
+
+#: ../../doc_src/tutorial.rst:692
+msgid ""
+"Fish starts by executing commands in ``~/.config/fish/config.fish``. You "
+"can create it if it does not exist."
+msgstr ""
+"fish は起動時に ``~/.config/fish/config.fish`` "
+"内のコマンドを実行します。ファイルが存在しない場合は作成してください。"
+
+#: ../../doc_src/tutorial.rst:694
+msgid ""
+"It is possible to directly create functions and variables in "
+"``config.fish`` file, using the commands shown above. For example:"
+msgstr "前述のコマンドを使って、 ``config.fish`` ファイル内で直接関数や変数を作成することが可能です。例: "
+
+#: ../../doc_src/tutorial.rst:709
+msgid ""
+"However, it is more common and efficient to use  autoloading functions "
+"and universal variables."
+msgstr "しかし、オートロード関数(autoloading functions)とユニバーサル変数を使用する"
+"ほうが、より一般的で効率的です。"
+
+#: ../../doc_src/tutorial.rst:711
+msgid ""
+"If you want to organize your configuration, fish also reads commands in "
+".fish files in ``~/.config/fish/conf.d/``. See :ref:`Configuration Files "
+"<configuration>` for the details."
+msgstr ""
+"設定を整理したい場合、fish は ``~/.config/fish/conf.d/`` にある ``.fish`` "
+"ファイル群も読み込みます。詳細は :ref:`設定ファイル <configuration>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:714
+msgid "Autoloading Functions"
+msgstr "オートロード関数"
+
+#: ../../doc_src/tutorial.rst:716
+msgid ""
+"When fish encounters a command, it attempts to autoload a function for "
+"that command, by looking for a file with the name of that command in "
+"``~/.config/fish/functions/``."
+msgstr ""
+"fish は未知のコマンドに出会うと、 ``~/.config/fish/functions/`` "
+"ディレクトリ内からそのコマンド名と同じ名前のファイルを探し、関数としてオートロードしようとします。"
+
+#: ../../doc_src/tutorial.rst:718
+msgid ""
+"For example, if you wanted to have a function ``ll``, you would add a "
+"text file ``ll.fish`` to ``~/.config/fish/functions``::"
+msgstr ""
+"例えば、 ``ll`` という関数を使いたい場合は、 ``ll.fish`` というテキストファイルを "
+"``~/.config/fish/functions`` に追加します。"
+
+#: ../../doc_src/tutorial.rst:726
+msgid "This is the preferred way to define your prompt as well::"
+msgstr "これは、プロンプトを定義する際にも推奨される方法です。"
+
+#: ../../doc_src/tutorial.rst:734
+msgid ""
+"See the documentation for :doc:`funced <cmds/funced>` and :doc:`funcsave "
+"<cmds/funcsave>` for ways to create these files automatically, and "
+":ref:`$fish_function_path <syntax-function-autoloading>` to control their"
+" location."
+msgstr ""
+"これらのファイルを自動で作成する方法については :doc:`funced <cmds/funced>` および :doc:`funcsave "
+"<cmds/funcsave>` を、ファイルの場所を制御する方法については :ref:`$fish_function_path <syntax-"
+"function-autoloading>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:739
+msgid "Universal Variables"
+msgstr "ユニバーサル変数"
+
+#: ../../doc_src/tutorial.rst:741
+msgid ""
+"A universal variable is a variable whose value is shared across all "
+"instances of fish, now and in the future – even after a reboot. You can "
+"make a variable universal with ``set -U``::"
+msgstr ""
+"ユニバーサル変数は、現在および将来のすべての fish インスタンス間で共有される変数です。再起動後も値は保持されます。 ``set -U`` "
+"を使うことで変数をユニバーサルにできます。"
+
+#: ../../doc_src/tutorial.rst:746
+msgid "Now in another shell::"
+msgstr "別のシェル(ターミナルの別のウィンドウなど)で確認すると: "
+
+#: ../../doc_src/tutorial.rst:751
+msgid ""
+"You only need to set universal variables once interactively. There is no "
+"need to add them to your :ref:`config files <configuration>`. For more "
+"details, see :ref:`Universal Variables <variables-universal>`."
+msgstr ""
+"ユニバーサル変数は、対話的に一度設定するだけで十分です。 :ref:`設定ファイル <configuration>` "
+"に記述し直す必要はありません。詳細は :ref:`ユニバーサル変数 <variables-universal>` を参照してください。"
+
+#: ../../doc_src/tutorial.rst:754
+msgid "Ready for more?"
+msgstr "さらに詳しく知るには"
+
+#: ../../doc_src/tutorial.rst:756
+msgid ""
+"If you want to learn more about fish, there is :ref:`lots of detailed "
+"documentation <intro>`, the `official gitter channel <https://gitter.im"
+"/fish-shell/fish-shell>`__, an `official mailing list "
+"<https://lists.sourceforge.net/lists/listinfo/fish-users>`__, and the "
+"`github page <https://github.com/fish-shell/fish-shell/>`__."
+msgstr ""
+"fish についてより深く学びたい場合は、 :ref:`詳細なドキュメント <intro>` が豊富に用意されているほか、`公式 Gitter "
+"チャンネル <https://gitter.im/fish-shell/fish-shell>`__ 、 `公式メーリングリスト "
+"<https://lists.sourceforge.net/lists/listinfo/fish-users>`__ 、 および "
+"`GitHub ページ <https://github.com/fish-shell/fish-shell/>`__ があります。"
+

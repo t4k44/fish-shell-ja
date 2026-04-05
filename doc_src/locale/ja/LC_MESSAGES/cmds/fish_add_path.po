@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_add_path.rst:2
+msgid "fish_add_path - add to the path"
+msgstr "fish_add_path - PATHにディレクトリを追加する"
+
+#: ../../doc_src/cmds/fish_add_path.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/fish_add_path.rst:14
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/fish_add_path.rst:16
+msgid ""
+":program:`fish_add_path` is a simple way to add more directories to "
+"fish's :envvar:`PATH`. It does this by adding the directories either to "
+":envvar:`fish_user_paths` or directly to :envvar:`PATH` (if the "
+"``--path`` switch is given)."
+msgstr ""
+":program:`fish_add_path` は、fish の :envvar:`PATH` にディレクトリを簡単に追加するための手段です。ディレクトリを :envvar:`fish_user_paths` に追加するか、(``--path`` スイッチが指定された場合は)直接 :envvar:`PATH` に追加することで機能します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:18
+msgid ""
+"It is (by default) safe to use :program:`fish_add_path` in config.fish, "
+"or it can be used once, interactively, and the paths will stay in future "
+"because of :ref:`universal variables <variables-universal>`. This is a "
+"\"do what I mean\" style command - it tries to do the right thing by "
+"default, and follow your lead on what you have already set up (e.g. by "
+"using a global :envvar:`fish_user_paths` if you have that already). If "
+"you need more control, consider modifying the variable yourself."
+msgstr ""
+"(デフォルトでは)config.fish 内で :program:`fish_add_path` を使用しても安全ですし、対話的に一度だけ実行することも可能です。後者の場合、:ref:`ユニバーサル変数 <variables-universal>` の仕組みによって、以降のセッションでも設定が保持されます。これは「意図を汲み取る(do what I mean)」スタイルのコマンドであり、デフォルトで適切な動作を試みつつ、ユーザーが既に設定している内容(例: 既にグローバルな :envvar:`fish_user_paths` を使用している場合など)に従います。より細かな制御が必要な場合は、変数自体を直接変更することを検討してください。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:20
+msgid ""
+"Directories are normalized with :doc:`realpath <realpath>`. Trailing "
+"slashes are ignored and relative paths are made absolute (but symlinks "
+"are not resolved). If a directory is already included, it is not added "
+"again and stays in the same place unless the ``--move`` switch is given."
+msgstr ""
+"ディレクトリは :doc:`realpath <realpath>` によって正規化されます。末尾のスラッシュは無視され、相対パスは絶対パスに変換されます(ただし、シンボリックリンクの解決は行われません)。ディレクトリが既に含まれている場合は再度追加されることはなく、``--move`` スイッチが指定されない限り、元の位置に維持されます。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:22
+msgid ""
+"Directories are added in the order they are given, and they are prepended"
+" to the path unless ``--append`` is given. If $fish_user_paths is used, "
+"that means they are last in $fish_user_paths, which is itself prepended "
+"to :envvar:`PATH`, so they still stay ahead of the system paths. If the "
+"``--path`` option is used, the paths are appended/prepended to "
+":envvar:`PATH` directly, so this doesn't happen."
+msgstr ""
+"ディレクトリは指定された順序で追加され、``--append`` が指定されない限りパスの先頭に追加(prepend)されます。$fish_user_paths が使用される場合、指定したパスは $fish_user_paths 内の末尾に追加されますが、$fish_user_paths 自体が :envvar:`PATH` の先頭に挿入されるため、結果としてシステムパスより優先されます。``--path`` オプションを使用した場合は :envvar:`PATH` に直接追加されるため、この挙動は適用されません。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:24
+msgid ""
+"With ``--path``, because :envvar:`PATH` must be a global variable instead"
+" of a universal one, the changes won't persist, so those calls need to be"
+" stored in :ref:`config.fish <configuration>`. This also applies to "
+":envvar:`fish_user_paths` if you make it global (for instance by passing "
+"``--global``)."
+msgstr ""
+"``--path`` を使用する場合、:envvar:`PATH` はユニバーサル変数ではなくグローバル変数である必要があるため、変更は永続化されません。したがって、これらの呼び出しは :ref:`config.fish <configuration>` に記述しておく必要があります。これは、(``--global`` を渡すなどして) :envvar:`fish_user_paths` をグローバル変数にした場合も同様です。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:26
+msgid ""
+"If no directory is new, the variable (:envvar:`fish_user_paths` or "
+":envvar:`PATH`) is not set again or otherwise modified, so variable "
+"handlers are not triggered."
+msgstr ""
+"新しく追加されるディレクトリがない場合、変数(:envvar:`fish_user_paths` 、 :envvar:`PATH`)は再設定も変更もされないため、変数ハンドラはトリガーされません。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:28
+msgid "If an argument is not an existing directory, ``fish_add_path`` ignores it."
+msgstr ""
+"引数が既存のディレクトリでない場合、``fish_add_path`` はそれを無視します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:31
+msgid "Options"
+msgstr "オプション"
+
+#: ../../doc_src/cmds/fish_add_path.rst:33
+msgid "**-a** or **--append**"
+msgstr "**-a** 、 **--append**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:34
+msgid "Add directories to the *end* of the variable."
+msgstr "ディレクトリを変数の「末尾」に追加します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:36
+msgid "**-p** or **--prepend**"
+msgstr "**-p** 、 **--prepend**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:37
+msgid "Add directories to the *front* of the variable (this is the default)."
+msgstr "ディレクトリを変数の「先頭」に追加します(これがデフォルトです)。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:39
+msgid "**-g** or **--global**"
+msgstr "**-g** 、 **--global**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:40
+msgid "Use a global :envvar:`fish_user_paths`."
+msgstr "グローバルな :envvar:`fish_user_paths` を使用します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:42
+msgid "**-U** or **--universal**"
+msgstr "**-U** 、 **--universal**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:43
+msgid ""
+"Use a universal :envvar:`fish_user_paths` - this is the default if it "
+"doesn't already exist."
+msgstr "ユニバーサルな :envvar:`fish_user_paths` を使用します。変数がまだ存在しない場合はこれがデフォルトとなります。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:45
+msgid "**-P** or **--path**"
+msgstr "**-P** 、 **--path**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:46
+msgid "Manipulate :envvar:`PATH` directly."
+msgstr ":envvar:`PATH` を直接操作します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:48
+msgid "**-m** or **--move**"
+msgstr "**-m** 、 **--move**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:49
+msgid ""
+"Move already-included directories to the place they would be added - by "
+"default they would be left in place and not added again."
+msgstr "既に含まれているディレクトリを、追加されるべき位置(先頭または末尾)へ移動します。デフォルトでは元の位置に維持され、再度追加されることはありません。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:51
+msgid "**-v** or **--verbose**"
+msgstr "**-v** 、 **--verbose**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:52
+msgid ""
+"Print the :doc:`set <set>` command used, and some more warnings, like "
+"when a path is skipped because it doesn't exist or is not a directory. "
+"Verbose mode is automatically enabled when fish_add_path is used "
+"interactively and the output goes to the terminal."
+msgstr ""
+"実際に使用された :doc:`set <set>` コマンドを表示し、パスが存在しない、あるいはディレクトリではないためにスキップされた場合などの警告を出力します。``fish_add_path`` が対話的に使用され、出力がターミナルに送られる場合は、詳細モード(verbose)が自動的に有効になります。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:55
+msgid "**-n** or **--dry-run**"
+msgstr "**-n** 、 **--dry-run**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:56
+msgid "Print the ``set`` command that would be used without executing it."
+msgstr "実行はせずに、使用される予定の ``set`` コマンドを表示します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:58
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/fish_add_path.rst:59
+msgid "Displays help about using this command."
+msgstr "このコマンドのヘルプを表示します。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:61
+msgid ""
+"If ``--move`` is used, it may of course lead to the path swapping order, "
+"so you should be careful doing that in config.fish."
+msgstr ""
+"``--move`` を使用すると、当然ながらパスの優先順位が入れ替わることがあるため、config.fish 内で使用する際は注意が必要です。"
+
+#: ../../doc_src/cmds/fish_add_path.rst:65
+msgid "Example"
+msgstr "使用例"

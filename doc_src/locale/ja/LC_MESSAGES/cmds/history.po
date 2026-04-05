@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/history.rst:2
+msgid "history - show and manipulate command history"
+msgstr "history - コマンド履歴の表示と操作"
+
+#: ../../doc_src/cmds/history.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/history.rst:21
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/history.rst:23
+msgid ""
+"``history`` is used to search, delete, and otherwise manipulate the "
+":ref:`history of interactive commands <history-search>`."
+msgstr ""
+"``history`` は、 :ref:`対話型コマンドの履歴 <history-search>` の検索、削除、"
+"およびその他の操作を行うために使用されます。"
+
+#: ../../doc_src/cmds/history.rst:25
+msgid "The following operations (sub-commands) are available:"
+msgstr "以下の操作(サブコマンド)が利用可能です。"
+
+#: ../../doc_src/cmds/history.rst:27
+msgid "**search**"
+msgstr "**search**"
+
+#: ../../doc_src/cmds/history.rst:28
+msgid ""
+"Returns history items matching the search string. If no search string is "
+"provided it returns all history items. This is the default operation if "
+"no other operation is specified. You only have to explicitly say "
+"``history search`` if you wish to search for one of the subcommands. The "
+"``--contains`` search option will be used if you don't specify a "
+"different search option. Entries are ordered newest to oldest unless you "
+"use the ``--reverse`` flag. If stdout is attached to a tty the output "
+"will be piped through your pager by the history function. The history "
+"builtin writes the results to stdout."
+msgstr ""
+"検索文字列に一致する履歴項目を返します。検索文字列が指定されない場合は、すべての履歴項目を返します。"
+"他の操作が指定されていない場合、これがデフォルトの操作となります。サブコマンド名そのものを検索したい場合にのみ、"
+"明示的に ``history search`` と入力する必要があります。別の検索オプションを指定しない限り、"
+" ``--contains`` 検索オプションが使用されます。 ``--reverse`` フラグを使用しない限り、"
+"項目は新しい順から古い順に並べられます。標準出力が tty に接続されている場合、"
+"history 関数によって出力がページャ(pager)にパイプされます。組み込みコマンドの history は結果を標準出力に書き込みます。"
+
+#: ../../doc_src/cmds/history.rst:30
+msgid "**delete**"
+msgstr "**delete**"
+
+#: ../../doc_src/cmds/history.rst:31
+msgid ""
+"Deletes history items. The ``--contains`` search option will be used if "
+"you don't specify a different search option. If you don't specify "
+"``--exact`` a prompt will be displayed before any items are deleted "
+"asking you which entries are to be deleted. You can enter the word "
+"\"all\" to delete all matching entries. You can enter a single ID (the "
+"number in square brackets) to delete just that single entry. You can "
+"enter more than one ID, or an ID range separated by a space to delete "
+"multiple entries. Press [enter] to not delete anything. Note that the "
+"interactive delete behavior is a feature of the history function. The "
+"history builtin only supports ``--exact --case-sensitive`` deletion."
+msgstr ""
+"履歴項目を削除します。別の検索オプションを指定しない限り、 ``--contains`` 検索オプションが使用されます。"
+" ``--exact`` を指定しない場合は、項目が削除される前に、どのエントリを削除するかを尋ねるプロンプトが表示されます。"
+"「all」と入力すると、一致するすべてのエントリを削除できます。単一の ID(角括弧内の数字)を入力して、"
+"その単一のエントリだけを削除することもできます。複数の ID、またはスペースで区切られた ID 範囲を入力して、"
+"複数のエントリを削除することも可能です。[enter] キーを押すと、何も削除されません。"
+"なお、この対話的な削除動作は history 関数の機能です。組み込みの history コマンドは、"
+" ``--exact --case-sensitive`` による削除のみをサポートしています。"
+
+#: ../../doc_src/cmds/history.rst:33
+msgid "**merge**"
+msgstr "**merge**"
+
+#: ../../doc_src/cmds/history.rst:34
+msgid ""
+"Immediately incorporates history changes from other sessions. Ordinarily "
+"``fish`` ignores history changes from sessions started after the current "
+"one. This command applies those changes immediately."
+msgstr ""
+"他のセッションからの履歴の変更を即座に取り込みます。通常、 ``fish`` は現在のセッションが開始された後に"
+"開始されたセッションからの履歴の変更を無視しますが、このコマンドはその変更を即座に適用します。"
+
+#: ../../doc_src/cmds/history.rst:36
+msgid "**save**"
+msgstr "**save**"
+
+#: ../../doc_src/cmds/history.rst:37
+msgid ""
+"Immediately writes all changes to the history file. The shell "
+"automatically saves the history file; this option is provided for "
+"internal use and should not normally need to be used by the user."
+msgstr ""
+"すべての変更を即座に履歴ファイルに書き込みます。シェルは自動的に履歴ファイルを保存するため、"
+"このオプションは内部用として提供されており、通常ユーザーが使用する必要はありません。"
+
+#: ../../doc_src/cmds/history.rst:39
+msgid "**clear**"
+msgstr "**clear**"
+
+#: ../../doc_src/cmds/history.rst:40
+msgid ""
+"Clears the history file. A prompt is displayed before the history is "
+"erased asking you to confirm you really want to clear all history unless "
+"``builtin history`` is used."
+msgstr ""
+"履歴ファイルを消去します。 ``builtin history`` が使用されていない限り、履歴が消去される前に、"
+"本当にすべての履歴を消去してよいか確認を求めるプロンプトが表示されます。"
+
+#: ../../doc_src/cmds/history.rst:42
+msgid "**clear-session**"
+msgstr "**clear-session**"
+
+#: ../../doc_src/cmds/history.rst:43
+msgid ""
+"Clears the history file from all activity of the current session. Note: "
+"If ``history merge`` or ``builtin history merge`` is run in a session, "
+"only the history after this will be erased."
+msgstr ""
+"現在のセッションのすべてのアクティビティから履歴ファイルを消去します。"
+"注意: セッション内で ``history merge`` 、 ``builtin history merge`` が実行された場合、"
+"それ以降の履歴のみが消去されます。"
+
+#: ../../doc_src/cmds/history.rst:45
+msgid "**append**"
+msgstr "**append**"
+
+#: ../../doc_src/cmds/history.rst:46
+msgid "Appends commands to the history without needing to execute them."
+msgstr "コマンドを実行することなく、履歴に追加します。"
+
+#: ../../doc_src/cmds/history.rst:48
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です。"
+
+#: ../../doc_src/cmds/history.rst:50
+msgid ""
+"These flags can appear before or immediately after one of the sub-"
+"commands listed above."
+msgstr ""
+"これらのフラグは、上記のサブコマンドの前後いずれにも配置できます。"
+
+#: ../../doc_src/cmds/history.rst:52
+msgid "**-C** or **--case-sensitive**"
+msgstr "**-C** 、 **--case-sensitive**"
+
+#: ../../doc_src/cmds/history.rst:53
+msgid "Does a case-sensitive search. The default is case-insensitive."
+msgstr "大文字と小文字を区別して検索します。デフォルトでは区別しません。"
+
+#: ../../doc_src/cmds/history.rst:55
+msgid "**-c** or **--contains**"
+msgstr "**-c** 、 **--contains**"
+
+#: ../../doc_src/cmds/history.rst:56
+msgid ""
+"Searches items in the history that contain the specified text string. "
+"This is the default for the **--search** flag. This is not currently "
+"supported by the **delete** subcommand."
+msgstr ""
+"指定された文字列を含む履歴項目を検索します。これは **--search** フラグのデフォルトの挙動です。"
+"現時点では、 **delete** サブコマンドではこのオプションはサポートされていません。"
+
+#: ../../doc_src/cmds/history.rst:58
+msgid "**-e** or **--exact**"
+msgstr "**-e** 、 **--exact**"
+
+#: ../../doc_src/cmds/history.rst:59
+msgid ""
+"Searches or deletes items in the history that exactly match the specified"
+" text string. This is the default for the **delete** subcommand. Note "
+"that the match is case-insensitive by default. If you really want an "
+"exact match, including letter case, you must use the **-C** or **--case-"
+"sensitive** flag."
+msgstr ""
+"指定された文字列と完全に一致する履歴項目を検索または削除します。これは **delete** サブコマンドのデフォルトの挙動です。"
+"デフォルトでは大文字と小文字を区別しないことに注意してください。文字の大小を含めて完全に一致させたい場合は、"
+" **-C** 、 **--case-sensitive** フラグを併用する必要があります。"
+
+#: ../../doc_src/cmds/history.rst:61
+msgid "**-p** or **--prefix**"
+msgstr "**-p** 、 **--prefix**"
+
+#: ../../doc_src/cmds/history.rst:62
+msgid ""
+"Searches items in the history that begin with the specified text string. "
+"This is not currently supported by the **delete** subcommand."
+msgstr ""
+"指定された文字列で始まる履歴項目を検索します。現時点では、 **delete** サブコマンドではこのオプションはサポートされていません。"
+
+#: ../../doc_src/cmds/history.rst:66
+msgid "**-t** or **--show-time**"
+msgstr "**-t** 、 **--show-time**"
+
+#: ../../doc_src/cmds/history.rst:67
+#, python-format
+msgid ""
+"Prepends each history entry with the date and time the entry was "
+"recorded. By default it uses the strftime format ``# %c%n``. You can "
+"specify another format; e.g., ``--show-time=\"%Y-%m-%d %H:%M:%S \"`` or "
+"``--show-time=\"%a%I%p\"``. The short option, **-t**, doesn't accept a "
+"strftime format string; it only uses the default format. Any strftime "
+"format is allowed, including ``%s`` to get the raw UNIX seconds since the"
+" epoch."
+msgstr ""
+"各履歴項目の先頭に、その項目が記録された日時を付加します。デフォルトでは strftime 形式の ``# %c%n`` を使用します。"
+"別の形式を指定することも可能です(例:  ``--show-time=\"%Y-%m-%d %H:%M:%S \"`` や ``--show-time=\"%a%I%p\"`` )。"
+"短縮オプションの **-t** は strftime 形式の文字列を受け付けず、デフォルトの形式のみを使用します。"
+"UNIX エポックからの秒数を取得する ``%s`` を含め、あらゆる strftime 形式が利用可能です。"
+
+#: ../../doc_src/cmds/history.rst:69
+msgid "**-z** or **--null**"
+msgstr "**-z** 、 **--null**"
+
+#: ../../doc_src/cmds/history.rst:70
+msgid ""
+"Causes history entries written by the search operations to be terminated "
+"by a NUL character rather than a newline. This allows the output to be "
+"processed by ``read -z`` to correctly handle multiline history entries."
+msgstr ""
+"検索操作によって出力される履歴項目の区切りを、改行ではなく NUL 文字(空文字)にします。"
+"これにより、 ``read -z`` を使って複数行にわたる履歴項目を正しく処理できるようになります。"
+
+#: ../../doc_src/cmds/history.rst:72
+msgid "**-**\\*NUMBER* **-n** *NUMBER* or **--max** *NUMBER*"
+msgstr "**-**\\*NUMBER* **-n** *NUMBER* 、 **--max** *NUMBER*"
+
+#: ../../doc_src/cmds/history.rst:73
+msgid ""
+"Limits the matched history items to the first *NUMBER* matching entries. "
+"This is only valid for ``history search``."
+msgstr ""
+"一致した履歴項目のうち、最初の *NUMBER* 件に制限します。"
+"これは ``history search`` においてのみ有効です。"
+
+#: ../../doc_src/cmds/history.rst:75
+msgid "**-R** or **--reverse**"
+msgstr "**-R** 、 **--reverse**"
+
+#: ../../doc_src/cmds/history.rst:76
+msgid ""
+"Causes the history search results to be ordered oldest to newest. Which "
+"is the order used by most shells. The default is newest to oldest."
+msgstr ""
+"履歴の検索結果を古い順から新しい順(昇順)に並べ替えます。これはほとんどのシェルで使用されている順序です。"
+"デフォルト(指定なし)では新しい順から古い順(降順)になります。"
+
+#: ../../doc_src/cmds/history.rst:78
+msgid "**--color** *WHEN*"
+msgstr "**--color** *WHEN*"
+
+#: ../../doc_src/cmds/history.rst:79
+msgid ""
+"Controls when to use syntax highlighting colors for the history entries. "
+"*WHEN* can be ``auto`` (the default, colorize if the output :doc:`is a "
+"terminal <isatty>`), ``always``, or ``never``."
+msgstr ""
+"履歴項目の表示にシンタックスハイライトの色を使用するかどうかを制御します。"
+"*WHEN* には、 ``auto`` (デフォルト。出力先が :doc:`ターミナルの場合 <isatty>` に着色)、"
+" ``always`` 、または ``never`` を指定できます。"
+
+#: ../../doc_src/cmds/history.rst:82
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/history.rst:83
+msgid "Displays help for this command."
+msgstr "このコマンドのヘルプを表示します。"
+
+#: ../../doc_src/cmds/history.rst:86
+msgid "Example"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/history.rst:104
+msgid "Customizing the name of the history file"
+msgstr "履歴ファイル名のカスタマイズ"
+
+#: ../../doc_src/cmds/history.rst:106
+msgid ""
+"By default interactive commands are logged to "
+"``$XDG_DATA_HOME/fish/fish_history`` (typically "
+"``~/.local/share/fish/fish_history``)."
+msgstr ""
+"デフォルトでは、対話的なコマンドは ``$XDG_DATA_HOME/fish/fish_history`` "
+"(通常は ``~/.local/share/fish/fish_history`` )に記録されます。"
+
+#: ../../doc_src/cmds/history.rst:108
+msgid ""
+"You can set the ``fish_history`` variable to another name for the current"
+" shell session. The default value (when the variable is unset) is "
+"``fish`` which corresponds to ``$XDG_DATA_HOME/fish/fish_history``. If "
+"you set it to e.g. ``fun``, the history would be written to "
+"``$XDG_DATA_HOME/fish/fun_history``. An empty string means history will "
+"not be stored at all. This is similar to the private session features in "
+"web browsers."
+msgstr ""
+"現在のシェルセッションにおいて、 ``fish_history`` 変数を別の名前に設定できます。"
+"デフォルト値(変数が未設定の場合)は ``fish`` であり、これは ``$XDG_DATA_HOME/fish/fish_history`` に対応します。"
+"例えば、これを ``fun`` に設定すると、履歴は ``$XDG_DATA_HOME/fish/fun_history`` に書き込まれます。"
+"空文字列を設定すると、履歴は一切保存されません。これはウェブブラウザのプライベートセッション機能に似ています。"
+
+#: ../../doc_src/cmds/history.rst:110
+msgid ""
+"You can change ``fish_history`` at any time (by using ``set -x "
+"fish_history \"session_name\"``) and it will take effect right away. If "
+"you set it to ``\"default\"``, it will use the default session name "
+"(which is ``\"fish\"``)."
+msgstr ""
+"``fish_history`` はいつでも変更でき( ``set -x fish_history \"session_name\"`` を使用)、"
+"即座に効果を発揮します。 ``\"default\"`` に設定した場合は、デフォルトのセッション名( ``\"fish\"`` )が使用されます。"
+
+#: ../../doc_src/cmds/history.rst:112
+msgid ""
+"Other shells such as bash and zsh use a variable named ``HISTFILE`` for a"
+" similar purpose. Fish uses a different name to avoid conflicts and "
+"signal that the behavior is different (session name instead of a file "
+"path). Also, if you set the var to anything other than ``fish`` or "
+"``default`` it will inhibit importing the bash history. That's because "
+"the most common use case for this feature is to avoid leaking private or "
+"sensitive history when giving a presentation."
+msgstr ""
+"bash や zsh などの他のシェルでは、同様の目的のために ``HISTFILE`` という名前の変数を使用します。"
+"fish が異なる名前を使用しているのは、衝突を避け、挙動が異なる(ファイルパスではなくセッション名である)ことを示すためです。"
+"また、この変数を ``fish`` 、 ``default`` 以外に設定すると、bash の履歴のインポートが抑制されます。"
+"これは、プレゼンテーション時などにプライベートな履歴や機密性の高い履歴が漏洩するのを防ぐことが、この機能の最も一般的なユースケースだからです。"
+
+#: ../../doc_src/cmds/history.rst:115
+msgid "Notes"
+msgstr "備考"
+
+#: ../../doc_src/cmds/history.rst:117
+msgid ""
+"If you specify both **--prefix** and **--contains** the last flag seen is"
+" used."
+msgstr ""
+"**--prefix** と **--contains** の両方を指定した場合は、最後に指定されたフラグが使用されます。"
+
+#: ../../doc_src/cmds/history.rst:119
+msgid ""
+"Note that for backwards compatibility each subcommand can also be "
+"specified as a long option. For example, rather than ``history search`` "
+"you can type ``history --search``. Those long options are deprecated and "
+"will be removed in a future release."
+msgstr ""
+"後方互換性のために、各サブコマンドはロングオプションとしても指定できることに注意してください。"
+"例えば、 ``history search`` の代わりに ``history --search`` と入力することも可能です。"
+"ただし、これらのロングオプションは非推奨(deprecated)であり、将来のリリースで削除される予定です。"

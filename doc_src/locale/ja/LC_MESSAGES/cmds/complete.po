@@ -1,0 +1,464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/complete.rst:2
+msgid "complete - edit command-specific tab-completions"
+msgstr "complete - コマンドのタブ補完を編集する"
+
+#: ../../doc_src/cmds/complete.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/complete.rst:13
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/complete.rst:15
+msgid "``complete`` defines, removes or lists completions for a command."
+msgstr "``complete`` は、コマンドの補完を定義、削除、または一覧表示します。"
+
+#: ../../doc_src/cmds/complete.rst:17
+msgid ""
+"For an introduction to writing your own completions, see :doc:`Writing "
+"your own completions <../completions>` in the fish manual."
+msgstr "独自の補完を作成するための入門ガイドについては、fish マニュアルの :doc:`独自の補完を作成する <../completions>` を参照してください。"
+
+#: ../../doc_src/cmds/complete.rst:20
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です: "
+
+#: ../../doc_src/cmds/complete.rst:22
+msgid "**-c** or **--command** *COMMAND*"
+msgstr "**-c** 、 **--command** *COMMAND*"
+
+#: ../../doc_src/cmds/complete.rst:23
+msgid ""
+"Specifies that *COMMAND* is the name of the command. If there is no "
+"**-c** or **-p**, one non-option argument will be used as the command."
+msgstr "*COMMAND* がコマンド名であることを指定します。 **-c** 、 **-p** が指定されていない場合、最初のオプション以外の引数がコマンドとして使用されます。"
+
+#: ../../doc_src/cmds/complete.rst:25
+msgid "**-p** or **--path** *COMMAND*"
+msgstr "**-p** 、 **--path** *COMMAND*"
+
+#: ../../doc_src/cmds/complete.rst:26
+msgid ""
+"Specifies that *COMMAND* is the absolute path of the command (optionally "
+"containing wildcards)."
+msgstr "*COMMAND* がコマンドの絶対パス(任意でワイルドカードを含む)であることを指定します。"
+
+#: ../../doc_src/cmds/complete.rst:28
+msgid "**-e** or **--erase**"
+msgstr "**-e** 、 **--erase**"
+
+#: ../../doc_src/cmds/complete.rst:29
+msgid "Deletes the specified completion."
+msgstr "指定された補完を削除します。"
+
+#: ../../doc_src/cmds/complete.rst:31
+msgid "**-s** or **--short-option** *SHORT_OPTION*"
+msgstr "**-s** 、 **--short-option** *SHORT_OPTION*"
+
+#: ../../doc_src/cmds/complete.rst:32
+msgid "Adds a short option to the completions list."
+msgstr "補完リストにショートオプションを追加します。"
+
+#: ../../doc_src/cmds/complete.rst:34
+msgid "**-l** or **--long-option** *LONG_OPTION*"
+msgstr "**-l** 、 **--long-option** *LONG_OPTION*"
+
+#: ../../doc_src/cmds/complete.rst:35
+msgid "Adds a GNU-style long option to the completions list."
+msgstr "補完リストに GNU 形式のロングオプションを追加します。"
+
+#: ../../doc_src/cmds/complete.rst:37
+msgid "**-o** or **--old-option** *OPTION*"
+msgstr "**-o** 、 **--old-option** *OPTION*"
+
+#: ../../doc_src/cmds/complete.rst:38
+msgid "Adds an old-style short or long option (see below for details)."
+msgstr "旧形式のショートまたはロングオプションを追加します(詳細は後述)。"
+
+#: ../../doc_src/cmds/complete.rst:40
+msgid "**-a** or **--arguments** *ARGUMENTS*"
+msgstr "**-a** 、 **--arguments** *ARGUMENTS*"
+
+#: ../../doc_src/cmds/complete.rst:41
+msgid "Adds the specified option arguments to the completions list."
+msgstr "指定されたオプション引数を補完リストに追加します。"
+
+#: ../../doc_src/cmds/complete.rst:43
+msgid "**-k** or **--keep-order**"
+msgstr "**-k** 、 **--keep-order**"
+
+#: ../../doc_src/cmds/complete.rst:44
+msgid ""
+"Keeps the order of *ARGUMENTS* instead of sorting alphabetically. "
+"Multiple ``complete`` calls with **-k** result in arguments of the later "
+"ones displayed first."
+msgstr "アルファベット順にソートせず、 *ARGUMENTS* の順序を維持します。 **-k** を指定して ``complete`` を複数回呼び出した場合、後の呼び出しで指定された引数が先に表示されます。"
+
+#: ../../doc_src/cmds/complete.rst:46
+msgid "**-f** or **--no-files**"
+msgstr "**-f** 、 **--no-files**"
+
+#: ../../doc_src/cmds/complete.rst:47
+msgid "This completion may not be followed by a filename."
+msgstr "この補完の後にファイル名を続けないようにします。"
+
+#: ../../doc_src/cmds/complete.rst:49
+msgid "**-F** or **--force-files**"
+msgstr "**-F** 、 **--force-files**"
+
+#: ../../doc_src/cmds/complete.rst:50
+msgid ""
+"This completion may be followed by a filename, even if another applicable"
+" ``complete`` specified **--no-files**."
+msgstr "他の適用可能な ``complete`` で **--no-files** が指定されている場合でも、この補完の後にファイル名を続けられるようにします。"
+
+#: ../../doc_src/cmds/complete.rst:52
+msgid "**-r** or **--require-parameter**"
+msgstr "**-r** 、 **--require-parameter**"
+
+#: ../../doc_src/cmds/complete.rst:53
+msgid ""
+"This completion must have an option argument, i.e. may not be followed by"
+" another option. This means that the next argument is the argument to the"
+" option. If this is *not* given, the option argument must be attached "
+"like ``-xFoo`` or ``--color=auto``."
+msgstr "この補完にはオプション引数が必須であることを示します。つまり、別のオプションを直後に続けることはできません。これは、次の引数がそのオプションの引数として扱われることを意味します。これが指定されていない場合、オプション引数は ``-xFoo`` や ``--color=auto`` のように連結して指定する必要があります。"
+
+#: ../../doc_src/cmds/complete.rst:57
+msgid "**-x** or **--exclusive**"
+msgstr "**-x** 、 **--exclusive**"
+
+#: ../../doc_src/cmds/exclusive.rst:58
+msgid "Short for **-r** and **-f**."
+msgstr "**-r** と **-f** の短縮形です。"
+
+#: ../../doc_src/cmds/complete.rst:60
+msgid "**-d** or **--description** *DESCRIPTION*"
+msgstr "**-d** 、 **--description** *DESCRIPTION*"
+
+#: ../../doc_src/cmds/complete.rst:61
+msgid ""
+"Add a description for this completion, to be shown in the completion "
+"pager."
+msgstr "補完ペイジャーに表示される、この補完の説明を追加します。"
+
+#: ../../doc_src/cmds/complete.rst:63
+msgid "**-w** or **--wraps** *WRAPPED_COMMAND*"
+msgstr "**-w** 、 **--wraps** *WRAPPED_COMMAND*"
+
+#: ../../doc_src/cmds/complete.rst:64
+msgid ""
+"Causes the specified command to inherit completions from "
+"*WRAPPED_COMMAND*. This is used for \"this command completes like that "
+"other command\" kinds of relationships. See below for details."
+msgstr "指定されたコマンドに *WRAPPED_COMMAND* から補完を継承させます。これは「このコマンドはあのコマンドと同じように補完する」といった関係を定義するのに使われます。詳細は後述します。"
+
+#: ../../doc_src/cmds/complete.rst:68
+msgid "**-n** or **--condition** *CONDITION*"
+msgstr "**-n** 、 **--condition** *CONDITION*"
+
+#: ../../doc_src/cmds/complete.rst:69
+msgid ""
+"This completion should only be used if the *CONDITION* (a shell command) "
+"returns 0. This makes it possible to specify completions that should only"
+" be used in some cases. If multiple conditions are specified, fish will "
+"try them in the order they are specified until one fails or all "
+"succeeded."
+msgstr "*CONDITION* (シェルコマンド)が 0 を返す場合にのみ、この補完を使用するようにします。これにより、特定の条件下でのみ有効な補完を指定できます。複数の条件が指定された場合、fish は指定された順に条件を試し、失敗するかすべて成功するまで評価を続けます。"
+
+#: ../../doc_src/cmds/complete.rst:71
+msgid "**-C** or **--do-complete** *STRING*"
+msgstr "**-C** 、 **--do-complete** *STRING*"
+
+#: ../../doc_src/cmds/complete.rst:72
+msgid ""
+"Makes ``complete`` try to find all possible completions for the specified"
+" string. If there is no *STRING*, the current commandline is used "
+"instead."
+msgstr "指定された文字列に対して、可能なすべての補完候補を検索します。 *STRING* が指定されていない場合は、現在のコマンドラインが代わりに使用されます。"
+
+#: ../../doc_src/cmds/complete.rst:74
+msgid "**--escape**"
+msgstr "**--escape**"
+
+#: ../../doc_src/cmds/complete.rst:75
+msgid "When used with ``-C``, escape special characters in completions."
+msgstr "``-C`` と併用した場合、補完候補内の特殊文字をエスケープします。"
+
+#: ../../doc_src/cmds/complete.rst:77
+msgid "**--color** *WHEN*"
+msgstr "**--color** *WHEN*"
+
+#: ../../doc_src/cmds/complete.rst:78
+msgid ""
+"Controls when to use syntax highlighting colors when printing "
+"completions. *WHEN* can be ``auto`` (the default, colorize if the output "
+":doc:`is a terminal <isatty>`), ``always``, or ``never``."
+msgstr "補完結果を表示する際に、構文ハイライトの色を使用するタイミングを制御します。 *WHEN* には、 ``auto`` (デフォルト。出力先が :doc:`端末 <isatty>` の場合に色付け)、 ``always`` 、または ``never`` を指定できます。"
+
+#: ../../doc_src/cmds/complete.rst:81
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/complete.rst:82
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/complete.rst:84
+msgid ""
+"Command-specific tab-completions in ``fish`` are based on the notion of "
+"options and arguments. An option is a parameter which begins with a "
+"hyphen, such as ``-h``, ``-help`` or ``--help``. Arguments are parameters"
+" that do not begin with a hyphen. Fish recognizes three styles of "
+"options, the same styles as the GNU getopt library. These styles are:"
+msgstr ""
+"``fish`` におけるコマンド固有のタブ補完は、オプションと引数の概念に基づいています。"
+"オプションとは、 ``-h`` 、 ``-help`` 、 ``--help`` のようにハイフンで始まるパラメータのことです。"
+"引数とは、ハイフンで始まらないパラメータのことです。Fish は、GNU getopt ライブラリと同じ 3 つの形式のオプションを認識します。"
+"それらの形式は以下の通りです: "
+
+#: ../../doc_src/cmds/complete.rst:86
+msgid ""
+"Short options, like ``-a``. Short options are a single character long, "
+"are preceded by a single hyphen and can be grouped together (like "
+"``-la``, which is equivalent to ``-l -a``). Option arguments may be "
+"specified by appending the option with the value (``-w32``), or, if "
+"``--require-parameter`` is given, in the following parameter (``-w 32``)."
+msgstr ""
+"ショートオプション(例:  ``-a``)。ショートオプションは 1 文字の長さで、単一のハイフンが前に置かれます。"
+"これらはまとめてグループ化できます(例:  ``-la`` は ``-l -a`` と等価です)。"
+"オプション引数は、オプションの直後に値を付けるか(``-w32``)、 ``--require-parameter`` が指定されている場合は次のパラメータ(``-w 32``)として指定します。"
+
+#: ../../doc_src/cmds/complete.rst:88
+msgid ""
+"Old-style options, long like ``-Wall`` or ``-name`` or even short like "
+"``-a``. Old-style options can be more than one character long, are "
+"preceded by a single hyphen and may not be grouped together. Option "
+"arguments are specified by default following a space (``-foo null``) or "
+"after ``=`` (``-foo=null``)."
+msgstr ""
+"旧形式のオプション(例:  ``-Wall`` や ``-name`` のような長いもの、あるいは ``-a`` のような短いもの)。"
+"旧形式のオプションは 2 文字以上の長さにすることができ、単一のハイフンが前に置かれますが、グループ化はできません。"
+"オプション引数は、デフォルトではスペースに続く形式(``-foo null``)か、 ``=`` の後の形式(``-foo=null``)で指定します。"
+
+#: ../../doc_src/cmds/complete.rst:90
+msgid ""
+"GNU-style long options, like ``--colors``. GNU-style long options can be "
+"more than one character long, are preceded by two hyphens, and can't be "
+"grouped together. Option arguments may be specified after a ``=`` "
+"(``--quoting-style=shell``), or, if ``--require-parameter`` is given, in "
+"the following parameter (``--quoting-style shell``)."
+msgstr ""
+"GNU 形式のロングオプション(例:  ``--colors``)。GNU 形式のロングオプションは 2 文字以上の長さで、2 つのハイフンが前に置かれ、グループ化はできません。"
+"オプション引数は、 ``=`` の後に指定するか(``--quoting-style=shell``)、 ``--require-parameter`` が指定されている場合は次のパラメータ(``--quoting-style shell``)として指定します。"
+
+#: ../../doc_src/cmds/complete.rst:92
+msgid ""
+"Multiple commands and paths can be given in one call to define the same "
+"completions for multiple commands."
+msgstr "1 回の呼び出しで複数のコマンドやパスを指定して、複数のコマンドに対して同じ補完を定義できます。"
+
+#: ../../doc_src/cmds/complete.rst:94
+msgid ""
+"Multiple command switches and wrapped commands can also be given to "
+"define multiple completions in one call."
+msgstr "1 回の呼び出しで複数のコマンドスイッチやラップされたコマンドを指定して、複数の補完を定義することもできます。"
+
+#: ../../doc_src/cmds/complete.rst:96
+msgid ""
+"Invoking ``complete`` multiple times for the same command adds the new "
+"definitions on top of any existing completions defined for the command."
+msgstr "同じコマンドに対して ``complete`` を複数回呼び出すと、既存の定義の上に新しい定義が追加されます。"
+
+#: ../../doc_src/cmds/complete.rst:98
+msgid ""
+"When ``-a`` or ``--arguments`` is specified in conjunction with long, "
+"short, or old-style options, the specified arguments are only completed "
+"as arguments for any of the specified options. If ``-a`` or "
+"``--arguments`` is specified without any long, short, or old-style "
+"options, the specified arguments are used when completing non-option "
+"arguments to the command (except when completing an option argument that "
+"was specified with ``-r`` or ``--require-parameter``)."
+msgstr ""
+"``-a`` 、 ``--arguments`` がロング、ショート、または旧形式のオプションと組み合わせて指定された場合、指定された引数は、それらのオプションの引数としてのみ補完されます。"
+"``-a`` 、 ``--arguments`` がどのオプション形式とも組み合わせずに指定された場合、指定された引数は、そのコマンドのオプション以外の引数を補完する際に使用されます(``-r`` 、 ``--require-parameter`` で指定されたオプション引数を補完する場合を除きます)。"
+
+#: ../../doc_src/cmds/complete.rst:100
+msgid ""
+"Command substitutions found in ``ARGUMENTS`` should return a newline-"
+"separated list of arguments, and each argument may optionally have a tab "
+"character followed by the argument description. Description given this "
+"way override a description given with ``-d`` or ``--description``."
+msgstr ""
+"``ARGUMENTS`` 内のコマンド置換は、改行区切りの引数リストを返す必要があります。"
+"各引数には、オプションとしてタブ文字に続いて引数の説明を付けることができます。"
+"この方法で指定された説明は、 ``-d`` 、 ``--description`` で指定された説明よりも優先されます。"
+
+#: ../../doc_src/cmds/complete.rst:102
+msgid ""
+"Descriptions given with ``--description`` are also used to group options "
+"given with ``-s``, ``-o`` or ``-l``. Options with the same (non-empty) "
+"description will be listed as one candidate, and one of them will be "
+"picked. If the description is empty or no description was given this is "
+"skipped."
+msgstr ""
+"``--description`` で指定された説明は、 ``-s`` 、 ``-o`` 、または ``-l`` で指定されたオプションをグループ化するためにも使用されます。"
+"同じ(空ではない)説明を持つオプションは 1 つの候補としてリストされ、そのうちの 1 つが選択されます。"
+"説明が空であるか、説明が指定されていない場合、この処理はスキップされます。"
+
+#: ../../doc_src/cmds/complete.rst:104
+msgid ""
+"The ``-w`` or ``--wraps`` options causes the specified command to inherit"
+" completions from another command, \"wrapping\" the other command. The "
+"wrapping command can also have additional completions. A command can wrap"
+" multiple commands, and wrapping is transitive: if A wraps B, and B wraps"
+" C, then A automatically inherits all of C's completions. Wrapping can be"
+" removed using the ``-e`` or ``--erase`` options. Wrapping only works for"
+" completions specified with ``-c`` or ``--command`` and are ignored when "
+"specifying completions with ``-p`` or ``--path``."
+msgstr ""
+"``-w`` 、 ``--wraps`` オプションは、指定されたコマンドに別のコマンドの補完を継承させ、そのコマンドを「ラップ(包摂)」します。"
+"ラップする側のコマンドに、独自の補完を追加することも可能です。1 つのコマンドで複数のコマンドをラップでき、ラップ関係は推移的です(A が B をラップし、B が C をラップしている場合、A は自動的に C のすべての補完を継承します)。"
+"ラップ設定は、 ``-e`` 、 ``--erase`` オプションを使用して削除できます。"
+"ラップ機能は ``-c`` 、 ``--command`` で指定された補完に対してのみ機能し、 ``-p`` 、 ``--path`` で補完を指定した場合は無視されます。"
+
+#: ../../doc_src/cmds/complete.rst:106
+msgid ""
+"When erasing completions, it is possible to either erase all completions "
+"for a specific command by specifying ``complete -c COMMAND -e``, or by "
+"specifying a specific completion option to delete."
+msgstr "補完を削除する際、 ``complete -c COMMAND -e`` を指定して特定のコマンドのすべての補完を削除することも、特定の補完オプションを指定して削除することも可能です。"
+
+#: ../../doc_src/cmds/complete.rst:108
+msgid ""
+"When ``complete`` is called without anything that would define or erase "
+"completions (options, arguments, wrapping, ...), it shows matching "
+"completions instead. So ``complete`` without any arguments shows all "
+"loaded completions, ``complete -c foo`` shows all loaded completions for "
+"``foo``. Since completions are :ref:`autoloaded <syntax-function-"
+"autoloading>`, you will have to trigger them first."
+msgstr "補完の定義や削除を行う引数(オプション、引数、ラップ設定など)なしで ``complete`` を呼び出すと、代わりに一致する補完を表示します。したがって、引数なしの ``complete`` はロード済みのすべての補完を表示し、 ``complete -c foo`` は ``foo`` 用のロード済み補完をすべて表示します。補完は :ref:`自動ロード (autoload) <syntax-function-autoloading>` されるため、表示させるにはまずその補完をトリガー(実行)する必要があります。"
+
+#: ../../doc_src/cmds/complete.rst:113
+msgid "Cygwin / MSYS2 / Windows"
+msgstr "Cygwin / MSYS2 / Windows"
+
+#: ../../doc_src/cmds/complete.rst:115
+msgid ""
+"On Windows, binary executables have a ``.exe`` extension, but this "
+"extension is not required when calling an application (and if the name is"
+" not ambiguous, i.e. there isn't also a script called ``myprog`` in the "
+"same directory as ``myprog.exe``)."
+msgstr "Windows ではバイナリ実行ファイルに ``.exe`` 拡張子が付きますが、アプリケーションを呼び出す際にこの拡張子は必須ではありません(名前が曖昧でない場合、つまり ``myprog.exe`` と同じディレクトリに ``myprog`` という名前のスクリプトが併存しない場合に限ります)。"
+
+#: ../../doc_src/cmds/complete.rst:117
+msgid ""
+"To unify completions between Windows and other OSes, on "
+"Cygwin/MSYS2/Windows, *COMMAND* does not require the ``.exe`` extension. "
+"Completions for ``myprog`` will also be used for ``myprog.exe`` if there "
+"are no ambiguities, i.e. if there are no completions for ``myprog.exe`` "
+"specifically. However, completions for ``myprog.exe`` will only be used "
+"when also using the ``.exe`` extension on the command line."
+msgstr "Windows と他の OS 間で補完を統一するため、Cygwin/MSYS2/Windows では *COMMAND* に ``.exe`` 拡張子を付ける必要はありません。 ``myprog`` 用の補完は、曖昧さがない場合(つまり ``myprog.exe`` 専用の補完が別に存在しない場合)、 ``myprog.exe`` に対しても使用されます。ただし、 ``myprog.exe`` 用に定義された補完は、コマンドラインで拡張子付きの ``.exe`` を使用した場合にのみ適用されます。"
+
+#: ../../doc_src/cmds/complete.rst:121
+msgid "In other words:"
+msgstr "言い換えれば: "
+
+#: ../../doc_src/cmds/complete.rst:127
+msgid "will only work for ``myprog.exe``"
+msgstr "は ``myprog.exe`` に対してのみ機能します"
+
+#: ../../doc_src/cmds/complete.rst:133
+msgid ""
+"can work for both ``myprog`` and ``myprog.exe``. But if both completions "
+"exist, #2 will only be used for ``myprog`` while ``myprog.exe`` will use "
+"#1."
+msgstr "は ``myprog`` と ``myprog.exe`` の両方に対して機能します。ただし、両方の補完定義が存在する場合、#2 は ``myprog`` にのみ使用され、 ``myprog.exe`` には #1 が使用されます。"
+
+#: ../../doc_src/cmds/complete.rst:136
+msgid "Examples"
+msgstr "例"
+
+#: ../../doc_src/cmds/complete.rst:138
+msgid ""
+"The short-style option ``-o`` for the ``gcc`` command needs a file "
+"argument:"
+msgstr "``gcc`` コマンドのショート形式オプション ``-o`` には、ファイルの引数が必要です: "
+
+#: ../../doc_src/cmds/complete.rst:145
+msgid ""
+"The short-style option ``-d`` for the ``grep`` command requires one of "
+"``read``, ``skip`` or ``recurse``:"
+msgstr "``grep`` コマンドのショート形式オプション ``-d`` には、 ``read``, ``skip``, ``recurse`` のいずれかが必要です: "
+
+#: ../../doc_src/cmds/complete.rst:152
+msgid ""
+"The ``su`` command takes any username as an argument. Usernames are given"
+" as the first colon-separated field in the file /etc/passwd. This can be "
+"specified as:"
+msgstr "``su`` コマンドは任意のユーザー名を引数に取ります。ユーザー名は /etc/passwd ファイルのコロン区切りの最初のフィールドに記述されています。これは次のように指定できます: "
+
+#: ../../doc_src/cmds/complete.rst:159
+msgid ""
+"The ``rpm`` command has several different modes. If the ``-e`` or "
+"``--erase`` flag has been specified, ``rpm`` should delete one or more "
+"packages, in which case several switches related to deleting packages are"
+" valid, like the ``nodeps`` switch."
+msgstr "``rpm`` コマンドにはいくつかの異なるモードがあります。 ``-e`` 、 ``--erase`` フラグが指定されている場合、 ``rpm`` は 1 つ以上のパッケージを削除するはずです。その場合、 ``nodeps`` スイッチなど、パッケージ削除に関連するいくつかのスイッチが有効になります。"
+
+#: ../../doc_src/cmds/complete.rst:161
+msgid "This can be written as:"
+msgstr "これは次のように記述できます: "
+
+#: ../../doc_src/cmds/complete.rst:168
+msgid ""
+"where ``__fish_contains_opt`` is a function that checks the command line "
+"buffer for the presence of a specified set of options."
+msgstr "ここで、 ``__fish_contains_opt`` はコマンドラインバッファをチェックして、指定された一連のオプションが存在するかどうかを確認する関数です。"
+
+#: ../../doc_src/cmds/complete.rst:170
+msgid "To implement an alias, use the ``-w`` or ``--wraps`` option:"
+msgstr "エイリアスを実装するには、 ``-w`` 、 ``--wraps`` オプションを使用します: "
+
+#: ../../doc_src/cmds/complete.rst:179
+msgid ""
+"Now hub inherits all of the completions from git. Note this can also be "
+"specified in a function declaration (``function thing -w otherthing``)."
+msgstr "これで hub は git からすべての補完を継承します。これは関数の宣言内でも指定できることに注意してください(例:  ``function thing -w otherthing``)。"
+
+#: ../../doc_src/cmds/complete.rst:185
+msgid "Shows all completions for ``git``."
+msgstr "``git`` に関するすべての補完を表示します。"
+
+#: ../../doc_src/cmds/complete.rst:187
+msgid ""
+"Any command ``foo`` that doesn't support grouping multiple short options "
+"in one string (not supporting ``-xf`` as short for ``-x -f``) or a short "
+"option and its value in one string (not supporting ``-d9`` instead of "
+"``-d 9``) should be specified as a single-character old-style option "
+"instead of as a short-style option; for example, ``complete -c foo -o s; "
+"complete -c foo -o v`` would never suggest ``foo -ov`` but rather ``foo "
+"-o -v``."
+msgstr "複数のショートオプションを 1 つの文字列にまとめること(``-x -f`` の短縮形としての ``-xf`` など)や、ショートオプションとその値を連結すること(``-d 9`` の代わりの ``-d9`` など)をサポートしていないコマンド ``foo`` がある場合、それらはショート形式オプションではなく、1 文字の旧形式オプションとして指定する必要があります。たとえば、 ``complete -c foo -o s; complete -c foo -o v`` と定義した場合、 ``foo -ov`` という形は提案されず、 ``foo -o -v`` と提案されるようになります。"

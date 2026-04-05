@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/export.rst:2
+msgid "export - compatibility function for exporting variables"
+msgstr "export - 変数をエクスポートする互換関数"
+
+#: ../../doc_src/cmds/export.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/export.rst:14
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/export.rst:16
+msgid ""
+"``export`` is a function included for compatibility with POSIX shells. In"
+" general, the :doc:`set <set>` builtin should be used instead."
+msgstr ""
+"``export`` は、POSIX シェルとの互換性のために含まれている関数です。"
+"通常は、代わりに :doc:`set <set>` ビルトインを使用してください。"
+
+#: ../../doc_src/cmds/export.rst:19
+msgid ""
+"When called without arguments, ``export`` prints a list of currently-"
+"exported variables, like ``set -x``."
+msgstr ""
+"引数なしで呼び出された場合、 ``export`` は ``set -x`` のように現在エクスポート"
+"されている変数の一覧を表示します。"
+
+#: ../../doc_src/cmds/export.rst:22
+msgid ""
+"When called with a ``NAME=VALUE`` pair, the variable ``NAME`` is set to "
+"``VALUE`` in the global scope, and exported as an environment variable to"
+" other commands."
+msgstr ""
+"``NAME=VALUE`` のペアで呼び出されると、変数 ``NAME`` がグローバルスコープで "
+"``VALUE`` に設定され、他のコマンドから参照できる環境変数としてエクスポートされます。"
+
+#: ../../doc_src/cmds/export.rst:25
+msgid "There are no options available."
+msgstr "利用可能なオプションはありません。"
+
+#: ../../doc_src/cmds/export.rst:28
+msgid "Example"
+msgstr "例"
+
+#: ../../doc_src/cmds/export.rst:30
+msgid "The following commands have an identical effect."
+msgstr "以下のコマンドはどれも同じ効果を持ちます。"
+
+#: ../../doc_src/cmds/export.rst:37
+msgid ""
+"Note: If you want to add to e.g. ``$PATH``, you need to be careful to "
+":ref:`combine the list <cartesian-product>`. Quote it, like so::"
+msgstr ""
+"Note: 例えば ``$PATH`` に追加したい場合、 :ref:`リストの結合(直積) <cartesian-product>` "
+"に注意する必要があります。以下のように引用符で囲んでください::"
+
+#: ../../doc_src/cmds/export.rst:41
+msgid "Or just use ``set``, which avoids this::"
+msgstr "あるいは、この問題を回避できる ``set`` を使用してください::"
+
+#: ../../doc_src/cmds/export.rst:46
+msgid "See more"
+msgstr "参照"
+
+#: ../../doc_src/cmds/export.rst:48
+msgid "The :doc:`set <set>` command."
+msgstr ":doc:`set <set>` コマンド。"
+

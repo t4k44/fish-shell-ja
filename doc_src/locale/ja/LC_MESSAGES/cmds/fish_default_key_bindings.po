@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:2
+msgid "fish_default_key_bindings - set emacs key bindings for fish"
+msgstr "fish_default_key_bindings - fish に Emacs キーバインドを設定する"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:14
+msgid ""
+"``fish_default_key_bindings`` sets the emacs key bindings for ``fish`` "
+"shell."
+msgstr ""
+"``fish_default_key_bindings`` は、 ``fish`` シェルに Emacs 風のキーバインドを設定します。"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:16
+msgid "Some of the Emacs key bindings are defined :ref:`here <emacs-mode>`."
+msgstr ""
+"いくつかの Emacs キーバインドについては :ref:`こちら <emacs-mode>` で定義されています。"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:18
+msgid "There are no parameters for ``fish_default_key_bindings``."
+msgstr "``fish_default_key_bindings`` にパラメータはありません。"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:21
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/fish_default_key_bindings.rst:23
+msgid "To start using emacs key bindings::"
+msgstr "Emacs キーバインドの使用を開始するには、以下のようにします::"

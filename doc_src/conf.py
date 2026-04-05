@@ -146,7 +146,11 @@ master_doc = "index"
 #
 # It also sets the html lang= attribute which would be useful to e.g. screenreaders.
 # Currently we only have english.
-language = "en"
+# language = "en"
+
+language = 'ja'
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -156,7 +160,6 @@ exclude_patterns = [fish_exclude_patterns]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
-
 
 # -- Options for HTML output -------------------------------------------------
 

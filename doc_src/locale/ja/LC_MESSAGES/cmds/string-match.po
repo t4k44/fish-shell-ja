@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/string-match.rst:2
+msgid "string-match - match substrings"
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:19
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:23
+msgid ""
+"``string match`` tests each *STRING* against *PATTERN* and prints "
+"matching substrings. Only the first match for each *STRING* is reported "
+"unless **-a** or **--all** is given, in which case all matches are "
+"reported."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:25
+msgid ""
+"If you specify the **-e** or **--entire** then each matching string is "
+"printed including any prefix or suffix not matched by the pattern "
+"(equivalent to ``grep`` without the **-o** flag). You can, obviously, "
+"achieve the same result by prepending and appending **\\*** or **.*** "
+"depending on whether or not you have specified the **--regex** flag. The "
+"**--entire** flag is a way to avoid having to complicate the pattern in "
+"that fashion and make the intent of the ``string match`` clearer. Without"
+" **--entire** and **--regex**, a *PATTERN* will need to match the entire "
+"*STRING* before it will be reported."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:27
+msgid "Matching can be made case-insensitive with **--ignore-case** or **-i**."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:29
+msgid ""
+"If **--groups-only** or **-g** is given, only the capturing groups will "
+"be reported - meaning the full match will be skipped. This is "
+"incompatible with **--entire** and **--invert**, and requires "
+"**--regex**. It is useful as a simple cutting tool instead of ``string "
+"replace``, so you can choose \"this part\" of a string."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:31
+msgid ""
+"If **--index** or **-n** is given, each match is reported as a 1-based "
+"start position and a length. By default, PATTERN is interpreted as a glob"
+" pattern matched against each entire *STRING* argument. A glob pattern is"
+" only considered a valid match if it matches the entire *STRING*."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:33
+msgid ""
+"If **--regex** or **-r** is given, *PATTERN* is interpreted as a Perl-"
+"compatible regular expression, which does not have to match the entire "
+"*STRING*. For a regular expression containing capturing groups, multiple "
+"items will be reported for each match, one for the entire match and one "
+"for each capturing group. With this, only the matching part of the "
+"*STRING* will be reported, unless **--entire** is given."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:35
+msgid ""
+"When matching via regular expressions, ``string match`` automatically "
+"sets variables for all named capturing groups (``(?<name>expression)``). "
+"It will create a variable with the name of the group, in the default "
+"scope, for each named capturing group, and set it to the value of the "
+"capturing group in the first matched argument. If a named capture group "
+"matched an empty string, the variable will be set to the empty string "
+"(like ``set var \"\"``). If it did not match, the variable will be set to"
+" nothing (like ``set var``).  When **--regex** is used with **--all**, "
+"this behavior changes. Each named variable will contain a list of "
+"matches, with the first match contained in the first element, the second "
+"match in the second, and so on. If the group was empty or did not match, "
+"the corresponding element will be an empty string."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:37
+msgid ""
+"If **--invert** or **-v** is used the selected lines will be only those "
+"which do not match the given glob pattern or regular expression."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:39
+msgid ""
+"If **--max-matches MAX** or **-m MAX** is used, ``string`` will stop "
+"checking for matches after MAX lines of input have matched. This can be "
+"used as an \"early exit\" optimization when processing long inputs but "
+"expecting a limited and fixed number of outputs that might be found "
+"considerably before the input stream has been exhausted. If combined with"
+" **--invert** or **-v**, considers only inverted matches."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:41
+msgid "Exit status: 0 if at least one match was found, or 1 otherwise."
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:46
+msgid "Examples"
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:51
+msgid "Match Glob Examples"
+msgstr ""
+
+#: ../../doc_src/cmds/string-match.rst:87
+msgid "Match Regex Examples"
+msgstr ""
+

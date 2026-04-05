@@ -1,0 +1,361 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 14:11+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/completions.rst:2
+msgid "Writing your own completions"
+msgstr "独自の補完を作成する"
+
+#: ../../doc_src/completions.rst:4
+msgid ""
+"To specify a completion, use the ``complete`` command. ``complete`` takes"
+" as a parameter the name of the command to specify a completion for. For "
+"example, to add a completion for the program ``myprog`` (or "
+"``myprog.exe`` on :ref:`Cygwin/MSYS2 <completions-cygwin>`), start the "
+"completion command with ``complete -c myprog ...``"
+msgstr ""
+"補完を指定するには、 ``complete`` コマンドを使用します。 ``complete`` はパラメータとして、"
+"補完を設定したいコマンドの名前を受け取ります。例えば、プログラム ``myprog`` (または "
+":ref:`Cygwin/MSYS2 <completions-cygwin>` 上の ``myprog.exe`` )に補完を追加するには、"
+"補完コマンドを ``complete -c myprog ...`` のように書き始めます。"
+
+#: ../../doc_src/completions.rst:6
+msgid ""
+"For a complete description of the various switches accepted by the "
+"``complete`` command, see the documentation for the :doc:`complete "
+"<cmds/complete>` builtin, or write ``complete --help`` inside the "
+"``fish`` shell."
+msgstr ""
+"``complete`` コマンドで利用可能な各種スイッチの詳細については、組み込みコマンドの "
+":doc:`complete <cmds/complete>` ドキュメントを参照するか、 ``fish`` シェル内で "
+"``complete --help`` と入力してください。"
+
+#: ../../doc_src/completions.rst:8
+msgid ""
+"To provide a list of possible completions for myprog, use the ``-a`` "
+"switch. If ``myprog`` accepts the arguments start and stop, this can be "
+"specified as ``complete -c myprog -a 'start stop'``. The argument to the "
+"``-a`` switch is always a single string. At completion time, it will be "
+"tokenized on spaces and tabs, and variable expansion, command "
+"substitution and other forms of parameter expansion will take place::"
+msgstr ""
+"myprog の補完候補リストを提供するには、 ``-a`` スイッチを使用します。もし ``myprog`` が "
+"引数として start と stop を受け取るなら、 ``complete -c myprog -a 'start stop'`` "
+"のように指定できます。 ``-a`` スイッチへの引数は常に単一の文字列です。補完の実行時に、"
+"この文字列はスペースやタブでトークン化され、変数展開、コマンド置換、およびその他の形式の"
+"パラメータ展開が行われます。"
+
+#: ../../doc_src/completions.rst:13
+msgid ""
+"``fish`` has a special syntax to support specifying switches accepted by "
+"a command. The switches ``-s``, ``-l`` and ``-o`` are used to specify a "
+"short switch (single character, such as ``-l``), a gnu style long switch "
+"(such as ``--color``) and an old-style long switch (with one ``-``, like "
+"``-shuffle``), respectively. If the command 'myprog' has an option that "
+"can be written as ``-o`` or ``--output``, that is::"
+msgstr ""
+"``fish`` には、コマンドが受け付けるスイッチ(オプション)を指定するための特別な構文があります。"
+"スイッチ ``-s`` 、 ``-l`` 、 ``-o`` はそれぞれ、短縮スイッチ( ``-l`` のような1文字)、"
+"GNU形式のロングスイッチ( ``--color`` など)、および旧形式のロングスイッチ( ``-shuffle`` のように "
+"``-`` が1つ)を指定するために使用されます。コマンド 'myprog' に ``-o`` 、 ``--output`` と"
+"記述できるオプションがある場合は、以下のようになります。"
+
+#: ../../doc_src/completions.rst:17
+msgid ""
+"If this option takes an optional argument, you would also add "
+"``--argument`` or ``-a``, and give that the possible arguments::"
+msgstr ""
+"このオプションが任意(オプション)の引数を取る場合は、 ``--argument`` 、 ``-a`` を追加し、"
+"候補となる引数を与えます。"
+
+#: ../../doc_src/completions.rst:21
+msgid "This offers the arguments \"yes\" and \"no\" for::"
+msgstr "これにより、以下の場合に引数として \"yes\" と \"no\" が提案されます。"
+
+#: ../../doc_src/completions.rst:26
+msgid ""
+"By default, option arguments are *optional*, so the candidates are only "
+"offered directly attached like that, so they aren't given in this case::"
+msgstr ""
+"デフォルトでは、オプションの引数は*任意*であるため、候補は上記のように直接連結された場合にのみ"
+"提示されます。したがって、次のケースでは提示されません。"
+
+#: ../../doc_src/completions.rst:30
+msgid ""
+"Usually options *require* a parameter, so you would give ``--require-"
+"parameter`` / ``-r``::"
+msgstr ""
+"通常、オプションにはパラメータが*必須*であるため、 ``--require-parameter`` 、 ``-r`` を指定します。"
+
+#: ../../doc_src/completions.rst:34
+msgid "which offers yes/no in these cases::"
+msgstr "これにより、以下のケースで yes/no が提案されます。"
+
+#: ../../doc_src/completions.rst:41
+msgid ""
+"Fish will also offer files by default, in addition to the arguments you "
+"specified. You would either inhibit file completion for a single option::"
+msgstr ""
+"fishはデフォルトで、指定された引数に加えてファイル名も候補として提示します。"
+"特定のオプションに対してファイル補完を抑制するには、次のようにします。"
+
+#: ../../doc_src/completions.rst:45
+msgid "or with a specific condition::"
+msgstr "または、特定の条件を指定します。"
+
+#: ../../doc_src/completions.rst:49
+msgid "or you can disable file completions globally for the command::"
+msgstr "あるいは、そのコマンドに対してグローバルにファイル補完を無効にすることもできます。"
+
+#: ../../doc_src/completions.rst:53
+msgid ""
+"If you have disabled them globally, you can enable them just for a "
+"specific condition or option with the ``--force-files`` / ``-F`` option::"
+msgstr ""
+"グローバルに無効化した後でも、 ``--force-files`` 、 ``-F`` オプションを使用すれば、"
+"特定の条件やオプションに対してのみファイル補完を有効にできます。"
+
+#: ../../doc_src/completions.rst:60
+msgid ""
+"As a more comprehensive example, here's a commented excerpt of the "
+"completions for systemd's ``timedatectl``::"
+msgstr ""
+"より包括的な例として、systemd の ``timedatectl`` 用の補完から、コメント付きの抜粋を紹介します。"
+
+#: ../../doc_src/completions.rst:115
+msgid ""
+"For examples of how to write your own complex completions, study the "
+"completions in ``/usr/share/fish/completions``. (The exact path depends "
+"on your chosen installation prefix and may be slightly different)"
+msgstr ""
+"複雑な補完を自分で作成する方法の例については、 ``/usr/share/fish/completions`` にある補完ファイルを"
+"調べてみてください。(正確なパスは、選択したインストールプレフィックスによって異なり、"
+"わずかに違う場合があります)"
+
+#: ../../doc_src/completions.rst:118
+msgid "Useful functions for writing completions"
+msgstr "補完作成に便利な関数"
+
+#: ../../doc_src/completions.rst:120
+msgid ""
+"``fish`` ships with several functions that may be useful when writing "
+"command-specific completions. Most of these function names begin with the"
+" string ``__fish_``. Such functions are internal to ``fish`` and their "
+"name and interface may change in future fish versions. A few of these "
+"functions are described here."
+msgstr ""
+"``fish`` には、特定のコマンド用補完を作成する際に便利な関数がいくつか同梱されています。"
+"これらの関数のほとんどは ``__fish_`` という文字列で始まります。これらは ``fish`` の内部関数であり、"
+"将来のfishバージョンで名前やインターフェースが変更される可能性があります。ここでは、そのうちの"
+"いくつかを紹介します。"
+
+#: ../../doc_src/completions.rst:122
+msgid ""
+"Functions beginning with the string ``__fish_print_`` print a newline "
+"separated list of strings. For example, ``__fish_print_filesystems`` "
+"prints a list of all known file systems. Functions beginning with "
+"``__fish_complete_`` print out a newline separated list of completions "
+"with descriptions. The description is separated from the completion by a "
+"tab character."
+msgstr ""
+"``__fish_print_`` で始まる関数は、改行で区切られた文字列のリストを出力します。"
+"例えば、 ``__fish_print_filesystems`` は既知のすべてのファイルシステムのリストを出力します。"
+"``__fish_complete_`` で始まる関数は、説明(ディスクリプション)付きの補完候補を改行区切りで"
+"出力します。説明は、補完候補からタブ文字で区切られます。"
+
+#: ../../doc_src/completions.rst:124
+msgid ""
+"``__fish_complete_directories STRING DESCRIPTION`` performs path "
+"completion on STRING, allowing only directories, and giving them the "
+"description DESCRIPTION."
+msgstr ""
+"``__fish_complete_directories STRING DESCRIPTION`` は、STRING に対してパス補完を実行します。"
+"ディレクトリのみを許可し、それらに DESCRIPTION という説明を付加します。"
+
+#: ../../doc_src/completions.rst:126
+msgid ""
+"``__fish_complete_path STRING DESCRIPTION`` performs path completion on "
+"STRING, giving them the description DESCRIPTION."
+msgstr ""
+"``__fish_complete_path STRING DESCRIPTION`` は、STRING に対してパス補完を実行し、"
+"説明 DESCRIPTION を付加します。"
+
+#: ../../doc_src/completions.rst:128
+msgid ""
+"``__fish_complete_groups`` prints a list of all user groups with the "
+"groups members as description."
+msgstr ""
+"``__fish_complete_groups`` は、すべてのユーザグループの一覧を、グループメンバを説明として表示します。"
+
+#: ../../doc_src/completions.rst:130
+msgid ""
+"``__fish_complete_pids`` prints a list of all processes IDs with the "
+"command name as description."
+msgstr ""
+"``__fish_complete_pids`` は、すべてのプロセスIDの一覧を、コマンド名を説明として表示します。"
+
+#: ../../doc_src/completions.rst:132
+msgid ""
+"``__fish_complete_suffix SUFFIX`` performs file completion but sorts "
+"files ending in SUFFIX first. This is useful in conjunction with "
+"``complete --keep-order``."
+msgstr ""
+"``__fish_complete_suffix SUFFIX`` は、ファイル補完を実行しますが、SUFFIX で終わるファイルを優先してソートします。"
+"これは ``complete --keep-order`` と組み合わせて使用すると便利です。"
+
+#: ../../doc_src/completions.rst:134
+msgid ""
+"``__fish_complete_users`` prints a list of all users with their full name"
+" as description."
+msgstr ""
+"``__fish_complete_users`` は、すべてのユーザの一覧を、フルネームを説明として表示します。"
+
+#: ../../doc_src/completions.rst:136
+msgid ""
+"``__fish_print_filesystems`` prints a list of all known file systems. "
+"Currently, this is a static list, and not dependent on what file systems "
+"the host operating system actually understands."
+msgstr ""
+"``__fish_print_filesystems`` は、既知のすべてのファイルシステムのリストを表示します。"
+"現在は静的なリストであり、ホストOSが実際に認識しているファイルシステムには依存しません。"
+
+#: ../../doc_src/completions.rst:138
+msgid ""
+"``__fish_print_hostnames`` prints a list of all known hostnames. This "
+"function searches the fstab for nfs servers, ssh for known hosts and "
+"checks the ``/etc/hosts`` file."
+msgstr ""
+"``__fish_print_hostnames`` は、既知のすべてのホスト名のリストを表示します。この関数は "
+"fstab から NFS サーバを、ssh から既知のホストを検索し、 ``/etc/hosts`` ファイルを確認します。"
+
+#: ../../doc_src/completions.rst:140
+msgid "``__fish_print_interfaces`` prints a list of all known network interfaces."
+msgstr "``__fish_print_interfaces`` は、既知のすべてのネットワークインターフェースのリストを表示します。"
+
+#: ../../doc_src/completions.rst:143
+msgid "Where to put completions"
+msgstr "補完の配置場所"
+
+#: ../../doc_src/completions.rst:145
+msgid ""
+"Completions can be defined on the commandline or in a configuration file,"
+" but they can also be automatically loaded. Fish automatically searches "
+"through any directories in the list variable ``$fish_complete_path``, and"
+" any completions defined are automatically loaded when needed. A "
+"completion file must have a filename consisting of the name of the "
+"command to complete and the suffix ``.fish``."
+msgstr ""
+"補完はコマンドラインや設定ファイルで定義できますが、自動的にロードすることも可能です。"
+"fish はリスト変数 ``$fish_complete_path`` に含まれるすべてのディレクトリを自動的に検索し、"
+"定義された補完は必要に応じて自動的にロードされます。補完ファイルの名前は、補完対象の"
+"コマンド名にサフィックス(拡張子) ``.fish`` を付けたものである必要があります。"
+
+#: ../../doc_src/completions.rst:147
+msgid ""
+"By default, Fish searches the following for completions, using the first "
+"available file that it finds:"
+msgstr ""
+"デフォルトでは、fish は以下の場所を検索し、最初に見つかった補完ファイルを使用します。"
+
+#: ../../doc_src/completions.rst:149
+msgid ""
+"A directory for end-users to keep their own completions, usually "
+"``~/.config/fish/completions`` (controlled by the ``XDG_CONFIG_HOME`` "
+"environment variable);"
+msgstr ""
+"エンドユーザが独自の補完を保持するためのディレクトリ。通常は ``~/.config/fish/completions`` "
+"です( ``XDG_CONFIG_HOME`` 環境変数で制御されます)。"
+
+#: ../../doc_src/completions.rst:150
+msgid ""
+"A directory for systems administrators to install completions for all "
+"users on the system, usually ``/etc/fish/completions``;"
+msgstr ""
+"システム管理者がシステム上の全ユーザ向けに補完をインストールするためのディレクトリ。通常は "
+"``/etc/fish/completions`` です。"
+
+#: ../../doc_src/completions.rst:151
+msgid ""
+"A user-specified directory for third-party vendor completions, usually "
+"``~/.local/share/fish/vendor_completions.d`` (controlled by the "
+"``XDG_DATA_HOME`` environment variable);"
+msgstr ""
+"ユーザが指定したサードパーティベンダーの補完用ディレクトリ。通常は "
+"``~/.local/share/fish/vendor_completions.d`` です( ``XDG_DATA_HOME`` 環境変数で制御されます)。"
+
+#: ../../doc_src/completions.rst:152
+msgid ""
+"A directory for third-party software vendors to ship their own "
+"completions for their software, usually "
+"``/usr/share/fish/vendor_completions.d``;"
+msgstr ""
+"サードパーティのソフトウェアベンダーが自社ソフトウェア用の補完を同梱するためのディレクトリ。"
+"通常は ``/usr/share/fish/vendor_completions.d`` です。"
+
+#: ../../doc_src/completions.rst:153
+msgid ""
+"The completions shipped with fish, usually installed in "
+"``/usr/share/fish/completions``; and"
+msgstr "fish に同梱されている補完。通常は ``/usr/share/fish/completions`` にインストールされます。"
+
+#: ../../doc_src/completions.rst:154
+msgid ""
+"Completions automatically generated from the operating system's manual, "
+"usually stored in ``~/.cache/fish/generated_completions`` (controlled by "
+"``XDG_CACHE_HOME`` environment variable)."
+msgstr ""
+"OSのマニュアルから自動生成された補完。通常は ``~/.cache/fish/generated_completions`` "
+"に保存されます( ``XDG_CACHE_HOME`` 環境変数で制御されます)。"
+
+#: ../../doc_src/completions.rst:156
+msgid ""
+"These paths are controlled by parameters set at build, install, or run "
+"time, and may vary from the defaults listed above."
+msgstr ""
+"これらのパスは、ビルド時、インストール時、または実行時に設定されるパラメータによって制御されており、"
+"上記のデフォルト値とは異なる場合があります。"
+
+#: ../../doc_src/completions.rst:158
+msgid ""
+"This wide search may be confusing. If you are unsure, your completions "
+"probably belong in ``~/.config/fish/completions``."
+msgstr ""
+"この広範な検索は混乱を招くかもしれません。迷った場合は、おそらく ``~/.config/fish/completions`` "
+"に配置するのが適切です。"
+
+#: ../../doc_src/completions.rst:160
+msgid ""
+"If you have written new completions for a common Unix command, please "
+"consider sharing your work by submitting it via the instructions in "
+":ref:`Further help and development <more-help>`."
+msgstr ""
+"一般的な Unix コマンドの新しい補完を作成した場合は、 :ref:`Further help and development <more-help>` "
+"の手順に従って提出し、成果を共有することを検討してください。"
+
+#: ../../doc_src/completions.rst:162
+msgid ""
+"If you are developing another program and would like to ship completions "
+"with your program, install them to the \"vendor\" completions directory. "
+"As this path may vary from system to system, the ``pkgconfig`` framework "
+"should be used to discover this path with the output of ``pkg-config "
+"--variable completionsdir fish``."
+msgstr ""
+"別のプログラムを開発しており、そのプログラムに補完を同梱したい場合は、\"vendor\" 補完ディレクトリに"
+"インストールしてください。このパスはシステムごとに異なる可能性があるため、 ``pkgconfig`` フレームワークを"
+"使用し、 ``pkg-config --variable completionsdir fish`` の出力を用いてこのパスを特定すべきです。"

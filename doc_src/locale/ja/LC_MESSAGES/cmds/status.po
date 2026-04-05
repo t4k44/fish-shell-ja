@@ -1,0 +1,436 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/status.rst:2
+msgid "status - query fish runtime information"
+msgstr "status - fish の実行時情報を照会する"
+
+#: ../../doc_src/cmds/status.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/status.rst:39
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/status.rst:41
+msgid ""
+"With no arguments, ``status`` displays a summary of the current login and"
+" job control status of the shell."
+msgstr "引数なしで実行すると、 ``status`` はシェルの現在のログインおよびジョブ制御ステータスの概要を表示します。"
+
+#: ../../doc_src/cmds/status.rst:43
+msgid "The following operations (subcommands) are available:"
+msgstr "以下の操作(サブコマンド)が利用可能です: "
+
+#: ../../doc_src/cmds/status.rst:45
+msgid "**is-command-substitution**, **-c** or **--is-command-substitution**"
+msgstr "**is-command-substitution**, **-c** 、 **--is-command-substitution**"
+
+#: ../../doc_src/cmds/status.rst:46
+msgid "Returns 0 if fish is currently executing a command substitution."
+msgstr "fish が現在コマンド置換を実行している場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:48
+msgid "**is-block**, **-b** or **--is-block**"
+msgstr "**is-block**, **-b** 、 **--is-block**"
+
+#: ../../doc_src/cmds/status.rst:49
+msgid "Returns 0 if fish is currently executing a block of code."
+msgstr "fish が現在コードブロックを実行している場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:51
+msgid "**is-breakpoint**"
+msgstr "**is-breakpoint**"
+
+#: ../../doc_src/cmds/status.rst:52
+msgid ""
+"Returns 0 if fish is currently showing a prompt in the context of a "
+":doc:`breakpoint <breakpoint>` command. See also the "
+":doc:`fish_breakpoint_prompt <fish_breakpoint_prompt>` function."
+msgstr ""
+"fish が現在 :doc:`breakpoint <breakpoint>` コマンドのコンテキストでプロンプトを表示している場合に 0 "
+"を返します。 :doc:`fish_breakpoint_prompt <fish_breakpoint_prompt>` "
+"関数も参照してください。"
+
+#: ../../doc_src/cmds/status.rst:54
+msgid "**is-interactive**, **-i** or **--is-interactive**"
+msgstr "**is-interactive**, **-i** 、 **--is-interactive**"
+
+#: ../../doc_src/cmds/status.rst:55
+msgid "Returns 0 if fish is interactive - that is, connected to a keyboard."
+msgstr "fish が対話モードである(つまり、キーボードに接続されている)場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:57
+msgid "**is-interactive-read** or **--is-interactive-read**"
+msgstr "**is-interactive-read** 、 **--is-interactive-read**"
+
+#: ../../doc_src/cmds/status.rst:58
+msgid ""
+"Returns 0 if fish is running an interactive :doc:`read <read>` builtin "
+"which is connected to a keyboard."
+msgstr "fish がキーボードに接続された対話型の :doc:`read <read>` 組み込みコマンドを実行している場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:60
+msgid "**is-login**, **-l** or **--is-login**"
+msgstr "**is-login**, **-l** 、 **--is-login**"
+
+#: ../../doc_src/cmds/status.rst:61
+msgid ""
+"Returns 0 if fish is a login shell - that is, if fish should perform "
+"login tasks such as setting up :envvar:`PATH`."
+msgstr "fish がログインシェルである(つまり、 :envvar:`PATH` の設定などのログインタスクを実行する必要がある)場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:63
+msgid "**is-full-job-control** or **--is-full-job-control**"
+msgstr "**is-full-job-control** 、 **--is-full-job-control**"
+
+#: ../../doc_src/cmds/status.rst:64
+msgid "Returns 0 if full job control is enabled."
+msgstr "完全なジョブ制御が有効な場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:66
+msgid "**is-interactive-job-control** or **--is-interactive-job-control**"
+msgstr "**is-interactive-job-control** 、 **--is-interactive-job-control**"
+
+#: ../../doc_src/cmds/status.rst:67
+msgid "Returns 0 if interactive job control is enabled."
+msgstr "対話型ジョブ制御が有効な場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:69
+msgid "**is-no-job-control** or **--is-no-job-control**"
+msgstr "**is-no-job-control** 、 **--is-no-job-control**"
+
+#: ../../doc_src/cmds/status.rst:70
+msgid "Returns 0 if no job control is enabled."
+msgstr "ジョブ制御が無効な場合に 0 を返します。"
+
+#: ../../doc_src/cmds/status.rst:72
+msgid "**current-command**"
+msgstr "**current-command**"
+
+#: ../../doc_src/cmds/status.rst:73
+msgid ""
+"Prints the name of the currently-running function or command, like the "
+"deprecated :envvar:`_` variable."
+msgstr "非推奨 :envvar:`_` 変数のように、現在実行中の関数またはコマンドの名前を出力します。"
+
+#: ../../doc_src/cmds/status.rst:75
+msgid "**current-commandline**"
+msgstr "**current-commandline**"
+
+#: ../../doc_src/cmds/status.rst:76
+msgid ""
+"Prints the entirety of the currently-running commandline, inclusive of "
+"all jobs and operators."
+msgstr "現在実行中のコマンドライン全体(すべてのジョブと演算子を含む)を出力します。"
+
+#: ../../doc_src/cmds/status.rst:78
+msgid "**filename**, **current-filename**, **-f** or **--current-filename**"
+msgstr "**filename**, **current-filename**, **-f** 、 **--current-filename**"
+
+#: ../../doc_src/cmds/status.rst:79
+msgid ""
+"Prints the filename of the currently-running script. If the current "
+"script was called via a symlink, this will return the symlink. If the "
+"current script was received by piping into :doc:`source <source>`, then "
+"this will return ``-``."
+msgstr ""
+"現在実行中のスクリプトのファイル名を出力します。現在のスクリプトがシンボリックリンク経由で呼び出された場合、シンボリックリンクを返します。現在のスクリプトが"
+" :doc:`source <source>` へのパイプで渡された場合、 ``-`` を返します。"
+
+#: ../../doc_src/cmds/status.rst:81
+msgid "**basename**"
+msgstr "**basename**"
+
+#: ../../doc_src/cmds/status.rst:82
+msgid ""
+"Prints just the filename of the running script, without any path "
+"components before."
+msgstr "実行中のスクリプトのファイル名のみを表示し、その前のパスコンポーネントは含めません。"
+
+#: ../../doc_src/cmds/status.rst:84
+msgid "**dirname**"
+msgstr "**dirname**"
+
+#: ../../doc_src/cmds/status.rst:85
+msgid ""
+"Prints just the path to the running script, without the actual filename "
+"itself. This can be relative to :envvar:`PWD` (including just \".\"), "
+"depending on how the script was called. This is the same as passing the "
+"filename to ``dirname(3)``. It's useful if you want to use other files in"
+" the current script's directory or similar."
+msgstr ""
+"実際のファイル名を含まず、実行中のスクリプトへのパスのみを表示します。スクリプトの呼び出し方によっては、 :envvar:`PWD` "
+"からの相対パス(単なる \".\" を含む)になる場合があります。これは、ファイル名を ``dirname(3)`` "
+"に渡すのと同じです。現在のスクリプトと同じディレクトリにある他のファイルを使用したい場合などに便利です。"
+
+#: ../../doc_src/cmds/status.rst:87
+msgid "**fish-path**"
+msgstr "**fish-path**"
+
+#: ../../doc_src/cmds/status.rst:88
+msgid ""
+"Prints the absolute path to the currently executing instance of fish. "
+"This is a best-effort attempt and the exact output is down to what the "
+"platform gives fish. In some cases you might only get \"fish\"."
+msgstr ""
+"現在実行中の fish "
+"インスタンスへの絶対パスを表示します。これはベストエフォート(最大限の努力)による試行であり、正確な出力はプラットフォームが fish "
+"に提供する情報に依存します。場合によっては、単に \"fish\" とだけ表示されることもあります。"
+
+#: ../../doc_src/cmds/status.rst:90
+msgid "**function** or **current-function**"
+msgstr "**function** 、 **current-function**"
+
+#: ../../doc_src/cmds/status.rst:91
+msgid ""
+"Prints the name of the currently called function if able, when missing "
+"displays \"Not a function\" (or equivalent translated string)."
+msgstr ""
+"可能であれば現在呼び出されている関数名を表示します。関数でない場合は "
+"\"Not a function\"(またはそれに対応する翻訳された文字列)を表示します。"
+
+#: ../../doc_src/cmds/status.rst:93
+msgid ""
+"**line-number**, **current-line-number**, **-n** or **--current-line-"
+"number**"
+msgstr ""
+"**line-number**, **current-line-number**, **-n** 、 **--current-line-"
+"number**"
+
+#: ../../doc_src/cmds/status.rst:94
+msgid "Prints the line number of the currently running script."
+msgstr "現在実行中のスクリプトの行番号を表示します。"
+
+#: ../../doc_src/cmds/status.rst:96
+msgid "**stack-trace**, **print-stack-trace**, **-t** or **--print-stack-trace**"
+msgstr "**stack-trace**, **print-stack-trace**, **-t** 、 **--print-stack-trace**"
+
+#: ../../doc_src/cmds/status.rst:97
+msgid "Prints a stack trace of all function calls on the call stack."
+msgstr "コールスタック上のすべての関数呼び出しのスタックトレースを表示します。"
+
+#: ../../doc_src/cmds/status.rst:99
+msgid "**job-control**, **-j** or **--job-control** *CONTROL_TYPE*"
+msgstr "**job-control**, **-j** 、 **--job-control** *CONTROL_TYPE*"
+
+#: ../../doc_src/cmds/status.rst:100
+msgid ""
+"Sets the job control type to *CONTROL_TYPE*, which can be **none**, "
+"**full**, or **interactive**."
+msgstr ""
+"ジョブ制御のタイプを *CONTROL_TYPE* に設定します。指定できるのは **none**, **full**, "
+"**interactive** です。"
+
+#: ../../doc_src/cmds/status.rst:102
+msgid "**features**"
+msgstr "**features**"
+
+#: ../../doc_src/cmds/status.rst:103
+msgid "Lists all available :ref:`feature flags <featureflags>`."
+msgstr "利用可能なすべての :ref:`機能フラグ(feature flags) <featureflags>` をリスト表示します。"
+
+#: ../../doc_src/cmds/status.rst:105
+msgid "**test-feature** *FEATURE*"
+msgstr "**test-feature** *FEATURE*"
+
+#: ../../doc_src/cmds/status.rst:106
+msgid ""
+"Returns 0 when FEATURE is enabled, 1 if it is disabled, and 2 if it is "
+"not recognized."
+msgstr "FEATURE が有効な場合は 0、無効な場合は 1、認識されない場合は 2 を返します。"
+
+#: ../../doc_src/cmds/status.rst:108
+msgid "**build-info**"
+msgstr "**build-info**"
+
+#: ../../doc_src/cmds/status.rst:109
+msgid ""
+"This prints information on how fish was build - which architecture, which"
+" build system or profile was used, etc. This is mainly useful for "
+"debugging."
+msgstr ""
+"fish "
+"がどのようにビルドされたかに関する情報(アーキテクチャ、使用されたビルドシステムやプロファイルなど)を表示します。これは主にデバッグに役立ちます。"
+
+#: ../../doc_src/cmds/status.rst:114
+msgid "**get-file** *FILE*"
+msgstr "**get-file** *FILE*"
+
+#: ../../doc_src/cmds/status.rst:115 ../../doc_src/cmds/status.rst:122
+msgid ""
+"NOTE: this subcommand is mainly intended for fish's internal use; let us "
+"know if you want to use it elsewhere."
+msgstr "注意: このサブコマンドは主に fish の内部利用を目的としています。他の用途で利用したい場合はお知らせください。"
+
+#: ../../doc_src/cmds/status.rst:117
+msgid ""
+"This prints a file embedded in the fish binary at compile time. This "
+"includes the default set of functions and completions, as well as the man"
+" pages and themes. Which files are included depends on build settings. "
+"Returns 0 if the file was included, 1 otherwise."
+msgstr ""
+"コンパイル時に fish バイナリに埋め込まれたファイルを表示します。これにはデフォルトの関数セットや補完、man "
+"ページ、テーマが含まれます。どのファイルが含まれるかはビルド設定に依存します。ファイルが含まれていた場合は 0 を、そうでない場合は 1 "
+"を返します。"
+
+#: ../../doc_src/cmds/status.rst:121
+msgid "**list-files** *FILE...*"
+msgstr "**list-files** *FILE...*"
+
+#: ../../doc_src/cmds/status.rst:124
+msgid ""
+"This lists the files embedded in the fish binary at compile time. Only "
+"files where the path starts with the optional *FILE* argument are shown. "
+"Returns 0 if something was printed, 1 otherwise."
+msgstr ""
+"コンパイル時に fish バイナリに埋め込まれたファイルをリスト表示します。オプションの *FILE* "
+"引数で始まるパスのファイルのみが表示されます。何らかの出力があった場合は 0 を、そうでない場合は 1 を返します。"
+
+#: ../../doc_src/cmds/status.rst:129
+msgid "**terminal**"
+msgstr "**terminal**"
+
+#: ../../doc_src/cmds/status.rst:130
+msgid ""
+"Prints the name and version of the terminal fish is running inside (for "
+"example as reported via :ref:`XTVERSION <term-compat-xtversion>`). This "
+"is not available during early startup but only starting from when the "
+"first interactive prompt is shown, possibly via builtin :doc:`read "
+"<read>`, so before the first ``fish_prompt`` or ``fish_read`` :ref:`event"
+" <event>`."
+msgstr ""
+"fish が実行されているターミナルの名前とバージョンを表示します(例:  :ref:`XTVERSION <term-compat-"
+"xtversion>` を通じて報告される情報)。これは起動直後には利用できず、最初の対話型プロンプト(組み込みの :doc:`read "
+"<read>` によるものを含む)が表示されてから利用可能になります。つまり、最初の ``fish_prompt`` 、 "
+"``fish_read`` :ref:`イベント <event>` 以前の状態では利用できません。"
+
+#: ../../doc_src/cmds/status.rst:136
+msgid "**terminal-os**"
+msgstr "**terminal-os**"
+
+#: ../../doc_src/cmds/status.rst:137
+msgid ""
+"Prints the name of the operating system (OS) the terminal is running on, "
+"as reported via :ref:`XTGETTCAP query-os-name <term-compat-xtgettcap>`. "
+"Like :ref:`status terminal <status-terminal>`, this only works once the "
+"first interactive prompt is shown. Returns 1 if the OS name is not "
+"available."
+msgstr ""
+"ターミナルが動作しているオペレーティングシステム(OS) の名前を表示します(:ref:`XTGETTCAP query-os-name "
+"<term-compat-xtgettcap>` を通じて報告される情報)。 :ref:`status terminal <status-"
+"terminal>` と同様、最初の対話型プロンプトが表示された後にのみ機能します。OS名が取得できない場合は 1 を返します。"
+
+#: ../../doc_src/cmds/status.rst:143
+msgid "**test-terminal-feature** *FEATURE*"
+msgstr "**test-terminal-feature** *FEATURE*"
+
+#: ../../doc_src/cmds/status.rst:144
+msgid ""
+"Returns 0 when the terminal was :ref:`detected <term-compat-xtgettcap>` "
+"to support the given feature. Like :ref:`status terminal <status-"
+"terminal>`, this only works once the first interactive prompt is shown."
+msgstr ""
+"ターミナルが指定された機能をサポートしていると :ref:`検出 <term-compat-xtgettcap>` された場合に 0 を返します。"
+" :ref:`status terminal <status-terminal>` と同様、最初の対話型プロンプトが表示された後にのみ機能します。"
+
+#: ../../doc_src/cmds/status.rst:147
+msgid ""
+"Currently the only available *FEATURE* is :ref:`scroll-content-up <term-"
+"compat-indn>`. An error will be printed when passed an unrecognized "
+"feature."
+msgstr ""
+"現在利用可能な *FEATURE* は :ref:`scroll-content-up <term-compat-indn>` "
+"のみです。認識できない機能が渡された場合はエラーが表示されます。"
+
+#: ../../doc_src/cmds/status.rst:152
+msgid "**language**"
+msgstr "**language**"
+
+#: ../../doc_src/cmds/status.rst:153
+msgid ""
+"Show or modify message localization settings. When invoked without "
+"arguments, the current language settings are shown."
+msgstr "メッセージのローカライズ設定を表示または変更します。引数なしで実行すると、現在の言語設定が表示されます。"
+
+#: ../../doc_src/cmds/status.rst:156
+msgid "Available subcommands:"
+msgstr "利用可能なサブコマンド: "
+
+#: ../../doc_src/cmds/status.rst:158
+msgid ""
+"**list-available** prints the language names for which fish has "
+"translations. These names can be used with the **set** subcommand."
+msgstr ""
+"**list-available** は fish が翻訳データを持っている言語名を表示します。これらの名前は **set** "
+"サブコマンドで使用できます。"
+
+#: ../../doc_src/cmds/status.rst:162
+msgid ""
+"**set** sets the language precedence for fish's messages. Overrides "
+"language settings configured via :ref:`environment variables <variables-"
+"locale>`, but only applies to fish itself, not to any child processes. "
+"Takes a list of language names from the set shown by the **list-"
+"available** subcommand. For some languages, fish's translation catalogs "
+"are incomplete, meaning not all messages can be shown in these languages."
+" Therefore, we allow specifying a list here, with translations taken from"
+" the first specified language which has a translation available for a "
+"message. For example, after running ``status language set pt_BR fr``, all"
+" messages which have a translation into Brazilian Portuguese will be "
+"shown in that language. The remaining messages will be shown in French, "
+"if a French translation is available. If none of the specified languages "
+"have a translation available for a message, the message will be shown in "
+"English."
+msgstr ""
+"**set** は fish のメッセージの言語優先順位を設定します。 :ref:`環境変数 <variables-locale>` "
+"を通じて構成された言語設定を上書きしますが、適用されるのは fish 自体のみで、子プロセスには適用されません。 **list-"
+"available** サブコマンドで表示される言語名のリストを受け取ります。一部の言語では、fish "
+"の翻訳カタログが不完全であり、すべてのメッセージを表示できない場合があります。そのため、ここではリストを指定することが可能で、メッセージごとに翻訳が存在する最初の言語が採用されます。例えば、"
+" ``status language set pt_BR fr`` "
+"を実行すると、ブラジル・ポルトガル語の翻訳があるメッセージはすべてその言語で表示されます。それ以外のメッセージは、フランス語の翻訳があればフランス語で表示されます。指定されたどの言語にも翻訳がない場合は、英語で表示されます。"
+
+#: ../../doc_src/cmds/status.rst:172
+msgid ""
+"**unset** undoes the effects of the **set** subcommand. Language settings"
+" will be taken from environment variables again."
+msgstr "**unset** は **set** サブコマンドによる変更を取り消します。言語設定は再び環境変数から取得されるようになります。"
+
+#: ../../doc_src/cmds/status.rst:177
+msgid "Notes"
+msgstr "注意"
+
+#: ../../doc_src/cmds/status.rst:179
+msgid ""
+"For backwards compatibility most subcommands can also be specified as a "
+"long or short option. For example, rather than ``status is-login`` you "
+"can type ``status --is-login``. The flag forms are deprecated and may be "
+"removed in a future release."
+msgstr ""
+"後方互換性のために、ほとんどのサブコマンドはロングまたはショートオプションとして指定することもできます。例えば、 ``status is-"
+"login`` の代わりに ``status --is-login`` "
+"と入力できます。ただし、フラグ形式は非推奨であり、将来のリリースで削除される可能性があります。"
+
+#: ../../doc_src/cmds/status.rst:181
+msgid ""
+"You can only specify one subcommand per invocation even if you use the "
+"flag form of the subcommand."
+msgstr "サブコマンドをフラグ形式で使用する場合でも、一度の実行につき指定できるサブコマンドは1つだけです。"
+

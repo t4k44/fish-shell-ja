@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/continue.rst:2
+msgid ""
+"continue - skip the remainder of the current iteration of the current "
+"inner loop"
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:12
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:14
+msgid ""
+"``continue`` skips the remainder of the current iteration of the current "
+"inner loop, such as a :doc:`for <for>` loop or a :doc:`while <while>` "
+"loop. It is usually added inside of a conditional block such as an "
+":doc:`if <if>` statement or a :doc:`switch <switch>` statement."
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:16
+msgid "The **-h** or **--help** option displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:19
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:21
+msgid ""
+"The following code removes all tmp files that do not contain the word "
+"smurf."
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:36
+msgid "See Also"
+msgstr ""
+
+#: ../../doc_src/cmds/continue.rst:38
+msgid "the :doc:`break <break>` command, to stop the current inner loop"
+msgstr ""
+

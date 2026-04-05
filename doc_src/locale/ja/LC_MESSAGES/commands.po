@@ -1,0 +1,383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 14:11+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/commands.rst:2
+msgid "Commands"
+msgstr "コマンド"
+
+#: ../../doc_src/commands.rst:4
+msgid "This is a list of all the commands fish ships with."
+msgstr "これは fish に付属しているすべてのコマンドのリストです。"
+
+#: ../../doc_src/commands.rst:6
+msgid "Broadly speaking, these fall into a few categories:"
+msgstr "大まかに言えば、これらはいくつかのカテゴリに分類されます。"
+
+#: ../../doc_src/commands.rst:9
+msgid "Keywords"
+msgstr "キーワード"
+
+#: ../../doc_src/commands.rst:11
+msgid "Core language keywords that make up the syntax, like"
+msgstr "構文を構成する言語の中核となるキーワードです。以下のようなものがあります。"
+
+#: ../../doc_src/commands.rst:13
+msgid ":doc:`if <cmds/if>` and :doc:`else <cmds/else>` for conditions."
+msgstr "条件分岐のための :doc:`if <cmds/if>` と :doc:`else <cmds/else>` 。"
+
+#: ../../doc_src/commands.rst:14
+msgid ":doc:`for <cmds/for>` and :doc:`while <cmds/while>` for loops."
+msgstr "ループのための :doc:`for <cmds/for>` と :doc:`while <cmds/while>` 。"
+
+#: ../../doc_src/commands.rst:15
+msgid ""
+":doc:`break <cmds/break>` and :doc:`continue <cmds/continue>` to control "
+"loops."
+msgstr "ループを制御するための :doc:`break <cmds/break>` と :doc:`continue <cmds/continue>` 。"
+
+#: ../../doc_src/commands.rst:16
+msgid ":doc:`function <cmds/function>` to define functions."
+msgstr "関数を定義するための :doc:`function <cmds/function>` 。"
+
+#: ../../doc_src/commands.rst:17
+msgid ":doc:`return <cmds/return>` to return a status from a function."
+msgstr "関数からステータスを返すための :doc:`return <cmds/return>` 。"
+
+#: ../../doc_src/commands.rst:18
+msgid ""
+":doc:`begin <cmds/begin>` to begin a block and :doc:`end <cmds/end>` to "
+"end any block (including ifs and loops)."
+msgstr "ブロックを開始するための :doc:`begin <cmds/begin>` と、あらゆるブロック(if やループを含む)を終了するための :doc:`end <cmds/end>` 。"
+
+#: ../../doc_src/commands.rst:19
+msgid ""
+":doc:`and <cmds/and>`, :doc:`or <cmds/or>` and :doc:`not <cmds/not>` to "
+"combine commands logically."
+msgstr "コマンドを論理的に組み合わせるための :doc:`and <cmds/and>` 、 :doc:`or <cmds/or>` 、 :doc:`not <cmds/not>` 。"
+
+#: ../../doc_src/commands.rst:20
+msgid ""
+":doc:`switch <cmds/switch>` and :doc:`case <cmds/case>` to make multiple "
+"blocks depending on the value of a variable."
+msgstr "変数の値に応じて複数のブロックを作成するための :doc:`switch <cmds/switch>` と :doc:`case <cmds/case>` 。"
+
+#: ../../doc_src/commands.rst:21
+msgid ""
+":doc:`command <cmds/command>` or :doc:`builtin <cmds/builtin>` to tell "
+"fish what sort of thing to execute"
+msgstr "実行する種類(外部コマンドかビルトインか)を fish に指示するための :doc:`command <cmds/command>` 、 :doc:`builtin <cmds/builtin>` 。"
+
+#: ../../doc_src/commands.rst:22
+msgid ":doc:`time <cmds/time>` to time execution"
+msgstr "実行時間を計測するための :doc:`time <cmds/time>` 。"
+
+#: ../../doc_src/commands.rst:23
+msgid ":doc:`exec <cmds/exec>` tells fish to replace itself with a command."
+msgstr ":doc:`exec <cmds/exec>` は、自身をコマンドに置き換えるよう fish に指示します。"
+
+#: ../../doc_src/commands.rst:24
+msgid ":doc:`end <cmds/end>` to end a block"
+msgstr "ブロックを終了するための :doc:`end <cmds/end>` 。"
+
+#: ../../doc_src/commands.rst:27
+msgid "Tools"
+msgstr "ツール"
+
+#: ../../doc_src/commands.rst:29
+msgid "Builtins to do a task, like"
+msgstr "タスクを実行するためのビルトインです。以下のようなものがあります。"
+
+#: ../../doc_src/commands.rst:31
+msgid ":doc:`cd <cmds/cd>` to change the current directory."
+msgstr "カレントディレクトリを変更するための :doc:`cd <cmds/cd>` 。"
+
+#: ../../doc_src/commands.rst:32
+msgid ":doc:`echo <cmds/echo>` or :doc:`printf <cmds/printf>` to produce output."
+msgstr "出力を生成するための :doc:`echo <cmds/echo>` 、 :doc:`printf <cmds/printf>` 。"
+
+#: ../../doc_src/commands.rst:33
+msgid ":doc:`set_color <cmds/set_color>` to colorize output."
+msgstr "出力を色付けするための :doc:`set_color <cmds/set_color>` 。"
+
+#: ../../doc_src/commands.rst:34
+msgid ":doc:`set <cmds/set>` to set, query or erase variables."
+msgstr "変数の設定、照会、消去を行うための :doc:`set <cmds/set>` 。"
+
+#: ../../doc_src/commands.rst:35
+msgid ":doc:`read <cmds/read>` to read input."
+msgstr "入力を読み取るための :doc:`read <cmds/read>` 。"
+
+#: ../../doc_src/commands.rst:36
+msgid ":doc:`string <cmds/string>` for string manipulation."
+msgstr "文字列操作のための :doc:`string <cmds/string>` 。"
+
+#: ../../doc_src/commands.rst:37
+msgid ":doc:`path <cmds/path>` for filtering paths and handling their components."
+msgstr "パスのフィルタリングやコンポーネントの処理を行うための :doc:`path <cmds/path>` 。"
+
+#: ../../doc_src/commands.rst:38
+msgid ":doc:`math <cmds/math>` does arithmetic."
+msgstr "算術計算を行うための :doc:`math <cmds/math>` 。"
+
+#: ../../doc_src/commands.rst:39
+msgid ":doc:`argparse <cmds/argparse>` to make arguments easier to handle."
+msgstr "引数の処理を容易にするための :doc:`argparse <cmds/argparse>` 。"
+
+#: ../../doc_src/commands.rst:40
+msgid ":doc:`count <cmds/count>` to count arguments."
+msgstr "引数をカウントするための :doc:`count <cmds/count>` 。"
+
+#: ../../doc_src/commands.rst:41
+msgid ""
+":doc:`type <cmds/type>` to find out what sort of thing (command, builtin "
+"or function) fish would call, or if it exists at all."
+msgstr "fish が呼び出すものが何の種類(コマンド、ビルトイン、関数)なのか、あるいはそもそも存在するのかを確認するための :doc:`type <cmds/type>` 。"
+
+#: ../../doc_src/commands.rst:42
+msgid ""
+":doc:`test <cmds/test>` checks conditions like if a file exists or a "
+"string is empty."
+msgstr "ファイルが存在するか、文字列が空かといった条件を確認するための :doc:`test <cmds/test>` 。"
+
+#: ../../doc_src/commands.rst:43
+msgid ":doc:`contains <cmds/contains>` to see if a list contains an entry."
+msgstr "リストにエントリが含まれているかを確認するための :doc:`contains <cmds/contains>` 。"
+
+#: ../../doc_src/commands.rst:44
+msgid ""
+":doc:`eval <cmds/eval>` and :doc:`source <cmds/source>` to run fish code "
+"from a string or file."
+msgstr "文字列またはファイルから fish コードを実行するための :doc:`eval <cmds/eval>` と :doc:`source <cmds/source>` 。"
+
+#: ../../doc_src/commands.rst:45
+msgid ""
+":doc:`status <cmds/status>` to get shell information, like whether it's "
+"interactive or a login shell, or which file it is currently running."
+msgstr "対話型かログインシェルか、現在どのファイルを実行しているかといったシェルの情報を取得するための :doc:`status <cmds/status>` 。"
+
+#: ../../doc_src/commands.rst:46
+msgid ":doc:`abbr <cmds/abbr>` manages :ref:`abbreviations`."
+msgstr ":ref:`略語(abbreviations) <abbreviations>` を管理するための :doc:`abbr <cmds/abbr>` 。"
+
+#: ../../doc_src/commands.rst:47
+msgid ":doc:`bind <cmds/bind>` to change bindings."
+msgstr "キーバインドを変更するための :doc:`bind <cmds/bind>` 。"
+
+#: ../../doc_src/commands.rst:48
+msgid ""
+":doc:`complete <cmds/complete>` manages :ref:`completions <tab-"
+"completion>`."
+msgstr ":ref:`補完(completions) <tab-completion>` を管理するための :doc:`complete <cmds/complete>` 。"
+
+#: ../../doc_src/commands.rst:49
+msgid ""
+":doc:`commandline <cmds/commandline>` to get or change the commandline "
+"contents."
+msgstr "コマンドラインの内容を取得または変更するための :doc:`commandline <cmds/commandline>` 。"
+
+#: ../../doc_src/commands.rst:50
+msgid ""
+":doc:`fish_config <cmds/fish_config>` to easily change fish's "
+"configuration, like the prompt or colorscheme."
+msgstr "プロンプトやカラースキームなど、 fish の設定を簡単に変更するための :doc:`fish_config <cmds/fish_config>` 。"
+
+#: ../../doc_src/commands.rst:51
+msgid ""
+":doc:`random <cmds/random>` to generate random numbers or pick from a "
+"list."
+msgstr "乱数を生成したり、リストから要素を選択したりするための :doc:`random <cmds/random>` 。"
+
+#: ../../doc_src/commands.rst:54
+msgid "Known functions"
+msgstr "既知の関数"
+
+#: ../../doc_src/commands.rst:56
+msgid ""
+"Known functions are a customization point. You can change them to change "
+"how your fish behaves. This includes:"
+msgstr ""
+"「既知の関数」はカスタマイズのポイントです。これらを変更することで、 fish "
+"の挙動を変えることができます。これには以下が含まれます。"
+
+#: ../../doc_src/commands.rst:58
+msgid ""
+":doc:`fish_prompt <cmds/fish_prompt>` and :doc:`fish_right_prompt "
+"<cmds/fish_right_prompt>` and :doc:`fish_mode_prompt "
+"<cmds/fish_mode_prompt>` to print your prompt."
+msgstr ""
+"プロンプトを表示するための :doc:`fish_prompt <cmds/fish_prompt>` 、 "
+":doc:`fish_right_prompt <cmds/fish_right_prompt>` 、 "
+":doc:`fish_mode_prompt <cmds/fish_mode_prompt>` 。"
+
+#: ../../doc_src/commands.rst:59
+msgid ""
+":doc:`fish_command_not_found <cmds/fish_command_not_found>` to tell fish "
+"what to do when a command is not found."
+msgstr ""
+"コマンドが見つからないときに何をすべきかを fish に指示するための "
+":doc:`fish_command_not_found <cmds/fish_command_not_found>` 。"
+
+#: ../../doc_src/commands.rst:60
+msgid ":doc:`fish_title <cmds/fish_title>` to change the terminal's title."
+msgstr "ターミナルのタイトルを変更するための :doc:`fish_title <cmds/fish_title>` 。"
+
+#: ../../doc_src/commands.rst:61
+msgid ""
+":doc:`fish_tab_title <cmds/fish_tab_title>` to change the terminal tab's "
+"title."
+msgstr "ターミナルのタブのタイトルを変更するための :doc:`fish_tab_title <cmds/fish_tab_title>` 。"
+
+#: ../../doc_src/commands.rst:62
+msgid ""
+":doc:`fish_greeting <cmds/fish_greeting>` to show a greeting when fish "
+"starts."
+msgstr "fish の起動時に挨拶を表示するための :doc:`fish_greeting <cmds/fish_greeting>` 。"
+
+#: ../../doc_src/commands.rst:63
+msgid ""
+":doc:`fish_should_add_to_history <cmds/fish_should_add_to_history>` to "
+"determine if a command should be added to history"
+msgstr ""
+"コマンドを履歴に追加すべきかどうかを決定するための :doc:`fish_should_add_to_history "
+"<cmds/fish_should_add_to_history>` 。"
+
+#: ../../doc_src/commands.rst:66
+msgid "Helper functions"
+msgstr "ヘルパー関数"
+
+#: ../../doc_src/commands.rst:68
+msgid ""
+"Some helper functions, often to give you information for use in your "
+"prompt:"
+msgstr ""
+"主にプロンプトで使用するための情報を提供するヘルパー関数です。"
+
+#: ../../doc_src/commands.rst:70
+msgid ""
+":doc:`fish_git_prompt <cmds/fish_git_prompt>` and :doc:`fish_hg_prompt "
+"<cmds/fish_hg_prompt>` to print information about the current git or "
+"mercurial repository."
+msgstr ""
+"現在の git 、 mercurial リポジトリに関する情報を表示するための "
+":doc:`fish_git_prompt <cmds/fish_git_prompt>` と :doc:`fish_hg_prompt <cmds/fish_hg_prompt>` 。"
+
+#: ../../doc_src/commands.rst:71
+msgid ""
+":doc:`fish_vcs_prompt <cmds/fish_vcs_prompt>` to print information for "
+"either."
+msgstr ""
+"いずれかの VCS に関する情報を表示するための :doc:`fish_vcs_prompt <cmds/fish_vcs_prompt>` 。"
+
+#: ../../doc_src/commands.rst:72
+msgid ""
+":doc:`fish_svn_prompt <cmds/fish_svn_prompt>` to print information about "
+"the current svn repository."
+msgstr ""
+"現在の svn リポジトリに関する情報を表示するための :doc:`fish_svn_prompt <cmds/fish_svn_prompt>` 。"
+
+#: ../../doc_src/commands.rst:73
+msgid ""
+":doc:`fish_status_to_signal <cmds/fish_status_to_signal>` to give a "
+"signal name from a return status."
+msgstr ""
+"終了ステータスからシグナル名を取得するための :doc:`fish_status_to_signal <cmds/fish_status_to_signal>` 。"
+
+#: ../../doc_src/commands.rst:74
+msgid ""
+":doc:`prompt_pwd <cmds/prompt_pwd>` to give the current directory in a "
+"nicely formatted and shortened way."
+msgstr ""
+"カレントディレクトリを適切にフォーマット・短縮して表示するための :doc:`prompt_pwd <cmds/prompt_pwd>` 。"
+
+#: ../../doc_src/commands.rst:75
+msgid ""
+":doc:`prompt_login <cmds/prompt_login>` to describe the current login, "
+"with user and hostname, and to explain if you are in a chroot or "
+"connected via ssh."
+msgstr ""
+"現在のログイン状況(ユーザー、ホスト名、chroot 内か ssh 経由かなど)を表示するための "
+":doc:`prompt_login <cmds/prompt_login>` 。"
+
+#: ../../doc_src/commands.rst:76
+msgid ""
+":doc:`prompt_hostname <cmds/prompt_hostname>` to give the hostname, "
+"shortened for use in the prompt."
+msgstr ""
+"プロンプトで使用するために短縮されたホスト名を取得するための "
+":doc:`prompt_hostname <cmds/prompt_hostname>` 。"
+
+#: ../../doc_src/commands.rst:77
+msgid ""
+":doc:`fish_is_root_user <cmds/fish_is_root_user>` to check if the current"
+" user is an administrator user like root."
+msgstr ""
+"現在のユーザーが root のような管理者ユーザーかどうかを確認するための "
+":doc:`fish_is_root_user <cmds/fish_is_root_user>` 。"
+
+#: ../../doc_src/commands.rst:78
+msgid ":doc:`fish_add_path <cmds/fish_add_path>` to easily add a path to $PATH."
+msgstr "$PATH に簡単にパスを追加するための :doc:`fish_add_path <cmds/fish_add_path>` 。"
+
+#: ../../doc_src/commands.rst:79
+msgid ""
+":doc:`alias <cmds/alias>` to quickly define wrapper functions "
+"(\"aliases\")."
+msgstr ""
+"ラッパー関数(「エイリアス」)を素早く定義するための :doc:`alias <cmds/alias>` 。"
+
+#: ../../doc_src/commands.rst:80
+msgid ""
+":doc:`fish_delta <cmds/fish_delta>` to show what you have changed from "
+"the default configuration."
+msgstr "デフォルト設定から何を変更したかを表示するための :doc:`fish_delta <cmds/fish_delta>` 。"
+
+#: ../../doc_src/commands.rst:81
+msgid ":doc:`export <cmds/export>` as a compatibility function for other shells."
+msgstr "他のシェルとの互換性のための :doc:`export <cmds/export>` 。"
+
+#: ../../doc_src/commands.rst:84
+msgid "Helper commands"
+msgstr "ヘルパーコマンド"
+
+#: ../../doc_src/commands.rst:86
+msgid ""
+"fish also ships some things as external commands so they can be easily "
+"called from elsewhere."
+msgstr ""
+"fish は、外部から簡単に呼び出せるように、いくつかの機能を外部コマンドとしても提供しています。"
+
+#: ../../doc_src/commands.rst:88
+msgid ""
+"This includes :doc:`fish_indent <cmds/fish_indent>` to format fish code "
+"and :doc:`fish_key_reader <cmds/fish_key_reader>` to show you what escape"
+" sequence a keypress produces."
+msgstr ""
+"これには、 fish コードを整形するための :doc:`fish_indent <cmds/fish_indent>` "
+"や、キー入力が生成するエスケープシーケンスを表示するための :doc:`fish_key_reader "
+"<cmds/fish_key_reader>` が含まれます。"
+
+#: ../../doc_src/commands.rst:91
+msgid "The full list"
+msgstr "全リスト"
+
+#: ../../doc_src/commands.rst:93
+msgid "And here is the full list:"
+msgstr "以下が全リストです。"
+

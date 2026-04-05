@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/prompt_pwd.rst:2
+msgid "prompt_pwd - print pwd suitable for prompt"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:12
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:14
+msgid ""
+"``prompt_pwd`` is a function to print the current working directory in a "
+"way suitable for prompts. It will replace the home directory with \"~\" "
+"and shorten every path component but the last to a default of one "
+"character."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:16
+msgid ""
+"To change the number of characters per path component, pass ``--dir-"
+"length=`` or set :envvar:`fish_prompt_pwd_dir_length` to the number of "
+"characters. Setting it to 0 or an invalid value will disable shortening "
+"entirely. This defaults to 1."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:18
+msgid ""
+"To keep some components unshortened, pass ``--full-length-dirs=`` or set "
+":envvar:`fish_prompt_pwd_full_dirs` to the number of components. This "
+"defaults to 1, keeping the last component."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:20
+msgid ""
+"If any positional arguments are given, ``prompt_pwd`` shortens them "
+"instead of :envvar:`PWD`."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:23
+msgid "Options"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:25
+msgid "**-d** or **--dir-length** *MAX*"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:26
+msgid ""
+"Causes the components to be shortened to *MAX* characters each. This "
+"overrides :envvar:`fish_prompt_pwd_dir_length`."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:28
+msgid "**-D** or **--full-length-dirs** *NUM*"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:29
+msgid ""
+"Keeps *NUM* components (counted from the right) as full length without "
+"shortening. This overrides :envvar:`fish_prompt_pwd_full_dirs`."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:31
+msgid "**-h** or **--help**"
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:32
+msgid "Displays help about using this command."
+msgstr ""
+
+#: ../../doc_src/cmds/prompt_pwd.rst:35
+msgid "Examples"
+msgstr ""
+

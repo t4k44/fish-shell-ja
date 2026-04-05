@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_delta.rst:2
+msgid "fish_delta - compare functions and completions to the default"
+msgstr "fish_delta - 関数や補完設定をデフォルトと比較する"
+
+#: ../../doc_src/cmds/fish_delta.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/fish_delta.rst:15
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/fish_delta.rst:17
+msgid ""
+"The ``fish_delta`` function tells you, at a glance, which of your "
+"functions and completions differ from the set that fish ships."
+msgstr ""
+"``fish_delta`` 関数は、自身で定義した関数や補完設定のうち、どれが fish に標準で付属しているものと異なっているかを一目で教えてくれます。"
+
+#: ../../doc_src/cmds/fish_delta.rst:19
+msgid ""
+"It does this by going through the relevant variables "
+"(:envvar:`fish_function_path` for functions and "
+":envvar:`fish_complete_path` for completions) and comparing the files "
+"against fish's default directories."
+msgstr ""
+"この関数は、関連する変数(関数の場合は :envvar:`fish_function_path` 、補完の場合は :envvar:`fish_complete_path` )を走査し、それらのファイルを fish のデフォルトディレクトリ内にあるファイルと比較することで動作します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:21
+msgid ""
+"If any names are given, it will only compare files by those names (plus a"
+" \".fish\" extension)."
+msgstr ""
+"名前が指定された場合は、その名前(に \".fish\" 拡張子を加えたもの)のファイルのみを比較します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:23
+msgid ""
+"By default, it will also use ``diff`` to display the difference between "
+"the files. If ``diff`` is unavailable, it will skip it, but in that case "
+"it also cannot figure out if the files really differ."
+msgstr ""
+"デフォルトでは、 ``diff`` を使用してファイル間の差分を表示します。 ``diff`` が利用できない場合はスキップされますが、その場合はファイルが本当に異なっているかどうかを判断することもできません。"
+
+#: ../../doc_src/cmds/fish_delta.rst:25
+msgid ""
+"The exit status is 1 if there was a difference and 2 for other errors, "
+"otherwise 0."
+msgstr ""
+"終了ステータスは、差分があった場合は 1 、その他のエラーが発生した場合は 2 、それ以外は 0 になります。"
+
+#: ../../doc_src/cmds/fish_delta.rst:28
+msgid "Options"
+msgstr "オプション"
+
+#: ../../doc_src/cmds/fish_delta.rst:30
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です。"
+
+#: ../../doc_src/cmds/fish_delta.rst:32
+msgid "**-f** or **--no-functions**"
+msgstr "**-f** 、 **--no-functions**"
+
+#: ../../doc_src/cmds/fish_delta.rst:33
+msgid "Stops checking functions"
+msgstr "関数のチェックを停止します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:35
+msgid "**-c** or **--no-completions**"
+msgstr "**-c** 、 **--no-completions**"
+
+#: ../../doc_src/cmds/fish_delta.rst:36
+msgid "Stops checking completions"
+msgstr "補完設定のチェックを停止します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:38
+msgid "**-C** or **--no-config**"
+msgstr "**-C** 、 **--no-config**"
+
+#: ../../doc_src/cmds/fish_delta.rst:39
+msgid ""
+"Stops checking configuration files like config.fish or snippets in the "
+"conf.d directories."
+msgstr ""
+"config.fish や conf.d ディレクトリ内のスニペットなどの設定ファイルのチェックを停止します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:41
+msgid "**-d** or **--no-diff**"
+msgstr "**-d** 、 **--no-diff**"
+
+#: ../../doc_src/cmds/fish_delta.rst:42
+msgid ""
+"Removes the diff display (this happens automatically if ``diff`` can't be"
+" found)"
+msgstr ""
+"diff の表示を抑制します( ``diff`` コマンドが見つからない場合は自動的にこの状態になります)。"
+
+#: ../../doc_src/cmds/fish_delta.rst:44
+msgid "**-n** or **--new**"
+msgstr "**-n** 、 **--new**"
+
+#: ../../doc_src/cmds/fish_delta.rst:45
+msgid ""
+"Also prints new files (i.e. those that can't be found in fish's default "
+"directories)."
+msgstr ""
+"新しいファイル(すなわち、 fish のデフォルトディレクトリには存在しないファイル)も表示します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:47
+msgid "**-Vvalue** or **--vendor=value**"
+msgstr "**-V値** 、 **--vendor=値**"
+
+#: ../../doc_src/cmds/fish_delta.rst:48
+msgid "Determines how the vendor directories are counted. Valid values are:"
+msgstr "ベンダーディレクトリの扱いを決定します。有効な値は以下の通りです。"
+
+#: ../../doc_src/cmds/fish_delta.rst:50
+msgid ""
+"\"default\" - counts vendor files as belonging to the defaults. Any "
+"changes in other directories will be counted as changes over them. This "
+"is the default."
+msgstr ""
+"\"default\" - ベンダーファイルをデフォルト設定の一部としてカウントします。他のディレクトリでの変更は、それらに対する変更としてカウントされます。これがデフォルト設定です。"
+
+#: ../../doc_src/cmds/fish_delta.rst:51
+msgid ""
+"\"user\" - counts vendor files as belonging to the user files. Any "
+"changes in them will be counted as new or changed files."
+msgstr ""
+"\"user\" - ベンダーファイルをユーザーファイルの一部としてカウントします。それらへの変更は、新規ファイルまたは変更されたファイルとしてカウントされます。"
+
+#: ../../doc_src/cmds/fish_delta.rst:52
+msgid ""
+"\"ignore\" - ignores vendor directories. Files of the same name will be "
+"counted as \"new\" if no file of the same name in fish's default "
+"directories exists."
+msgstr ""
+"\"ignore\" - ベンダーディレクトリを無視します。 fish のデフォルトディレクトリに同名のファイルが存在しない場合、同名のファイルは「新規(new)」としてカウントされます。"
+
+#: ../../doc_src/cmds/fish_delta.rst:54
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/fish_delta.rst:55
+msgid "Prints ``fish_delta``'s help (this)."
+msgstr "``fish_delta`` のヘルプ(これ)を表示します。"
+
+#: ../../doc_src/cmds/fish_delta.rst:58
+msgid "Example"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/fish_delta.rst:60
+msgid "Running just::"
+msgstr "単純に以下を実行すると、::"
+
+#: ../../doc_src/cmds/fish_delta.rst:64
+msgid ""
+"will give you a list of all your changed functions and completions, "
+"including diffs (if you have the ``diff`` command)."
+msgstr ""
+"変更されたすべての関数と補完設定のリストが、( ``diff`` コマンドがある場合は)その差分と共に表示されます。"
+
+#: ../../doc_src/cmds/fish_delta.rst:66
+msgid "It might look like this::"
+msgstr "出力は以下のようになります。::"
+
+#: ../../doc_src/cmds/fish_delta.rst:75
+msgid ""
+"The options are there to select which parts of the output you want. With "
+"``--no-completions`` you can compare just functions, and with ``--no-"
+"diff`` you can turn off the ``diff`` display."
+msgstr ""
+"オプションを使用して、出力のどの部分が必要かを選択できます。 ``--no-completions`` を指定すれば関数のみを比較でき、 ``--no-diff`` を指定すれば ``diff`` 表示をオフにできます。"
+
+#: ../../doc_src/cmds/fish_delta.rst:77
+msgid "To only compare your ``fish_git_prompt``, you might use::"
+msgstr "自身の ``fish_git_prompt`` のみを比較したい場合は、以下のようにします。::"
+
+#: ../../doc_src/cmds/fish_delta.rst:81
+msgid "which will only compare files called \"fish_git_prompt.fish\"."
+msgstr "これにより、 \"fish_git_prompt.fish\" という名前のファイルのみが比較されます。"

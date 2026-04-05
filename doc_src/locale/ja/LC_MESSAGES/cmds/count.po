@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/count.rst:2
+msgid "count - count the number of elements of a list"
+msgstr "count - リストの要素数を数える"
+
+#: ../../doc_src/cmds/count.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/count.rst:14
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/count.rst:16
+msgid ""
+"``count`` prints the number of arguments that were passed to it, plus the"
+" number of newlines passed to it via stdin. This is usually used to find "
+"out how many elements an environment variable list contains, or how many "
+"lines there are in a text file."
+msgstr ""
+"``count`` は、渡された引数の数に、標準入力(stdin)経由で渡された改行の数を加えて表示します。これは通常、環境変数リストに含まれる要素の数や、テキストファイルの行数を調べるために使用されます。"
+
+#: ../../doc_src/cmds/count.rst:18
+msgid "``count`` does not accept any options, not even ``-h`` or ``--help``."
+msgstr "``count`` はオプションを一切受け付けません。 ``-h`` や ``--help`` も同様です。"
+
+#: ../../doc_src/cmds/count.rst:20
+msgid ""
+"``count`` exits with a non-zero exit status if no arguments were passed "
+"to it, and with zero if at least one argument was passed."
+msgstr ""
+"``count`` は、引数が一つも渡されなかった場合は非ゼロの終了ステータスで終了し、少なくとも一つの引数が渡された場合はゼロで終了します。"
+
+#: ../../doc_src/cmds/count.rst:22
+msgid ""
+"Note that, like ``wc -l``, reading from stdin counts newlines, so ``echo "
+"-n foo | count`` will print 0."
+msgstr ""
+"``wc -l`` と同様に、標準入力からの読み込みでは「改行」の数を数えることに注意してください。そのため、 ``echo -n foo | count`` は 0 を表示します。"
+
+#: ../../doc_src/cmds/count.rst:25
+msgid "Example"
+msgstr "使用例"

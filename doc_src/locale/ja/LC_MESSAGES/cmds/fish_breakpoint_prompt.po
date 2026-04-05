@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:2
+msgid "fish_breakpoint_prompt - define the prompt when stopped at a breakpoint"
+msgstr "fish_breakpoint_prompt - ブレークポイントで停止した時のプロンプトを定義する"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:19
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:21
+msgid ""
+"``fish_breakpoint_prompt`` is the prompt function when asking for input "
+"in response to a :doc:`breakpoint <breakpoint>` command."
+msgstr ""
+"``fish_breakpoint_prompt`` は、 :doc:`breakpoint <breakpoint>` コマンドに応じて入力を求める際に使用されるプロンプト関数です。"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:23
+msgid ""
+"The exit status of commands within ``fish_breakpoint_prompt`` will not "
+"modify the value of :ref:`$status <variables-status>` outside of the "
+"``fish_breakpoint_prompt`` function."
+msgstr ""
+"``fish_breakpoint_prompt`` 内で実行されたコマンドの終了ステータスは、 ``fish_breakpoint_prompt`` 関数の外側にある :ref:`$status <variables-status>` の値を変更しません。"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:25
+msgid ""
+"``fish`` ships with a default version of this function that displays the "
+"function name and line number of the current execution context."
+msgstr ""
+"``fish`` にはこの関数のデフォルトバージョンが付属しており、現在の実行コンテキストの関数名と行番号を表示します。"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:29
+msgid "Example"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/fish_breakpoint_prompt.rst:31
+msgid ""
+"A simple prompt that is a simplified version of the default debugging "
+"prompt::"
+msgstr ""
+"デフォルトのデバッグプロンプトを簡略化したシンプルなプロンプトの例です::"

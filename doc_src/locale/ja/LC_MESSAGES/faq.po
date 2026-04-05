@@ -1,0 +1,730 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-04 22:03+0900\n"
+"PO-Revision-Date: 2026-04-04 22:06+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/faq.rst:2
+msgid "Frequently asked questions"
+msgstr "よくある質問(FAQ)"
+
+#: ../../doc_src/faq.rst:5
+msgid "What is the equivalent to this thing from bash (or other shells)?"
+msgstr "bash(または他のシェル)のあの機能に対応するものは何ですか？"
+
+#: ../../doc_src/faq.rst:7
+msgid "See :doc:`Fish for bash users <fish_for_bash_users>`"
+msgstr ":doc:`bashユーザーのためのfish <fish_for_bash_users>` を参照してください。"
+
+#: ../../doc_src/faq.rst:10
+msgid "How do I set or clear an environment variable?"
+msgstr "環境変数を設定または消去するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:11
+msgid "Use the :doc:`set <cmds/set>` command::"
+msgstr ":doc:`set <cmds/set>` コマンドを使用します。"
+
+#: ../../doc_src/faq.rst:16
+msgid ""
+"Since fish 3.1 you can set an environment variable for one command using "
+"the ``key=value some command`` syntax, like in other shells.  The two "
+"lines below behave identically - unlike other shells, fish will output "
+"``value`` both times::"
+msgstr ""
+"fish 3.1 以降、他のシェルと同様に ``key=value some command`` "
+"という構文を使用して、1つのコマンドに対してのみ環境変数を設定できるようになりました。以下の2行はまったく同じように動作します。他のシェルとは異なり、fish"
+" ではどちらの場合も ``value`` が出力されます。::"
+
+#: ../../doc_src/faq.rst:21
+msgid ""
+"Note that \"exported\" is not a :ref:`scope <variables-scope>`, but an "
+"additional bit of state. A variable can be global and exported or local "
+"and exported or even universal and exported. Typically it makes sense to "
+"make an exported variable global."
+msgstr ""
+"「エクスポート(exported)」は :ref:`スコープ <variables-scope>` "
+"ではなく、変数の追加の状態であることに注意してください。変数は「グローバルかつエクスポート」、「ローカルかつエクスポート」、あるいは「ユニバーサルかつエクスポート」になり得ます。通常、エクスポートする変数はグローバルにするのが理にかなっています。"
+
+#: ../../doc_src/faq.rst:24
+msgid "How do I check whether a variable is defined?"
+msgstr "変数が定義されているかどうかを確認するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:26
+msgid ""
+"Use ``set -q var``.  For example, ``if set -q var; echo variable defined;"
+" end``.  To check multiple variables you can combine with ``and`` and "
+"``or`` like so::"
+msgstr ""
+"``set -q var`` を使用します。例えば、 ``if set -q var; echo variable defined; end`` "
+"のように記述します。複数の変数をチェックする場合は、次のように ``and`` や ``or`` と組み合わせることができます。::"
+
+#: ../../doc_src/faq.rst:32
+msgid ""
+"Keep in mind that a defined variable could also be empty, either by "
+"having no elements (if set like ``set var``) or only empty elements (if "
+"set like ``set var \"\"``). Read on for how to deal with those."
+msgstr ""
+"定義された変数であっても、要素を持たない場合( ``set var`` のように設定した場合)や、空の要素のみを持つ場合( ``set var "
+"\"\"`` のように設定した場合)は、空である可能性があることに注意してください。これらへの対処法については、以下を読み進めてください。"
+
+#: ../../doc_src/faq.rst:36
+msgid "How do I check whether a variable is not empty?"
+msgstr "変数が空でないことを確認するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:38
+msgid ""
+"Use ``string length -q -- $var``.  For example, ``if string length -q -- "
+"$var; echo not empty; end``.  Note that ``string length`` will interpret "
+"a list of multiple variables as a disjunction (meaning any/or)::"
+msgstr ""
+"``string length -q -- $var`` を使用します。例えば、 ``if string length -q -- $var; "
+"echo not empty; end`` のように記述します。 ``string length`` "
+"に複数の変数のリストを渡すと、「いずれかが真(OR条件)」として解釈されることに注意してください。::"
+
+#: ../../doc_src/faq.rst:44
+msgid ""
+"Alternatively, use ``test -n \"$var\"``, but remember that **the variable"
+" must be double-quoted**.  For example, ``if test -n \"$var\"; echo not "
+"empty; end``. The ``test`` command provides its own and (-a) and or "
+"(-o)::"
+msgstr ""
+"または、 ``test -n \"$var\"`` を使用します。ただし、 **変数をダブルクォートで囲む必要がある** "
+"ことに注意してください。例えば、 ``if test -n \"$var\"; echo not empty; end`` のように記述します。 "
+"``test`` コマンド自体も、 and(-a)や or(-o)といった論理演算機能を提供しています。::"
+
+#: ../../doc_src/faq.rst:51
+msgid ""
+"If you want to know if a variable has *no elements*, use ``set -q "
+"var[1]``."
+msgstr "変数に*要素が一つもない*かどうかを知りたい場合は、 ``set -q var[1]`` を使用してください。"
+
+#: ../../doc_src/faq.rst:55
+msgid "Why doesn't ``set -Ux`` (exported universal variables) seem to work?"
+msgstr "なぜ ``set -Ux`` (エクスポートされたユニバーサル変数)が機能しないように見えるのですか？"
+
+#: ../../doc_src/faq.rst:56
+msgid "A global variable of the same name already exists."
+msgstr "同名のグローバル変数が既に存在しているためです。"
+
+#: ../../doc_src/faq.rst:58
+msgid ""
+"Environment variables such as ``EDITOR`` or ``TZ`` can be set universally"
+" using ``set -Ux``.  However, if there is an environment variable already"
+" set before fish starts (such as by login scripts or system "
+"administrators), it is imported into fish as a global variable. The "
+":ref:`variable scopes <variables-scope>` are searched from the \"inside "
+"out\", which means that local variables are checked first, followed by "
+"global variables, and finally universal variables."
+msgstr ""
+"``EDITOR`` や ``TZ`` などの環境変数は、 ``set -Ux`` を使用してユニバーサル変数として設定できます。しかし、 "
+"fish が起動する前に(ログインスクリプトやシステム管理者などによって)既に設定されている環境変数がある場合、それらはグローバル変数として "
+"fish にインポートされます。 :ref:`変数のスコープ <variables-scope>` "
+"は「内側から外側へ」の順に検索されます。つまり、最初にローカル変数がチェックされ、次にグローバル変数、最後にユニバーサル変数の順で確認されます。"
+
+#: ../../doc_src/faq.rst:64
+msgid ""
+"This means that the global value takes precedence over the universal "
+"value."
+msgstr "これは、グローバルな値がユニバーサルな値よりも優先されることを意味します。"
+
+#: ../../doc_src/faq.rst:66
+msgid ""
+"To avoid this problem, consider changing the setting which fish inherits."
+" If this is not possible, add a statement to your :ref:`configuration "
+"file <configuration>` (usually ``~/.config/fish/config.fish``)::"
+msgstr ""
+"この問題を回避するには、fishが継承する元の設定を変更することを検討してください。それが不可能な場合は、 :ref:`設定ファイル "
+"<configuration>` (通常は ``~/.config/fish/config.fish`` )に以下の記述を追加してください。"
+
+#: ../../doc_src/faq.rst:73
+msgid ""
+"How do I run a command every login? What's fish's equivalent to .bashrc "
+"or .profile?"
+msgstr "ログインするたびにコマンドを実行するにはどうすればよいですか？ .bashrc や .profile に相当するものは何ですか？"
+
+#: ../../doc_src/faq.rst:74
+msgid ""
+"Edit the file ``~/.config/fish/config.fish`` [#]_, creating it if it does"
+" not exist (Note the leading period)."
+msgstr ""
+"``~/.config/fish/config.fish`` [#]_ "
+"ファイルを編集してください。存在しない場合は作成してください。(先頭にドットがあることに注意してください)"
+
+#: ../../doc_src/faq.rst:76
+msgid ""
+"Unlike .bashrc and .profile, this file is always read, even in non-"
+"interactive or login shells."
+msgstr ".bashrc や .profile とは異なり、このファイルは非対話型シェルやログインシェルであっても常に読み込まれます。"
+
+#: ../../doc_src/faq.rst:78
+msgid ""
+"To do something only in interactive shells, check ``status is-"
+"interactive`` like::"
+msgstr "対話型シェルでのみ何かを実行したい場合は、次のように ``status is-interactive`` をチェックしてください。"
+
+#: ../../doc_src/faq.rst:85
+msgid ""
+"The \"~/.config\" part of this can be set via $XDG_CONFIG_HOME, that's "
+"just the default."
+msgstr "このパスの \"~/.config\" 部分は $XDG_CONFIG_HOME 経由で設定可能であり、これは単なるデフォルト値です。"
+
+#: ../../doc_src/faq.rst:88
+msgid "How do I set my prompt?"
+msgstr "プロンプトを設定するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:89
+msgid ""
+"The prompt is the output of the ``fish_prompt`` function. Put it in "
+"``~/.config/fish/functions/fish_prompt.fish``. For example, a simple "
+"prompt is::"
+msgstr ""
+"プロンプトは ``fish_prompt`` 関数の出力です。この関数を "
+"``~/.config/fish/functions/fish_prompt.fish`` "
+"に配置します。例えば、シンプルなプロンプトは以下のようになります。"
+
+#: ../../doc_src/faq.rst:99
+msgid ""
+"You can also use the Web configuration tool, :doc:`fish_config "
+"<cmds/fish_config>`, to preview and choose from a gallery of sample "
+"prompts."
+msgstr ""
+"また、Web設定ツールの :doc:`fish_config <cmds/fish_config>` "
+"を使用して、サンプルプロンプトのギャラリーからプレビューして選択することもできます。"
+
+#: ../../doc_src/faq.rst:101
+msgid "Or you can use fish_config from the commandline::"
+msgstr "あるいは、コマンドラインから fish_config を使用することもできます。"
+
+#: ../../doc_src/faq.rst:110
+msgid ""
+"If you want to modify your existing prompt, you can use :doc:`funced "
+"<cmds/funced>` and :doc:`funcsave <cmds/funcsave>` like::"
+msgstr ""
+"既存のプロンプトを修正したい場合は、 :doc:`funced <cmds/funced>` と :doc:`funcsave "
+"<cmds/funcsave>` を次のように使用します。"
+
+#: ../../doc_src/faq.rst:119
+msgid ""
+"This also applies to :doc:`fish_right_prompt <cmds/fish_right_prompt>` "
+"and :doc:`fish_mode_prompt <cmds/fish_mode_prompt>`."
+msgstr ""
+"これは :doc:`fish_right_prompt <cmds/fish_right_prompt>` や "
+":doc:`fish_mode_prompt <cmds/fish_mode_prompt>` にも当てはまります。"
+
+#: ../../doc_src/faq.rst:122
+msgid "Why does my prompt show a ``[I]``?"
+msgstr "なぜプロンプトに ``[I]`` と表示されるのですか？"
+
+#: ../../doc_src/faq.rst:124
+msgid ""
+"That's the :doc:`fish_mode_prompt <cmds/fish_mode_prompt>`. It is "
+"displayed by default when you've activated vi mode using "
+"``fish_vi_key_bindings``."
+msgstr ""
+"それは :doc:`fish_mode_prompt <cmds/fish_mode_prompt>` です。 "
+"``fish_vi_key_bindings`` を使用してviモードを有効にしている場合、デフォルトで表示されます。"
+
+#: ../../doc_src/faq.rst:126
+msgid ""
+"If you haven't activated vi mode on purpose, you might have installed a "
+"third-party theme or plugin that does it."
+msgstr "意図的にviモードを有効にしていないのであれば、それを実行するサードパーティ製のテーマやプラグインをインストールしている可能性があります。"
+
+#: ../../doc_src/faq.rst:128
+msgid ""
+"If you want to change or disable this display, modify the "
+"``fish_mode_prompt`` function, for instance via :doc:`funced "
+"<cmds/funced>`."
+msgstr ""
+"この表示を変更または無効にしたい場合は、例えば :doc:`funced <cmds/funced>` などを使って "
+"``fish_mode_prompt`` 関数を修正してください。"
+
+#: ../../doc_src/faq.rst:131
+msgid "How do I customize my syntax highlighting colors?"
+msgstr "構文ハイライトの色をカスタマイズするにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:132
+msgid ""
+"Use the web configuration tool started by :doc:`fish_config "
+"<cmds/fish_config>`, or alter the :ref:`fish_color family of environment "
+"variables <variables-color>`, or use the :doc:`fish_config theme "
+"<cmds/fish_config>` subcommand, like::"
+msgstr ""
+":doc:`fish_config <cmds/fish_config>` で起動するWeb設定ツールを使用するか、 "
+":ref:`fish_color 系の環境変数 <variables-color>` を変更するか、次のように :doc:`fish_config"
+" theme <cmds/fish_config>` サブコマンドを使用してください。"
+
+#: ../../doc_src/faq.rst:142
+msgid "How do I change the greeting message?"
+msgstr "挨拶メッセージ(グリーティング)を変更するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:143
+msgid ""
+"Change the value of the variable ``fish_greeting`` or create a "
+":doc:`fish_greeting <cmds/fish_greeting>` function. For example, to "
+"remove the greeting use::"
+msgstr ""
+"変数 ``fish_greeting`` の値を変更するか、 :doc:`fish_greeting <cmds/fish_greeting>` "
+"関数を作成してください。例えば、挨拶を表示しないようにするには次のようにします。"
+
+#: ../../doc_src/faq.rst:147
+msgid "Or if you prefer not to use a universal variable, use::"
+msgstr "ユニバーサル変数を使用したくない場合は、次のようにします。"
+
+#: ../../doc_src/faq.rst:151
+msgid "in :ref:`config.fish <configuration>`."
+msgstr "これを :ref:`config.fish <configuration>` に記述します。"
+
+#: ../../doc_src/faq.rst:154
+msgid "How do I run a command from history?"
+msgstr "履歴からコマンドを実行するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:155
+msgid ""
+"Type some part of the command, and then hit the :kbd:`up` (``↑``) or "
+":kbd:`down` (``↓``) arrow keys to navigate through history matches, or "
+"press :kbd:`ctrl-r` to open the history in a searchable pager. In this "
+"pager you can press :kbd:`ctrl-r` or :kbd:`ctrl-s` to move to older or "
+"younger history respectively."
+msgstr ""
+"コマンドの一部を入力してから、 :kbd:`up` (``↑``) 、 :kbd:`down` (``↓``) "
+"矢印キーを押して履歴の一致項目を移動するか、 :kbd:`ctrl-r` を押して検索可能なページャで履歴を開きます。このページャ内では、 "
+":kbd:`ctrl-r` 、 :kbd:`ctrl-s` を押すことで、それぞれ古い履歴または新しい履歴に移動できます。"
+
+#: ../../doc_src/faq.rst:157
+msgid ""
+"Additional default key bindings include :kbd:`ctrl-p` (up) and "
+":kbd:`ctrl-n` (down). See :ref:`Searchable command history <history-"
+"search>` for more information."
+msgstr ""
+"その他のデフォルトのキーバインドには、 :kbd:`ctrl-p` (上) および :kbd:`ctrl-n` (下) が含まれます。詳細は "
+":ref:`検索可能なコマンド履歴 <history-search>` を参照してください。"
+
+#: ../../doc_src/faq.rst:160
+msgid "Why doesn't history substitution (\"!$\" etc.) work?"
+msgstr "なぜ履歴置換(\"!$\" など)が機能しないのですか？"
+
+#: ../../doc_src/faq.rst:161
+msgid ""
+"Because history substitution is an awkward interface that was invented "
+"before interactive line editing was even possible. Instead of adding this"
+" pseudo-syntax, fish opts for nice history searching and recall features."
+"  Switching requires a small change of habits: if you want to modify an "
+"old line/word, first recall it, then edit."
+msgstr ""
+"履歴置換(history substitution)は、対話的な行編集が普及する前に発明された扱いにくいインターフェースだからです。fish "
+"はこのような擬似構文を追加する代わりに、優れた履歴検索機能や呼び出し(リコール)機能を採用しています。使いこなすには習慣を少し変える必要があります。古い行や単語を修正したい場合は、まずそれを呼び出してから編集してください。"
+
+#: ../../doc_src/faq.rst:163
+msgid ""
+"As a special case, most of the time history substitution is used as "
+"``sudo !!``. In that case press :kbd:`alt-s`, and it will recall your "
+"last commandline with ``sudo`` prefixed (or toggle a ``sudo`` prefix on "
+"the current commandline if there is anything)."
+msgstr ""
+"特殊なケースとして、履歴置換の多くは ``sudo !!`` として使われます。その場合は :kbd:`alt-s` "
+"を押してください。直前のコマンドラインの先頭に ``sudo`` を付加して呼び出します(現在のコマンドラインに何か入力されている場合は、 "
+"``sudo`` プレフィックスの有無を切り替えます)。"
+
+#: ../../doc_src/faq.rst:165
+msgid "In general, fish's history recall works like this:"
+msgstr "一般的に、fish の履歴呼び出しは次のように動作します。"
+
+#: ../../doc_src/faq.rst:167
+msgid ""
+"Like other shells, the Up arrow, ``up`` recalls whole lines, starting "
+"from the last executed line. So instead of typing ``!!``, you would hit "
+"the up-arrow."
+msgstr ""
+"他のシェルと同様に、上矢印キー( ``up`` )は、最後に実行された行から順に行全体を呼び出します。したがって、 ``!!`` "
+"と入力する代わりに、上矢印キーを押します。"
+
+#: ../../doc_src/faq.rst:169
+msgid ""
+"If the line you want is far back in the history, type any part of the "
+"line and then press Up one or more times.  This will filter the recalled "
+"lines to ones that include this text, and you will get to the line you "
+"want much faster.  This replaces \"!vi\", \"!?bar.c\" and the like. If "
+"you want to see more context, you can press ``ctrl-r`` to open the "
+"history in the pager."
+msgstr ""
+"探している履歴のずっと後ろにある場合は、その行の一部を入力してから「上」キーを1回以上押してください。これにより、入力したテキストを含む行だけが絞り込まれて呼び出されるため、目的の行に素早く到達できます。これは"
+" ``!vi`` や ``!?bar.c`` などの代わりとなる機能です。より多くの文脈(前後関係)を確認したい場合は、``ctrl-r`` "
+"を押して履歴をページャで開くこともできます。"
+
+#: ../../doc_src/faq.rst:171
+msgid ""
+"``alt-up`` recalls individual arguments, starting from the last argument "
+"in the last executed line. This can be used instead of \"!$\"."
+msgstr "``alt-up`` は、最後に実行された行の最後の引数から順に、個々の引数を呼び出します。これは \"!$\" の代わりに使用できます。"
+
+#: ../../doc_src/faq.rst:173
+msgid ""
+"See :ref:`documentation <editor>` for more details about line editing in "
+"fish."
+msgstr "fish での行編集の詳細については、 :ref:`ドキュメント <editor>` を参照してください。"
+
+#: ../../doc_src/faq.rst:175
+msgid ""
+"That being said, you can use :ref:`abbreviations` to implement history "
+"substitution. Here's ``!!`` only::"
+msgstr ""
+"とは言え、 :ref:`abbreviations (省略形) <abbreviations>` を使って履歴置換を実装することも可能です。以下は"
+" ``!!`` のみの例です。"
+
+#: ../../doc_src/faq.rst:180
+msgid ""
+"Run this and ``!!`` will be replaced with the last history entry, "
+"anywhere on the commandline. Put it into :ref:`config.fish "
+"<configuration>` to keep it."
+msgstr ""
+"これを実行すると、コマンドラインのどこであっても ``!!`` が直前の履歴エントリに置き換わります。設定を維持するには、 "
+":ref:`config.fish <configuration>` に記述してください。"
+
+#: ../../doc_src/faq.rst:183
+msgid "How do I run a subcommand? The backtick doesn't work!"
+msgstr "サブコマンドを実行するにはどうすればよいですか？バッククォートが機能しません！"
+
+#: ../../doc_src/faq.rst:184
+msgid "``fish`` uses parentheses for subcommands. For example::"
+msgstr "``fish`` はサブコマンドに括弧を使用します。例: "
+
+#: ../../doc_src/faq.rst:190
+msgid ""
+"It also supports the familiar ``$()`` syntax, even in quotes. Backticks "
+"are not supported because they are discouraged even in POSIX shells. They"
+" nest poorly and are hard to tell from single quotes (``''``)."
+msgstr ""
+"また、引用符内であっても、おなじみの ``$()`` 構文をサポートしています。バッククォートは、POSIX "
+"シェルですら非推奨とされているため、サポートされていません。入れ子(ネスト)にしにくく、シングルクォート (``''``) "
+"との区別が難しいためです。"
+
+#: ../../doc_src/faq.rst:193
+msgid "My command (pkg-config) gives its output as a single long string?"
+msgstr "コマンド(pkg-configなど)の出力が、1つの長い文字列になってしまいます。"
+
+#: ../../doc_src/faq.rst:194
+msgid ""
+"Unlike other shells, fish splits command substitutions only on newlines, "
+"not spaces or tabs or the characters in $IFS."
+msgstr "他のシェルとは異なり、fish はコマンド置換の結果を改行でのみ分割し、スペースやタブ、$IFS に含まれる文字では分割しません。"
+
+#: ../../doc_src/faq.rst:196
+msgid "That means if you run"
+msgstr "つまり、次のように実行した場合、"
+
+#: ../../doc_src/faq.rst:203
+msgid ""
+"It will print ``1``, because the \"a b c \" is used in one piece. But if "
+"you do"
+msgstr "\"a b c \" が一塊として扱われるため、 ``1`` が出力されます。しかし、次のようにすると、"
+
+#: ../../doc_src/faq.rst:209
+msgid ""
+"it will print ``3``, because it gave ``count`` the arguments \"a\", \"b\""
+" and \"c\" separately."
+msgstr "``count`` に \"a\", \"b\", \"c\" が個別の引数として渡されるため、 ``3`` が出力されます。"
+
+#: ../../doc_src/faq.rst:211
+msgid ""
+"In the overwhelming majority of cases, splitting on spaces is unwanted, "
+"so this is an improvement. This is why you hear about problems with "
+"filenames with spaces, after all."
+msgstr "圧倒的多数のケースにおいて、スペースでの分割は望ましくないため、これは改善と言えます。結局のところ、スペースを含むファイル名で問題が起きるのはこれが原因だからです。"
+
+#: ../../doc_src/faq.rst:213
+msgid ""
+"However sometimes, especially with ``pkg-config`` and related tools, "
+"splitting on spaces is needed."
+msgstr "しかし、特に ``pkg-config`` や関連ツールでは、スペースでの分割が必要な場合があります。"
+
+#: ../../doc_src/faq.rst:215
+msgid "In these cases use ``string split -n \" \"`` like::"
+msgstr "そのような場合は、次のように ``string split -n \" \"`` を使用してください。"
+
+#: ../../doc_src/faq.rst:219
+msgid "The ``-n`` is so empty elements are removed like POSIX shells would do."
+msgstr "``-n`` を指定しているのは、POSIXシェルの挙動と同様に空の要素を削除するためです。"
+
+#: ../../doc_src/faq.rst:222
+msgid "How do I get the exit status of a command?"
+msgstr "コマンドの終了ステータスを取得するにはどうすればよいですか？"
+
+#: ../../doc_src/faq.rst:223
+msgid ""
+"Use the ``$status`` variable. This replaces the ``$?`` variable used in "
+"other shells."
+msgstr "``$status`` 変数を使用します。これは、他のシェルで使用される ``$?`` 変数に代わるものです。"
+
+#: ../../doc_src/faq.rst:233
+msgid ""
+"If you are only interested in success or failure, you can run the command"
+" directly as the if-condition::"
+msgstr "成功か失敗かにのみ関心がある場合は、コマンドを直接 if 文の条件として実行できます。"
+
+#: ../../doc_src/faq.rst:242
+msgid ""
+"Or if you just want to do one command in case the first succeeded or "
+"failed, use ``and`` or ``or``::"
+msgstr "あるいは、最初のコマンドが成功または失敗した場合に別のコマンドを一つ実行したいだけなら、 ``and`` や ``or`` を使用します。"
+
+#: ../../doc_src/faq.rst:247
+msgid ""
+"See the :ref:`Conditions <syntax-conditional>` and the documentation for "
+":doc:`test <cmds/test>` and :doc:`if <cmds/if>` for more information."
+msgstr ""
+"詳細については、 :ref:`条件文 <syntax-conditional>` および :doc:`test <cmds/test>` 、 "
+":doc:`if <cmds/if>` のドキュメントを参照してください。"
+
+#: ../../doc_src/faq.rst:250
+msgid "My command prints \"No matches for wildcard\" but works in bash"
+msgstr "コマンドが \"No matches for wildcard\" と表示されますが、bashでは動作します。"
+
+#: ../../doc_src/faq.rst:252
+msgid "In short: :ref:`quote <quotes>` or :ref:`escape <escapes>` the wildcard::"
+msgstr "手短に言えば、ワイルドカードを :ref:`引用符で囲む <quotes>` か :ref:`エスケープ <escapes>` してください。"
+
+#: ../../doc_src/faq.rst:256
+msgid ""
+"When fish sees an unquoted ``*``, it performs :ref:`wildcard expansion "
+"<expand-wildcard>`. That means it tries to match filenames to the given "
+"string."
+msgstr ""
+"fish は引用符で囲まれていない ``*`` を見つけると、 :ref:`ワイルドカード展開 <expand-wildcard>` "
+"を実行します。つまり、与えられた文字列に一致するファイル名を探そうとします。"
+
+#: ../../doc_src/faq.rst:258
+msgid ""
+"If the wildcard doesn't match any files, fish prints an error instead of "
+"running the command::"
+msgstr "ワイルドカードがいかなるファイルにも一致しない場合、fish はコマンドを実行せずにエラーを表示します。"
+
+#: ../../doc_src/faq.rst:265
+msgid ""
+"Now, bash also tries to match files in this case, but when it doesn't "
+"find a match, it passes along the literal wildcard string instead."
+msgstr "bash も同様にファイルをマッチさせようとしますが、一致するものが見つからない場合、ワイルドカード文字列をそのまま(リテラルとして)渡します。"
+
+#: ../../doc_src/faq.rst:267
+msgid "That means that commands like the above"
+msgstr "これは、次のようなコマンドが"
+
+#: ../../doc_src/faq.rst:273
+msgid "or"
+msgstr "または"
+
+#: ../../doc_src/faq.rst:279
+msgid ""
+"appear to work, because most of the time the string doesn't match and so "
+"it passes along the ``string-*``, which is then interpreted by the "
+"receiving program."
+msgstr ""
+"動作しているように見えることを意味します。なぜなら、ほとんどの場合において文字列は(ファイル名に)一致せず、そのまま渡された "
+"``string-*`` を受け取り側のプログラムが解釈するからです。"
+
+#: ../../doc_src/faq.rst:281
+msgid ""
+"But it also means that these commands can stop working at any moment once"
+" a matching file is encountered (because it has been created or the "
+"command is executed in a different working directory), and to deal with "
+"that bash needs workarounds like"
+msgstr ""
+"しかし同時に、一致するファイルが(作成されたり、別の作業ディレクトリで実行されたりして)見つかった瞬間に、これらのコマンドが意図通りに動作しなくなることも意味します。これに対処するため、bash"
+" では次のようなワークアラウンドが必要になります。"
+
+#: ../../doc_src/faq.rst:292
+msgid "(from http://mywiki.wooledge.org/BashFAQ/004)"
+msgstr "(出典: http://mywiki.wooledge.org/BashFAQ/004)"
+
+#: ../../doc_src/faq.rst:294
+msgid ""
+"For these reasons, fish does not do this, and instead expects asterisks "
+"to be quoted or escaped if they aren't supposed to be expanded."
+msgstr "これらの理由から、fish はこのような挙動はせず、展開を意図していないアスタリスクについては引用符で囲むかエスケープすることを要求します。"
+
+#: ../../doc_src/faq.rst:296
+msgid "This is similar to bash's \"failglob\" option."
+msgstr "これは bash の \"failglob\" オプションに近い挙動です。"
+
+#: ../../doc_src/faq.rst:299
+msgid "Why won't SSH/SCP/rsync connect properly when fish is my login shell?"
+msgstr "fish をログインシェルにしていると、SSH/SCP/rsync が正常に接続できないのはなぜですか？"
+
+#: ../../doc_src/faq.rst:301
+msgid ""
+"This problem may show up as messages like \"``Received message too "
+"long``\", \"``open terminal failed: not a terminal``\", \"``Bad packet "
+"length``\", or \"``Connection refused``\" with strange output in "
+"``ssh_exchange_identification`` messages in the debug log."
+msgstr ""
+"この問題は、 \"``Received message too long``\" 、 \"``open terminal failed: not "
+"a terminal``\" 、 \"``Bad packet length``\" 、またはデバッグログ内の "
+"``ssh_exchange_identification`` メッセージに奇妙な出力が含まれる \"``Connection "
+"refused``\" といったメッセージとして現れることがあります。"
+
+#: ../../doc_src/faq.rst:305
+msgid ""
+"This usually happens because fish reads the :ref:`user configuration file"
+" <configuration>` (``~/.config/fish/config.fish``) *always*, whether it's"
+" in an interactive or login or non-interactive or non-login shell."
+msgstr ""
+"これは通常、fish が :ref:`ユーザー設定ファイル <configuration>` "
+"(``~/.config/fish/config.fish``) "
+"を、対話型・ログイン・非対話型・非ログインシェルの区別なく*常に*読み込むために発生します。"
+
+#: ../../doc_src/faq.rst:308
+msgid ""
+"This simplifies matters, but it also means when config.fish generates "
+"output, it will do that even in non-interactive shells like the one "
+"ssh/scp/rsync start when they connect."
+msgstr ""
+"これにより物事が単純化されますが、一方で config.fish が出力を生成する場合、ssh/scp/rsync "
+"が接続時に起動する非対話型シェルであってもその出力が行われてしまうことを意味します。"
+
+#: ../../doc_src/faq.rst:310
+msgid ""
+"Anything in config.fish that produces output should be guarded with "
+"``status is-interactive`` (or ``status is-login`` if you prefer)::"
+msgstr ""
+"config.fish 内で出力を生成するものはすべて、 ``status is-interactive`` (あるいは好みで ``status "
+"is-login`` )でガード(保護)する必要があります。"
+
+#: ../../doc_src/faq.rst:317
+msgid ""
+"The same applies for example when you start ``tmux`` in config.fish "
+"without guards, which will cause a message like ``sessions should be "
+"nested with care, unset $TMUX to force``."
+msgstr ""
+"例えば、ガードなしで config.fish 内で ``tmux`` を起動する場合も同様です。その場合、 ``sessions should "
+"be nested with care, unset $TMUX to force`` といったメッセージが表示される原因になります。"
+
+#: ../../doc_src/faq.rst:322
+msgid ""
+"I'm getting weird graphical glitches (a staircase effect, ghost "
+"characters, cursor in the wrong position,...)?"
+msgstr "表示が崩れたり、変な挙動(階段現象、ゴースト文字の発生、カーソル位置のズレなど)が起きます。"
+
+#: ../../doc_src/faq.rst:323
+msgid ""
+"In a terminal, the application running inside it and the terminal itself "
+"need to agree on the width of characters in order to handle cursor "
+"movement."
+msgstr "ターミナルにおいては、カーソル移動を正しく制御するために、その中で実行されているアプリケーションとターミナル自身の間で、文字幅の認識が一致している必要があります。"
+
+#: ../../doc_src/faq.rst:325
+msgid ""
+"This is more important to fish than other shells because features like "
+"syntax highlighting and autosuggestions are implemented by moving the "
+"cursor."
+msgstr ""
+"fish "
+"では構文ハイライトやオートサジェスチョン(自動提案)といった機能がカーソル移動によって実現されているため、他のシェルよりもこの一致が重要になります。"
+
+#: ../../doc_src/faq.rst:327
+msgid ""
+"Sometimes, there is disagreement on the width. There are numerous causes "
+"and fixes for this:"
+msgstr "時として、この文字幅の認識が食い違うことがあります。これには多くの原因と解決策があります。"
+
+#: ../../doc_src/faq.rst:329
+msgid ""
+"It is possible the character is too new for your system to know - in this"
+" case you need to refrain from using it."
+msgstr "その文字がシステムにとって新しすぎて認識できない可能性があります。この場合は、その文字の使用を控えてください。"
+
+#: ../../doc_src/faq.rst:330
+msgid ""
+"Fish or your terminal might not know about the character or handle it "
+"wrong - in this case fish or your terminal needs to be fixed, or you need"
+" to update to a fixed version."
+msgstr ""
+"fish またはターミナルがその文字を知らないか、扱いを誤っている可能性があります。この場合、fish "
+"またはターミナルを修正するか、修正済みのバージョンにアップデートする必要があります。"
+
+#: ../../doc_src/faq.rst:331
+msgid ""
+"The character has an \"ambiguous\" width and fish thinks that means a "
+"width of X while your terminal thinks it's Y. In this case you either "
+"need to change your terminal's configuration or set $fish_ambiguous_width"
+" to the correct value."
+msgstr ""
+"その文字が「曖昧な(ambiguous)」幅を持っており、fish が幅 X と考えているのに対し、ターミナルが Y "
+"と考えているケースです。この場合は、ターミナルの設定を変更するか、 ``$fish_ambiguous_width`` "
+"に正しい値を設定してください。"
+
+#: ../../doc_src/faq.rst:332
+#, fuzzy
+msgid ""
+"The character is an emoji and your system only supports Unicode 8. In "
+"this case set $fish_emoji_width to 1."
+msgstr ""
+"その文字が絵文字(emoji)であり、ホストシステムが Unicode 8 までしかサポートしていない一方で、ターミナルを実行しているシステムが "
+"Unicode 9 以上を使用しているケースです。この場合は ``$fish_emoji_width`` を 2 に設定してください。"
+
+#: ../../doc_src/faq.rst:334
+msgid "This also means that a few things are unsupportable:"
+msgstr "これはまた、以下のようないくつかの事項がサポート不可能であることを意味します。"
+
+#: ../../doc_src/faq.rst:336
+msgid ""
+"Non-monospace fonts - there is *no way* for fish to figure out what width"
+" a specific character has as it has no influence on the terminal's font "
+"rendering."
+msgstr ""
+"等幅フォント(monospace)以外のフォント。fish "
+"はターミナルのフォント描画に干渉できないため、特定の文字がどのような幅を持つかを知る*方法がありません*。"
+
+#: ../../doc_src/faq.rst:337
+msgid ""
+"Different widths for multiple ambiguous width characters - there is no "
+"way for fish to know which width you assign to each character."
+msgstr "複数の「曖昧な幅」を持つ文字に対して、個別に異なる幅を割り当てること。fish は、あなたが各文字にどの幅を割り当てたかを知る方法がありません。"
+
+#: ../../doc_src/faq.rst:342
+msgid "fish does not work in a specific terminal"
+msgstr "特定のターミナルで fish が動作しません"
+
+#: ../../doc_src/faq.rst:344
+msgid ""
+"The terminal might not meet all of :doc:`fish's requirements <terminal-"
+"compatibility>`. Please report this to your terminal's and to fish's "
+"issue tracker."
+msgstr ""
+"そのターミナルが :doc:`fish の要件 <terminal-compatibility>` "
+"をすべて満たしていない可能性があります。そのターミナルおよび fish の各イシュートラッカー(issue tracker)に報告してください。"
+
+#: ../../doc_src/faq.rst:350
+msgid "Uninstalling fish"
+msgstr "fish のアンインストール"
+
+#: ../../doc_src/faq.rst:351
+msgid ""
+"If you want to uninstall fish, first make sure fish is not set as your "
+"shell. Run ``chsh -s /bin/bash`` if you are not sure."
+msgstr ""
+"fish をアンインストールする場合は、まず fish が使用中のシェルとして設定されていないことを確認してください。不明な場合は ``chsh "
+"-s /bin/bash`` を実行してください。"
+
+#: ../../doc_src/faq.rst:353
+msgid ""
+"If you installed it with a package manager, use that package manager's "
+"uninstall function. If you built fish yourself, assuming you installed it"
+" to /usr/local, do this::"
+msgstr ""
+"パッケージマネージャでインストールした場合は、そのパッケージマネージャのアンインストール機能を使用してください。自身でビルドし、 "
+"/usr/local にインストールしたと仮定すると、次のように行います。"
+

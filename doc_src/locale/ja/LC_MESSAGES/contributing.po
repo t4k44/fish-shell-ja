@@ -1,0 +1,819 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 02:26+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/contributing.rst:3
+msgid "Contributing To Fish"
+msgstr "fish への貢献"
+
+#: ../../doc_src/contributing.rst:5
+msgid "This document tells you how you can contribute to fish."
+msgstr "このドキュメントでは、fish への貢献方法について説明します。"
+
+#: ../../doc_src/contributing.rst:7
+msgid ""
+"Fish is free and open source software, distributed under the terms of the"
+" GPLv2."
+msgstr "fish は、GPLv2 の条件の下で配布されているフリーでオープンソースのソフトウェアです。"
+
+#: ../../doc_src/contributing.rst:9
+msgid "Contributions are welcome, and there are many ways to contribute!"
+msgstr "貢献は大歓迎です。また、貢献には多くの方法があります！"
+
+#: ../../doc_src/contributing.rst:11
+msgid ""
+"Whether you want to change some of the core Rust source, enhance or add a"
+" completion script or function, improve the documentation or translate "
+"something, this document will tell you how."
+msgstr ""
+"Rust "
+"で書かれたコアソースの変更、補完スクリプトや関数の強化・追加、ドキュメントの改善や翻訳など、どのような形であれ、このドキュメントでその方法を確認できます。"
+
+#: ../../doc_src/contributing.rst:16
+msgid "Mailing List"
+msgstr "メーリングリスト"
+
+#: ../../doc_src/contributing.rst:18
+msgid ""
+"Send patches to the public mailing list: mailto:~krobelus/fish-"
+"shell@lists.sr.ht. Archives are available at "
+"https://lists.sr.ht/~krobelus/fish-shell/."
+msgstr ""
+"パッチは公開メーリングリスト( mailto:~krobelus/fish-shell@lists.sr.ht )に送信してください。アーカイブは"
+" https://lists.sr.ht/~krobelus/fish-shell/ で閲覧可能です。"
+
+#: ../../doc_src/contributing.rst:22
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../../doc_src/contributing.rst:24
+msgid "Fish is available on GitHub, at https://github.com/fish-shell/fish-shell."
+msgstr "fish は GitHub( https://github.com/fish-shell/fish-shell )で公開されています。"
+
+#: ../../doc_src/contributing.rst:26
+msgid ""
+"First, you'll need an account there, and you'll need a git clone of fish."
+" Fork it on GitHub and then run::"
+msgstr ""
+"まず、GitHubのアカウントと fish の git クローンが必要です。GitHub でフォークしてから、以下を実行してください。::"
+
+#: ../../doc_src/contributing.rst:31
+msgid ""
+"This will create a copy of the fish repository in the directory fish-"
+"shell in your current working directory."
+msgstr ""
+"これにより、現在のカレントディレクトリ内の fish-shell ディレクトリに fish リポジトリのコピーが作成されます。"
+
+#: ../../doc_src/contributing.rst:33
+msgid ""
+"Also, for most changes you want to run the tests and so you'd get a setup"
+" to compile fish. For that, you'll require:"
+msgstr ""
+"また、ほとんどの変更においてテストを実行する必要があるため、fish "
+"をコンパイルするためのセットアップが必要になります。そのためには以下が必要です。"
+
+#: ../../doc_src/contributing.rst:36
+msgid "Rust - when in doubt, try rustup"
+msgstr ""
+"Rust - 不明な場合は rustup を試してください"
+
+#: ../../doc_src/contributing.rst:37
+msgid "CMake"
+msgstr "CMake"
+
+#: ../../doc_src/contributing.rst:38
+msgid ""
+"PCRE2 (headers and libraries) - optional, this will be downloaded if "
+"missing"
+msgstr ""
+"PCRE2(ヘッダーとライブラリ) - 任意。見つからない場合はダウンロードされます"
+
+#: ../../doc_src/contributing.rst:39
+msgid "gettext (only the msgfmt tool) - optional, for translation support"
+msgstr ""
+"gettext(msgfmt ツールのみ) - 任意。翻訳サポート用"
+
+#: ../../doc_src/contributing.rst:40
+msgid "Sphinx - optional, to build the documentation"
+msgstr "Sphinx - 任意。ドキュメントのビルド用"
+
+#: ../../doc_src/contributing.rst:42
+msgid ""
+"Of course not everything is required always - if you just want to "
+"contribute something to the documentation you'll just need Sphinx, and if"
+" the change is very simple and obvious you can just send it in. Use your "
+"judgement!"
+msgstr ""
+"もちろん、常にすべてが必要なわけではありません。ドキュメントに貢献したいだけであれば Sphinx "
+"だけで十分ですし、変更が非常に単純で明白なものであればそのまま送ってもかまいません。状況に応じて判断してください！"
+
+#: ../../doc_src/contributing.rst:45
+msgid ""
+"Once you have your changes, open a pull request on https://github.com"
+"/fish-shell/fish-shell/pulls."
+msgstr ""
+"変更が完了したら、https://github.com/fish-shell/fish-shell/pulls でプルリクエストを作成してください。"
+
+#: ../../doc_src/contributing.rst:48
+msgid "Guidelines"
+msgstr "ガイドライン"
+
+#: ../../doc_src/contributing.rst:50
+msgid "In short:"
+msgstr "簡潔に:"
+
+#: ../../doc_src/contributing.rst:52
+msgid ""
+"Be conservative in what you need (keep to the agreed minimum supported "
+"Rust version, limit new dependencies)"
+msgstr ""
+"必要とするものに対して保守的であること(合意された最小サポートRustバージョンを維持し、新しい依存関係を制限する)"
+
+#: ../../doc_src/contributing.rst:53
+msgid "Use automated tools to help you (``cargo xtask check``)"
+msgstr ""
+"自動化ツールを活用すること(``cargo xtask check``)"
+
+#: ../../doc_src/contributing.rst:56
+msgid "Commit History"
+msgstr "コミット履歴"
+
+#: ../../doc_src/contributing.rst:58
+msgid ""
+"We use a linear, `recipe-style <https://www.bitsnbites.eu/git-history-"
+"work-log-vs-recipe/>`__ history. Every commit should pass our checks. We "
+"do not want \"fixup\" commits in our history. If you notice an issue with"
+" a commit in a pull request, or get feedback suggesting changes, you "
+"should rewrite the commit history and fix the relevant commits directly, "
+"instead of adding new \"fixup\" commits. When a pull request is ready, we"
+" rebase it on top of the current master branch, so don't be shy about "
+"rewriting the history of commits which are not on master yet. Rebasing "
+"(not merging) your pull request on the latest version of master is also "
+"welcome, especially if it resolves conflicts."
+msgstr ""
+"私たちは、線形で「レシピ形式(`recipe-style <https://www.bitsnbites.eu/git-history-work-"
+"log-vs-recipe/>`__)」の履歴を採用しています。 すべてのコミットは、私たちのチェックをパスする必要があります。 "
+"履歴に「修正用(fixup)」コミットを残すことは望んでいません。 "
+"プルリクエスト内のコミットに問題が見つかった場合や、変更を促すフィードバックを受けた場合は、新しい「修正用」コミットを追加するのではなく、コミット履歴を書き換えて該当するコミットを直接修正してください。"
+" "
+"プルリクエストの準備が整い次第、現在のmasterブランチの先頭にリベースします。そのため、まだmasterに反映されていないコミット履歴を書き換えることをためらわないでください。"
+" 最新のmasterに対してプルリクエストをリベース(マージではなく)することも歓迎します。特にコンフリクトを解消する場合には有効です。"
+
+#: ../../doc_src/contributing.rst:68
+msgid ""
+"If you're using Git, consider using `jj <https://www.jj-vcs.dev/>`__ to "
+"make this easier."
+msgstr ""
+"Gitを使用している場合は、作業を容易にするために `jj <https://www.jj-vcs.dev/>__` の使用を検討してください。"
+
+#: ../../doc_src/contributing.rst:70
+msgid ""
+"If a commit should close an issue, add a ``Fixes #<issue-number>`` line "
+"at the end of the commit description."
+msgstr ""
+"コミットによって問題を解決する場合は、コミット説明の最後に Fixes #<issue-number> という行を追加してください。"
+
+#: ../../doc_src/contributing.rst:73
+msgid "Contributing completions"
+msgstr "補完スクリプトの貢献"
+
+#: ../../doc_src/contributing.rst:75
+msgid ""
+"Completion scripts are the most common contribution to fish, and they are"
+" very welcome."
+msgstr "補完スクリプトは fish への最も一般的な貢献であり、非常に歓迎されます。"
+
+#: ../../doc_src/contributing.rst:77
+msgid ""
+"In general, we'll take all well-written completion scripts for a command "
+"that is publicly available. This means no private tools or personal "
+"scripts, and we do reserve the right to reject for other reasons."
+msgstr "一般的に、公開されているコマンドに対する適切に記述された補完スクリプトであれば、すべて受け入れます。つまり、非公開のツールや個人的なスクリプトは対象外です。また、その他の理由で拒否する権利を留保します。"
+
+#: ../../doc_src/contributing.rst:80
+msgid ""
+"Before you try to contribute them to fish, consider if the authors of the"
+" tool you are completing want to maintain the script instead. Often that "
+"makes more sense, specifically because they can add new options to the "
+"script immediately once they add them, and don't have to maintain one "
+"completion script for multiple versions. If the authors no longer wish to"
+" maintain the script, they can of course always contact the fish "
+"maintainers to hand it over, preferably by opening a PR. This isn't a "
+"requirement - if the authors don't want to maintain it, or you simply "
+"don't want to contact them, you can contribute your script to fish."
+msgstr ""
+"fish "
+"本体に貢献する前に、補完対象ツールの作者自身がそのスクリプトをメンテナンスしたいと考えていないか検討してください。多くの場合、作者側で管理する方が合理的です。新しいオプションを追加した際に即座に補完を更新でき、複数のバージョンに対して一つの補完スクリプトを維持する手間も省けるからです。もし作者がメンテナンスの継続を望まない場合は、もちろん"
+" fish メンテナに連絡して引き継ぐことができます(PR "
+"を作成するのが望ましいです)。これは必須ではありません。作者がメンテナンスを望まない場合や、単に連絡を取りたくない場合は、スクリプトを fish "
+"に直接提供していただいて構いません。"
+
+#: ../../doc_src/contributing.rst:87
+msgid "Completion scripts should"
+msgstr "補完スクリプトの指針"
+
+#: ../../doc_src/contributing.rst:89
+msgid ""
+"Use as few dependencies as possible - try to use fish's builtins like "
+"``string`` instead of ``grep`` and ``awk``, use ``python`` to read json "
+"instead of ``jq`` (because it's already a soft dependency for fish's "
+"tools)"
+msgstr ""
+"依存関係を可能な限り少なくしてください。 ``grep`` や ``awk`` の代わりに ``string`` などの fish "
+"組み込みコマンドを使い、``jq`` の代わりに ``python`` を使って JSON を読み取るようにしてください(Python は "
+"fish ツールの緩やかな依存関係に含まれているためです)。"
+
+#: ../../doc_src/contributing.rst:91
+msgid ""
+"If it uses a common unix tool, use POSIX-compatible invocations - ideally"
+" it would work on GNU/Linux, macOS, the BSDs and other systems"
+msgstr ""
+"一般的な Unix ツールを使用する場合は、POSIX 準拠の呼び出しを行ってください。理想的には GNU/Linux、macOS、BSD "
+"系、およびその他のシステムで動作する必要があります。"
+
+#: ../../doc_src/contributing.rst:92
+msgid ""
+"Option and argument descriptions should be kept short. The shorter the "
+"description, the more likely it is that fish can use more columns."
+msgstr "オプションや引数の説明は短くまとめてください。説明が短いほど、fish がより多くの列(カラム)を表示できる可能性が高まります。"
+
+#: ../../doc_src/contributing.rst:94
+msgid ""
+"Function names should start with ``__fish``, and functions should be kept"
+" in the completion file unless they're used elsewhere."
+msgstr "関数名は ``__fish`` で始める必要があります。また、他で使用されない限り、関数は補完ファイル内に記述してください。"
+
+#: ../../doc_src/contributing.rst:95
+msgid "Run ``fish_indent`` on your script."
+msgstr "スクリプトに対して ``fish_indent`` を実行してください。"
+
+#: ../../doc_src/contributing.rst:96
+msgid ""
+"Try not to use minor convenience features right after they are available "
+"in fish - we do try to keep completion scripts backportable. If something"
+" has a real impact on the correctness or performance, feel free to use "
+"it, but if it is just a shortcut, please leave it."
+msgstr ""
+"fish "
+"に導入されたばかりの些細な便利機能は使わないようにしてください。補完スクリプトのバックポート(旧バージョンへの適用)のしやすさを維持するためです。正確性やパフォーマンスに大きな影響がある場合は自由に使っていただいて構いませんが、単なるショートカットであれば控えてください。"
+
+#: ../../doc_src/contributing.rst:100
+msgid ""
+"Put your completion script into share/completions/name-of-command.fish. "
+"If you have multiple commands, you need multiple files."
+msgstr ""
+"補完スクリプトは ``share/completions/コマンド名.fish`` "
+"に配置してください。複数のコマンドがある場合は、複数のファイルが必要になります。"
+
+#: ../../doc_src/contributing.rst:102
+msgid ""
+"If you want to add tests, you probably want to add a littlecheck test. "
+"See below for details."
+msgstr "テストを追加したい場合は、littlecheck テストの追加を検討してください。詳細は後述します。"
+
+#: ../../doc_src/contributing.rst:105
+msgid "Contributing documentation"
+msgstr "ドキュメントへの貢献"
+
+#: ../../doc_src/contributing.rst:107
+msgid ""
+"The documentation is stored in ``doc_src/``, and written in ReStructured "
+"Text and built with Sphinx. The builtins and various functions shipped "
+"with fish are documented in ``doc_src/cmds/``."
+msgstr ""
+"ドキュメントは doc_src/ に保存されており、ReStructured Text形式で記述され、Sphinxによってビルドされます。 "
+"fishに同梱されている組み込みコマンドや各種関数は、 doc_src/cmds/ 内でドキュメント化されています。"
+
+#: ../../doc_src/contributing.rst:110
+msgid "To build an HTML version of the docs locally, run::"
+msgstr ""
+"ドキュメントのHTML版をローカルでビルドするには、以下を実行してください。::"
+
+#: ../../doc_src/contributing.rst:114
+msgid "will output to ``target/fish-docs/html`` or, if you use CMake::"
+msgstr ""
+"実行すると target/fish-docs/html に出力されます。または、CMakeを使用している場合は以下を実行してください。::"
+
+#: ../../doc_src/contributing.rst:118
+msgid ""
+"will output to ``build/cargo/fish-docs/html/``. You can also run "
+"``sphinx-build`` directly, which allows choosing the output directory::"
+msgstr ""
+"実行すると build/cargo/fish-docs/html/ に出力されます。また、 sphinx-build "
+"を直接実行することも可能で、その場合は出力先ディレクトリを選択できます。::"
+
+#: ../../doc_src/contributing.rst:122
+msgid "will output HTML docs to ``/tmp/fish-doc``."
+msgstr "実行すると /tmp/fish-doc にHTMLドキュメントが出力されます。"
+
+#: ../../doc_src/contributing.rst:124
+msgid ""
+"After building them, you can open the HTML docs in a browser and see that"
+" it looks okay."
+msgstr ""
+"ビルド後、ブラウザでHTMLドキュメントを開き、表示に問題がないか確認してください。"
+
+#: ../../doc_src/contributing.rst:128
+msgid "Code Style"
+msgstr "コードスタイル"
+
+#: ../../doc_src/contributing.rst:130
+msgid "For formatting, we use:"
+msgstr "フォーマットには以下を使用します:"
+
+#: ../../doc_src/contributing.rst:132
+msgid "``rustfmt`` for Rust"
+msgstr "Rustには ``rustfmt``"
+
+#: ../../doc_src/contributing.rst:133
+msgid "``fish_indent`` (shipped with fish) for fish script"
+msgstr "fishスクリプトには ``fish_indent`` (fishに同梱)"
+
+#: ../../doc_src/contributing.rst:134
+msgid "``ruff format`` for Python"
+msgstr "Python には ``ruff format``"
+
+#: ../../doc_src/contributing.rst:136
+msgid "To reformat files, there is an xtask"
+msgstr "ファイルを再フォーマットするためのxtaskがあります。"
+
+#: ../../doc_src/contributing.rst:144
+msgid "Fish Script Style Guide"
+msgstr "Ffishスクリプトスタイルガイド"
+
+#: ../../doc_src/contributing.rst:146
+msgid ""
+"All fish scripts, such as those in the *share/functions* and *tests* "
+"directories, should be formatted using the ``fish_indent`` command."
+msgstr ""
+"*share/functions* や *tests* ディレクトリにあるものを含め、すべてのfishスクリプトは ``fish_indent``"
+" コマンドを使用してフォーマットする必要があります。"
+
+#: ../../doc_src/contributing.rst:149
+msgid ""
+"Function names should be in all lowercase with words separated by "
+"underscores. Private functions should begin with an underscore. The first"
+" word should be ``fish`` if the function is unique to fish."
+msgstr ""
+"関数名はすべて小文字とし、単語間はアンダースコアで区切る必要があります。 プライベート関数はアンダースコアで始める必要があります。 "
+"その関数がfish固有のものである場合、最初の単語は ``fish`` としてください。"
+
+#: ../../doc_src/contributing.rst:153
+msgid ""
+"The first word of global variable names should generally be ``fish`` for "
+"public vars or ``_fish`` for private vars to minimize the possibility of "
+"name clashes with user defined vars."
+msgstr ""
+"グローバル変数名は、ユーザー定義変数との名前の衝突の可能性を最小限に抑えるため、パブリック変数の場合は通常 ``fish`` "
+"で始め、プライベート変数の場合は ``_fish`` で始める必要があります。"
+
+#: ../../doc_src/contributing.rst:158
+msgid "Configuring Your Editor for Fish Scripts"
+msgstr "エディタの fish スクリプト用設定"
+
+#: ../../doc_src/contributing.rst:160
+msgid ""
+"If you use Vim: Install `vim-fish <https://github.com/dag/vim-fish>`__, "
+"make sure you have syntax and filetype functionality in ``~/.vimrc``:"
+msgstr ""
+"Vim を使用している場合:  `vim-fish <https://github.com/dag/vim-fish>`__ "
+"をインストールし、``~/.vimrc`` でシンタックスハイライトとファイルタイプ機能が有効になっていることを確認してください。"
+
+#: ../../doc_src/contributing.rst:168
+msgid ""
+"Then turn on some options for nicer display of fish scripts in "
+"``~/.vim/ftplugin/fish.vim``:"
+msgstr "次に、 ``~/.vim/ftplugin/fish.vim`` で fish スクリプトをより綺麗に表示するためのオプションを有効にします。"
+
+#: ../../doc_src/contributing.rst:182
+msgid ""
+"If you use Emacs: Install `fish-mode <https://github.com/wwwjfy/emacs-"
+"fish>`__ (also available in melpa and melpa-stable) and ``(setq-default "
+"indent-tabs-mode nil)`` for it (via a hook or in ``use-package``\\ s "
+"“:init” block). It can also be made to run fish_indent via e.g."
+msgstr ""
+"Emacs を使用している場合:  `fish-mode <https://github.com/wwwjfy/emacs-fish>`__ "
+"(MELPA および MELPA Stable からも入手可能)をインストールし、フックまたは ``use-package`` の “:init”"
+" ブロック経由で ``(setq-default indent-tabs-mode nil)`` "
+"を設定してください。また、例えば以下のように設定することで fish_indent を実行させることもできます。"
+
+#: ../../doc_src/contributing.rst:194
+msgid "Minimum Supported Rust Version (MSRV) Policy"
+msgstr "最小サポート Rust バージョン (MSRV) ポリシー"
+
+#: ../../doc_src/contributing.rst:196
+msgid "We support at least the version of ``rustc`` available in Debian Stable."
+msgstr "私たちは、少なくとも Debian Stable で利用可能な ``rustc`` のバージョンをサポートします。"
+
+#: ../../doc_src/contributing.rst:199
+msgid "Testing"
+msgstr "テスト"
+
+#: ../../doc_src/contributing.rst:201
+msgid ""
+"The source code for fish includes a large collection of tests. If you are"
+" making any changes to fish, running these tests is a good way to make "
+"sure the behaviour remains consistent and regressions are not introduced."
+" Even if you don’t run the tests on your machine, they will still be run "
+"via GitHub Actions."
+msgstr ""
+"fish のソースコードには、膨大なテストコレクションが含まれています。fish "
+"に変更を加える際、これらのテストを実行することは、挙動の一貫性を保ち、デグレード(先祖返り)が発生していないか確認する良い方法です。たとえ自分のマシンでテストを実行しなくても、GitHub"
+" Actions を通じて自動的に実行されます。"
+
+#: ../../doc_src/contributing.rst:207
+msgid ""
+"You are strongly encouraged to add tests when changing the functionality "
+"of fish, especially if you are fixing a bug to help ensure there are no "
+"regressions in the future (i.e., we don’t reintroduce the bug)."
+msgstr "fish の機能を変更する場合、特にバグを修正する場合は、将来的に同じバグを再発させないために、テストを追加することを強く推奨します。"
+
+#: ../../doc_src/contributing.rst:211
+#, python-brace-format
+msgid ""
+"Unit tests live next to the implementation in Rust source files, in "
+"inline submodules (``mod tests {}``)."
+msgstr ""
+"ユニットテスト(単体テスト)は、Rust ソースファイル内の実装のすぐ隣に、インラインサブモジュール( ``mod tests {}`` "
+")として記述されます。"
+
+#: ../../doc_src/contributing.rst:213
+msgid "System tests live in ``tests/``:"
+msgstr "システムテストは ``tests/`` に配置されています。"
+
+#: ../../doc_src/contributing.rst:215
+msgid ""
+"``tests/checks`` are run by `littlecheck "
+"<https://github.com/ridiculousfish/littlecheck>`__ and test "
+"noninteractive (script) behavior, except for ``tests/checks/tmux-*`` "
+"which test interactive scenarios."
+msgstr ""
+"``tests/checks`` は `littlecheck "
+"<https://github.com/ridiculousfish/littlecheck>`__ "
+"によって実行され、非対話的(スクリプト)な挙動をテストします(対話的なシナリオをテストする ``tests/checks/tmux-*`` "
+"を除きます)。"
+
+#: ../../doc_src/contributing.rst:218
+msgid ""
+"``tests/pexpects`` tests interactive scenarios using `pexpect "
+"<https://pexpect.readthedocs.io/en/stable/>`__"
+msgstr ""
+"``tests/pexpects`` は、 `pexpect "
+"<https://pexpect.readthedocs.io/en/stable/>`__ を使用して対話的なシナリオをテストします。"
+
+#: ../../doc_src/contributing.rst:220
+msgid ""
+"When in doubt, the bulk of the tests should be added as a littlecheck "
+"test in tests/checks, as they are the easiest to modify and run, and much"
+" faster and more dependable than pexpect tests. The syntax is fairly "
+"self-explanatory. It's a fish script with the expected output in ``# "
+"CHECK:`` or ``# CHECKERR:`` (for stderr) comments. If your littlecheck "
+"test has a specific dependency, use ``# REQUIRE: ...`` with a POSIX sh "
+"script."
+msgstr ""
+"迷った場合は、テストの大部分を ``tests/checks`` 内の littlecheck "
+"テストとして追加してください。littlecheck は修正や実行が最も簡単で、pexpect "
+"テストよりも高速で信頼性が高いためです。構文は非常に分かりやすく、fish スクリプトの中に、期待される出力を ``# CHECK:`` や "
+"``# CHECKERR:`` (標準エラー出力用)コメントとして記述するだけです。特定の依存関係が必要な場合は、POSIX sh "
+"スクリプト形式で ``# REQUIRE: ...`` を使用してください。"
+
+#: ../../doc_src/contributing.rst:225
+msgid ""
+"The pexpect tests are written in Python and can simulate input and output"
+" to/from a terminal, so they are needed for anything that needs actual "
+"interactivity. The runner is in tests/pexpect_helper.py, in case you need"
+" to modify something there."
+msgstr ""
+"pexpect テストは Python "
+"で記述されており、ターミナルへの入出力をシミュレートできるため、実際の対話性を必要とするテストに使用されます。何かを修正する必要がある場合に備えて、ランナーは"
+" ``tests/pexpect_helper.py`` に用意されています。"
+
+#: ../../doc_src/contributing.rst:228
+msgid ""
+"These tests can be run via the tests/test_driver.py Python script, which "
+"will set up the environment. It sets up a temporary $HOME and also uses "
+"it as the current directory, so you do not need to create a temporary "
+"directory in them."
+msgstr ""
+"これらのテストは、環境のセットアップを行う Python スクリプト ``tests/test_driver.py`` "
+"経由で実行できます。このスクリプトは一時的な ``$HOME`` "
+"を作成し、それをカレントディレクトリとして使用するため、テスト内で一時ディレクトリを自作する必要はありません。"
+
+#: ../../doc_src/contributing.rst:231
+msgid ""
+"If you need a command to do something weird to test something, maybe add "
+"it to the ``fish_test_helper`` binary (in ``tests/fish_test_helper.c``)."
+msgstr ""
+"テストのために特殊な動作をするコマンドが必要な場合は、 ``fish_test_helper`` バイナリ( "
+"``tests/fish_test_helper.c`` 内)に追加することを検討してください。"
+
+#: ../../doc_src/contributing.rst:234
+msgid "Local testing"
+msgstr "ローカルでのテスト"
+
+#: ../../doc_src/contributing.rst:236
+msgid "The tests can be run on your local system::"
+msgstr "テストはローカルシステムで実行できます。"
+
+#: ../../doc_src/contributing.rst:246
+msgid ""
+"Here, the first argument to test_driver.py refers to a directory with "
+"``fish``, ``fish_indent`` and ``fish_key_reader`` in it. In this example "
+"we're in the root of the workspace and have run ``cargo build`` without "
+"``--release``, so it's a debug build."
+msgstr ""
+"ここで、 ``test_driver.py`` の第1引数は、 ``fish`` 、 ``fish_indent`` 、 "
+"``fish_key_reader`` が含まれるディレクトリを指します。この例では、ワークスペースのルートで ``--release`` なしで"
+" ``cargo build`` を実行した後のデバッグビルドを想定しています。"
+
+#: ../../doc_src/contributing.rst:249
+msgid "To run all tests and linters, use::"
+msgstr "すべてのテストとリンターを実行するには、以下を使用します。"
+
+#: ../../doc_src/contributing.rst:254
+msgid "Contributing Translations"
+msgstr "翻訳への貢献"
+
+#: ../../doc_src/contributing.rst:256
+msgid ""
+"Fish uses GNU gettext to translate messages from English to other "
+"languages. We use custom tools for extracting messages from source files "
+"and to localize at runtime. This means that we do not have a runtime "
+"dependency on the gettext library. It also means that some features are "
+"not supported, such as message context and plurals. We also expect all "
+"files to be UTF-8-encoded. In practice, this should not matter much for "
+"contributing translations."
+msgstr ""
+"fish は GNU gettext を使用して、メッセージを英語から他言語へ翻訳しています。 "
+"私たちはソースファイルからメッセージを抽出し、実行時にローカライズを行うためのカスタムツールを使用しています。 これは、実行時に gettext "
+"ライブラリへの依存関係がないことを意味します。 また、メッセージのコンテキストや複数形などの一部の機能がサポートされていないことも意味します。 "
+"さらに、すべてのファイルが UTF-8 でエンコードされていることを想定しています。 "
+"実務上、これらは翻訳に貢献する上でそれほど大きな問題にはならないはずです。"
+
+#: ../../doc_src/contributing.rst:263
+msgid ""
+"Translation sources are stored in the ``localization/po`` directory and "
+"named ``ll_CC.po``, where ``ll`` is the two (or possibly three) letter "
+"ISO 639-1 language code of the target language (e.g. ``pt`` for "
+"Portuguese). ``CC`` is an ISO 3166 country/territory code, (e.g. ``BR`` "
+"for Brazil). An example for a valid name is ``pt_BR.po``, indicating "
+"Brazilian Portuguese. These are the files you will interact with when "
+"adding translations."
+msgstr ""
+"翻訳ソースは ``localization/po`` ディレクトリに ``ll_CC.po`` という名前で保存されています。 ここで "
+"``ll`` はターゲット言語の 2 文字(または 3 文字)の ISO 639-1 言語コード(例: ポルトガル語の場合は ``pt``)です。 "
+"``CC`` は ISO 3166 の国/地域コード(例: ブラジルの場合は ``BR``)です。 有効な名前の例は ``pt_BR.po`` "
+"で、これはブラジルポルトガル語であることを示しています。 翻訳を追加する際に操作するのは、これらのファイルになります。"
+
+#: ../../doc_src/contributing.rst:271
+msgid "Adding translations for a new language"
+msgstr "新しい言語の翻訳を追加する"
+
+#: ../../doc_src/contributing.rst:273
+msgid ""
+"Creating new translations requires the Gettext tools. More specifically, "
+"you will need ``msguniq`` and ``msgmerge`` for creating translations for "
+"a new language. To create a new translation, run::"
+msgstr ""
+"新しい翻訳を作成するには Gettext ツールが必要です。 具体的には、新しい言語の翻訳を作成するために ``msguniq`` と "
+"``msgmerge`` が必要になります。 新しい翻訳を作成するには、以下を実行してください。::"
+
+#: ../../doc_src/contributing.rst:280
+msgid ""
+"This will create a new PO file containing all messages available for "
+"translation. If the file already exists, it will be updated."
+msgstr ""
+"これにより、翻訳可能なすべてのメッセージを含む新しい PO ファイルが作成されます。 ファイルが既に存在する場合は、更新されます。"
+
+#: ../../doc_src/contributing.rst:283
+msgid ""
+"After modifying a PO file, you can recompile fish, and it will integrate "
+"the modifications you made. This requires that the ``msgfmt`` utility is "
+"installed (comes as part of ``gettext``). It is important that the "
+"``localize-messages`` cargo feature is enabled, which it is by default. "
+"You can explicitly enable it using::"
+msgstr ""
+"PO ファイルを修正した後、fish を再コンパイルすると、加えた修正が統合されます。 これには ``msgfmt`` "
+"ユーティリティ(``gettext`` の一部として提供)がインストールされている必要があります。 また、cargo の機能である "
+"``localize-messages`` が有効になっていることが重要です(デフォルトで有効になっています)。 "
+"以下を使用して明示的に有効にすることもできます。::"
+
+#: ../../doc_src/contributing.rst:290
+msgid "Use environment variables to tell fish which language to use, e.g.::"
+msgstr "fish が使用する言語を指定するには、環境変数を使用します。例: ::"
+
+#: ../../doc_src/contributing.rst:294
+msgid "or within the running fish shell::"
+msgstr "または、実行中の fish シェル内で以下のように設定します。::"
+
+#: ../../doc_src/contributing.rst:298
+msgid ""
+"For more options regarding how to choose languages, see `the "
+"corresponding gettext documentation "
+"<https://www.gnu.org/software/gettext/manual/html_node/Locale-"
+"Environment-Variables.html>`__. One neat thing you can do is set a list "
+"of languages to check for translations in the order defined using the "
+"``LANGUAGE`` variable, e.g.::"
+msgstr ""
+"言語の選択に関する詳細なオプションについては、対応する `gettext のドキュメント "
+"<https://www.gnu.org/software/gettext/manual/html_node/Locale-"
+"Environment-Variables.html>`__ を参照してください。 便利な機能として、 ``LANGUAGE`` "
+"変数を使用して、翻訳を探す言語の優先順位リストを設定できます。例: ::"
+
+#: ../../doc_src/contributing.rst:306
+msgid ""
+"to try to translate messages to Portuguese, if that fails try German, and"
+" if that fails too you will see the English version defined in the source"
+" code."
+msgstr "これにより、まずメッセージをポルトガル語に翻訳しようとし、失敗した場合はドイツ語を試し、それも失敗した場合はソースコードで定義されている英語バージョンが表示されます。"
+
+#: ../../doc_src/contributing.rst:310
+msgid "Modifying existing translations"
+msgstr "既存の翻訳を修正する"
+
+#: ../../doc_src/contributing.rst:312
+msgid ""
+"If you want to work on translations for a language which already has a "
+"corresponding ``po`` file, it is sufficient to edit this file. No other "
+"changes are necessary."
+msgstr ""
+"すでに対応する ``po`` ファイルが存在する言語の翻訳作業を行う場合は、そのファイルを編集するだけで十分です。その他の変更は必要ありません。"
+
+#: ../../doc_src/contributing.rst:315
+msgid ""
+"After recompiling fish, you should be able to see your translations in "
+"action. See the previous section for details."
+msgstr ""
+"fish を再コンパイルすると、翻訳が実際に反映されているのを確認できるはずです。詳細は前のセクションを参照してください。"
+
+#: ../../doc_src/contributing.rst:319
+msgid "Editing PO files"
+msgstr "PO ファイルを編集する"
+
+#: ../../doc_src/contributing.rst:321
+msgid ""
+"Many tools are available for editing translation files, including "
+"command-line and graphical user interface programs. For simple use, you "
+"can use your text editor."
+msgstr ""
+"翻訳ファイルを編集するためのツールは、コマンドラインプログラムやグラフィカルユーザーインターフェース(GUI)プログラムを含め、多く存在します。簡単な用途であれば、テキストエディタを使用することもできます。"
+
+#: ../../doc_src/contributing.rst:324
+msgid ""
+"Open up the PO file, for example ``localization/po/sv.po``, and you'll "
+"see something like::"
+msgstr ""
+"POファイル(例: ``localization/po/sv.po``)を開くと、以下のような内容が表示されます::"
+
+#: ../../doc_src/contributing.rst:329
+msgid ""
+"The ``msgid`` here is the \"name\" of the string to translate, typically "
+"the English string to translate. The second line (``msgstr``) is where "
+"your translation goes."
+msgstr ""
+"ここでの ``msgid`` は翻訳対象となる文字列の「名前」であり、通常は翻訳元の英語の文字列です。2行目(``msgstr``"
+")が翻訳を記入する場所です。"
+
+#: ../../doc_src/contributing.rst:332
+msgid "For example::"
+msgstr "例::"
+
+#: ../../doc_src/contributing.rst:337
+#, python-format
+msgid ""
+"Any ``%s`` or ``%d`` are placeholders that fish will use for formatting "
+"at runtime. It is important that they match - the translated string "
+"should have the same placeholders in the same order."
+msgstr ""
+"``%s`` や ``%d`` は、実行時に fish "
+"がフォーマットに使用するプレースホルダです。これらを一致させることが重要です。翻訳後の文字列には、同じプレースホルダを同じ順序で含める必要があります。"
+
+#: ../../doc_src/contributing.rst:339
+msgid ""
+"Also any escaped characters, like that ``\\n`` newline at the end, should"
+" be kept so the translation has the same behavior."
+msgstr "また、末尾の ``\\n`` (改行)のようなエスケープ文字も、翻訳が同じ挙動をするように維持する必要があります。"
+
+#: ../../doc_src/contributing.rst:341
+msgid ""
+"Our tests run ``msgfmt --check-format /path/to/file``, so they would "
+"catch mismatched placeholders - otherwise fish would crash at runtime "
+"when the string is about to be used."
+msgstr ""
+"私たちのテストでは ``msgfmt --check-format /path/to/file`` "
+"を実行しているため、プレースホルダの不一致はそこで検出されます。不一致があると、その文字列が使用される直前に fish "
+"が実行時にクラッシュしてしまいます。"
+
+#: ../../doc_src/contributing.rst:343
+msgid ""
+"Be cautious about blindly updating an existing translation file. "
+"``msgid`` strings should never be updated manually, only by running the "
+"appropriate script."
+msgstr ""
+"既存の翻訳ファイルをむやみに更新しないよう注意してください。 ``msgid`` "
+"の文字列は手動で更新すべきではなく、必ず適切なスクリプトを実行して更新してください。"
+
+#: ../../doc_src/contributing.rst:347
+msgid "Modifications to strings in source files"
+msgstr "ソースファイル内の文字列の変更"
+
+#: ../../doc_src/contributing.rst:349
+msgid ""
+"If a string changes in the sources, the old translations will no longer "
+"work. They will be preserved in the PO files, but commented-out (starting"
+" with ``#~``). If you add/remove/change a translatable strings in a "
+"source file, run ``build_tools/update_translations.fish`` to propagate "
+"this to all translation files (``localization/po/*.po``). This is only "
+"relevant for developers modifying the source files of fish or fish "
+"scripts."
+msgstr ""
+"ソースファイル内の文字列が変更されると、古い翻訳は機能しなくなります。それらは PO ファイル内に保持されますが、コメントアウト( ``#~`` "
+"で始まる行)されます。 ソースファイル内で翻訳可能な文字列を追加、削除、または変更した場合は、 "
+"``build_tools/update_translations.fish`` "
+"を実行して、すべての翻訳ファイル(``localization/po/*.po``)にその変更を伝播させてください。 これは、fish "
+"のソースファイルや fish スクリプトを修正する開発者にのみ関係する作業です。"
+
+#: ../../doc_src/contributing.rst:356
+msgid "Setting Code Up For Translations"
+msgstr "翻訳用のコード設定"
+
+#: ../../doc_src/contributing.rst:358
+msgid ""
+"All non-debug messages output for user consumption should be marked for "
+"translation. In Rust, this requires the use of the ``wgettext!`` or "
+"``wgettext_fmt!`` macros:"
+msgstr ""
+"ユーザーが目にする非デバッグ用メッセージは、すべて翻訳対象としてマークする必要があります。Rust では、 ``wgettext!`` 、 "
+"``wgettext_fmt!`` マクロを使用する必要があります。"
+
+#: ../../doc_src/contributing.rst:366
+msgid ""
+"All messages in fish script must be enclosed in single or double quote "
+"characters for our message extraction script to find them. They must also"
+" be translated via a command substitution. This means that the following "
+"are **not** valid:"
+msgstr ""
+"fish "
+"スクリプト内のすべてのメッセージは、メッセージ抽出スクリプトがそれらを見つけられるように、シングルクォートまたはダブルクォートで囲む必要があります。"
+" また、それらはコマンド置換を介して翻訳されなければなりません。つまり、以下は **無効** です。"
+
+#: ../../doc_src/contributing.rst:376
+msgid "Above should be written like this instead:"
+msgstr "上記は、代わりに次のように記述する必要があります。"
+
+#: ../../doc_src/contributing.rst:383
+msgid ""
+"You can use either single or double quotes to enclose the message to be "
+"translated. You can also optionally include spaces after the opening "
+"parentheses or before the closing parentheses."
+msgstr ""
+"翻訳対象のメッセージを囲むには、シングルクォートまたはダブルクォートのいずれかを使用できます。"
+"また、開始括弧の直後や終了括弧の直前に、任意でスペースを含めることもできます。"
+
+#: ../../doc_src/contributing.rst:388
+msgid "Updating Dependencies"
+msgstr "依存関係の更新"
+
+#: ../../doc_src/contributing.rst:390
+msgid ""
+"To update dependencies, run ``build_tools/update-dependencies.sh``. This "
+"currently requires `updatecli <https://github.com/updatecli/updatecli>`__"
+" and a few other tools."
+msgstr ""
+"依存関係を更新するには、 ``build_tools/update-dependencies.sh`` を実行してください。現在のところ、これには"
+" `updatecli <https://github.com/updatecli/updatecli>`__ "
+"とその他のいくつかのツールが必要です。"
+
+#: ../../doc_src/contributing.rst:394
+msgid "Versioning"
+msgstr "バージョニング"
+
+#: ../../doc_src/contributing.rst:396
+msgid ""
+"The fish version is constructed by the *build_tools/git_version_gen.sh* "
+"script. For developers the version is the branch name plus the output of "
+"``git describe --always --dirty``. Normally the main part of the version "
+"will be the closest annotated tag. Which itself is usually the most "
+"recent release number (e.g., ``2.6.0``)."
+msgstr ""
+"fish のバージョンは、 *build_tools/git_version_gen.sh* スクリプトによって構成されます。 "
+"開発者向けのバージョンは、ブランチ名に ``git describe --always --dirty`` の出力を加えたものになります。 "
+"通常、バージョンの主要な部分は、最も近い注釈付き(annotated)タグになります。 "
+"これは通常、最新のリリース番号(例: ``2.6.0``)です。"
+

@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/alias.rst:2
+msgid "alias - create a function"
+msgstr "alias - エイリアスを作成する"
+
+#: ../../doc_src/cmds/alias.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/alias.rst:15
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/alias.rst:19
+msgid ""
+"NOTE: This page documents the fish builtin ``alias``. To see the "
+"documentation on any non-fish versions, use ``command man alias``."
+msgstr "注意: このページは fish 組み込みコマンドの ``alias`` について説明しています。fish 以外のドキュメントを参照するには、 ``command man alias`` を使用してください。"
+
+#: ../../doc_src/cmds/alias.rst:22
+msgid ""
+"``alias`` is a simple wrapper for the ``function`` builtin, which creates"
+" a function wrapping a command. It has similar syntax to POSIX shell "
+"``alias``. For other uses, it is recommended to define a :doc:`function "
+"<function>`."
+msgstr "``alias`` は ``function`` 組み込みコマンドの単純なラッパーであり、コマンドをラップする関数を作成します。POSIX シェルの ``alias`` と似た構文を持っています。これ以外の用途には、 :doc:`function <function>` を定義することをお勧めします。"
+
+#: ../../doc_src/cmds/alias.rst:24
+msgid ""
+"If you want to ease your interactive use, to save typing, consider using "
+"an :doc:`abbreviation <abbr>` instead."
+msgstr "対話型の使用をより快適にし、タイピングを節約したい場合は、代わりに :doc:`abbreviation(省略形) <abbr>` の使用を検討してください。"
+
+#: ../../doc_src/cmds/alias.rst:26
+msgid ""
+"``fish`` marks functions that have been created by ``alias`` by including"
+" the command used to create them in the function description. You can "
+"list ``alias``-created functions by running ``alias`` without arguments. "
+"They must be erased using ``functions -e``."
+msgstr "``fish`` は、 ``alias`` によって作成された関数の説明文(description)に作成時のコマンドを含めることで、それらを識別します。引数なしで ``alias`` を実行すると、 ``alias`` によって作成された関数の一覧を表示できます。これらの関数を削除するには、 ``functions -e`` を使用する必要があります。"
+
+#: ../../doc_src/cmds/alias.rst:28
+msgid "``NAME`` is the name of the alias"
+msgstr "``NAME`` はエイリアスの名前です"
+
+#: ../../doc_src/cmds/alias.rst:29
+msgid ""
+"``DEFINITION`` is the actual command to execute. ``alias`` automatically "
+"appends ``$argv``, so that all parameters used with the alias are passed "
+"to the actual command."
+msgstr "``DEFINITION`` は実行される実際のコマンドです。 ``alias`` は自動的に ``$argv`` を追加するため、エイリアスで使用されたすべてのパラメータは実際のコマンドに渡されます。"
+
+#: ../../doc_src/cmds/alias.rst:31
+msgid ""
+"You cannot create an alias to a function with the same name. Note that "
+"spaces need to be escaped in the call to ``alias`` just like at the "
+"command line, *even inside quoted parts*."
+msgstr "同名の関数に対してエイリアスを作成することはできません。コマンドラインと同様に、 ``alias`` の呼び出し時には *引用符で囲まれた部分であっても* スペースのエスケープが必要になることに注意してください。"
+
+#: ../../doc_src/cmds/alias.rst:33
+msgid "The following options are available:"
+msgstr "以下のオプションが利用可能です: "
+
+#: ../../doc_src/cmds/alias.rst:35
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/alias.rst:36
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/alias.rst:38
+msgid "**-s** or **--save**"
+msgstr "**-s** 、 **--save**"
+
+#: ../../doc_src/cmds/alias.rst:39
+msgid ""
+"Saves the function created by the alias into your fish configuration "
+"directory using :doc:`funcsave <funcsave>`."
+msgstr "エイリアスによって作成された関数を、 :doc:`funcsave <funcsave>` を使用して fish 設定ディレクトリに保存します。"
+
+#: ../../doc_src/cmds/alias.rst:42
+msgid "Example"
+msgstr "例"
+
+#: ../../doc_src/cmds/alias.rst:44
+msgid ""
+"The following code will create ``rmi``, which runs ``rm`` with additional"
+" arguments on every invocation."
+msgstr "以下のコードは ``rmi`` を作成し、実行のたびに追加の引数を付けて ``rm`` を実行するようにします。"
+
+#: ../../doc_src/cmds/alias.rst:55
+msgid "``alias`` sometimes requires escaping, as you can see here::"
+msgstr "こちらで確認できるように、 ``alias`` では時としてエスケープが必要になります: "
+
+#: ../../doc_src/cmds/alias.rst:63
+msgid "See more"
+msgstr "参照"
+
+#: ../../doc_src/cmds/alias.rst:65
+msgid "The :doc:`function <function>` command this builds on."
+msgstr "このコマンドの基礎となっている :doc:`function <function>` コマンド。"
+
+#: ../../doc_src/cmds/alias.rst:66
+msgid ":ref:`Functions <syntax-function>`."
+msgstr ":ref:`関数 (Functions) <syntax-function>`"
+
+#: ../../doc_src/cmds/alias.rst:67
+msgid ":ref:`Defining aliases <syntax-aliases>`."
+msgstr ":ref:`エイリアスの定義 (Defining aliases) <syntax-aliases>`"

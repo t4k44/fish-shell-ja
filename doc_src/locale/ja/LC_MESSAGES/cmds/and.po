@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/and.rst:2
+msgid "and - conditionally execute a command"
+msgstr "and - 条件付きでコマンドを実行する"
+
+#: ../../doc_src/cmds/and.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/and.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/and.rst:14
+msgid ""
+"``and`` is used to execute a command if the previous command was "
+"successful (returned a status of 0)."
+msgstr "``and`` は、直前のコマンドが成功した(ステータス 0 を返した)場合にコマンドを実行するために使用されます。"
+
+#: ../../doc_src/cmds/and.rst:16
+msgid ""
+"``and`` statements may be used as part of the condition in an :doc:`while"
+" <while>` or :doc:`if <if>` block."
+msgstr "``and`` 文は、 :doc:`while <while>` や :doc:`if <if>` ブロック内の条件の一部として使用できます。"
+
+#: ../../doc_src/cmds/and.rst:18
+msgid ""
+"``and`` does not change the current exit status itself, but the command "
+"it runs most likely will. The exit status of the last foreground command "
+"to exit can always be accessed using the :ref:`$status <variables-"
+"status>` variable."
+msgstr "``and`` 自体は現在の終了ステータスを変更しませんが、実行されるコマンドによってステータスが更新される可能性が高いです。最後に終了したフォアグラウンドコマンドの終了ステータスには、常に :ref:`$status <variables-status>` 変数を使用してアクセスできます。"
+
+#: ../../doc_src/cmds/and.rst:20
+msgid "The **-h** or **--help** option displays help about using this command."
+msgstr "**-h** 、 **--help** オプションはこのコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/and.rst:23
+msgid "Example"
+msgstr "例"
+
+#: ../../doc_src/cmds/and.rst:25
+msgid ""
+"The following code runs the ``make`` command to build a program. If the "
+"build succeeds, ``make``'s exit status is 0, and the program is "
+"installed. If either step fails, the exit status is 1, and ``make clean``"
+" is run, which removes the files created by the build process."
+msgstr "以下のコードは、プログラムをビルドするために ``make`` コマンドを実行します。ビルドが成功すると ``make`` の終了ステータスは 0 になり、プログラムがインストールされます。いずれかのステップが失敗した場合、終了ステータスは 1 となり、 ``make clean`` が実行されてビルドプロセスで作成されたファイルが削除されます。"
+
+#: ../../doc_src/cmds/and.rst:32
+msgid "See Also"
+msgstr "参照"
+
+#: ../../doc_src/cmds/and.rst:34
+msgid ":doc:`or <or>` command"
+msgstr ":doc:`or <or>` コマンド"
+
+#: ../../doc_src/cmds/and.rst:35
+msgid ":doc:`not <not>` command"
+msgstr ":doc:`not <not>` コマンド"

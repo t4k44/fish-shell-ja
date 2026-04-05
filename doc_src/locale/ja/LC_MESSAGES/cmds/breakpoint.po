@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/breakpoint.rst:2
+msgid "breakpoint - launch debug mode"
+msgstr "breakpoint - デバッグモードの起動"
+
+#: ../../doc_src/cmds/breakpoint.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/breakpoint.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/breakpoint.rst:14
+msgid ""
+"``breakpoint`` is used to halt a running script and launch an interactive"
+" debugging prompt."
+msgstr "``breakpoint`` は、実行中のスクリプトを一時停止し、対話型のデバッグプロンプトを起動するために使用されます。"
+
+#: ../../doc_src/cmds/breakpoint.rst:16
+msgid ""
+"For more details, see :ref:`Debugging fish scripts <debugging>` in the "
+"``fish`` manual."
+msgstr "詳細については、 ``fish`` マニュアルの :ref:`fish スクリプトのデバッグ <debugging>` を参照してください。"
+
+#: ../../doc_src/cmds/breakpoint.rst:18
+msgid "There are no parameters for ``breakpoint``."
+msgstr "``breakpoint`` にパラメータはありません。"

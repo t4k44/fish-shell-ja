@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/_.rst:2
+msgid "_ - call fish's translations"
+msgstr "_ - fishの翻訳を呼び出す"
+
+#: ../../doc_src/cmds/_.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/_.rst:12
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/_.rst:14
+msgid "``_`` translates its arguments into the current language, if possible."
+msgstr "``_`` は、可能であれば引数を現在の言語に翻訳します。"
+
+#: ../../doc_src/cmds/_.rst:16
+msgid ""
+"This only works with messages which are translated as part of fish's own "
+"sources, so using it as part of your own fish scripts which are not "
+"upstreamed into the fish repo will not work unless the exact same message"
+" also exists upstream."
+msgstr ""
+"これはfish自体のソースの一部として翻訳されているメッセージに対してのみ機能します。 "
+"そのため、fishのリポジトリにアップストリームされていない独自のfishスクリプト内で使用しても、 "
+"アップストリームに全く同じメッセージが存在しない限り機能しません。"
+
+#: ../../doc_src/cmds/_.rst:18
+msgid ""
+"It requires fish to be built with gettext support. If that support is "
+"disabled or there is no translation it will echo the argument back."
+msgstr ""
+"fishがgettextサポートを有効にしてビルドされている必要があります。 "
+"サポートが無効であるか、翻訳が存在しない場合は、引数をそのままエコーバックします。"
+
+#: ../../doc_src/cmds/_.rst:20
+msgid ""
+"The language depends on the current locale, set with :envvar:`LANG`, "
+":envvar:`LC_MESSAGES`, :envvar:`LC_ALL`, and :envvar:`LANGUAGE`. These "
+"variables do not have to be exported for fish to use them, and fish's "
+"variable scopes are supported. If other programs launched via fish should"
+" respect these locale variables they have to be exported to make them "
+"available outside of fish."
+msgstr ""
+"言語は、 :envvar:`LANG`, :envvar:`LC_MESSAGES`, :envvar:`LC_ALL`, 、 :envvar:`LANGUAGE` "
+"で設定された現在のロケールに依存します。 "
+"これらの変数はfishが使用するためにエクスポートされている必要はなく、fishの変数スコープがサポートされています。 "
+"fish経由で起動された他のプログラムがこれらのロケール変数を尊重する必要がある場合は、 "
+"fishの外部で利用可能にするためにエクスポートする必要があります。"
+
+#: ../../doc_src/cmds/_.rst:24
+msgid ""
+"For :envvar:`LANGUAGE` you can use a list, or use colons to separate "
+"multiple languages."
+msgstr ""
+":envvar:`LANGUAGE` には、リストを使用するか、コロンで区切って複数の言語を指定できます。"
+
+#: ../../doc_src/cmds/_.rst:26
+msgid ""
+"If the :ref:`status language set <status-language>` command was used, its"
+" arguments specify the language precedence, and the environment variables"
+" are ignored."
+msgstr ""
+":ref:`status language set <status-language>` コマンドが使用された場合、 "
+"その引数が言語の優先順位を指定し、環境変数は無視されます。"
+
+#: ../../doc_src/cmds/_.rst:29
+msgid "Options"
+msgstr "オプション"
+
+#: ../../doc_src/cmds/_.rst:31
+msgid "``_`` takes no options."
+msgstr "``_`` にオプションはありません。"
+
+#: ../../doc_src/cmds/_.rst:34
+msgid "Examples"
+msgstr "例"
+
+#: ../../doc_src/cmds/_.rst:36
+msgid "Use German translations::"
+msgstr "ドイツ語の翻訳を使用する場合::"
+
+#: ../../doc_src/cmds/_.rst:42
+msgid "Specify a precedence of languages (only works with :envvar:`LANGUAGE`)::"
+msgstr "言語の優先順位を指定する場合 (:envvar:`LANGUAGE` でのみ機能します)::"
+
+#: ../../doc_src/cmds/_.rst:52
+msgid ""
+"Note that the specific examples may change if translations are "
+"added/modified."
+msgstr ""
+"翻訳が追加または変更されると、具体的な例が変わる可能性があることに注意してください。"

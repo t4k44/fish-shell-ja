@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_opt.rst:2
+msgid "fish_opt - create an option specification for the argparse command"
+msgstr "fish_opt - argparse コマンド用のオプション仕様を作成する"
+
+#: ../../doc_src/cmds/fish_opt.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/fish_opt.rst:13
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/fish_opt.rst:15
+msgid ""
+"This command provides a way to produce option specifications suitable for"
+" use with the :doc:`argparse <argparse>` command. You can, of course, "
+"write the option specifications by hand without using this command. But "
+"you might prefer to use this for the clarity it provides."
+msgstr ""
+"このコマンドは、 :doc:`argparse <argparse>` コマンドでの使用に適したオプション仕様を生成する方法を提供します。"
+"もちろん、このコマンドを使わずに手動でオプション仕様を記述することも可能ですが、"
+"このコマンドが提供する明快さを好むかもしれません。"
+
+#: ../../doc_src/cmds/fish_opt.rst:17
+msgid "The following ``argparse`` options are available:"
+msgstr "以下の ``argparse`` オプションが利用可能です。"
+
+#: ../../doc_src/cmds/fish_opt.rst:19
+msgid "**-s** or **--short** *ALPHANUM*"
+msgstr "**-s** 、 **--short** *ALPHANUM*"
+
+#: ../../doc_src/cmds/fish_opt.rst:20
+msgid ""
+"Takes a single letter or number that is used as the short flag in the "
+"option being defined. Either this option or the **--long** option must be"
+" provided."
+msgstr ""
+"定義するオプションの短縮フラグ(ショートフラグ)として使用される、1文字の英数字を受け取ります。"
+"このオプションか **--long** オプションのいずれか一方は必ず指定する必要があります。"
+
+#: ../../doc_src/cmds/fish_opt.rst:22
+msgid "**-l** or **--long** *LONG-NAME*"
+msgstr "**-l** 、 **--long** *LONG-NAME*"
+
+#: ../../doc_src/cmds/fish_opt.rst:23
+msgid ""
+"Takes a string that is used as the long flag in the option being defined."
+" This option is optional and has no default. If no long flag is defined "
+"then only the short flag will be allowed when parsing arguments using the"
+" option specification."
+msgstr ""
+"定義するオプションのロングフラグ(ロングフラグ)として使用される文字列を受け取ります。"
+"このオプションは任意であり、デフォルト値はありません。ロングフラグが定義されていない場合、"
+"そのオプション仕様を使用した引数解析では、短縮フラグのみが許可されます。"
+
+#: ../../doc_src/cmds/fish_opt.rst:25
+msgid "**--long-only**"
+msgstr "**--long-only**"
+
+#: ../../doc_src/cmds/fish_opt.rst:26
+msgid ""
+"Deprecated. The option being defined will only allow the long flag name "
+"to be used, even if the short flag is defined (i.e., **--short** is "
+"specified)."
+msgstr ""
+"非推奨。定義されたオプションにおいて、たとえ短縮フラグが定義( **--short** が指定)されていても、"
+"ロングフラグ名のみの使用を許可します。"
+
+#: ../../doc_src/cmds/fish_opt.rst:28
+msgid "**-o** or **--optional-val**"
+msgstr "**-o** 、 **--optional-val**"
+
+#: ../../doc_src/cmds/fish_opt.rst:29
+msgid ""
+"The option being defined can take a value, but it is optional rather than"
+" required. If the option is seen more than once when parsing arguments, "
+"only the last value seen is saved. This means the resulting flag variable"
+" created by ``argparse`` will zero elements if no value was given with "
+"the option else it will have exactly one element."
+msgstr ""
+"定義されるオプションは値を取ることができますが、その値は必須ではなく任意(オプション)です。"
+"引数の解析中にこのオプションが複数回現れた場合、最後に現れた値のみが保存されます。"
+"これは、 ``argparse`` によって作成されるフラグ変数の要素数が、値が与えられなかった場合は0になり、"
+"値が与えられた場合は正確に1つになることを意味します。"
+
+#: ../../doc_src/cmds/fish_opt.rst:31
+msgid "**-r** or **--required-val**"
+msgstr "**-r** 、 **--required-val**"
+
+#: ../../doc_src/cmds/fish_opt.rst:32
+msgid ""
+"The option being defined requires a value. If the option is seen more "
+"than once when parsing arguments, only the last value seen is saved. This"
+" means the resulting flag variable created by ``argparse`` will have "
+"exactly one element."
+msgstr ""
+"定義されるオプションは値を必須とします。引数の解析中にこのオプションが複数回現れた場合、"
+"最後に現れた値のみが保存されます。これは、 ``argparse`` によって作成されるフラグ変数が"
+"正確に1つの要素を持つことを意味します。"
+
+#: ../../doc_src/cmds/fish_opt.rst:34
+msgid "**-m** or **--multiple-vals**"
+msgstr "**-m** 、 **--multiple-vals**"
+
+#: ../../doc_src/cmds/fish_opt.rst:35
+msgid ""
+"The value of each instance of the option is accumulated. If **--optional-"
+"val** is provided, the value is optional, and an empty string is stored "
+"if no value is provided. Otherwise, the **--requiured-val** option is "
+"implied and each instance of the option requires a value. This means the "
+"resulting flag variable created by ``argparse`` will have one element for"
+" each instance of this option in the arguments, even for instances that "
+"did not provide a value."
+msgstr ""
+"各オプションの指定値が蓄積されます。 **--optional-val** が指定されている場合、値は任意であり、"
+"値が指定されない場合は空の文字列が格納されます。そうでない場合は、 **--required-val** オプションが"
+"暗黙的に適用され、オプションの指定ごとに値が必要になります。これは、 ``argparse`` によって作成される"
+"フラグ変数が、引数内のこのオプションの出現回数と同じ数の要素(値が提供されなかった回分も含む)を"
+"持つことを意味します。"
+
+#: ../../doc_src/cmds/fish_opt.rst:37
+msgid "**-d** or **--delete**"
+msgstr "**-d** 、 **--delete**"
+
+#: ../../doc_src/cmds/fish_opt.rst:38
+msgid ""
+"The option and any values will be deleted from the ``$argv_opts`` "
+"variables set by ``argparse`` (as with other options, it will also be "
+"deleted from ``$argv``)."
+msgstr ""
+"このオプションとその値は、 ``argparse`` によって設定される ``$argv_opts`` 変数から削除されます"
+"(他のオプションと同様に、 ``$argv`` からも削除されます)。"
+
+#: ../../doc_src/cmds/fish_opt.rst:41
+msgid "**-v** or **--validate** *COMMAND* *OPTION...*"
+msgstr "**-v** 、 **--validate** *COMMAND* *OPTION...*"
+
+#: ../../doc_src/cmds/fish_opt.rst:42
+msgid ""
+"This option must be the last one, and requires one of ``-o``, ``-r``, or "
+"``-m``. All the remaining arguments are interpreted a fish script to run "
+"to validate the value of the argument, see ``argparse`` documentation for"
+" more details. Note that the interpretation of *COMMAND* *OPTION...* is "
+"similar to ``eval``, so you may need to quote or escape special "
+"characters *twice* if you want them to be interpreted literally when the "
+"validate script is run."
+msgstr ""
+"このオプションは最後に指定する必要があり、 ``-o`` 、 ``-r`` 、 ``-m`` のいずれかを必要とします。"
+"残りの引数はすべて、引数の値を検証(バリデート)するために実行される fish スクリプトとして解釈されます。"
+"詳細は ``argparse`` のドキュメントを参照してください。 *COMMAND* *OPTION...* の解釈は "
+"``eval`` に似ているため、検証スクリプトの実行時に特殊文字を文字通りに解釈させたい場合は、"
+"引用符で囲むかエスケープを*2回*行う必要がある場合があることに注意してください。"
+
+#: ../../doc_src/cmds/fish_opt.rst:44
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/fish_opt.rst:45
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/fish_opt.rst:48
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/fish_opt.rst:50
+msgid "Define a single option specification for the boolean help flag:"
+msgstr "真偽値をとるヘルプフラグ用の単一のオプション仕様を定義する: "
+
+#: ../../doc_src/cmds/fish_opt.rst:60
+msgid "Same as above but with a second flag that requires a value:"
+msgstr "上記と同じですが、値を必要とする2つ目のフラグを追加する場合: "
+
+#: ../../doc_src/cmds/fish_opt.rst:70
+msgid "Same as above but the value of the second flag cannot be the empty string:"
+msgstr "上記と同じですが、2つ目のフラグの値が空文字列であってはならない場合: "
+
+#: ../../doc_src/cmds/fish_opt.rst:78
+msgid ""
+"Same as above but with a third flag that can be given multiple times "
+"saving the value of each instance seen and only a long flag name "
+"(``--token``) is defined:"
+msgstr ""
+"上記と同じですが、複数回の指定が可能で各指定値を保存する3つ目のフラグを追加し、"
+"かつロングフラグ名( ``--token`` )のみを定義する場合: "

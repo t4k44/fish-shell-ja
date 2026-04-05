@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/end.rst:2
+msgid "end - end a block of commands"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:22
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:24
+msgid ""
+"The **end** keyword ends a block of commands started by one of the "
+"following commands:"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:26
+msgid ":doc:`begin <begin>` to start a block of commands"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:27
+msgid ":doc:`function <function>` to define a function"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:28
+msgid ":doc:`if <if>`, :doc:`switch <switch>` to conditionally execute commands"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:29
+msgid ":doc:`while <while>`, :doc:`for <for>` to perform commands multiple times"
+msgstr ""
+
+#: ../../doc_src/cmds/end.rst:31
+msgid ""
+"The **end** keyword does not change the current exit status. Instead, the"
+" status after it will be the status returned by the most recent command."
+msgstr ""
+

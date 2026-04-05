@@ -1,0 +1,1859 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-04 22:03+0900\n"
+"PO-Revision-Date: 2026-04-04 22:06+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/interactive.rst:2
+msgid "Interactive use"
+msgstr "対話的(インタラクティブ)な使用"
+
+#: ../../doc_src/interactive.rst:4
+msgid ""
+"Fish prides itself on being really nice to use interactively. That's down"
+" to a few features we'll explain in the next few sections."
+msgstr "fish は、対話的な使用において非常に快適であることを自負しています。その理由は、次のいくつかのセクションで説明する機能にあります。"
+
+#: ../../doc_src/interactive.rst:6
+msgid ""
+"Fish is used by giving commands in the fish language, see :doc:`The Fish "
+"Language <language>` for information on that."
+msgstr ""
+"fish は fish 言語でコマンドを与えることで使用します。詳細については :doc:`The Fish Language "
+"<language>` を参照してください。"
+
+#: ../../doc_src/interactive.rst:9
+msgid "Help"
+msgstr "ヘルプ"
+
+#: ../../doc_src/interactive.rst:11
+msgid ""
+"Fish has an extensive help system. Use the :doc:`help <cmds/help>` "
+"command to obtain help on a specific subject or command. For instance, "
+"writing ``help syntax`` displays the :ref:`syntax section <syntax>` of "
+"this documentation."
+msgstr ""
+"fish には広範なヘルプシステムが備わっています。特定の主題やコマンドに関するヘルプを取得するには :doc:`help "
+"<cmds/help>` コマンドを使用してください。例えば、 ``help syntax`` と入力すると、このドキュメントの "
+":ref:`構文の概要 <syntax>` が表示されます。"
+
+#: ../../doc_src/interactive.rst:13
+msgid ""
+"Fish also has man pages for its commands, and translates the help pages "
+"to man pages. For example, ``man set`` will show the documentation for "
+"``set`` as a man page."
+msgstr ""
+"fish には各コマンドの man ページもあり、ヘルプページを man ページへと変換して提供しています。例えば、 ``man set`` "
+"を実行すると ``set`` のドキュメントを man ページとして表示します。"
+
+#: ../../doc_src/interactive.rst:15
+msgid ""
+"Help on a specific builtin can also be obtained with the ``-h`` "
+"parameter. For instance, to obtain help on the :doc:`fg <cmds/fg>` "
+"builtin, either type ``fg -h`` or ``help fg``."
+msgstr ""
+"特定の組み込みコマンドに関するヘルプは、 ``-h`` パラメータでも取得できます。例えば、 :doc:`fg <cmds/fg>` "
+"組み込みコマンドのヘルプを取得するには、 ``fg -h`` と入力するか ``help fg`` を実行します。"
+
+#: ../../doc_src/interactive.rst:17
+msgid ""
+"The main page can be viewed via ``help index`` (or just ``help``) or "
+"``man fish-doc``. The tutorial can be viewed with ``help tutorial`` or "
+"``man fish-tutorial``."
+msgstr ""
+"メインページは ``help index`` (または単に ``help`` )、あるいは ``man fish-doc`` "
+"で閲覧できます。チュートリアルは ``help tutorial`` 、 ``man fish-tutorial`` で閲覧可能です。"
+
+#: ../../doc_src/interactive.rst:22
+msgid "Autosuggestions"
+msgstr "自動提案 (Autosuggestions)"
+
+#: ../../doc_src/interactive.rst:24
+msgid ""
+"fish suggests commands as you type, based on :ref:`command history "
+"<history-search>`, completions, and valid file paths. As you type "
+"commands, you will see a suggestion offered after the cursor, in a muted "
+"gray color (which can be changed with the ``fish_color_autosuggestion`` "
+"variable)."
+msgstr ""
+"fish は入力に合わせて、 :ref:`コマンド履歴 <history-search>` "
+"、補完、および有効なファイルパスに基づいてコマンドを提案します。コマンドを入力していくと、カーソルの後ろに控えめなグレーで提案が表示されます(この色は"
+" ``fish_color_autosuggestion`` 変数で変更可能です)。"
+
+#: ../../doc_src/interactive.rst:26
+msgid ""
+"To accept the autosuggestion (replacing the command line contents), press"
+" :kbd:`right` (``→``) or :kbd:`ctrl-f`. To accept the first suggested "
+"word, press :kbd:`alt-right` (``→``) or :kbd:`alt-f`. If the "
+"autosuggestion is not what you want, ignore it: it won't execute unless "
+"you accept it."
+msgstr ""
+"自動提案を受け入れる(コマンドラインの内容を置き換える)には、 :kbd:`→` (右矢印キー)または :kbd:`ctrl-f` "
+"を押します。提案された最初の単語だけを受け入れるには、 :kbd:`alt-→` 、 :kbd:`alt-f` "
+"を押します。自動提案が意図したものでない場合は、無視してください。受け入れない限り、その内容が実行されることはありません。"
+
+#: ../../doc_src/interactive.rst:28
+msgid ""
+"Autosuggestions are a powerful way to quickly summon frequently entered "
+"commands, by typing the first few characters. They are also an efficient "
+"technique for navigating through directory hierarchies."
+msgstr "自動提案は、最初の数文字を入力するだけで頻繁に使用するコマンドを素早く呼び出すための強力な手段です。また、ディレクトリ階層を効率的に移動するための優れたテクニックでもあります。"
+
+#: ../../doc_src/interactive.rst:30
+msgid ""
+"If you don't like autosuggestions, you can disable them by setting "
+"``$fish_autosuggestion_enabled`` to 0::"
+msgstr "もし自動提案が不要な場合は、 ``$fish_autosuggestion_enabled`` を 0 に設定することで無効にできます::"
+
+#: ../../doc_src/interactive.rst:37
+msgid "Tab Completion"
+msgstr "タブ補完"
+
+#: ../../doc_src/interactive.rst:39
+msgid ""
+"Tab completion is a time saving feature of any modern shell. When you "
+"type :kbd:`tab`, fish tries to guess the rest of the word under the "
+"cursor. If it finds exactly one possibility, it inserts it. If it finds "
+"more, it inserts the longest unambiguous part and then opens a menu (the "
+"\"pager\") that you can navigate to find what you're looking for."
+msgstr ""
+"タブ補完は、現代的なシェルには欠かせない時間を節約するための機能です。 :kbd:`tab` を入力すると、fish "
+"はカーソル下の単語の残りを推測しようとします。候補が 1 "
+"つしかない場合は、それが挿入されます。候補が複数ある場合は、曖昧でない最長の部分を挿入した上で、目的のものを選べるメニュー(「ページャ」)を開きます。"
+
+#: ../../doc_src/interactive.rst:41
+msgid ""
+"The pager can be navigated with the arrow keys, :kbd:`pageup` / "
+":kbd:`pagedown`, :kbd:`tab` or :kbd:`shift-tab`. Pressing :kbd:`ctrl-s` "
+"(the ``pager-toggle-search`` binding - :kbd:`/` in vi mode) opens up a "
+"search menu that you can use to filter the list."
+msgstr ""
+"ページャ内は矢印キー、 :kbd:`pageup` / :kbd:`pagedown` 、 :kbd:`tab` 、または :kbd"
+":`shift-tab` で移動できます。 :kbd:`ctrl-s` ( ``pager-toggle-search`` のバインド。vi "
+"モードでは :kbd:`/` )を押すと検索メニューが開き、リストを絞り込むことができます。"
+
+#: ../../doc_src/interactive.rst:43
+msgid ""
+"Fish provides some general purpose completions, like for commands, "
+"variable names, usernames or files."
+msgstr "fish は、コマンド、変数名、ユーザー名、ファイル名など、いくつかの汎用的な補完機能を提供しています。"
+
+#: ../../doc_src/interactive.rst:45
+msgid ""
+"It also provides a large number of program specific scripted completions."
+" Most of these completions are simple options like the ``-l`` option for "
+"``ls``, but a lot are more advanced. For example:"
+msgstr ""
+"また、特定のプログラムに特化したスクリプト化された補完機能も数多く提供しています。その多くは ``ls`` の ``-l`` "
+"オプションのような単純なものですが、中にはより高度なものもあります。例えば以下のようなものです。"
+
+#: ../../doc_src/interactive.rst:47
+msgid "``man`` and ``whatis`` show the installed manual pages as completions."
+msgstr "``man`` や ``whatis`` では、インストールされているマニュアルページが補完候補として表示されます。"
+
+#: ../../doc_src/interactive.rst:49
+msgid ""
+"``make`` uses targets in the Makefile in the current directory as "
+"completions."
+msgstr "``make`` では、カレントディレクトリ内の Makefile にあるターゲットが補完候補として使用されます。"
+
+#: ../../doc_src/interactive.rst:51
+msgid "``mount`` uses mount points specified in fstab as completions."
+msgstr "``mount`` では、 fstab で指定されたマウントポイントが補完候補として使用されます。"
+
+#: ../../doc_src/interactive.rst:53
+msgid "``apt``, ``rpm`` and ``yum`` show installed or installable packages"
+msgstr "``apt`` 、 ``rpm`` 、 ``yum`` では、インストール済みまたはインストール可能なパッケージが表示されます。"
+
+#: ../../doc_src/interactive.rst:55
+msgid ""
+"You can also write your own completions or install some you got from "
+"someone else. For that, see :doc:`Writing your own completions "
+"<completions>`."
+msgstr ""
+"独自の補完を作成したり、他人が作成したものをインストールしたりすることもできます。これについては :doc:`Writing your own "
+"completions <completions>` を参照してください。"
+
+#: ../../doc_src/interactive.rst:57
+msgid ""
+"Completion scripts are loaded on demand, like :ref:`functions are "
+"<syntax-function-autoloading>`. The difference is the "
+"``$fish_complete_path`` :ref:`list <variables-lists>` is used instead of "
+"``$fish_function_path``. Typically you can drop new completions in "
+"~/.config/fish/completions/name-of-command.fish and fish will find them "
+"automatically."
+msgstr ""
+"補完スクリプトは、 :ref:`関数 <syntax-function-autoloading>` と同様にオンデマンドでロードされます。違いは、"
+" ``$fish_function_path`` の代わりに ``$fish_complete_path`` :ref:`リスト "
+"<variables-lists>` が使用される点です。通常、新しい補完設定を "
+"``~/.config/fish/completions/コマンド名.fish`` に配置すれば、 fish は自動的にそれを見つけ出します。"
+
+#: ../../doc_src/interactive.rst:62
+msgid "Syntax highlighting"
+msgstr "シンタックスハイライト"
+
+#: ../../doc_src/interactive.rst:64
+msgid ""
+"Fish interprets the command line as it is typed and uses syntax "
+"highlighting to provide feedback. The most important feedback is the "
+"detection of potential errors. By default, errors are marked red."
+msgstr ""
+"fish "
+"は入力されるコマンドラインを逐次解釈し、シンタックスハイライト(構文強調)によってフィードバックを行います。最も重要なフィードバックは潜在的なエラーの検出です。デフォルトでは、エラーは赤色で表示されます。"
+
+#: ../../doc_src/interactive.rst:66
+msgid "Detected errors include:"
+msgstr "検出されるエラーには以下のものが含まれます。"
+
+#: ../../doc_src/interactive.rst:68
+msgid "Non-existing commands."
+msgstr "存在しないコマンド。"
+
+#: ../../doc_src/interactive.rst:69
+msgid "Reading from or appending to a non-existing file."
+msgstr "存在しないファイルからの読み込み、または存在しないファイルへの追記。"
+
+#: ../../doc_src/interactive.rst:70
+msgid "Incorrect use of output redirects"
+msgstr "出力リダイレクトの誤った使用。"
+
+#: ../../doc_src/interactive.rst:71
+msgid "Mismatched parenthesis"
+msgstr "括弧の対応関係の不整合。"
+
+#: ../../doc_src/interactive.rst:73
+msgid ""
+"To customize the syntax highlighting, you can set the environment "
+"variables listed in the :ref:`Variables for changing highlighting colors "
+"<variables-color>` section."
+msgstr ""
+"シンタックスハイライトをカスタマイズするには、 :ref:`シンタックスハイライト変数 <variables-color>` "
+"セクションに記載されている環境変数を設定します。"
+
+#: ../../doc_src/interactive.rst:75
+msgid ""
+"Fish also provides pre-made color themes you can pick with "
+":doc:`fish_config <cmds/fish_config>`. Running just ``fish_config`` opens"
+" a browser interface, or you can use ``fish_config theme`` from fish::"
+msgstr ""
+"また、 fish は :doc:`fish_config <cmds/fish_config>` "
+"で選択できる作成済みのカラーテーマも提供しています。単に ``fish_config`` "
+"を実行するとブラウザベースのインターフェースが開きます。または、 fish から ``fish_config theme`` "
+"を使用することもできます。::"
+
+#: ../../doc_src/interactive.rst:83
+msgid "Or, to see all themes, right in your terminal::"
+msgstr "あるいは、ターミナル上で直接すべてのテーマを確認するには、以下のようにします。::"
+
+#: ../../doc_src/interactive.rst:89
+msgid ""
+"To update the theme of all shell sessions without restarting them, first "
+"have those sessions define an :ref:`event handler <event>` by adding the "
+"following to your :ref:`config.fish <configuration>` and restarting "
+"them::"
+msgstr ""
+"すべてのシェルセッションを再起動せずにテーマを更新するには、まず :ref:`config.fish <configuration>` "
+"に以下を追加して再起動し、各セッションで :ref:`イベントハンドラ <event>` を定義するようにします。::"
+
+#: ../../doc_src/interactive.rst:96
+msgid ""
+"Then, set the corresponding :ref:`universal variable <variables-"
+"universal>` from any session::"
+msgstr "その後、いずれかのセッションから対応する :ref:`ユニバーサル変数 <variables-universal>` を設定します。::"
+
+#: ../../doc_src/interactive.rst:104
+msgid "Syntax highlighting variables"
+msgstr "シンタックスハイライト変数"
+
+#: ../../doc_src/interactive.rst:106
+#, fuzzy
+msgid ""
+"The colors used by fish for syntax highlighting can be configured by "
+"changing the values of various variables. The value of these variables "
+"can be one of the colors accepted by the :doc:`set_color "
+"<cmds/set_color>` command. Options accepted by ``set_color`` like "
+"``--foreground=``, ``--background=``, ``--bold``, ``--dim``, "
+"``--italics``, ``--reverse``, ``--strikethrough``, ``--underline`` and "
+"``--underline-color=`` are also accepted."
+msgstr ""
+"fish がシンタックスハイライトに使用する色は、さまざまな変数の値を変更することで設定できます。これらの変数の値には、 "
+":doc:`set_color <cmds/set_color>` コマンドで受け入れられる色のいずれかを指定できます。また、 "
+"``set_color`` で使用できる ``--background=`` 、 ``--bold`` 、 ``--dim`` 、 "
+"``--italics`` 、 ``--reverse`` 、 ``--strikethrough`` 、 ``--underline`` 、 "
+"``--underline-color=`` などのオプションも受け付けられます。"
+
+#: ../../doc_src/interactive.rst:120
+msgid "Example: to make errors highlighted and red, use::"
+msgstr "例: エラーを強調(下線)し、かつ赤色にするには以下のようにします。::"
+
+#: ../../doc_src/interactive.rst:125
+msgid ""
+"The following variables are available to change the highlighting colors "
+"in fish:"
+msgstr "fish のハイライトカラーを変更するために、以下の変数が利用可能です。"
+
+#: ../../doc_src/interactive.rst:128 ../../doc_src/interactive.rst:185
+msgid "Variable"
+msgstr "変数"
+
+#: ../../doc_src/interactive.rst:128 ../../doc_src/interactive.rst:185
+msgid "Meaning"
+msgstr "意味"
+
+#: ../../doc_src/interactive.rst:130
+msgid "default color"
+msgstr "デフォルトの色"
+
+#: ../../doc_src/interactive.rst:131
+msgid "commands like echo"
+msgstr "echo などのコマンド"
+
+#: ../../doc_src/interactive.rst:132
+msgid "keywords like if - this falls back on the command color if unset"
+msgstr "if などのキーワード(未設定の場合はコマンドの色が適用されます)"
+
+#: ../../doc_src/interactive.rst:133
+msgid "quoted text like ``\"abc\"``"
+msgstr "``\"abc\"`` などの引用符で囲まれたテキスト"
+
+#: ../../doc_src/interactive.rst:134
+msgid "IO redirections like >/dev/null"
+msgstr ">/dev/null などの入出力リダイレクト"
+
+#: ../../doc_src/interactive.rst:135
+msgid "process separators like ``;`` and ``&``"
+msgstr "``;`` や ``&`` などのプロセス区切り文字"
+
+#: ../../doc_src/interactive.rst:136
+msgid "syntax errors"
+msgstr "構文エラー"
+
+#: ../../doc_src/interactive.rst:137
+msgid "ordinary command parameters"
+msgstr "通常のコマンド引数(パラメータ)"
+
+#: ../../doc_src/interactive.rst:138
+msgid "parameters and redirection targets that are filenames (if the file exists)"
+msgstr "引数やリダイレクト先のうち、ファイル名であるもの(ファイルが存在する場合)"
+
+#: ../../doc_src/interactive.rst:139
+msgid "options starting with \"-\", up to the first \"--\" parameter"
+msgstr "最初の \"--\" 引数より前にある、 \"-\" で始まるオプション"
+
+#: ../../doc_src/interactive.rst:140
+msgid "comments like '# important'"
+msgstr "'# important' などのコメント"
+
+#: ../../doc_src/interactive.rst:141
+msgid "selected text in vi visual mode"
+msgstr "vi ビジュアルモードで選択されたテキスト"
+
+#: ../../doc_src/interactive.rst:142
+msgid "parameter expansion operators like ``*`` and ``~``"
+msgstr "``*`` や ``~`` などのパラメータ展開演算子"
+
+#: ../../doc_src/interactive.rst:143
+msgid "character escapes like ``\\n`` and ``\\x70``"
+msgstr "``\\n`` や ``\\x70`` などのエスケープ文字"
+
+#: ../../doc_src/interactive.rst:144
+msgid "autosuggestions (the proposed rest of a command)"
+msgstr "自動提案(入力中のコマンドの後に続く提案内容)"
+
+#: ../../doc_src/interactive.rst:145
+msgid "the current working directory in the default prompt"
+msgstr "デフォルトプロンプトにおける現在の作業ディレクトリ"
+
+#: ../../doc_src/interactive.rst:146
+msgid "the current working directory in the default prompt for the root user"
+msgstr "ルートユーザー(root)時のデフォルトプロンプトにおける現在の作業ディレクトリ"
+
+#: ../../doc_src/interactive.rst:147
+msgid "the username in the default prompt"
+msgstr "デフォルトプロンプトにおけるユーザー名"
+
+#: ../../doc_src/interactive.rst:148
+msgid "the hostname in the default prompt"
+msgstr "デフォルトプロンプトにおけるホスト名"
+
+#: ../../doc_src/interactive.rst:149
+msgid "the hostname in the default prompt for remote sessions (like ssh)"
+msgstr "リモートセッション(ssh など)時のデフォルトプロンプトにおけるホスト名"
+
+#: ../../doc_src/interactive.rst:150
+msgid "the last command's nonzero exit code in the default prompt"
+msgstr "デフォルトプロンプトにおける、直前のコマンドが 0 以外(異常終了)だった際の終了コード"
+
+#: ../../doc_src/interactive.rst:151
+msgid "the '^C' indicator on a canceled command"
+msgstr "キャンセルされたコマンドに表示される '^C' インジケータ"
+
+#: ../../doc_src/interactive.rst:152
+msgid "history search matches and selected pager items (background only)"
+msgstr "履歴検索のヒット箇所およびページャで選択中のアイテム(背景色のみ)"
+
+#: ../../doc_src/interactive.rst:153
+msgid "the current position in the history for commands like ``dirh`` and ``cdh``"
+msgstr "``dirh`` や ``cdh`` などのコマンドにおける、履歴内の現在位置"
+
+#: ../../doc_src/interactive.rst:157
+msgid ""
+"If a variable isn't set or is empty after subtracting any "
+"``--theme=THEME`` options, fish usually tries ``$fish_color_normal``, "
+"except for:"
+msgstr ""
+"変数が設定されていない場合、または ``--theme=テーマ名`` オプションを除いた後に変数が空である場合、fish は通常 "
+"``$fish_color_normal`` の使用を試みますが、以下の例外があります。"
+
+#: ../../doc_src/interactive.rst:160
+msgid "``$fish_color_keyword``, where it tries ``$fish_color_command`` first."
+msgstr "``$fish_color_keyword`` : まず ``$fish_color_command`` を試します。"
+
+#: ../../doc_src/interactive.rst:161
+msgid "``$fish_color_option``, where it tries ``$fish_color_param`` first."
+msgstr "``$fish_color_option`` : まず ``$fish_color_param`` を試します。"
+
+#: ../../doc_src/interactive.rst:162
+msgid ""
+"For ``$fish_color_valid_path``, if that doesn't have a color, but only "
+"modifiers, it adds those to the color that would otherwise be used, like "
+"``$fish_color_param``. But if valid paths have a color, it uses that and "
+"adds in modifiers from the other color."
+msgstr ""
+"``$fish_color_valid_path`` については、色指定がなく修飾子(太字など)のみが指定されている場合、 "
+"``$fish_color_param`` "
+"などの本来適用されるべき色にそれらの修飾子を付加します。一方、有効なパスに色が設定されている場合は、その色を使用し、他の色設定から修飾子を継承します。"
+
+#: ../../doc_src/interactive.rst:166
+msgid "Pager color variables"
+msgstr "ページャの色変数"
+
+#: ../../doc_src/interactive.rst:168
+msgid ""
+"fish will sometimes present a list of choices in a table, called the "
+"pager."
+msgstr "fish は、選択肢のリストをテーブル形式で表示することがあります。これをページャと呼びます。"
+
+#: ../../doc_src/interactive.rst:170
+msgid "Example: to set the background of each pager row, use::"
+msgstr "例: ページャの各行の背景色を設定するには、以下のようにします。::"
+
+#: ../../doc_src/interactive.rst:174
+msgid "To have black text on alternating white and gray backgrounds::"
+msgstr "白とグレーの背景を交互に配置し、黒いテキストを表示する場合の例です。::"
+
+#: ../../doc_src/interactive.rst:182
+msgid "Variables affecting the pager colors:"
+msgstr "ページャの色に影響を与える変数: "
+
+#: ../../doc_src/interactive.rst:187
+msgid "the progress bar at the bottom left corner"
+msgstr "左下隅のプログレスバー"
+
+#: ../../doc_src/interactive.rst:188
+msgid "the background color of a line"
+msgstr "行の背景色"
+
+#: ../../doc_src/interactive.rst:189
+msgid "the prefix string, i.e. the string that is to be completed"
+msgstr "プレフィックス(接頭辞)文字列。すなわち、補完対象となっている入力済みの文字列"
+
+#: ../../doc_src/interactive.rst:190
+msgid "the completion itself, i.e. the proposed rest of the string"
+msgstr "補完内容そのもの。すなわち、提案された残りの文字列"
+
+#: ../../doc_src/interactive.rst:191
+msgid "the completion description"
+msgstr "補完内容の説明文"
+
+#: ../../doc_src/interactive.rst:192
+msgid "background of the selected completion"
+msgstr "選択されている補完候補の背景色"
+
+#: ../../doc_src/interactive.rst:193
+msgid "prefix of the selected completion"
+msgstr "選択されている補完候補のプレフィックス"
+
+#: ../../doc_src/interactive.rst:194
+msgid "suffix of the selected completion"
+msgstr "選択されている補完候補のサフィックス(接尾辞)"
+
+#: ../../doc_src/interactive.rst:195
+msgid "description of the selected completion"
+msgstr "選択されている補完候補の説明文"
+
+#: ../../doc_src/interactive.rst:196
+msgid "background of every second unselected completion"
+msgstr "選択されていない補完候補のうち、1行おき(偶数行)の背景色"
+
+#: ../../doc_src/interactive.rst:197
+msgid "prefix of every second unselected completion"
+msgstr "選択されていない補完候補のうち、1行おき(偶数行)のプレフィックス"
+
+#: ../../doc_src/interactive.rst:198
+msgid "suffix of every second unselected completion"
+msgstr "選択されていない補完候補のうち、1行おき(偶数行)のサフィックス"
+
+#: ../../doc_src/interactive.rst:199
+msgid "description of every second unselected completion"
+msgstr "選択されていない補完候補のうち、1行おき(偶数行)の説明文"
+
+#: ../../doc_src/interactive.rst:202
+msgid ""
+"When the secondary or selected variables aren't set or are empty, the "
+"normal variables are used, except for "
+"``$fish_pager_color_selected_background``, where the background of "
+"``$fish_color_search_match`` is tried first."
+msgstr ""
+"「セカンダリ(1行おき)」や「選択時(selected)」の変数が設定されていない、あるいは空である場合は、通常の変数が使用されます。ただし、 "
+"``$fish_pager_color_selected_background`` だけは例外で、まず "
+"``$fish_color_search_match`` の背景色が試されます。"
+
+#: ../../doc_src/interactive.rst:207
+msgid "Abbreviations"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:209
+msgid ""
+"To avoid needless typing, a frequently-run command like ``git checkout`` "
+"can be abbreviated to ``gco`` using the :doc:`abbr <cmds/abbr>` command."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:215
+msgid ""
+"After entering ``gco`` and pressing :kbd:`space` or :kbd:`enter`, a "
+"``gco`` in command position will turn into ``git checkout`` in the "
+"command line. If you want to use a literal ``gco`` sometimes, use :kbd"
+":`ctrl-space` [#]_."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:217
+msgid ""
+"Abbreviations are a lot more powerful than just replacing literal "
+"strings. For example you can make going up a number of directories easier"
+" with this::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:224
+msgid ""
+"Now, ``..`` transforms to ``cd ../``, while ``...`` turns into ``cd "
+"../../`` and ``....`` expands to ``cd ../../../``."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:226
+msgid ""
+"The advantage over aliases is that you can see the actual command before "
+"using it, add to it or change it, and the actual command will be stored "
+"in history."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:228
+msgid ""
+"Any binding that executes the ``expand-abbr`` or ``execute`` :doc:`bind "
+"function <cmds/bind>` will expand abbreviations. By default :kbd:`ctrl-"
+"space` is bound to just inserting a space."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:233
+msgid "Programmable prompt"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:235
+msgid ""
+"When it is fish's turn to ask for input (like after it started or the "
+"command ended), it will show a prompt. Often this looks something like::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:239
+msgid ""
+"This prompt is determined by running the :doc:`fish_prompt "
+"<cmds/fish_prompt>` and :doc:`fish_right_prompt <cmds/fish_right_prompt>`"
+" functions."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:241
+msgid ""
+"The output of the former is displayed on the left and the latter's output"
+" on the right side of the terminal. For :ref:`vi mode <vi-mode>`, the "
+"output of :doc:`fish_mode_prompt <cmds/fish_mode_prompt>` will be "
+"prepended on the left."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:244
+msgid ""
+"If :envvar:`fish_transient_prompt` is set to 1, fish will redraw the "
+"prompt with a ``--final-rendering`` argument before running a "
+"commandline, allowing you to change it before pushing it to the "
+"scrollback."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:246
+msgid ""
+"Fish ships with a few prompts which you can see with :doc:`fish_config "
+"<cmds/fish_config>`. If you run just ``fish_config`` it will open a web "
+"interface [#]_ where you'll be shown the prompts and can pick which one "
+"you want. ``fish_config prompt show`` will show you the prompts right in "
+"your terminal."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:248
+msgid ""
+"For example ``fish_config prompt choose disco`` will temporarily select "
+"the \"disco\" prompt. If you like it and decide to keep it, run "
+"``fish_config prompt save``."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:250
+msgid ""
+"You can also change these functions yourself by running ``funced "
+"fish_prompt`` and ``funcsave fish_prompt`` once you are happy with the "
+"result (or ``fish_right_prompt`` if you want to change that)."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:252
+msgid ""
+"The web interface runs purely locally on your computer and requires "
+"python to be installed."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:255
+msgid "Configurable greeting"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:257
+msgid ""
+"When it is started interactively, fish tries to run the "
+":doc:`fish_greeting <cmds/fish_greeting>` function. The default "
+"fish_greeting prints a simple message. You can change its text by "
+"changing the ``$fish_greeting`` variable, for instance using a "
+":ref:`universal variable <variables-universal>`::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:261
+msgid ""
+"or you can set it :ref:`globally <variables-scope>` in :ref:`config.fish "
+"<configuration>`::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:265
+msgid "or you can script it by changing the function::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:271
+msgid ""
+"save this in config.fish or :ref:`a function file <syntax-function-"
+"autoloading>`. You can also use :doc:`funced <cmds/funced>` and "
+":doc:`funcsave <cmds/funcsave>` to edit it easily."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:274
+msgid "Programmable title"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:276
+msgid ""
+"Most terminals allow setting the text displayed in the titlebar of the "
+"terminal window. Fish does this by running the :doc:`fish_title "
+"<cmds/fish_title>` function. It is executed before and after a command "
+"and the output is used as a titlebar message."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:280
+msgid ""
+"The :doc:`status current-command <cmds/status>` builtin will always "
+"return the name of the job to be put into the foreground (or ``fish`` if "
+"control is returning to the shell) when the :doc:`fish_title "
+"<cmds/fish_title>` function is called. The first argument will contain "
+"the most recently executed foreground command as a string."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:282
+msgid ""
+"The default title shows the hostname if connected via ssh, the currently "
+"running command (unless it is fish) and the current working directory. "
+"All of this is shortened to not make the tab too wide."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:284 ../../doc_src/interactive.rst:689
+msgid "Examples:"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:286
+msgid "To show the last command and working directory in the title::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:297
+msgid "Command line editor"
+msgstr "コマンドラインエディタ"
+
+#: ../../doc_src/interactive.rst:299
+msgid ""
+"The fish editor features copy and paste, a :ref:`searchable history "
+"<history-search>` and many editor functions that can be bound to special "
+"keyboard shortcuts."
+msgstr ""
+"fish のエディタは、コピー＆ペースト、 :ref:`検索可能な履歴 <history-search>` "
+"、および特別なキーボードショートカットに割り当て可能な多くのエディタ機能を備えています。"
+
+#: ../../doc_src/interactive.rst:301
+msgid ""
+"Like bash and other shells, fish includes two sets of keyboard shortcuts "
+"(or key bindings): one inspired by the Emacs text editor, and one by the "
+"vi text editor. The default editing mode is Emacs. You can switch to vi "
+"mode by running :doc:`fish_vi_key_bindings <cmds/fish_vi_key_bindings>` "
+"and switch back with :doc:`fish_default_key_bindings "
+"<cmds/fish_default_key_bindings>`. You can also make your own key "
+"bindings by creating a function and setting the ``fish_key_bindings`` "
+"variable to its name. For example::"
+msgstr ""
+"bash や他のシェルと同様に、fish には 2 種類のキーボードショートカット(キーバインド)が用意されています。一つは Emacs "
+"テキストエディタ、もう一つは vi テキストエディタにインスパイアされたものです。デフォルトの編集モードは Emacs です。 "
+":doc:`fish_vi_key_bindings <cmds/fish_vi_key_bindings>` を実行することで vi "
+"モードに切り替えられ、 :doc:`fish_default_key_bindings "
+"<cmds/fish_default_key_bindings>` で元に戻せます。また、関数を作成し、 "
+"``fish_key_bindings`` 変数にその関数名を設定することで、独自のキーバインドを作成することも可能です。例: ::"
+
+#: ../../doc_src/interactive.rst:313
+msgid ""
+"While the key bindings included with fish include many of the shortcuts "
+"popular from the respective text editors, they are not a complete "
+"implementation. They include a shortcut to open the current command line "
+"in your preferred editor (:kbd:`alt-e` by default) if you need the full "
+"power of your editor."
+msgstr ""
+"fish "
+"に含まれるキーバインドは、それぞれのテキストエディタで人気のあるショートカットを多く取り入れていますが、完全な実装ではありません。エディタの全機能が必要な場合のために、現在のコマンドラインをお好みのエディタで開くショートカット(デフォルトは"
+" :kbd:`alt-e` )が用意されています。"
+
+#: ../../doc_src/interactive.rst:318
+msgid "Shared bindings"
+msgstr "共通のバインド"
+
+#: ../../doc_src/interactive.rst:320
+msgid ""
+"Some bindings are common across Emacs and vi mode, because they aren't "
+"text editing bindings, or because what vi/Vim does for a particular key "
+"doesn't make sense for a shell."
+msgstr ""
+"一部のバインドは Emacs モードと vi モードで共通です。これは、それらがテキスト編集用のバインドではないため、あるいは特定のキーに対する "
+"vi/Vim の挙動がシェルには適さないためです。"
+
+#: ../../doc_src/interactive.rst:322
+msgid ""
+":kbd:`tab` :ref:`completes <tab-completion>` the current token. :kbd"
+":`shift-tab` completes the current token and starts the pager's search "
+"mode. :kbd:`tab` is the same as :kbd:`ctrl-i`."
+msgstr ""
+":kbd:`tab` は現在のトークンを :ref:`補完 <tab-completion>` します。 :kbd:`shift-tab` "
+"は現在のトークンを補完し、ページャの検索モードを開始します。 :kbd:`tab` は :kbd:`ctrl-i` と同じです。"
+
+#: ../../doc_src/interactive.rst:324
+msgid ""
+":kbd:`left` (``←``) and :kbd:`right` (``→``) move the cursor left or "
+"right by one character. If the cursor is already at the end of the line, "
+"and an autosuggestion is available, :kbd:`right` (``→``) accepts the "
+"autosuggestion."
+msgstr ""
+":kbd:`←` (左矢印)および :kbd:`→` (右矢印)は、カーソルを左右に 1 "
+"文字移動させます。カーソルがすでに末尾にあり、自動提案が表示されている場合、 :kbd:`→` を押すとその提案を確定(受け入れ)します。"
+
+#: ../../doc_src/interactive.rst:326
+msgid ""
+":kbd:`enter` executes the current commandline or inserts a newline if "
+"it's not complete yet (e.g. a ``)`` or ``end`` is missing)."
+msgstr ""
+":kbd:`enter` は現在のコマンドラインを実行します。内容が未完了の場合(例:  ``)`` や ``end`` "
+"が不足している場合)は改行を挿入します。"
+
+#: ../../doc_src/interactive.rst:328
+msgid ""
+":kbd:`alt-enter` inserts a newline at the cursor position. This is useful"
+" to add a line to a commandline that's already complete."
+msgstr ":kbd:`alt-enter` はカーソル位置に改行を挿入します。これは、すでに完結しているコマンドラインに新しい行を追加したい場合に便利です。"
+
+#: ../../doc_src/interactive.rst:330
+msgid ""
+":kbd:`alt-left` (``←``) and :kbd:`alt-right` (``→``) move the cursor left"
+" or right by one argument (or one word on macOS). If the command line is "
+"empty, they move forward/backward in the directory history. If the cursor"
+" is already at the end of the line, and an autosuggestion is available, "
+":kbd:`alt-right` (``→``) (or :kbd:`alt-f`) accepts the first argument (or"
+" word on macOS) in the suggestion."
+msgstr ""
+":kbd:`alt-←` および :kbd:`alt-→` は、カーソルを 1 引数(macOS では 1 "
+"単語)ずつ左右に移動させます。コマンドラインが空の場合、これらはディレクトリ履歴を前後に移動します。カーソルがすでに末尾にあり、自動提案が表示されている場合、"
+" :kbd:`alt-→` (または :kbd:`alt-f` )を押すと、提案の最初の引数(macOS では 1 単語)を確定します。"
+
+#: ../../doc_src/interactive.rst:334
+msgid ""
+":kbd:`ctrl-left` (``←``) and :kbd:`ctrl-right` (``→``) move the cursor "
+"left or right by one word. These accept one word of the autosuggestion - "
+"the part they'd move over."
+msgstr ""
+":kbd:`ctrl-←` および :kbd:`ctrl-→` は、カーソルを 1 "
+"単語ずつ左右に移動させます。自動提案がある場合、移動した範囲の単語を確定します。"
+
+#: ../../doc_src/interactive.rst:336
+msgid ""
+":kbd:`shift-left` (``←``) and :kbd:`shift-right` (``→``) move the cursor "
+"one word left or right, without stopping on punctuation. These accept one"
+" big word of the autosuggestion."
+msgstr ""
+":kbd:`shift-←` および :kbd:`shift-→` は、句読点で止まらずにカーソルを 1 "
+"単語(大きな単語単位)ずつ左右に移動させます。自動提案がある場合、その「大きな単語」を確定します。"
+
+#: ../../doc_src/interactive.rst:338
+msgid ""
+":kbd:`up` (``↑``) and :kbd:`down` (``↓``) (or :kbd:`ctrl-p` and "
+":kbd:`ctrl-n` for emacs aficionados) search the command history for the "
+"previous/next command containing the string that was specified on the "
+"commandline before the search was started. If the commandline was empty "
+"when the search started, all commands match. See the :ref:`history "
+"<history-search>` section for more information on history searching."
+msgstr ""
+":kbd:`↑` および :kbd:`↓` (Emacs 愛好家の方は :kbd:`ctrl-p` および :kbd:`ctrl-n` "
+")は、検索開始前にコマンドラインに入力されていた文字列を含むコマンドを、履歴から前後方向に検索します。検索開始時にコマンドラインが空だった場合は、すべてのコマンドが一致対象となります。詳細は"
+" :ref:`履歴 <history-search>` セクションを参照してください。"
+
+#: ../../doc_src/interactive.rst:340
+msgid ""
+":kbd:`alt-up` (``↑``) and :kbd:`alt-down` (``↓``) search the command "
+"history for the previous/next token containing the token under the cursor"
+" before the search was started. If the commandline was not on a token "
+"when the search started, all tokens match. See the :ref:`history "
+"<history-search>` section for more information on history searching."
+msgstr ""
+":kbd:`alt-↑` および :kbd:`alt-↓` "
+"は、検索開始前にカーソル下にあったトークンを含むものを、履歴から前後方向に検索します。開始時にカーソルがトークン上になかった場合は、すべてのトークンが一致対象となります。詳細は"
+" :ref:`履歴 <history-search>` セクションを参照してください。"
+
+#: ../../doc_src/interactive.rst:342
+msgid ":kbd:`ctrl-c` interrupts/kills whatever is running (SIGINT)."
+msgstr ":kbd:`ctrl-c` は実行中のプロセスを中断(終了)させます(SIGINT)。"
+
+#: ../../doc_src/interactive.rst:344
+msgid ""
+":kbd:`ctrl-d` deletes one character to the right of the cursor. If the "
+"command line is empty, :kbd:`ctrl-d` will exit fish."
+msgstr ""
+":kbd:`ctrl-d` はカーソルの右側の 1 文字を削除します。コマンドラインが空の状態で :kbd:`ctrl-d` を押すと、fish "
+"を終了します。"
+
+#: ../../doc_src/interactive.rst:346
+msgid ""
+":kbd:`ctrl-u` removes contents from the beginning of line to the cursor "
+"(moving it to the :ref:`killring <killring>`)."
+msgstr ""
+":kbd:`ctrl-u` は、行の先頭からカーソル位置までの内容を削除します(削除した内容は :ref:`キルリング <killring>` "
+"に移動します)。"
+
+#: ../../doc_src/interactive.rst:348
+msgid ""
+":kbd:`ctrl-l` pushes any text above the prompt to the terminal's "
+"scrollback, then clears and repaints the screen."
+msgstr ":kbd:`ctrl-l` は、プロンプトより上のテキストをターミナルのスクロールバックに押し出し、画面を消去して再描画します。"
+
+#: ../../doc_src/interactive.rst:351
+msgid ""
+":kbd:`ctrl-w` removes the previous path component (everything up to the "
+"previous \"/\", \":\" or \"@\") (moving it to the :ref:`killring`)."
+msgstr ""
+":kbd:`ctrl-w` は、直前のパスコンポーネント(直前の \"/\"、\":\"、\"@\"までのすべて)を削除します(削除した内容は "
+":ref:`killring` に移動します)。"
+
+#: ../../doc_src/interactive.rst:353
+msgid ""
+":kbd:`ctrl-x` copies the current buffer to the system's clipboard, "
+":kbd:`ctrl-v` inserts the clipboard contents. (see "
+":doc:`fish_clipboard_copy <cmds/fish_clipboard_copy>` and "
+":doc:`fish_clipboard_paste <cmds/fish_clipboard_paste>`)"
+msgstr ""
+":kbd:`ctrl-x` は現在のバッファをシステムのクリップボードにコピーし、 :kbd:`ctrl-v` "
+"はクリップボードの内容を挿入します。(:doc:`fish_clipboard_copy <cmds/fish_clipboard_copy>` "
+"および :doc:`fish_clipboard_paste <cmds/fish_clipboard_paste>` を参照してください)"
+
+#: ../../doc_src/interactive.rst:355
+msgid ":kbd:`alt-d` moves the next word to the :ref:`killring`."
+msgstr ":kbd:`alt-d` は次の単語を :ref:`killring` に移動(削除)します。"
+
+#: ../../doc_src/interactive.rst:357
+msgid ""
+":kbd:`ctrl-delete` moves the next word (or next argument on macOS) to the"
+" :ref:`killring`."
+msgstr ":kbd:`ctrl-delete` は次の単語(macOS では次の引数)を :ref:`killring` に移動します。"
+
+#: ../../doc_src/interactive.rst:359
+msgid ":kbd:`alt-d` lists the directory history if the command line is empty."
+msgstr ":kbd:`alt-d` は、コマンドラインが空の場合、ディレクトリ履歴を一覧表示します。"
+
+#: ../../doc_src/interactive.rst:361
+msgid ""
+":kbd:`alt-delete` moves the next argument (or word on macOS) to the "
+":ref:`killring`."
+msgstr ":kbd:`alt-delete` は次の引数(macOS では次の単語)を :ref:`killring` に移動します。"
+
+#: ../../doc_src/interactive.rst:363
+msgid ""
+":kbd:`shift-delete` removes the current history item or autosuggestion "
+"from the command history."
+msgstr ":kbd:`shift-delete` は、現在の履歴項目または自動提案をコマンド履歴から削除します。"
+
+#: ../../doc_src/interactive.rst:365
+msgid ""
+":kbd:`alt-h` (or :kbd:`f1`) shows the manual page for the current "
+"command, if one exists."
+msgstr ":kbd:`alt-h` (または :kbd:`f1` )は、現在のコマンドのマニュアルページが存在すれば表示します。"
+
+#: ../../doc_src/interactive.rst:367
+msgid ""
+":kbd:`alt-l` lists the contents of the current directory, unless the "
+"cursor is over a directory argument, in which case the contents of that "
+"directory will be listed."
+msgstr ""
+":kbd:`alt-l` "
+"はカレントディレクトリの内容を表示します。ただし、カーソルがディレクトリの引数上にある場合は、そのディレクトリの内容を表示します。"
+
+#: ../../doc_src/interactive.rst:371
+msgid ""
+":kbd:`alt-o` opens the file at the cursor in a pager. If the cursor is in"
+" command position and the command is a script, it will instead open that "
+"script in your editor. The editor is chosen from the first available of "
+"the ``$VISUAL`` or ``$EDITOR`` variables."
+msgstr ""
+":kbd:`alt-o` "
+"は、カーソル位置のファイルをページャで開きます。カーソルがコマンドの位置にあり、そのコマンドがスクリプトである場合は、代わりにエディタでそのスクリプトを開きます。エディタは"
+" ``$VISUAL`` 、 ``$EDITOR`` 変数のうち、最初に見つかったものが使用されます。"
+
+#: ../../doc_src/interactive.rst:373
+msgid ""
+":kbd:`alt-p` adds the string ``&| less;`` to the end of the job under the"
+" cursor. The result is that the output of the command will be paged. If "
+"you set the ``PAGER`` variable, its value is used instead of ``less``."
+msgstr ""
+":kbd:`alt-p` は、カーソル下のジョブの末尾に文字列 ``&| less;`` "
+"を追加します。これにより、コマンドの出力がページング(画面ごとに表示)されます。 ``PAGER`` 変数を設定している場合は、 ``less``"
+" の代わりにその値が使用されます。"
+
+#: ../../doc_src/interactive.rst:375
+msgid ":kbd:`alt-w` prints a short description of the command under the cursor."
+msgstr ":kbd:`alt-w` は、カーソル下のコマンドの短い説明を表示します。"
+
+#: ../../doc_src/interactive.rst:377
+msgid ""
+":kbd:`alt-e` edits the current command line in an external editor. The "
+"editor is chosen from the first available of the ``$VISUAL`` or "
+"``$EDITOR`` variables."
+msgstr ""
+":kbd:`alt-e` は、現在のコマンドラインを外部エディタで編集します。エディタは ``$VISUAL`` 、 ``$EDITOR`` "
+"変数のうち、最初に見つかったものが使用されます。"
+
+#: ../../doc_src/interactive.rst:379
+msgid ":kbd:`alt-v` Same as :kbd:`alt-e`."
+msgstr ":kbd:`alt-v` は :kbd:`alt-e` と同じです。"
+
+#: ../../doc_src/interactive.rst:381
+msgid ""
+":kbd:`alt-s` Prepends ``sudo`` to the current commandline. If the "
+"commandline is empty, prepend ``sudo`` to the last commandline. If "
+"``sudo`` is not installed, various similar commands are tried: ``doas``, "
+"``please``, and ``run0``."
+msgstr ""
+":kbd:`alt-s` は現在のコマンドラインの先頭に ``sudo`` を付与します。コマンドラインが空の場合は、直前のコマンドラインの先頭に"
+" ``sudo`` を付与します。 ``sudo`` がインストールされていない場合は、 ``doas`` 、 ``please`` 、 "
+"``run0`` といった類似のコマンドを順に試行します。"
+
+#: ../../doc_src/interactive.rst:383
+msgid ""
+":kbd:`ctrl-space` Inserts a space without expanding an :ref:`abbreviation"
+" <abbreviations>`. For vi mode, this only applies to insert-mode."
+msgstr ""
+":kbd:`ctrl-space` は、 :ref:`省略名(abbreviation) <abbreviations>` "
+"を展開せずにスペースを挿入します。 vi モードの場合、これは挿入モードにのみ適用されます。"
+
+#: ../../doc_src/interactive.rst:388
+msgid "Emacs mode commands"
+msgstr "Emacs モードのコマンド"
+
+#: ../../doc_src/interactive.rst:390
+msgid ""
+"To enable emacs mode, use :doc:`fish_default_key_bindings "
+"<cmds/fish_default_key_bindings>`. This is also the default."
+msgstr ""
+"Emacs モードを有効にするには、 :doc:`fish_default_key_bindings "
+"<cmds/fish_default_key_bindings>` を使用します。これは fish のデフォルト設定でもあります。"
+
+#: ../../doc_src/interactive.rst:392
+msgid ""
+":kbd:`home` or :kbd:`ctrl-a` moves the cursor to the beginning of the "
+"line."
+msgstr ":kbd:`home` 、 :kbd:`ctrl-a` は、カーソルを行の先頭に移動します。"
+
+#: ../../doc_src/interactive.rst:394
+msgid ""
+":kbd:`end` or :kbd:`ctrl-e` moves to the end of line. If the cursor is "
+"already at the end of the line, and an autosuggestion is available, "
+":kbd:`end` or :kbd:`ctrl-e` accepts the autosuggestion."
+msgstr ""
+":kbd:`end` 、 :kbd:`ctrl-e` は、行の末尾に移動します。カーソルがすでに末尾にあり、自動提案が表示されている場合、 "
+":kbd:`end` 、 :kbd:`ctrl-e` を押すとその提案を確定します。"
+
+#: ../../doc_src/interactive.rst:396
+msgid ""
+":kbd:`ctrl-b`, :kbd:`ctrl-f` move the cursor one character left or right "
+"or accept the autosuggestion just like the :kbd:`left` (``←``) and "
+":kbd:`right` (``→``) shared bindings (which are available as well)."
+msgstr ""
+":kbd:`ctrl-b` 、 :kbd:`ctrl-f` は、共通バインドの :kbd:`←` (左矢印)および :kbd:`→` "
+"(右矢印)と同様に、カーソルを左右に 1 文字移動させるか、自動提案を確定します。"
+
+#: ../../doc_src/interactive.rst:398
+msgid ""
+":kbd:`alt-b`, :kbd:`alt-f` move the cursor one word left or right, or "
+"accept one word of the autosuggestion. If the command line is empty, "
+"moves forward/backward in the directory history instead."
+msgstr ""
+":kbd:`alt-b` 、 :kbd:`alt-f` は、カーソルを左右に 1 単語移動させるか、自動提案の 1 "
+"単語分を確定します。コマンドラインが空の場合、代わりにディレクトリ履歴を前後に移動します。"
+
+#: ../../doc_src/interactive.rst:400
+msgid ""
+":kbd:`ctrl-n`, :kbd:`ctrl-p` move the cursor up/down or through history, "
+"like the up and down arrow shared bindings."
+msgstr ":kbd:`ctrl-n` 、 :kbd:`ctrl-p` は、共通バインドの上下矢印キーと同様に、カーソルを上下に移動させるか、履歴を辿ります。"
+
+#: ../../doc_src/interactive.rst:402
+msgid ""
+":kbd:`delete` or :kbd:`backspace` or :kbd:`ctrl-h` removes one character "
+"forwards or backwards respectively."
+msgstr ""
+":kbd:`delete` は前方の 1 文字を、 :kbd:`backspace` 、 :kbd:`ctrl-h` は後方の 1 "
+"文字を削除します。"
+
+#: ../../doc_src/interactive.rst:404
+msgid ""
+":kbd:`ctrl-backspace` removes one word backwards and :kbd:`alt-backspace`"
+" removes one argument backwards. On macOS, it's the other way round."
+msgstr ""
+":kbd:`ctrl-backspace` は後方の 1 単語を削除し、 :kbd:`alt-backspace` は後方の 1 "
+"引数を削除します。macOS では、この割り当てが逆になります。"
+
+#: ../../doc_src/interactive.rst:407
+msgid ""
+":kbd:`alt-<` moves to the beginning of the commandline, :kbd:`alt->` "
+"moves to the end."
+msgstr ":kbd:`alt-<` はコマンドラインの先頭へ、 :kbd:`alt->` は末尾へ移動します。"
+
+#: ../../doc_src/interactive.rst:409
+msgid ""
+":kbd:`ctrl-k` deletes from the cursor to the end of line (moving it to "
+"the :ref:`killring`)."
+msgstr ":kbd:`ctrl-k` は、カーソル位置から行末までを削除します(削除した内容は :ref:`killring` に移動します)。"
+
+#: ../../doc_src/interactive.rst:411
+msgid ""
+":kbd:`escape` and :kbd:`ctrl-g` cancel the current operation. Immediately"
+" after an unambiguous completion this undoes it."
+msgstr ""
+":kbd:`escape` および :kbd:`ctrl-g` "
+"は、現在の操作をキャンセルします。一意な補完が行われた直後に押すと、その補完を取り消します。"
+
+#: ../../doc_src/interactive.rst:413
+msgid ":kbd:`alt-c` capitalizes the current word."
+msgstr ":kbd:`alt-c` は、現在の単語の先頭を大文字にします(キャピタライズ)。"
+
+#: ../../doc_src/interactive.rst:415
+msgid ":kbd:`alt-u` makes the current word uppercase."
+msgstr ":kbd:`alt-u` は、現在の単語をすべて大文字にします。"
+
+#: ../../doc_src/interactive.rst:417
+msgid ":kbd:`ctrl-t` transposes the last two characters."
+msgstr ":kbd:`ctrl-t` は、直前の 2 文字を入れ替えます。"
+
+#: ../../doc_src/interactive.rst:419
+msgid ":kbd:`alt-t` transposes the last two words."
+msgstr ":kbd:`alt-t` は、直前の 2 単語を入れ替えます。"
+
+#: ../../doc_src/interactive.rst:421
+msgid ""
+":kbd:`ctrl-z`, :kbd:`ctrl-_` (:kbd:`ctrl-/` on some terminals) undo the "
+"most recent edit of the line."
+msgstr ""
+":kbd:`ctrl-z` 、 :kbd:`ctrl-_` (一部のターミナルでは :kbd:`ctrl-/` "
+")は、直前の編集操作を取り消します(アンドゥ)。"
+
+#: ../../doc_src/interactive.rst:423
+msgid ":kbd:`alt-/` or :kbd:`ctrl-shift-z` reverts the most recent undo."
+msgstr ":kbd:`alt-/` 、 :kbd:`ctrl-shift-z` は、直前のアンドゥをやり直します(リドゥ)。"
+
+#: ../../doc_src/interactive.rst:425
+msgid ""
+":kbd:`ctrl-r` opens the history in a pager. This will show history "
+"entries matching the search, a few at a time. Pressing :kbd:`ctrl-r` "
+"again will search older entries, pressing :kbd:`ctrl-s` (that otherwise "
+"toggles pager search) will go to newer entries. The search bar will "
+"always be selected."
+msgstr ""
+":kbd:`ctrl-r` は、履歴をページャで開きます。検索に一致する履歴項目が数件ずつ表示されます。再度 :kbd:`ctrl-r` "
+"を押すとより古い項目を検索し、 :kbd:`ctrl-s` "
+"(通常はページャ検索の切り替え)を押すとより新しい項目へと移動します。検索バーは常に選択された状態になります。"
+
+#: ../../doc_src/interactive.rst:428
+msgid ""
+"You can change these key bindings using the :doc:`bind <cmds/bind>` "
+"builtin."
+msgstr "これらのキーバインドは、組み込みの :doc:`bind <cmds/bind>` コマンドを使用して変更できます。"
+
+#: ../../doc_src/interactive.rst:434
+msgid "Vi mode commands"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:436
+msgid ""
+"Vi mode allows for the use of vi-like commands at the prompt. Initially, "
+":ref:`insert mode <vi-mode-insert>` is active. :kbd:`escape` enters "
+":ref:`command mode <vi-mode-command>`. The commands available in command,"
+" insert and visual mode are described below. Vi mode shares :ref:`some "
+"bindings <shared-binds>` with :ref:`Emacs mode <emacs-mode>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:438
+msgid ""
+"To enable vi mode, use :doc:`fish_vi_key_bindings "
+"<cmds/fish_vi_key_bindings>`. It is also possible to add all Emacs mode "
+"bindings to vi mode by using something like::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:454
+msgid ""
+"When in vi mode, the :doc:`fish_mode_prompt <cmds/fish_mode_prompt>` "
+"function will display a mode indicator to the left of the prompt. To "
+"disable this feature, override it with an empty function. To display the "
+"mode elsewhere (like in your right prompt), use the output of the "
+"``fish_default_mode_prompt`` function."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:456
+msgid ""
+"When a binding switches the mode, it will repaint the mode-prompt if it "
+"exists, and the rest of the prompt only if it doesn't. So if you want a "
+"mode-indicator in your ``fish_prompt``, you need to erase "
+"``fish_mode_prompt`` e.g. by adding an empty file at "
+"``~/.config/fish/functions/fish_mode_prompt.fish``. (Bindings that change"
+" the mode are supposed to call the `repaint-mode` bind function, see "
+":doc:`bind <cmds/bind>`)"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:458
+msgid ""
+"The ``fish_vi_cursor`` function will be used to change the cursor's shape"
+" depending on the mode in supported terminals. The following snippet can "
+"be used to manually configure cursors after enabling vi mode::"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:475
+msgid ""
+"Additionally, ``blink`` can be added after each of the cursor shape "
+"parameters to set a blinking cursor in the specified shape."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:477
+msgid ""
+"Fish knows the shapes \"block\", \"line\" and \"underscore\", other "
+"values will be ignored."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:479
+msgid ""
+"If the cursor shape does not appear to be changing after setting the "
+"above variables, it's likely your terminal emulator does not support the "
+"capabilities necessary to do this."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:484
+msgid "Command mode"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:486
+msgid "Command mode is also known as normal mode."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:488 ../../doc_src/interactive.rst:554
+msgid ":kbd:`h` moves the cursor left."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:490 ../../doc_src/interactive.rst:556
+msgid ":kbd:`l` moves the cursor right."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:492
+msgid ""
+":kbd:`k` and :kbd:`j` search the command history for the previous/next "
+"command containing the string that was specified on the commandline "
+"before the search was started. If the commandline was empty when the "
+"search started, all commands match. See the :ref:`history <history-"
+"search>` section for more information on history searching. In multi-line"
+" commands, they move the cursor up and down respectively."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:494
+msgid ""
+":kbd:`i` enters :ref:`insert mode <vi-mode-insert>` at the current cursor"
+" position."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:496
+msgid ""
+":kbd:`I` enters :ref:`insert mode <vi-mode-insert>` at the beginning of "
+"the line."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:498
+msgid ""
+":kbd:`v` enters :ref:`visual mode <vi-mode-visual>` at the current cursor"
+" position."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:500
+msgid ""
+":kbd:`a` enters :ref:`insert mode <vi-mode-insert>` after the current "
+"cursor position."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:502
+msgid ""
+":kbd:`A` enters :ref:`insert mode <vi-mode-insert>` at the end of the "
+"line."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:504
+msgid ""
+":kbd:`o` inserts a new line under the current one and enters :ref:`insert"
+" mode <vi-mode-insert>`"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:506
+msgid ""
+":kbd:`O` (capital-\"o\") inserts a new line above the current one and "
+"enters :ref:`insert mode <vi-mode-insert>`"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:508
+msgid ""
+":kbd:`0` (zero) moves the cursor to beginning of line (remaining in "
+"command mode)."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:510
+msgid ":kbd:`d,d` deletes the current line and moves it to the :ref:`killring`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:512
+msgid ""
+":kbd:`D` deletes text after the current cursor position and moves it to "
+"the :ref:`killring`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:514
+msgid ":kbd:`p` pastes text from the :ref:`killring`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:516
+msgid ":kbd:`u` undoes the most recent edit of the command line."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:518
+msgid ":kbd:`ctrl-r` redoes the most recent edit."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:520
+msgid ""
+":kbd:`[` and :kbd:`]` search the command history for the previous/next "
+"token containing the token under the cursor before the search was "
+"started. See the :ref:`history <history-search>` section for more "
+"information on history searching."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:522
+msgid ""
+":kbd:`/` opens the history in a pager. This will show history entries "
+"matching the search, a few at a time. Pressing it again will search older"
+" entries, pressing :kbd:`ctrl-s` (that otherwise toggles pager search) "
+"will go to newer entries. The search bar will always be selected."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:524
+msgid ":kbd:`backspace` moves the cursor left."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:526
+msgid ""
+":kbd:`g,g` / :kbd:`G` moves the cursor to the beginning/end of the "
+"commandline, respectively."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:528
+msgid ""
+":kbd:`~` toggles the case (upper/lower) of the character and moves to the"
+" next character."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:530
+msgid ":kbd:`g,u` lowercases to the end of the word."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:532
+msgid ":kbd:`g,U` uppercases to the end of the word."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:534
+msgid ":kbd:`:,q` exits fish."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:539
+msgid "Insert mode"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:541
+msgid ":kbd:`escape` enters :ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:543
+msgid ":kbd:`backspace` removes one character to the left."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:545
+msgid ":kbd:`ctrl-n` accepts the autosuggestion."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:550
+msgid "Visual mode"
+msgstr ""
+
+#: ../../doc_src/interactive.rst:552
+msgid ""
+":kbd:`left (``←``) and :kbd:`right`(``→``) extend the selection "
+"backward/forward by one character."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:558
+msgid ":kbd:`k` moves the cursor up."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:560
+msgid ":kbd:`j` moves the cursor down."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:562
+msgid ":kbd:`b` and :kbd:`w` extend the selection backward/forward by one word."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:564
+msgid ""
+":kbd:`d` and :kbd:`x` move the selection to the :ref:`killring` and enter"
+" :ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:566
+msgid ""
+":kbd:`escape` and :kbd:`ctrl-c` enter :ref:`command mode <vi-mode-"
+"command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:568
+msgid ":kbd:`c` and :kbd:`s` remove the selection and switch to insert mode."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:570
+msgid ""
+":kbd:`X` moves the entire line to the :ref:`killring`, and enters "
+":ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:572
+msgid ""
+":kbd:`y` copies the selection to the :ref:`killring`, and enters "
+":ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:574
+msgid ""
+":kbd:`~` toggles the case (upper/lower) on the selection, and enters "
+":ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:576
+msgid ""
+":kbd:`g,u` lowercases the selection, and enters :ref:`command mode <vi-"
+"mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:578
+msgid ""
+":kbd:`g,U` uppercases the selection, and enters :ref:`command mode <vi-"
+"mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:580
+msgid ""
+":kbd:`\",*,y` copies the selection to the clipboard, and enters "
+":ref:`command mode <vi-mode-command>`."
+msgstr ""
+
+#: ../../doc_src/interactive.rst:583
+msgid "Custom bindings"
+msgstr "カスタムバインド"
+
+#: ../../doc_src/interactive.rst:585
+msgid ""
+"In addition to the standard bindings listed here, you can also define "
+"your own with :doc:`bind <cmds/bind>`::"
+msgstr "ここに挙げた標準のバインドに加えて、 :doc:`bind <cmds/bind>` を使って独自のバインドを定義することもできます。::"
+
+#: ../../doc_src/interactive.rst:590
+msgid ""
+"Put ``bind`` statements into :ref:`config.fish <configuration>` or a "
+"function called ``fish_user_key_bindings``."
+msgstr ""
+"``bind`` 文は :ref:`config.fish <configuration>` か、 "
+"``fish_user_key_bindings`` という名前の関数の中に記述してください。"
+
+#: ../../doc_src/interactive.rst:592
+msgid ""
+"If you change your mind on a binding and want to go back to fish's "
+"default, you can erase it again::"
+msgstr "設定したバインドを変更したくなり、fish のデフォルトに戻したい場合は、その設定を消去できます。::"
+
+#: ../../doc_src/interactive.rst:596
+msgid ""
+"Fish remembers its preset bindings and so it will take effect again. This"
+" saves you from having to remember what it was before and add it again "
+"yourself."
+msgstr ""
+"fish "
+"はプリセットのバインドを記憶しているため、消去すると元の設定が再び有効になります。これにより、以前の設定が何だったかを覚えて自分で再設定する手間が省けます。"
+
+#: ../../doc_src/interactive.rst:598
+msgid ""
+"If you use :ref:`vi bindings <vi-mode>`, note that ``bind`` will by "
+"default bind keys in :ref:`command mode <vi-mode-command>`. To bind "
+"something in :ref:`insert mode <vi-mode-insert>`::"
+msgstr ""
+":ref:`vi バインド <vi-mode>` を使用している場合、 ``bind`` はデフォルトで "
+":ref:`ノーマルモード(コマンドモード) <vi-mode-command>` のキーをバインドすることに注意してください。 "
+":ref:`挿入モード <vi-mode-insert>` でバインドするには以下のようにします。::"
+
+#: ../../doc_src/interactive.rst:605
+msgid "Key sequences"
+msgstr "キーシーケンス"
+
+#: ../../doc_src/interactive.rst:607
+msgid ""
+"To find out the name of a key, you can use :doc:`fish_key_reader "
+"<cmds/fish_key_reader>`."
+msgstr "キーの名前を調べるには、 :doc:`fish_key_reader <cmds/fish_key_reader>` を使用できます。"
+
+#: ../../doc_src/interactive.rst:615
+msgid ""
+"Note that the historical way the terminal encodes keys and sends them to "
+"the application (fish, in this case) makes a lot of combinations "
+"indistinguishable or unbindable. In the usual encoding, :kbd:`ctrl-i` *is"
+" the same* as the tab key, and shift cannot be detected when ctrl is also"
+" pressed."
+msgstr ""
+"注意点として、ターミナルがキーをエンコードしてアプリケーション(この場合は "
+"fish)に送信する歴史的な仕組みのせいで、多くの組み合わせが区別できなかったり、バインドできなかったりします。通常のエンコーディングでは、 "
+":kbd:`ctrl-i` はタブキーと *同一* であり、 :kbd:`ctrl` が押されている間は :kbd:`shift` "
+"を検出できません。"
+
+#: ../../doc_src/interactive.rst:617
+msgid ""
+"There are more powerful encoding schemes, and fish tries to tell the "
+"terminal to turn them on, but there are still many terminals that do not "
+"support them. When ``fish_key_reader`` prints the same sequence for two "
+"different keys, then that is because your terminal sends the same "
+"sequence for them, and there isn't anything fish can do about it. It is "
+"our hope that these schemes will become more widespread, making input "
+"more flexible."
+msgstr ""
+"より強力なエンコーディング・スキームも存在し、fish "
+"はターミナルに対してそれらを有効にするよう試みますが、依然として未対応のターミナルも多く存在します。 ``fish_key_reader`` が "
+"2 つの異なるキーに対して同じシーケンスを表示する場合、それはターミナル側が同じシーケンスを送信しているためであり、fish "
+"側で対処できることはありません。これらのスキームが普及し、入力の柔軟性が高まることが期待されています。"
+
+#: ../../doc_src/interactive.rst:619
+msgid ""
+"In the historical scheme, :kbd:`escape` is the same thing as :kbd:`alt` "
+"in a terminal. To distinguish between pressing :kbd:`escape` and then "
+"another key, and pressing :kbd:`alt` and that key (or an escape sequence "
+"the key sends), fish waits for a certain time after seeing an escape "
+"character. This is configurable via the :envvar:`fish_escape_delay_ms` "
+"variable."
+msgstr ""
+"歴史的な仕組みでは、ターミナルにおいて :kbd:`escape` は :kbd:`alt` と同じ扱いになります。 :kbd:`escape` "
+"の後に別のキーを押した場合と、 :kbd:`alt` "
+"とそのキー(またはそのキーが送るエスケープシーケンス)を同時に押した場合を区別するため、fish "
+"はエスケープ文字を検知した後に一定時間待機します。この待機時間は :envvar:`fish_escape_delay_ms` "
+"変数で設定可能です。"
+
+#: ../../doc_src/interactive.rst:621
+msgid ""
+"If you want to be able to press :kbd:`escape` and then a character and "
+"have it count as :kbd:`alt`\\ +\\ that character, set it to a higher "
+"value, e.g.::"
+msgstr ""
+"もし :kbd:`escape` を押した後に別の文字を押し、それを :kbd:`alt` "
+"＋その文字として認識させたい場合は、以下のように高い値を設定してください。::"
+
+#: ../../doc_src/interactive.rst:625
+msgid ""
+"Similarly, to disambiguate *other* keypresses where you've bound a "
+"subsequence and a longer sequence, fish has "
+":envvar:`fish_sequence_key_delay_ms`::"
+msgstr ""
+"同様に、短いシーケンスとそれを含む長いシーケンスの両方をバインドしている場合の「他の」キー入力の曖昧さを解消するために、 "
+":envvar:`fish_sequence_key_delay_ms` が用意されています::"
+
+#: ../../doc_src/interactive.rst:639
+msgid "Copy and paste (Kill Ring)"
+msgstr "コピー＆ペースト(キルリング)"
+
+#: ../../doc_src/interactive.rst:641
+msgid ""
+"Fish uses an Emacs-style kill ring for copy and paste functionality. For "
+"example, use :kbd:`ctrl-k` (`kill-line`) to cut from the current cursor "
+"position to the end of the line. The string that is cut (a.k.a. killed in"
+" emacs-ese) is inserted into a list of kills, called the kill ring. To "
+"paste the latest value from the kill ring (emacs calls this \"yanking\") "
+"use :kbd:`ctrl-y` (the ``yank`` input function). After pasting, use "
+":kbd:`alt-y` (``yank-pop``) to rotate to the previous kill."
+msgstr ""
+"fish はコピー＆ペースト機能として、 Emacs スタイルの「キルリング」を使用します。例えば、 :kbd:`ctrl-k` ( `kill-"
+"line` )を使うと、現在のカーソル位置から行末までをカットできます。カットされた( Emacs "
+"用語で言うところの「キル(killed)」された)文字列は、キルリングと呼ばれるリストに挿入されます。キルリングから最新の値を貼り付ける( "
+"Emacs ではこれを「ヤンク(yanking)」と呼びます)には、 :kbd:`ctrl-y` ( ``yank`` "
+"入力関数)を使用します。貼り付けた直後に :kbd:`alt-y` ( ``yank-pop`` "
+")を押すと、一つ前のカット内容に順次切り替えることができます。"
+
+#: ../../doc_src/interactive.rst:643
+msgid ""
+"Copy and paste from outside are also supported, both via the "
+":kbd:`ctrl-x` / :kbd:`ctrl-v` bindings (the ``fish_clipboard_copy`` and "
+"``fish_clipboard_paste`` functions [#]_) and via the terminal's paste "
+"function, for which fish enables \"Bracketed Paste Mode\", so it can tell"
+" a paste from manually entered text. In addition, when pasting inside "
+"single quotes, pasted single quotes and backslashes are automatically "
+"escaped so that the result can be used as a single token by closing the "
+"quote after. Kill ring entries are stored in ``fish_killring`` variable."
+msgstr ""
+"外部とのコピー＆ペーストも、 :kbd:`ctrl-x` / :kbd:`ctrl-v` のバインド( "
+"``fish_clipboard_copy`` および ``fish_clipboard_paste`` 関数 [#]_ "
+")と、ターミナルの貼り付け機能の両方でサポートされています。ターミナル経由の場合、 fish は「ブラケット・ペースト・モード(Bracketed"
+" Paste "
+"Mode)」を有効にしているため、手入力されたテキストと貼り付けられたテキストを区別できます。さらに、シングルクォート内で貼り付けを行うと、貼り付けられた内容に含まれるシングルクォートやバックスラッシュが自動的にエスケープされます。これにより、貼り付け後にクォートを閉じるだけで、結果を一つのトークンとして扱うことができます。キルリングの内容は変数"
+" ``fish_killring`` に保存されます。"
+
+#: ../../doc_src/interactive.rst:647
+msgid ""
+"The commands ``begin-selection`` and ``end-selection`` (unbound by "
+"default; used for selection in vi visual mode) control text selection "
+"together with cursor movement commands that extend the current selection."
+" The variable :envvar:`fish_cursor_selection_mode` can be used to "
+"configure if that selection should include the character under the cursor"
+" (``inclusive``) or not (``exclusive``). The default is ``exclusive``, "
+"which works well with any cursor shape. For vi mode, and particularly for"
+" the ``block`` or ``underscore`` cursor shapes you may prefer "
+"``inclusive``."
+msgstr ""
+"``begin-selection`` と ``end-selection`` コマンド(デフォルトでは未バインド。 vi "
+"ビジュアルモードでの選択に使用されます)は、選択範囲を広げるカーソル移動コマンドと組み合わせてテキスト選択を制御します。変数 "
+":envvar:`fish_cursor_selection_mode` を使用して、選択範囲にカーソル下の文字を含めるか( "
+"``inclusive`` )、含めないか( ``exclusive`` )を設定できます。デフォルトは ``exclusive`` "
+"で、どのようなカーソル形状でもうまく機能します。 vi モード、特に ``block`` (ブロック型)や ``underscore`` "
+"(アンダースコア型)のカーソル形状を使用している場合は、 ``inclusive`` の方が好みに合うかもしれません。"
+
+#: ../../doc_src/interactive.rst:650
+msgid ""
+"These rely on external tools. Currently xsel, xclip, wl-copy/wl-paste and"
+" pbcopy/pbpaste are supported."
+msgstr ""
+"これらは外部ツールに依存しています。現在は xsel, xclip, wl-copy/wl-paste, pbcopy/pbpaste "
+"がサポートされています。"
+
+#: ../../doc_src/interactive.rst:655
+msgid "Multiline editing"
+msgstr "複数行編集"
+
+#: ../../doc_src/interactive.rst:657
+msgid ""
+"The fish commandline editor can be used to work on commands that are "
+"several lines long. There are three ways to make a command span more than"
+" a single line:"
+msgstr "fish のコマンドラインエディタでは、数行にわたる長いコマンドを扱うことができます。コマンドを複数行に分けるには、以下の 3 つの方法があります。"
+
+#: ../../doc_src/interactive.rst:659
+msgid ""
+"Pressing the :kbd:`enter` key while a block of commands is unclosed, such"
+" as when one or more block commands such as ``for``, ``begin`` or ``if`` "
+"do not have a corresponding :doc:`end <cmds/end>` command."
+msgstr ""
+"``for`` 、 ``begin`` 、 ``if`` などのブロックコマンドに対して、対応する :doc:`end <cmds/end>` "
+"コマンドが入力されず、ブロックが閉じられていない状態で :kbd:`enter` キーを押す。"
+
+#: ../../doc_src/interactive.rst:661
+msgid "Pressing :kbd:`alt-enter` instead of pressing the :kbd:`enter` key."
+msgstr ":kbd:`enter` キーの代わりに :kbd:`alt-enter` を押す。"
+
+#: ../../doc_src/interactive.rst:663
+msgid ""
+"By inserting a backslash (``\\``) character before pressing the "
+":kbd:`enter` key, escaping the newline."
+msgstr ":kbd:`enter` キーを押す前にバックスラッシュ( ``\\`` )を挿入して、改行をエスケープする。"
+
+#: ../../doc_src/interactive.rst:665
+msgid ""
+"The fish commandline editor works exactly the same in single line mode "
+"and in multiline mode. To move between lines use the left and right arrow"
+" keys and other such keyboard shortcuts."
+msgstr ""
+"fish "
+"のコマンドラインエディタは、単一行モードでも複数行モードでも全く同じように動作します。行間を移動するには、左右の矢印キーやその他のキーボードショートカットを使用します。"
+
+#: ../../doc_src/interactive.rst:670
+msgid "Searchable command history"
+msgstr "検索可能なコマンド履歴"
+
+#: ../../doc_src/interactive.rst:672
+msgid ""
+"After a command has been executed, it is remembered in the history list. "
+"Any duplicate history items are automatically removed. By pressing the up"
+" and down keys, you can search forwards and backwards in the history. If "
+"the current command line is not empty when starting a history search, "
+"only the commands containing the string entered into the command line are"
+" shown."
+msgstr "コマンドが実行されると、その内容は履歴リストに記憶されます。重複する履歴項目は自動的に削除されます。上下の矢印キーを押すことで、履歴を前後に検索できます。履歴検索を開始した際にコマンドラインが空でない場合、入力されている文字列を含むコマンドのみが表示されます。"
+
+#: ../../doc_src/interactive.rst:674
+msgid ""
+"By pressing :kbd:`alt-up` (``↑``) and :kbd:`alt-down` (``↓``), a history "
+"search is also performed, but instead of searching for a complete "
+"commandline, each commandline is broken into separate elements like it "
+"would be before execution, and the history is searched for an element "
+"matching that under the cursor."
+msgstr ""
+":kbd:`alt-↑` および :kbd:`alt-↓` "
+"を押すことでも履歴検索が行われますが、こちらはコマンドライン全体ではなく、実行前のように各要素に分割された単位で検索されます。具体的には、カーソル位置にある要素と一致するものを履歴から探し出します。"
+
+#: ../../doc_src/interactive.rst:676
+msgid ""
+"For more complicated searches, you can press :kbd:`ctrl-r` to open a "
+"pager that allows you to search the history. It shows a limited number of"
+" entries in one page, press :kbd:`ctrl-r` [#]_ again to move to the next "
+"page and :kbd:`ctrl-s` [#]_ to move to the previous page. You can change "
+"the text to refine your search."
+msgstr ""
+"より複雑な検索を行う場合は、 :kbd:`ctrl-r` を押して、履歴を検索できるページャを開くことができます。1 "
+"ページに表示される項目数は限られていますが、再度 :kbd:`ctrl-r` [#]_ を押すと次のページへ、 :kbd:`ctrl-s` "
+"[#]_ を押すと前のページへ移動します。テキストを入力して検索結果を絞り込むことも可能です。"
+
+#: ../../doc_src/interactive.rst:678
+msgid ""
+"History searches are case-insensitive unless the search string contains "
+"an uppercase character. You can stop a search to edit your search string "
+"by pressing :kbd:`escape` or :kbd:`pagedown`."
+msgstr ""
+"履歴検索は、検索文字列に大文字が含まれていない限り大文字小文字を区別しません。 :kbd:`escape` 、 :kbd:`pagedown` "
+"を押すと、検索を終了して検索文字列を編集できます。"
+
+#: ../../doc_src/interactive.rst:680
+msgid ""
+"Prefixing the commandline with a space will prevent the entire line from "
+"being stored in the history. It will still be available for recall until "
+"the next command is executed, but will not be stored on disk. This is to "
+"allow you to fix misspellings and such."
+msgstr "コマンドラインの先頭にスペースを入れると、その行全体が履歴に保存されなくなります。次のコマンドが実行されるまでは呼び出し可能ですが、ディスクには保存されません。これは、入力ミスを修正する場合などに便利です。"
+
+#: ../../doc_src/interactive.rst:682
+msgid ""
+"The command history is stored in the file "
+"``~/.local/share/fish/fish_history`` (or "
+"``$XDG_DATA_HOME/fish/fish_history`` if that variable is set) by default."
+" However, you can set the ``fish_history`` environment variable to change"
+" the name of the history session (resulting in a ``<session>_history`` "
+"file); both before starting the shell and while the shell is running."
+msgstr ""
+"デフォルトでは、コマンド履歴は ``~/.local/share/fish/fish_history`` (または "
+"``$XDG_DATA_HOME/fish/fish_history`` が設定されている場合はその場所)に保存されます。ただし、環境変数 "
+"``fish_history`` を設定することで、履歴セッションの名前( ``<セッション名>_history`` "
+"というファイルになります)を変更可能です。これはシェルの起動前でも実行中でも行えます。"
+
+#: ../../doc_src/interactive.rst:687
+msgid "See the :doc:`history <cmds/history>` command for other manipulations."
+msgstr "その他の操作については、 :doc:`history <cmds/history>` コマンドを参照してください。"
+
+#: ../../doc_src/interactive.rst:691
+msgid ""
+"To search for previous entries containing the word 'make', type ``make`` "
+"in the console and press the up key."
+msgstr "「make」という単語を含む過去の項目を検索するには、コンソールに ``make`` と入力して上矢印キーを押します。"
+
+#: ../../doc_src/interactive.rst:693
+msgid ""
+"If the commandline reads ``cd m``, place the cursor over the ``m`` "
+"character and press :kbd:`alt-up` (``↑``) to search for previously typed "
+"words containing 'm'."
+msgstr ""
+"コマンドラインが ``cd m`` となっている場合、 ``m`` の文字の上にカーソルを置いて :kbd:`alt-↑` "
+"を押すと、「m」を含む過去に入力された単語を検索します。"
+
+#: ../../doc_src/interactive.rst:695
+msgid ""
+"Or another binding that triggers the ``history-pager`` input function. "
+"See :doc:`bind <cmds/bind>` for a list."
+msgstr ""
+"または、 ``history-pager`` 入力関数をトリガーする別のバインド。一覧については :doc:`bind <cmds/bind>` "
+"を参照してください。"
+
+#: ../../doc_src/interactive.rst:696
+msgid ""
+"Or another binding that triggers the ``pager-toggle-search`` input "
+"function."
+msgstr "または、 ``pager-toggle-search`` 入力関数をトリガーする別のバインド。"
+
+#: ../../doc_src/interactive.rst:701
+msgid "Private mode"
+msgstr "プライベートモード"
+
+#: ../../doc_src/interactive.rst:703
+msgid ""
+"Fish has a private mode, in which command history will not be written to "
+"the history file on disk. To enable it, either set ``$fish_private_mode``"
+" to a non-empty value, or launch with ``fish --private`` (or ``fish -P`` "
+"for short)."
+msgstr ""
+"fish には、コマンド履歴をディスク上の履歴ファイルに書き込まない「プライベートモード」があります。このモードを有効にするには、 "
+"``$fish_private_mode`` に空でない値を設定するか、 ``fish --private`` (短縮形は ``fish -P``"
+" )で起動します。"
+
+#: ../../doc_src/interactive.rst:705
+msgid ""
+"If you launch fish with ``-P``, it both hides old history and prevents "
+"writing history to disk. This is useful to avoid leaking personal "
+"information (e.g. for screencasts) or when dealing with sensitive "
+"information."
+msgstr ""
+"``-P`` "
+"オプションで起動すると、過去の履歴を非表示にするだけでなく、新たな履歴がディスクに書き込まれるのも防ぎます。これは(スクリーンキャストなどで)個人情報の漏洩を防ぎたい場合や、機密情報を扱う際に便利です。"
+
+#: ../../doc_src/interactive.rst:707
+msgid ""
+"You can query the variable ``fish_private_mode`` (``if test -n "
+"\"$fish_private_mode\" ...``) if you would like to respect the user's "
+"wish for privacy and alter the behavior of your own fish scripts."
+msgstr ""
+"独自の fish スクリプトを作成する際、ユーザーのプライバシーへの配慮として挙動を変更したい場合は、 ``fish_private_mode``"
+" 変数を確認( ``if test -n \"$fish_private_mode\" ...`` )することができます。"
+
+#: ../../doc_src/interactive.rst:710
+msgid "Navigating directories"
+msgstr "ディレクトリの移動"
+
+#: ../../doc_src/interactive.rst:714
+msgid ""
+"Navigating directories is usually done with the :doc:`cd <cmds/cd>` "
+"command, but fish offers some advanced features as well."
+msgstr "ディレクトリの移動は通常 :doc:`cd <cmds/cd>` コマンドで行いますが、fish はいくつかの高度な機能も提供しています。"
+
+#: ../../doc_src/interactive.rst:716
+msgid ""
+"The current working directory can be displayed with the :doc:`pwd "
+"<cmds/pwd>` command, or the ``$PWD`` :ref:`special variable <variables-"
+"special>`. Usually your prompt already does this."
+msgstr ""
+"現在の作業ディレクトリは :doc:`pwd <cmds/pwd>` コマンド、または ``$PWD`` :ref:`特殊変数 "
+"<variables-special>` で表示できます。通常、プロンプトにすでに表示されています。"
+
+#: ../../doc_src/interactive.rst:719
+msgid "Directory history"
+msgstr "ディレクトリ履歴"
+
+#: ../../doc_src/interactive.rst:721
+msgid ""
+"Fish automatically keeps a trail of the recent visited directories with "
+":doc:`cd <cmds/cd>` by storing this history in the ``dirprev`` and "
+"``dirnext`` variables."
+msgstr ""
+"fish は :doc:`cd <cmds/cd>` で訪れた最近のディレクトリの軌跡を自動的に保持しており、その履歴を ``dirprev`` "
+"および ``dirnext`` 変数に保存しています。"
+
+#: ../../doc_src/interactive.rst:723
+msgid "Several commands are provided to interact with this directory history:"
+msgstr "このディレクトリ履歴を操作するために、いくつかのコマンドが用意されています。"
+
+#: ../../doc_src/interactive.rst:725
+msgid ":doc:`dirh <cmds/dirh>` prints the history"
+msgstr ":doc:`dirh <cmds/dirh>` : 履歴を一覧表示します。"
+
+#: ../../doc_src/interactive.rst:726
+msgid ":doc:`cdh <cmds/cdh>` displays a prompt to quickly navigate the history"
+msgstr ":doc:`cdh <cmds/cdh>` : 履歴内を素早く移動するためのプロンプトを表示します。"
+
+#: ../../doc_src/interactive.rst:727
+msgid ""
+":doc:`prevd <cmds/prevd>` moves backward through the history. It is bound"
+" to :kbd:`alt-left` (``←``)"
+msgstr ""
+":doc:`prevd <cmds/prevd>` : 履歴を一つ戻ります。 :kbd:`alt-left` (``←``) "
+"にバインドされています。"
+
+#: ../../doc_src/interactive.rst:728
+msgid ""
+":doc:`nextd <cmds/nextd>` moves forward through the history. It is bound "
+"to :kbd:`alt-right` (``→``)"
+msgstr ""
+":doc:`nextd <cmds/nextd>` : 履歴を一つ進みます。 :kbd:`alt-right` "
+"(``→``)にバインドされています。"
+
+#: ../../doc_src/interactive.rst:733
+msgid "Directory stack"
+msgstr "ディレクトリスタック"
+
+#: ../../doc_src/interactive.rst:735
+msgid ""
+"Another set of commands, usually also available in other shells like "
+"bash, deal with the directory stack. Stack handling is not automatic and "
+"needs explicit calls of the following commands:"
+msgstr ""
+"bash "
+"などの他のシェルでも一般的に利用できる、ディレクトリスタックを扱うコマンド群もあります。スタックの操作は自動ではなく、以下のコマンドを明示的に呼び出す必要があります。"
+
+#: ../../doc_src/interactive.rst:737
+msgid ":doc:`dirs <cmds/dirs>` prints the stack"
+msgstr ":doc:`dirs <cmds/dirs>` : スタックの内容を表示します。"
+
+#: ../../doc_src/interactive.rst:738
+msgid ""
+":doc:`pushd <cmds/pushd>` adds a directory on top of the stack and makes "
+"it the current working directory"
+msgstr ":doc:`pushd <cmds/pushd>` : ディレクトリをスタックの最上部に追加し、そこを現在の作業ディレクトリにします。"
+
+#: ../../doc_src/interactive.rst:739
+msgid ""
+":doc:`popd <cmds/popd>` removes the directory on top of the stack and "
+"changes the current working directory"
+msgstr ":doc:`popd <cmds/popd>` : スタックの最上部にあるディレクトリを取り除き、現在の作業ディレクトリを変更します。"
+

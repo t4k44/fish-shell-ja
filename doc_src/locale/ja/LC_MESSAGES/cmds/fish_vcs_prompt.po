@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-01 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:2
+msgid ""
+"fish_vcs_prompt - output version control system information for use in a "
+"prompt"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:5
+msgid "Synopsis"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:18
+msgid "Description"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:20
+msgid ""
+"The ``fish_vcs_prompt`` function displays information about the current "
+"version control system (VCS) repository, if any."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:22
+msgid ""
+"It calls out to VCS-specific functions. The currently supported systems "
+"are:"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:24
+msgid ":doc:`fish_git_prompt <fish_git_prompt>`"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:25
+msgid ":doc:`fish_hg_prompt <fish_hg_prompt>`"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:26
+msgid ":doc:`fish_svn_prompt <fish_svn_prompt>`"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:28
+msgid "If a VCS isn't installed, the respective function does nothing."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:30
+msgid ""
+"The Subversion prompt is disabled by default, because it's slow on large "
+"repositories. To enable it, modify ``fish_vcs_prompt`` to uncomment it. "
+"See :doc:`funced <funced>`."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:32
+msgid ""
+"For more information, see the documentation for each of the functions "
+"above."
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:35
+msgid "Example"
+msgstr ""
+
+#: ../../doc_src/cmds/fish_vcs_prompt.rst:37
+msgid "A simple prompt that displays all known VCS info::"
+msgstr ""
+

@@ -1,0 +1,940 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/terminal-compatibility.rst:2
+msgid "Terminal Compatibility"
+msgstr "ターミナルとの互換性"
+
+#: ../../doc_src/terminal-compatibility.rst:4
+msgid ""
+"fish writes various control sequences to the terminal. Some must be "
+"implemented to enable basic functionality, while others enable optional "
+"features and may be ignored by the terminal."
+msgstr ""
+"fish "
+"はターミナルに対してさまざまな制御シーケンスを書き込みます。基本的な機能を有効にするために実装が必須なものもあれば、オプション機能を有効にするためのもので、ターミナル側で無視されてもよいものもあります。"
+
+#: ../../doc_src/terminal-compatibility.rst:8
+msgid ""
+"The terminal must be able to parse Control Sequence Introducer (CSI) "
+"commands, Operating System Commands (OSC) and :ref:`optionally <term-"
+"compat-dcs-gnu-screen>` Device Control Strings (DCS). These are defined "
+"by ECMA-48. If a valid CSI, OSC or DCS sequence does not represent a "
+"command implemented by the terminal, the terminal must ignore it. For "
+"historical reasons, OSC sequences may be terminated with ``\\x07`` "
+"instead of ``\\e\\\\``."
+msgstr ""
+"ターミナルは、Control Sequence Introducer (CSI) コマンド、Operating System Commands "
+"(OSC)、および :ref:`オプションで <term-compat-dcs-gnu-screen>` Device Control "
+"Strings (DCS) を解析できる必要があります。これらは ECMA-48 で定義されています。有効な CSI、OSC、または DCS "
+"シーケンスであっても、ターミナルに実装されていないコマンドを表す場合は、ターミナルはそれを無視しなければなりません。歴史的な理由により、OSC "
+"シーケンスは ``\\e\\\\`` の代わりに ``\\x07`` で終了する場合があります。"
+
+#: ../../doc_src/terminal-compatibility.rst:13
+msgid ""
+"Control sequences are denoted in a fish-like syntax. Special characters "
+"other than ``\\`` are not escaped. Spaces are only added for readability "
+"and are not part of the sequence. Placeholders are written as ``Ps`` for "
+"a number or ``Pt`` for an arbitrary printable string."
+msgstr ""
+"制御シーケンスは fish 風の構文で記述されています。 ``\\`` "
+"以外の特殊文字はエスケープされません。スペースは可読性のために追加されているだけで、シーケンスの一部ではありません。プレースホルダーは、数値の場合は"
+" ``Ps`` 、任意の表示可能文字列の場合は ``Pt`` と表記されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:18
+msgid ""
+"**NOTE:** fish does not rely on your system's terminfo database. In this "
+"document, terminfo (TI) codes are included for reference only."
+msgstr ""
+"**注意:** fish はシステムの terminfo データベースに依存しません。このドキュメントに含まれる terminfo (TI) "
+"コードは、参照用としてのみ記載されています。"
+
+#: ../../doc_src/terminal-compatibility.rst:22
+msgid "Required Commands"
+msgstr "必須コマンド"
+
+#: ../../doc_src/terminal-compatibility.rst:28
+#: ../../doc_src/terminal-compatibility.rst:85
+msgid "Sequence"
+msgstr "シーケンス"
+
+#: ../../doc_src/terminal-compatibility.rst:29
+#: ../../doc_src/terminal-compatibility.rst:86
+msgid "TI"
+msgstr "TI"
+
+#: ../../doc_src/terminal-compatibility.rst:30
+#: ../../doc_src/terminal-compatibility.rst:87
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/terminal-compatibility.rst:31
+msgid "``\\r``"
+msgstr "``\\r``"
+
+#: ../../doc_src/terminal-compatibility.rst:32
+#: ../../doc_src/terminal-compatibility.rst:70
+#: ../../doc_src/terminal-compatibility.rst:73
+#: ../../doc_src/terminal-compatibility.rst:178
+#: ../../doc_src/terminal-compatibility.rst:183
+#: ../../doc_src/terminal-compatibility.rst:203
+#: ../../doc_src/terminal-compatibility.rst:210
+#: ../../doc_src/terminal-compatibility.rst:213
+#: ../../doc_src/terminal-compatibility.rst:216
+#: ../../doc_src/terminal-compatibility.rst:219
+#: ../../doc_src/terminal-compatibility.rst:257
+msgid "n/a"
+msgstr "なし"
+
+#: ../../doc_src/terminal-compatibility.rst:33
+msgid "Move cursor to the beginning of the line"
+msgstr "カーソルを行頭へ移動する"
+
+#: ../../doc_src/terminal-compatibility.rst:34
+msgid "``\\n``"
+msgstr "``\\n``"
+
+#: ../../doc_src/terminal-compatibility.rst:35
+msgid "cud1"
+msgstr "cud1"
+
+#: ../../doc_src/terminal-compatibility.rst:36
+msgid "Move cursor down one line."
+msgstr "カーソルを 1 行下へ移動する。"
+
+#: ../../doc_src/terminal-compatibility.rst:37
+msgid "``\\e[ Ps A``"
+msgstr "``\\e[ Ps A``"
+
+#: ../../doc_src/terminal-compatibility.rst:38
+msgid "cuu"
+msgstr "cuu"
+
+#: ../../doc_src/terminal-compatibility.rst:39
+msgid "Move cursor up Ps columns, or one column if no parameter."
+msgstr "カーソルを Ps 行上へ移動する(パラメータがない場合は 1 行)。"
+
+#: ../../doc_src/terminal-compatibility.rst:40
+msgid "``\\e[ Ps C``"
+msgstr "``\\e[ Ps C``"
+
+#: ../../doc_src/terminal-compatibility.rst:41
+msgid "cuf"
+msgstr "cuf"
+
+#: ../../doc_src/terminal-compatibility.rst:42
+msgid "Move cursor to the right Ps columns, or one column if no parameter."
+msgstr "カーソルを Ps 列右へ移動する(パラメータがない場合は 1 列)。"
+
+#: ../../doc_src/terminal-compatibility.rst:43
+msgid "``\\x08``"
+msgstr "``\\x08``"
+
+#: ../../doc_src/terminal-compatibility.rst:44
+msgid "cub1"
+msgstr "cub1"
+
+#: ../../doc_src/terminal-compatibility.rst:45
+msgid "Move cursor one column to the left."
+msgstr "カーソルを 1 列左へ移動する。"
+
+#: ../../doc_src/terminal-compatibility.rst:46
+msgid "``\\e[ Ps D``"
+msgstr "``\\e[ Ps D``"
+
+#: ../../doc_src/terminal-compatibility.rst:47
+msgid "cub"
+msgstr "cub"
+
+#: ../../doc_src/terminal-compatibility.rst:48
+msgid "Move cursor to the left Ps times."
+msgstr "カーソルを Ps 回左へ移動する。"
+
+#: ../../doc_src/terminal-compatibility.rst:49
+msgid "``\\e[H``"
+msgstr "``\\e[H``"
+
+#: ../../doc_src/terminal-compatibility.rst:50
+msgid "cup"
+msgstr "cup"
+
+#: ../../doc_src/terminal-compatibility.rst:51
+msgid "Set cursor position (no parameters means: move to row 1, column 1)."
+msgstr "カーソル位置を設定する(パラメータがない場合は 1 行 1 列へ移動)。"
+
+#: ../../doc_src/terminal-compatibility.rst:52
+msgid "``\\e[K``"
+msgstr "``\\e[K``"
+
+#: ../../doc_src/terminal-compatibility.rst:53
+msgid "el"
+msgstr "el"
+
+#: ../../doc_src/terminal-compatibility.rst:54
+msgid "Clear to end of line."
+msgstr "行末までを消去する。"
+
+#: ../../doc_src/terminal-compatibility.rst:55
+msgid "``\\e[J``"
+msgstr "``\\e[J``"
+
+#: ../../doc_src/terminal-compatibility.rst:56
+msgid "ed"
+msgstr "ed"
+
+#: ../../doc_src/terminal-compatibility.rst:57
+msgid "Clear to the end of screen."
+msgstr "画面末尾までを消去する。"
+
+#: ../../doc_src/terminal-compatibility.rst:58
+msgid "``\\e[2J``"
+msgstr "``\\e[2J``"
+
+#: ../../doc_src/terminal-compatibility.rst:59
+msgid "clear"
+msgstr "clear"
+
+#: ../../doc_src/terminal-compatibility.rst:60
+msgid "Clear the screen."
+msgstr "画面全体を消去する。"
+
+#: ../../doc_src/terminal-compatibility.rst:63
+msgid "``\\e[0c``"
+msgstr "``\\e[0c``"
+
+#: ../../doc_src/terminal-compatibility.rst:65
+msgid ""
+"Request Primary Device Attribute. The terminal must respond with a CSI "
+"command that starts with the ``?`` parameter byte (so a sequence starting"
+" with ``\\e[?``) and has ``c`` as final byte."
+msgstr ""
+"プライマリ・デバイス属性(Primary Device Attribute)をリクエストします。ターミナルは、 ``?`` "
+"パラメータバイトで始まり(つまり ``\\e[?`` で始まるシーケンス)、末尾のバイトが ``c`` である CSI "
+"コマンドを返さなければなりません。"
+
+#: ../../doc_src/terminal-compatibility.rst:68
+msgid ""
+"Failure to implement this will cause a brief pause at startup followed by"
+" a warning. For the time being, both can be turned off by turning off the"
+" ``query-terminal`` :ref:`feature flag <featureflags>`."
+msgstr ""
+"これが実装されていない場合、起動時にわずかな一時停止が発生し、その後に警告が表示されます。当面の間、これらはいずれも ``query-"
+"terminal`` :ref:`機能フラグ(feature flag) <featureflags>` をオフにすることで無効化できます。"
+
+#: ../../doc_src/terminal-compatibility.rst:71
+msgid "am"
+msgstr "am"
+
+#: ../../doc_src/terminal-compatibility.rst:72
+msgid "Soft wrap text at screen width."
+msgstr "画面幅に合わせてテキストを自動的に折り返す(ソフトラップ)。"
+
+#: ../../doc_src/terminal-compatibility.rst:74
+msgid "xenl"
+msgstr "xenl"
+
+#: ../../doc_src/terminal-compatibility.rst:75
+msgid ""
+"Printing to the last column does not move the cursor to the next line. "
+"Verify this by running ``printf %0\"$COLUMNS\"d 0; sleep 3``"
+msgstr ""
+"最終列に文字を出力しても、カーソルが次の行へ移動しません。 ``printf %0\"$COLUMNS\"d 0; sleep 3`` "
+"を実行することでこれを確認できます。"
+
+#: ../../doc_src/terminal-compatibility.rst:79
+msgid "Optional Commands"
+msgstr "オプションのコマンド"
+
+#: ../../doc_src/terminal-compatibility.rst:88
+msgid "``\\t``"
+msgstr "``\\t``"
+
+#: ../../doc_src/terminal-compatibility.rst:89
+msgid "it"
+msgstr "it"
+
+#: ../../doc_src/terminal-compatibility.rst:90
+msgid ""
+"Move the cursor to the next tab stop (à 8 columns). This is mainly "
+"relevant if your prompt includes tabs."
+msgstr "カーソルを次のタブストップ(8 列ごと)へ移動します。これは主に、プロンプトにタブが含まれている場合に関係します。"
+
+#: ../../doc_src/terminal-compatibility.rst:93
+msgid "``\\e[m``"
+msgstr "``\\e[m``"
+
+#: ../../doc_src/terminal-compatibility.rst:94
+msgid "sgr0"
+msgstr "sgr0"
+
+#: ../../doc_src/terminal-compatibility.rst:95
+msgid ""
+"Turn off bold/dim/italic/underline/strikethrough/reverse attribute modes "
+"and select default colors."
+msgstr "太字、薄字、イタリック、下線、打ち消し線、反転といった属性モードをオフにし、デフォルトの色を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:96
+msgid "``\\e[1m``"
+msgstr "``\\e[1m``"
+
+#: ../../doc_src/terminal-compatibility.rst:97
+msgid "bold"
+msgstr "bold"
+
+#: ../../doc_src/terminal-compatibility.rst:98
+msgid "Enter bold mode."
+msgstr "太字モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:99
+msgid "``\\e[2m``"
+msgstr "``\\e[2m``"
+
+#: ../../doc_src/terminal-compatibility.rst:100
+msgid "dim"
+msgstr "dim"
+
+#: ../../doc_src/terminal-compatibility.rst:101
+msgid "Enter dim mode."
+msgstr "薄暗い(dim)モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:102
+msgid "``\\e[3m``"
+msgstr "``\\e[3m``"
+
+#: ../../doc_src/terminal-compatibility.rst:103
+msgid "sitm"
+msgstr "sitm"
+
+#: ../../doc_src/terminal-compatibility.rst:104
+msgid "Enter italic mode."
+msgstr "イタリック(斜体)モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:105
+msgid "``\\e[4m``"
+msgstr "``\\e[4m``"
+
+#: ../../doc_src/terminal-compatibility.rst:106
+msgid "smul"
+msgstr "smul"
+
+#: ../../doc_src/terminal-compatibility.rst:107
+msgid "Enter underline mode."
+msgstr "下線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:108
+msgid "``\\e[4:2m``"
+msgstr "``\\e[4:2m``"
+
+#: ../../doc_src/terminal-compatibility.rst:109
+#: ../../doc_src/terminal-compatibility.rst:112
+#: ../../doc_src/terminal-compatibility.rst:115
+#: ../../doc_src/terminal-compatibility.rst:118
+#: ../../doc_src/terminal-compatibility.rst:142
+#: ../../doc_src/terminal-compatibility.rst:165
+#: ../../doc_src/terminal-compatibility.rst:168
+msgid "Su"
+msgstr "Su"
+
+#: ../../doc_src/terminal-compatibility.rst:110
+msgid "Enter double underline mode."
+msgstr "二重下線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:111
+msgid "``\\e[4:3m``"
+msgstr "``\\e[4:3m``"
+
+#: ../../doc_src/terminal-compatibility.rst:113
+msgid "Enter curly underline mode."
+msgstr "波状下線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:114
+msgid "``\\e[4:4m``"
+msgstr "``\\e[4:4m``"
+
+#: ../../doc_src/terminal-compatibility.rst:116
+msgid "Enter dotted underline mode."
+msgstr "点線下線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:117
+msgid "``\\e[4:5m``"
+msgstr "``\\e[4:5m``"
+
+#: ../../doc_src/terminal-compatibility.rst:119
+msgid "Enter dashed underline mode."
+msgstr "破線下線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:120
+msgid "``\\e[7m``"
+msgstr "``\\e[7m``"
+
+#: ../../doc_src/terminal-compatibility.rst:121
+msgid "rev"
+msgstr "rev"
+
+#: ../../doc_src/terminal-compatibility.rst:122
+msgid "Enter reverse video mode (swap foreground and background colors)."
+msgstr "反転表示モード(前景色と背景色を入れ替える)に入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:123
+msgid "``\\e[9m``"
+msgstr "``\\e[9m``"
+
+#: ../../doc_src/terminal-compatibility.rst:124
+msgid "smxx"
+msgstr "smxx"
+
+#: ../../doc_src/terminal-compatibility.rst:125
+msgid "Enter strikethrough mode"
+msgstr "取り消し線モードに入ります。"
+
+#: ../../doc_src/terminal-compatibility.rst:126
+msgid "``\\e[23m``"
+msgstr "``\\e[23m``"
+
+#: ../../doc_src/terminal-compatibility.rst:127
+msgid "ritm"
+msgstr "ritm"
+
+#: ../../doc_src/terminal-compatibility.rst:128
+msgid "Exit italic mode."
+msgstr "イタリック(斜体)モードを終了します。"
+
+#: ../../doc_src/terminal-compatibility.rst:129
+msgid "``\\e[24m``"
+msgstr "``\\e[24m``"
+
+#: ../../doc_src/terminal-compatibility.rst:130
+msgid "rmul"
+msgstr "rmul"
+
+#: ../../doc_src/terminal-compatibility.rst:131
+msgid "Exit underline mode."
+msgstr "下線モードを終了します。"
+
+#: ../../doc_src/terminal-compatibility.rst:132
+msgid "``\\e[29m``"
+msgstr "``\\e[29m``"
+
+#: ../../doc_src/terminal-compatibility.rst:133
+msgid "rmxx"
+msgstr "rmxx"
+
+#: ../../doc_src/terminal-compatibility.rst:134
+msgid "Exit strikethrough mode."
+msgstr "取り消し線モードを終了します。"
+
+#: ../../doc_src/terminal-compatibility.rst:135
+msgid "``\\e[38;5; Ps m``"
+msgstr "``\\e[38;5; Ps m``"
+
+#: ../../doc_src/terminal-compatibility.rst:136
+msgid "setaf"
+msgstr "setaf"
+
+#: ../../doc_src/terminal-compatibility.rst:137
+msgid "Select foreground color Ps from the 256-color-palette."
+msgstr "256色パレットから前景色 Ps を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:138
+msgid "``\\e[48;5; Ps m``"
+msgstr "``\\e[48;5; Ps m``"
+
+#: ../../doc_src/terminal-compatibility.rst:139
+msgid "setab"
+msgstr "setab"
+
+#: ../../doc_src/terminal-compatibility.rst:140
+msgid "Select background color Ps from the 256-color-palette."
+msgstr "256色パレットから背景色 Ps を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:141
+msgid "``\\e[58:5: Ps m`` (note: colons not semicolons)"
+msgstr "``\\e[58:5: Ps m`` (Note: セミコロンではなくコロン)"
+
+#: ../../doc_src/terminal-compatibility.rst:143
+msgid "Select underline color Ps from the 256-color-palette."
+msgstr "256色パレットから下線の色 Ps を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:144
+msgid "``\\e[ Ps m``"
+msgstr "``\\e[ Ps m``"
+
+#: ../../doc_src/terminal-compatibility.rst:145
+msgid "setaf setab"
+msgstr "setaf setab"
+
+#: ../../doc_src/terminal-compatibility.rst:147
+msgid ""
+"Select foreground/background color. This uses a color in the "
+"aforementioned 256-color-palette, based on the range that contains the "
+"parameter: 30-37 maps to foreground 0-7, 40-47 maps to background 0-7, "
+"90-97 maps to foreground 8-15 and 100-107 maps to background 8-15."
+msgstr "前景色/背景色を選択します。これは、パラメータが含まれる範囲に基づいて、前述の256色パレット内の色を使用します。30-37は前景色0-7、40-47は背景色0-7、90-97は前景色8-15、100-107は背景色8-15に対応します。"
+
+#: ../../doc_src/terminal-compatibility.rst:152
+msgid "``\\e[38;2; Ps ; Ps ; Ps m``"
+msgstr "``\\e[38;2; Ps ; Ps ; Ps m``"
+
+#: ../../doc_src/terminal-compatibility.rst:154
+msgid "Select foreground color from 24-bit RGB colors."
+msgstr "24ビットRGBカラーから前景色を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:155
+msgid "``\\e[48;2; Ps ; Ps ; Ps m``"
+msgstr "``\\e[48;2; Ps ; Ps ; Ps m``"
+
+#: ../../doc_src/terminal-compatibility.rst:157
+msgid "Select background color from 24-bit RGB colors."
+msgstr "24ビットRGBカラーから背景色を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:158
+msgid "``\\e[39m``"
+msgstr "``\\e[39m``"
+
+#: ../../doc_src/terminal-compatibility.rst:160
+msgid "Reset foreground color to the terminal's default."
+msgstr "ターミナルの前景色をデフォルトに戻します。"
+
+#: ../../doc_src/terminal-compatibility.rst:161
+msgid "``\\e[49m``"
+msgstr "``\\e[49m``"
+
+#: ../../doc_src/terminal-compatibility.rst:163
+msgid "Reset background color to the terminal's default."
+msgstr "背景色をターミナルのデフォルトに戻します。"
+
+#: ../../doc_src/terminal-compatibility.rst:164
+msgid "``\\e[58:2:: Ps : Ps : Ps m`` (note: colons not semicolons)"
+msgstr "``\\e[58:2:: Ps : Ps : Ps m`` (Note: セミコロンではなくコロン)"
+
+#: ../../doc_src/terminal-compatibility.rst:166
+msgid "Select underline color from 24-bit RGB colors."
+msgstr "24ビットRGBカラーから下線の色を選択します。"
+
+#: ../../doc_src/terminal-compatibility.rst:167
+msgid "``\\e[59m``"
+msgstr "``\\e[59m``"
+
+#: ../../doc_src/terminal-compatibility.rst:169
+msgid "Reset underline color to the default (follow the foreground color)."
+msgstr "下線の色をデフォルト(前景色に従う)に戻します。"
+
+#: ../../doc_src/terminal-compatibility.rst:172
+msgid "``\\e[ Ps S``"
+msgstr "``\\e[ Ps S``"
+
+#: ../../doc_src/terminal-compatibility.rst:173
+msgid "indn"
+msgstr "indn"
+
+#: ../../doc_src/terminal-compatibility.rst:174
+msgid ""
+"Scroll up the content (not the viewport) Ps lines (called ``SCROLL UP`` /"
+" ``SU`` by ECMA-48 and \"scroll forward\" by terminfo). When fish detects"
+" support for this feature, :ref:`status test-terminal-features scroll-"
+"content-up <status-test-terminal-features>` will return 0, which enables "
+"the :kbd:`ctrl-l` binding to use the :ref:`scrollback-push <special-"
+"input-functions-scrollback-push>` special input function."
+msgstr ""
+"コンテンツ(ビューポートではなく)を Ps 行分上にスクロールします(ECMA-48では ``SCROLL UP`` / ``SU`` "
+"、terminfoでは \"scroll forward\" と呼ばれます)。fishがこの機能のサポートを検出すると、:ref:`status "
+"test-terminal-features scroll-content-up <status-test-terminal-features>`"
+" は0を返し、これにより :kbd:`ctrl-l` バインドが :ref:`scrollback-push <special-input-"
+"functions-scrollback-push>` 特殊入力関数を使用できるようになります。"
+
+#: ../../doc_src/terminal-compatibility.rst:177
+msgid "``\\e[= Ps u``, ``\\e[? Ps u``"
+msgstr "``\\e[= Ps u``, ``\\e[? Ps u``"
+
+#: ../../doc_src/terminal-compatibility.rst:179
+msgid "Enable the kitty keyboard protocol."
+msgstr "kitty キーボードプロトコルを有効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:182
+msgid "``\\e[6n``"
+msgstr "``\\e[6n``"
+
+#: ../../doc_src/terminal-compatibility.rst:184
+msgid ""
+"Request cursor position report. The response must be of the form ``\\e[ "
+"Ps ; Ps R`` where the first parameter is the row number and the second "
+"parameter is the column number. Both start at 1."
+msgstr ""
+"カーソル位置のレポートを要求します。レスポンスは ``\\e[ Ps ; Ps R`` "
+"の形式である必要があり、最初のパラメータは行番号、2番目のパラメータは列番号です。どちらも1から始まります。"
+
+#: ../../doc_src/terminal-compatibility.rst:190
+msgid ""
+"This is used for truncating multiline autosuggestions at the screen's "
+"bottom edge, by the :ref:`scrollback-push <special-input-functions-"
+"scrollback-push>` special input function, and inside terminals that "
+"implement the OSC 133 :ref:`click_events <term-compat-osc-133>` feature."
+msgstr ""
+"これは、画面の下端で複数行のオートサジェスチョン(自動提案)を切り詰めるために、:ref:`scrollback-push <special-"
+"input-functions-scrollback-push>` 特殊入力関数や、OSC 133 :ref:`click_events "
+"<term-compat-osc-133>` 機能を実装しているターミナル内部で使用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:193
+msgid "``\\e[ \\x20 q``"
+msgstr "``\\e[ \\x20 q``"
+
+#: ../../doc_src/terminal-compatibility.rst:194
+msgid "Se"
+msgstr "Se"
+
+#: ../../doc_src/terminal-compatibility.rst:195
+msgid ""
+"Reset cursor style to the terminal's default. This is not used as of "
+"today but may be in future."
+msgstr "カーソルのスタイルをターミナルのデフォルトにリセットします。現時点では使用されていませんが、将来的に使用される可能性があります。"
+
+#: ../../doc_src/terminal-compatibility.rst:197
+msgid "``\\e[ Ps \\x20 q``"
+msgstr "``\\e[ Ps \\x20 q``"
+
+#: ../../doc_src/terminal-compatibility.rst:198
+msgid "Ss"
+msgstr "Ss"
+
+#: ../../doc_src/terminal-compatibility.rst:199
+msgid ""
+"Set cursor style (DECSCUSR); Ps is 2, 4 or 6 for block, underscore or "
+"line shape."
+msgstr "カーソルのスタイルを設定します (DECSCUSR)。Ps が 2 の場合はブロック、4 の場合は下線、6 の場合は垂直線の形状になります。"
+
+#: ../../doc_src/terminal-compatibility.rst:202
+msgid "``\\e[ Ps q``"
+msgstr "``\\e[ Ps q``"
+
+#: ../../doc_src/terminal-compatibility.rst:204
+msgid ""
+"Request terminal name and version (XTVERSION). This is only used for "
+"temporary workarounds for incompatible terminals."
+msgstr ""
+"ターミナルの名称とバージョンを要求します "
+"(XTVERSION)。これは、互換性のないターミナルに対する一時的な回避策(ワークアラウンド)としてのみ使用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:206
+msgid "``\\e[?25h``"
+msgstr "``\\e[?25h``"
+
+#: ../../doc_src/terminal-compatibility.rst:207
+msgid "cvvis"
+msgstr "cvvis"
+
+#: ../../doc_src/terminal-compatibility.rst:208
+msgid "Enable cursor visibility (DECTCEM)."
+msgstr "カーソルの表示を有効にします (DECTCEM)。"
+
+#: ../../doc_src/terminal-compatibility.rst:209
+msgid "``\\e[?1004h``"
+msgstr "``\\e[?1004h``"
+
+#: ../../doc_src/terminal-compatibility.rst:211
+msgid "Enable focus reporting."
+msgstr "フォーカスレポートを有効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:212
+msgid "``\\e[?1004l``"
+msgstr "``\\e[?1004l``"
+
+#: ../../doc_src/terminal-compatibility.rst:214
+msgid "Disable focus reporting."
+msgstr "フォーカスレポートを無効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:215
+msgid "``\\e[?1049h``"
+msgstr "``\\e[?1049h``"
+
+#: ../../doc_src/terminal-compatibility.rst:217
+msgid "Enable alternate screen buffer."
+msgstr "代替画面バッファを有効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:218
+msgid "``\\e[?1049l``"
+msgstr "``\\e[?1049l``"
+
+#: ../../doc_src/terminal-compatibility.rst:220
+msgid "Disable alternate screen buffer."
+msgstr "代替画面バッファを無効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:221
+msgid "``\\e[?2004h``"
+msgstr "``\\e[?2004h``"
+
+#: ../../doc_src/terminal-compatibility.rst:223
+msgid "Enable bracketed paste."
+msgstr "ブラケット付きペースト(bracketed paste)を有効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:224
+msgid "``\\e[?2004l``"
+msgstr "``\\e[?2004l``"
+
+#: ../../doc_src/terminal-compatibility.rst:226
+msgid "Disable bracketed paste."
+msgstr "ブラケット付きペースト(bracketed paste)を無効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:227
+msgid "``\\e[?2031h``"
+msgstr "``\\e[?2031h``"
+
+#: ../../doc_src/terminal-compatibility.rst:229
+msgid ""
+"Enable unsolicited `color theme reporting <https://contour-terminal.org"
+"/vt-extensions/color-palette-update-notifications/>`_. When enabled, the "
+"terminal should send ``\\e[?997;1n`` or ``\\e[?997;2n`` whenever its "
+"color theme has changed. This prompts fish to query for :ref:`background "
+"color <term-compat-query-background-color>`."
+msgstr ""
+"非要請の`カラーテーマレポート <https://contour-terminal.org/vt-extensions/color-"
+"palette-update-notifications/>`_を有効にします。有効にすると、ターミナルはカラーテーマが変更されるたびに "
+"``\\e[?997;1n`` 、 ``\\e[?997;2n`` を送信するようになります。これにより、fishは :ref:`背景色 "
+"<term-compat-query-background-color>` の問い合わせを行います。"
+
+#: ../../doc_src/terminal-compatibility.rst:232
+msgid "``\\e[?2031l``"
+msgstr "``\\e[?2031l``"
+
+#: ../../doc_src/terminal-compatibility.rst:234
+msgid "Disable unsolicited color theme reporting."
+msgstr "非要請のカラーテーマレポートを無効にします。"
+
+#: ../../doc_src/terminal-compatibility.rst:237
+msgid "``\\e]0; Pt \\e\\\\``"
+msgstr "``\\e]0; Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:238
+#: ../../doc_src/terminal-compatibility.rst:241
+msgid "ts"
+msgstr "ts"
+
+#: ../../doc_src/terminal-compatibility.rst:239
+msgid ""
+"Set terminal window title (OSC 0). Used in :doc:`fish_title "
+"<cmds/fish_title>`."
+msgstr ""
+"ターミナルウィンドウのタイトルを設定します (OSC 0)。 :doc:`fish_title <cmds/fish_title>` "
+"で使用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:240
+msgid "``\\e]2; Pt \\e\\\\``"
+msgstr "``\\e]2; Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:242
+msgid ""
+"Set terminal tab title (OSC 1). Used in :doc:`fish_tab_title "
+"<cmds/fish_tab_title>`."
+msgstr ""
+"ターミナルのタブタイトルを設定します (OSC 1)。 :doc:`fish_tab_title <cmds/fish_tab_title>` "
+"で使用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:243
+msgid "``\\e]7;file:// Pt / Pt \\e\\\\``"
+msgstr "``\\e]7;file:// Pt / Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:245
+msgid ""
+"Report working directory (OSC 7). Since the terminal may be running on a "
+"different system than a (remote) shell, the hostname (first parameter) "
+"will *not* be ``localhost``."
+msgstr ""
+"作業ディレクトリを報告します (OSC "
+"7)。ターミナルが(リモート)シェルのあるシステムとは別のシステムで動作している可能性があるため、ホスト名(最初のパラメータ)は "
+"``localhost`` には*なりません*。"
+
+#: ../../doc_src/terminal-compatibility.rst:250
+msgid "``\\e]8;; Pt \\e\\\\``"
+msgstr "``\\e]8;; Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:252
+msgid ""
+"Create a `hyperlink (OSC 8) "
+"<https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda>`_. "
+"This is used in fish's man pages."
+msgstr ""
+"`ハイパーリンク (OSC 8) "
+"<https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda>`_ "
+"を作成します。これはfishのmanページで使用されています。"
+
+#: ../../doc_src/terminal-compatibility.rst:256
+msgid "``\\e]11;?\\e\\\\``"
+msgstr "``\\e]11;?\\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:258
+msgid "Query background color."
+msgstr "背景色を問い合わせます。"
+
+#: ../../doc_src/terminal-compatibility.rst:260
+msgid ""
+"A valid response would be of the form ``\\e]11;rgb: Pt / Pt / Pt "
+"\\e\\\\`` or ``\\e]11;rgba: Pt / Pt / Pt / Pt\\e\\\\`` where the first "
+"three parameters consist of one to four hex digits each, representing "
+"red, blue and green components."
+msgstr ""
+"有効なレスポンスの形式は ``\\e]11;rgb: Pt / Pt / Pt \\e\\\\`` 、 ``\\e]11;rgba: Pt / "
+"Pt / Pt / Pt\\e\\\\`` です。最初の3つのパラメータは、それぞれ1〜4桁の16進数で構成され、赤・青・緑の成分を表します。"
+
+#: ../../doc_src/terminal-compatibility.rst:263
+msgid ""
+"This is used to populate :envvar:`fish_terminal_color_theme`, which is "
+"used to select a :ref:`theme variant <fish-config-theme-files>` optimized"
+" for the terminal's color theme."
+msgstr ""
+"これは :envvar:`fish_terminal_color_theme` "
+"に値を格納するために使用され、ターミナルのカラーテーマに最適化された :ref:`テーマバリアント <fish-config-theme-"
+"files>` を選択するために利用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:267
+msgid "``\\e]52;c; Pt \\e\\\\``"
+msgstr "``\\e]52;c; Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:269
+msgid ""
+"Copy to clipboard (OSC 52). Used by :doc:`fish_clipboard_copy "
+"<cmds/fish_clipboard_copy>`."
+msgstr ""
+"クリップボードへコピーします (OSC 52)。 :doc:`fish_clipboard_copy "
+"<cmds/fish_clipboard_copy>` で使用されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:272
+msgid "``\\e]133;A; click_events=1\\e\\\\``"
+msgstr "``\\e]133;A; click_events=1\\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:274
+msgid ""
+"Mark prompt start (OSC 133), with kitty's ``click_events`` extension. The"
+" ``click_events`` extension enables mouse clicks to move the cursor or "
+"select pager items, assuming that :ref:`cursor position reporting <term-"
+"compat-cursor-position-report>` is available."
+msgstr ""
+"kittyの ``click_events`` 拡張機能を用いてプロンプトの開始をマークします (OSC "
+"133)。``click_events`` 拡張機能により、 :ref:`カーソル位置のレポート <term-compat-cursor-"
+"position-report>` が利用可能であることを前提として、マウスクリックによるカーソル移動やページャ項目の選択が可能になります。"
+
+#: ../../doc_src/terminal-compatibility.rst:277
+msgid "``\\e]133;B\\e\\\\``"
+msgstr "``\\e]133;B\\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:279
+msgid "Mark prompt end (OSC 133)."
+msgstr "プロンプトの終了をマークします (OSC 133)。"
+
+#: ../../doc_src/terminal-compatibility.rst:280
+msgid "``\\e]133;C; cmdline_url= Pt \\e\\\\``"
+msgstr "``\\e]133;C; cmdline_url= Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:282
+msgid ""
+"Mark command start (OSC 133), with kitty's ``cmdline_url`` extension "
+"whose parameter is the URL-encoded command line."
+msgstr ""
+"kittyの ``cmdline_url`` 拡張機能を用いてコマンドの開始をマークします (OSC "
+"133)。パラメータはURLエンコードされたコマンドラインです。"
+
+#: ../../doc_src/terminal-compatibility.rst:283
+msgid "``\\e]133;D; Ps \\e\\\\``"
+msgstr "``\\e]133;D; Ps \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:285
+msgid "Mark command end (OSC 133);  Ps is the exit status."
+msgstr "コマンドの終了をマークします (OSC 133)。 Ps は終了ステータスです。"
+
+#: ../../doc_src/terminal-compatibility.rst:288
+msgid "``\\eP+q Pt \\e\\\\``"
+msgstr "``\\eP+q Pt \\e\\\\``"
+
+#: ../../doc_src/terminal-compatibility.rst:290
+msgid ""
+"Request terminfo capability (XTGETTCAP). The parameter is the "
+"capability's hex-encoded terminfo code."
+msgstr "terminfoケーパビリティを要求します (XTGETTCAP)。パラメータは、16進エンコードされたterminfoコードです。"
+
+#: ../../doc_src/terminal-compatibility.rst:293
+msgid ""
+"The response must be of the form ``\\eP1+q Pt \\e\\\\`` (\"boolean\") or "
+"``\\eP1+q Pt = Pt \\e\\\\`` (\"string\"). In either variant, the first "
+"parameter must be the same as the request parameter."
+msgstr ""
+"レスポンスは ``\\eP1+q Pt \\e\\\\`` (boolean) 、 ``\\eP1+q Pt = Pt \\e\\\\`` "
+"(string) の形式である必要があります。どちらの場合も、最初のパラメータはリクエストパラメータと同じでなければなりません。"
+
+#: ../../doc_src/terminal-compatibility.rst:297
+msgid "fish queries the following string capabilities:"
+msgstr "fishは以下の文字列ケーパビリティを照会します。"
+
+#: ../../doc_src/terminal-compatibility.rst:299
+msgid ":ref:`indn <term-compat-indn>`"
+msgstr ":ref:`indn <term-compat-indn>`"
+
+#: ../../doc_src/terminal-compatibility.rst:301
+msgid "The response's second parameter is ignored."
+msgstr "レスポンスの2番目のパラメータは無視されます。"
+
+#: ../../doc_src/terminal-compatibility.rst:302
+msgid "``query-os-name`` (for :ref:`status terminal-os <status-terminal-os>`)"
+msgstr "``query-os-name`` (:ref:`status terminal-os <status-terminal-os>` 用)"
+
+#: ../../doc_src/terminal-compatibility.rst:304
+msgid ""
+"Terminals running on Unix should respond with the hex encoding of "
+"``$(uname -s)`` as second parameter."
+msgstr "Unix上で動作しているターミナルは、2番目のパラメータとして ``$(uname -s)`` を16進エンコードしたものを返すべきです。"
+
+#: ../../doc_src/terminal-compatibility.rst:309
+msgid "DCS commands and GNU screen"
+msgstr "DCSコマンドとGNU screen"
+
+#: ../../doc_src/terminal-compatibility.rst:311
+msgid ""
+"DCS parsing is optional because fish temporarily switches to the "
+"alternate screen before printing any DCS commands. However, since GNU "
+"screen neither allows turning on the alternate screen buffer by default, "
+"nor treats DCS commands in a compatible way, fish's initial prompt may be"
+" garbled by a DCS payload like ``+q696e646e``. For the time being, fish "
+"works around this by checking for presence of the :envvar:`STY` "
+"environment variable. If that doesn't work for some reason, you can add "
+"this to your ``~/.screenrc``:"
+msgstr ""
+"DCSコマンドを印刷する前にfishが一時的に代替画面に切り替えるため、DCSの解析は任意(オプショナル)です。しかし、GNU "
+"screenはデフォルトで代替画面バッファを有効にすることを許可しておらず、DCSコマンドを互換性のある方法で扱わないため、fishの初期プロンプトが"
+" ``+q696e646e`` のようなDCSペイロードによって文字化けする可能性があります。当面の間、fishは :envvar:`STY` "
+"環境変数の存在をチェックすることでこれを回避しています。何らかの理由でそれが機能しない場合は、 ``~/.screenrc`` "
+"に以下を追加してください。"
+
+#: ../../doc_src/terminal-compatibility.rst:322
+msgid "Or add this to your ``config.fish``::"
+msgstr "または、 ``config.fish`` に以下を追加してください。"
+
+#: ../../doc_src/terminal-compatibility.rst:332
+msgid "Unicode Codepoints"
+msgstr "Unicodeコードポイント"
+
+#: ../../doc_src/terminal-compatibility.rst:334
+msgid "By default, fish outputs the following non-ASCII characters::"
+msgstr "デフォルトでは、fishは以下の非ASCII文字を出力します。"
+
+#: ../../doc_src/terminal-compatibility.rst:338
+msgid ""
+"as well as control pictures (U+2400 through U+241F), and locale-specific "
+"ones in :ref:`translated strings <variables-locale>`."
+msgstr ""
+"また、制御文字記号(U+2400からU+241F)、および :ref:`翻訳された文字列 <variables-locale>` "
+"内のロケール固有の文字も出力されます。"
+

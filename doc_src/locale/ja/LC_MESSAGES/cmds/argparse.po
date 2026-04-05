@@ -1,0 +1,916 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) fish-shell developers
+# This file is distributed under the same license as the fish-shell package.
+# t4k44 <95964+t4k44@users.noreply.github.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fish-shell 4.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-15 05:31+0900\n"
+"PO-Revision-Date: 2026-03-23 03:42+0900\n"
+"Last-Translator: t4k44 <95964+t4k44@users.noreply.github.com>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../doc_src/cmds/argparse.rst:2
+msgid "argparse - parse options passed to a fish script or function"
+msgstr "argparse - fishスクリプトまたは関数に渡されたオプションを解析"
+
+#: ../../doc_src/cmds/argparse.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../doc_src/cmds/argparse.rst:13
+msgid "Description"
+msgstr "説明"
+
+#: ../../doc_src/cmds/argparse.rst:15
+msgid ""
+"This command makes it easy for fish scripts and functions to handle "
+"arguments. You pass arguments that define the known options, followed by "
+"a literal **--**, then the arguments to be parsed (which might also "
+"include a literal **--**). ``argparse`` then sets variables to indicate "
+"the passed options with their values, sets ``$argv_opts`` to the options "
+"and their values, and sets ``$argv`` to the remaining arguments. See the "
+":ref:`usage <cmd-argparse-usage>` section below."
+msgstr ""
+"このコマンドを使用すると、fishスクリプトや関数で引数を簡単に処理できるようになります。既知のオプションを定義する引数を渡し、リテラルの "
+"**--** を続けた後に、解析対象の引数(これ自体にリテラルの **--** が含まれる場合もあります)を渡します。 ``argparse`` "
+"は、渡されたオプションとその値を示す変数を設定し、``$argv_opts`` にオプションとその値を設定し、``$argv`` "
+"に残りの引数を設定します。詳細は以下の :ref:`使用法 <cmd-argparse-usage>` セクションを参照してください。"
+
+#: ../../doc_src/cmds/argparse.rst:17
+msgid ""
+"Each option specification (``OPTION_SPEC``) is written in the "
+":ref:`domain specific language <cmd-argparse-option-specification>` "
+"described below. All OPTION_SPECs must appear after any argparse flags "
+"and before the ``--`` that separates them from the arguments to be "
+"parsed."
+msgstr ""
+"各オプション仕様(``OPTION_SPEC``)は、後述する :ref:`ドメイン言語 <cmd-argparse-option-"
+"specification>` で記述されます。すべての OPTION_SPEC "
+"は、argparse自体のフラグの後、かつ解析対象の引数とを区切る ``--`` よりも前に記述する必要があります。"
+
+#: ../../doc_src/cmds/argparse.rst:19
+msgid ""
+"Each option that is seen in the ARG list will result in variables named "
+"``_flag_X``, where **X** is the short flag letter and the long flag name "
+"(if they are defined). For example a **--help** option could cause "
+"argparse to define one variable called ``_flag_h`` and another called "
+"``_flag_help``."
+msgstr ""
+"引数(ARG)リスト内で見つかった各オプションは、 ``_flag_X`` という名前の変数になります。ここで **X** "
+"は、短縮フラグの文字またはロングフラグの名前(定義されている場合)です。例えば、 **--help** オプションによって、argparseが "
+"``_flag_h`` と ``_flag_help`` という2つの変数を定義する場合があります。"
+
+#: ../../doc_src/cmds/argparse.rst:21
+msgid ""
+"The variables will be set with local scope (i.e., as if the script had "
+"done ``set -l _flag_X``). If the flag is a boolean (that is, it is passed"
+" or not, it doesn't have a value) the values are the short and long flags"
+" seen. If the option is not a boolean the values will be zero or more "
+"values corresponding to the values collected when the ARG list is "
+"processed. If the flag was not seen the flag variable will not be set."
+msgstr ""
+"これらの変数はローカルスコープで設定されます(つまり、スクリプトが ``set -l _flag_X`` "
+"を実行したかのように扱われます)。フラグがbool値(値を持たず、指定されたか否かのみを判別するもの)の場合、値は実際に渡された短縮フラグやロングフラグになります。オプションがbool値でない場合、値は"
+" ARG リストの処理時に収集された0個以上の値になります。フラグが指定されなかった場合、そのフラグ変数は設定されません。"
+
+#: ../../doc_src/cmds/argparse.rst:24
+msgid "Options"
+msgstr "オプション"
+
+#: ../../doc_src/cmds/argparse.rst:26
+msgid ""
+"The following ``argparse`` options are available. They must appear before"
+" all *OPTION_SPEC*\\ s:"
+msgstr ""
+"以下の ``argparse`` 自体に対するオプションが利用可能です。これらはすべての *OPTION_SPEC* "
+"よりも前に記述する必要があります。"
+
+#: ../../doc_src/cmds/argparse.rst:28
+msgid "**-n** or **--name** *NAME*"
+msgstr "**-n** 、 **--name** *NAME*"
+
+#: ../../doc_src/cmds/argparse.rst:29
+msgid ""
+"Use *NAME* in error messages. By default the current function name will "
+"be used, or ``argparse`` if run outside of a function."
+msgstr ""
+"エラーメッセージで使用する名前(*NAME*)を指定します。デフォルトでは現在の関数名が使用されます。関数の外で実行された場合は "
+"``argparse`` が使用されます。"
+
+#: ../../doc_src/cmds/argparse.rst:31
+msgid "**-x** or **--exclusive** *OPTIONS*"
+msgstr "**-x** 、 **--exclusive** *OPTIONS*"
+
+#: ../../doc_src/cmds/argparse.rst:32
+msgid ""
+"A comma separated list of options that are mutually exclusive. You can "
+"use this more than once to define multiple sets of mutually exclusive "
+"options. You give either the short or long version of each option, and "
+"you still need to otherwise define the options."
+msgstr "互いに排他的なオプションをカンマ区切りのリストで指定します。これを複数回使用して、排他的なオプションのセットを複数定義することもできます。各オプションは短縮形式とロング形式のどちらでも指定できますが、別途そのオプション自体の定義も必要です。"
+
+#: ../../doc_src/cmds/argparse.rst:35
+msgid "**-N** or **--min-args** *NUMBER*"
+msgstr "**-N** 、 **--min-args** *NUMBER*"
+
+#: ../../doc_src/cmds/argparse.rst:36
+msgid ""
+"The minimum number of acceptable non-option arguments. The default is "
+"zero."
+msgstr "許容される非オプション引数の最小数です。デフォルトは 0 です。"
+
+#: ../../doc_src/cmds/argparse.rst:38
+msgid "**-X** or **--max-args** *NUMBER*"
+msgstr "**-X** 、 **--max-args** *NUMBER*"
+
+#: ../../doc_src/cmds/argparse.rst:39
+msgid ""
+"The maximum number of acceptable non-option arguments. The default is "
+"infinity."
+msgstr "許容される非オプション引数の最大数です。デフォルトは 無制限 です。"
+
+#: ../../doc_src/cmds/argparse.rst:41
+msgid "**-u** or **--move-unknown**"
+msgstr "**-u** 、 **--move-unknown**"
+
+#: ../../doc_src/cmds/argparse.rst:42
+msgid ""
+"Allow unknown options, and move them from ``$argv`` to ``$argv_opts``. By"
+" default, Unknown options are treated as if they take optional arguments "
+"(i.e. have option spec ``=?``)."
+msgstr ""
+"未知のオプションを許可し、それらを ``$argv`` から ``$argv_opts`` "
+"へ移動します。デフォルトでは、未知のオプションはオプション引数を取るもの(つまりオプション仕様 ``=?`` を持つもの)として扱われます。"
+
+#: ../../doc_src/cmds/argparse.rst:44
+msgid ""
+"The above means that if a group of short options contains an unknown "
+"short option *followed* by a known short option, the known short option "
+"is treated as an argument to the unknown one (e.g. ``--move-unknown h -- "
+"-oh`` will treat ``h`` as the argument to ``-o``, and so ``_flag_h`` will"
+" *not* be set). In contrast, if the known option comes first (and does "
+"not take any arguments), the known option will be recognised (e.g. "
+"``argparse --move-unknown h -- -ho`` *will* set ``$_flag_h`` to ``-h``)"
+msgstr ""
+"これは、短縮オプションのグループ内に未知の短縮オプションが含まれ、その「後ろ」に既知の短縮オプションが続く場合、既知のオプションは未知のオプションへの引数として扱われることを意味します(例:"
+"  ``--move-unknown h -- -oh`` では、 ``h`` は ``-o`` への引数として扱われるため、 "
+"``_flag_h`` "
+"は設定「されません」)。対照的に、既知のオプションが先に来る場合(かつ引数を取らない場合)、既知のオプションは正しく認識されます(例:  "
+"``argparse --move-unknown h -- -ho`` では、 ``$_flag_h`` に ``-h`` "
+"が設定「されます」)。"
+
+#: ../../doc_src/cmds/argparse.rst:48
+msgid "**-i** or **--ignore-unknown**"
+msgstr "**-i** 、 **--ignore-unknown**"
+
+#: ../../doc_src/cmds/argparse.rst:49
+msgid ""
+"Deprecated. This is like **--move-unknown**, except that unknown options "
+"and their arguments are kept in ``$argv`` and not moved to "
+"``$argv_opts``. Unlike **--move-unknown**, this option makes it "
+"impossible to distinguish between an unknown option and non-option "
+"argument that starts with a ``-`` (since any ``--`` separator in "
+"``$argv`` will be removed)."
+msgstr ""
+"非推奨です。これは **--move-unknown** と似ていますが、不明なオプションとその引数が "
+"``$argv_opts`` に移動されず、 ``$argv`` に保持される点が異なります。"
+"**--move-unknown** とは異なり、このオプションを使用すると、不明なオプションと "
+"``-`` で始まるオプション以外の引数を区別することができなくなります"
+"(``$argv`` 内の ``--`` セパレータがすべて削除されるためです)。"
+
+#: ../../doc_src/cmds/argparse.rst:51
+msgid "**-S** or **--strict-longopts**"
+msgstr "**-S** 、 **--strict-longopts**"
+
+#: ../../doc_src/cmds/argparse.rst:52
+msgid ""
+"This makes the parsing of long options more strict. In particular, "
+"*without* this flag, if ``long`` is a known long option flag, ``--long`` "
+"and ``--long=<value>`` can be abbreviated as:"
+msgstr ""
+"長い形式のオプションの解析をより厳密にします。具体的には、このフラグが「ない」場合、 ``long`` "
+"という既知の長い形式のオプションフラグは以下のように省略可能です::"
+
+#: ../../doc_src/cmds/argparse.rst:54
+msgid ""
+"``-long`` and ``-long=<value>``, but *only* if there is no short flag "
+"``l``."
+msgstr "``-long`` 、 ``-long=<value>`` (ただし、短縮フラグ ``l`` が存在しない場合「のみ」)。"
+
+#: ../../doc_src/cmds/argparse.rst:56
+msgid ""
+"``--lo`` and ``--lo=<value>``, but *only* if there is no other long flag "
+"that starts with ``lo``. Similarly with any other non-empty prefix of "
+"``long``."
+msgstr ""
+"``--lo`` 、 ``--lo=<value>`` (ただし、 ``lo`` で始まる他の長い形式のフラグが存在しない場合「のみ」)。 "
+"``long`` の他の空でない接頭辞についても同様です。"
+
+#: ../../doc_src/cmds/argparse.rst:58
+msgid "``-lo`` and ``-lo=<value>`` (i.e. combining the above two)."
+msgstr "``-lo`` 、 ``-lo=<value>`` (上記2つの組み合わせ)。"
+
+#: ../../doc_src/cmds/argparse.rst:60
+msgid ""
+"With the ``--strict-longopts`` flag, the above three are parse errors: "
+"one must use the syntax ``--long`` or ``--long=<value>`` to use a long "
+"option called ``long``."
+msgstr ""
+"``--strict-longopts`` フラグを指定すると、上記の3つは解析エラーになります。``long`` "
+"という名前の長い形式のオプションを使用するには、 ``--long`` 、 ``--long=<value>`` "
+"という構文を使用しなければなりません。"
+
+#: ../../doc_src/cmds/argparse.rst:62
+msgid ""
+"This flag has no effect on the parsing of unknown options (which are "
+"parsed as if this flag is on)."
+msgstr "このフラグは、未知のオプションの解析には影響しません(未知のオプションは、常にこのフラグが有効であるかのように解析されます)。"
+
+#: ../../doc_src/cmds/argparse.rst:64
+msgid ""
+"This option may be on all the time in the future, so do not rely on the "
+"behaviour without it."
+msgstr "このオプションは将来的に常に有効になる可能性があるため、これが無効な状態の挙動に依存しないでください。"
+
+#: ../../doc_src/cmds/argparse.rst:66
+msgid "**--unknown-arguments** *KIND*"
+msgstr "**--unknown-arguments** *KIND*"
+
+#: ../../doc_src/cmds/argparse.rst:67
+msgid ""
+"This option implies **--move-unknown**, unless **--ignore-unknown** is "
+"also given. This will modify the parsing behaviour of unknown options "
+"depending on the value of *KIND*:"
+msgstr ""
+"**--ignore-unknown** が同時に指定されない限り、このオプションは **--move-unknown** を包含します。これは、"
+" *KIND* の値に応じて未知のオプションの解析挙動を変更します。"
+
+#: ../../doc_src/cmds/argparse.rst:70
+msgid ""
+"**optional** (the default), allows each unknown option to take an "
+"optional argument (i.e. as if it had ``=?`` or ``=*`` in its option "
+"specification). For example, ``argparse --ignore-unknown --unknown-"
+"arguments=optional ab -- -u -a -ub`` will set ``_flag_a`` but *not* "
+"``_flag_b``, as the ``b`` is treated as an argument to the second use of "
+"``-u``."
+msgstr ""
+"**optional** (デフォルト): 各未知のオプションが任意指定の引数を取ることを許可します(つまり、オプション仕様に ``=?`` "
+"または ``=*`` が指定されているかのように扱われます)。例えば、 ``argparse --ignore-unknown "
+"--unknown-arguments=optional ab -- -u -a -ub`` を実行すると、 ``_flag_a`` "
+"は設定されますが、 ``_flag_b`` は設定「されません」。これは、 ``b`` が 2 回目の ``-u`` "
+"への引数として扱われるためです。"
+
+#: ../../doc_src/cmds/argparse.rst:72
+msgid ""
+"**required** requires each unknown option to take an argument (i.e. as if"
+" it had ``=`` or ``=+`` in its option specification). If the above "
+"example was changed to use ``--unknown-arguments=required``, *neither* "
+"``_flag_a`` nor ``_flag_b`` would be set: the ``-a`` will be treated as "
+"an argument to the first use of ``-u``, and the ``b`` as an argument to "
+"the second."
+msgstr ""
+"**required** : 各未知のオプションが引数を取ることを必須とします(つまり、オプション仕様に ``=`` 、 ``=+`` "
+"が指定されているかのように扱われます)。上記の例を ``--unknown-arguments=required`` に変更した場合、 "
+"``_flag_a`` も ``_flag_b`` も「どちらも」設定されません。 ``-a`` は 1 回目の ``-u`` への引数として、 "
+"``b`` は 2 回目の ``-u`` への引数として扱われるためです。"
+
+#: ../../doc_src/cmds/argparse.rst:74
+msgid ""
+"**none** forbids each unknown option from taking an argument (i.e. as if "
+"it had no ``=`` in its option specification). If the above example was "
+"changed to use ``--unknown-arguments=none``, *both* ``_flag_a`` and "
+"``_flag_b`` would be set, as neither use of ``-u`` will be passed as "
+"taking an argument."
+msgstr ""
+"**none** : 各未知のオプションが引数を取ることを禁止します(つまり、オプション仕様に ``=`` "
+"が指定されていないかのように扱われます)。上記の例を ``--unknown-arguments=none`` に変更した場合、 "
+"``_flag_a`` と ``_flag_b`` の「両方」が設定されます。どちらの ``-u`` も引数を取らないものとして扱われるためです。"
+
+#: ../../doc_src/cmds/argparse.rst:76
+msgid ""
+"Note that the above assumes that unknown long flags use the ``--`` \"GNU-"
+"style\" (e.g. if *KIND* is ``none``, and there is no ``bar`` long option,"
+" ``-bar`` is interpreted as three short flags, ``b``, ``a``, and ``r``; "
+"but if ``bar`` is known, ``-bar`` is treated the same as ``--bar``)."
+msgstr ""
+"なお、上記は未知の長い形式のフラグが ``--`` (GNU スタイル)を使用することを前提としています(例えば、 *KIND* が "
+"``none`` で ``bar`` という長い形式のオプションが定義されていない場合、 ``-bar`` は 3 つの短縮フラグ ``b``、 "
+"``a``、 ``r`` として解釈されます。しかし、 ``bar`` が既知である場合、 ``-bar`` は ``--bar`` "
+"と同様に扱われます)。"
+
+#: ../../doc_src/cmds/argparse.rst:78
+msgid ""
+"When using ``--unknown-arguments=required``, you will get an error if the"
+" provided arguments end in an unknown option, since it has no argument. "
+"Similarly, with ``--unknown-arguments=none``, you will get an error if "
+"you use the ``--flag=value`` syntax and ``flag`` is an unknown option."
+msgstr ""
+"``--unknown-arguments=required`` "
+"を使用している場合、指定された引数が未知のオプションで終わっていると、それに対する引数が存在しないためエラーになります。同様に、 "
+"``--unknown-arguments=none`` を使用している場合に ``--flag=value`` 構文を使用し、 ``flag``"
+" が未知のオプションである場合もエラーになります。"
+
+#: ../../doc_src/cmds/argparse.rst:80
+msgid "**-s** or **--stop-nonopt**"
+msgstr "**-s** 、 **--stop-nonopt**"
+
+#: ../../doc_src/cmds/argparse.rst:81
+msgid ""
+"Causes scanning the arguments to stop as soon as the first non-option "
+"argument is seen. Among other things, this is useful to implement "
+"subcommands that have their own options."
+msgstr "最初の非オプション引数が見つかった時点で引数のスキャンを停止させます。これは特に、独自のオプションを持つサブコマンドを実装する場合などに便利です。"
+
+#: ../../doc_src/cmds/argparse.rst:83
+msgid "**-h** or **--help**"
+msgstr "**-h** 、 **--help**"
+
+#: ../../doc_src/cmds/argparse.rst:84
+msgid "Displays help about using this command."
+msgstr "このコマンドの使用方法に関するヘルプを表示します。"
+
+#: ../../doc_src/cmds/argparse.rst:89
+msgid "Usage"
+msgstr "使用法"
+
+#: ../../doc_src/cmds/argparse.rst:91
+msgid ""
+"To use this command, pass the option specifications (**OPTION_SPEC**), a "
+"mandatory **--**, and then the arguments to be parsed."
+msgstr "このコマンドを使用するには、オプション仕様(**OPTION_SPEC**)を渡し、必須の **--** を置いた後に、解析対象の引数を指定します。"
+
+#: ../../doc_src/cmds/argparse.rst:93
+msgid "A simple example::"
+msgstr "簡単な例::"
+
+#: ../../doc_src/cmds/argparse.rst:98
+msgid ""
+"If ``$argv`` is empty then there is nothing to parse and ``argparse`` "
+"returns zero to indicate success. If ``$argv`` is not empty then it is "
+"checked for flags ``-h``, ``--help``, ``-n`` and ``--name``. If they are "
+"found they are removed from the arguments and local variables called "
+"``_flag_OPTION`` are set so the script can determine which options were "
+"seen. If ``$argv`` doesn't have any errors, like an unknown option or a "
+"missing mandatory value for an option, then ``argparse`` exits with a "
+"status of zero. Otherwise it writes appropriate error messages to stderr "
+"and exits with a status of one."
+msgstr ""
+"``$argv`` が空の場合、解析する対象がないため、 ``argparse`` は成功を示す 0 を返します。 ``$argv`` "
+"が空でない場合、フラグ ``-h``、 ``--help``、 ``-n``、 ``--name`` "
+"がチェックされます。これらが見つかると引数から削除され、 ``_flag_OPTION`` "
+"という名前のローカル変数が設定されるため、スクリプトはどのオプションが指定されたかを判断できます。未知のオプションや、オプションに必須の値が欠落しているといったエラーが"
+" ``$argv`` になければ、 ``argparse`` はステータス 0 "
+"で終了します。それ以外の場合は、適切なエラーメッセージを標準エラー出力(stderr)に書き出し、ステータス 1 で終了します。"
+
+#: ../../doc_src/cmds/argparse.rst:100
+msgid ""
+"The ``or return`` means that the function returns ``argparse``'s status "
+"if it failed, so if it goes on ``argparse`` succeeded."
+msgstr ""
+"``or return`` は、 ``argparse`` "
+"が失敗した場合に関数がそのステータスを返して終了することを意味します。したがって、その後の処理が続行されれば、 ``argparse`` "
+"は成功したことになります。"
+
+#: ../../doc_src/cmds/argparse.rst:102
+msgid "To use the flags argparse has extracted::"
+msgstr "argparse が抽出したフラグを使用するには::"
+
+#: ../../doc_src/cmds/argparse.rst:115
+msgid ""
+"Any characters in the flag name that are not valid in a variable name "
+"(like ``-`` dashes) will be replaced with underscores."
+msgstr ""
+"フラグ名の中に変数名として有効でない文字( ``-`` ハイフンなど)が含まれている場合、それらはアンダースコア( ``_`` "
+")に置き換えられます。"
+
+#: ../../doc_src/cmds/argparse.rst:117
+msgid ""
+"The ``--`` argument is required. You do not have to include any option "
+"specifications or arguments after the ``--`` but you must include the "
+"``--``. For example, this is acceptable::"
+msgstr ""
+"引数の ``--`` は必須です。 ``--`` の後にオプション仕様や引数を含める必要はありませんが、 ``--`` "
+"自体は必ず含めなければなりません。例えば、以下は許容されます::"
+
+#: ../../doc_src/cmds/argparse.rst:123
+msgid "But this is not::"
+msgstr "しかし、以下は認められません::"
+
+#: ../../doc_src/cmds/argparse.rst:128
+msgid ""
+"The first ``--`` seen is what allows the ``argparse`` command to reliably"
+" separate the option specifications and options to ``argparse`` itself "
+"(like ``--move-unknown``) from the command arguments, so it is required."
+msgstr ""
+"最初に見つかる ``--`` は、 ``argparse`` コマンドがオプション仕様や ``argparse`` 自体へのオプション( "
+"``--move-unknown`` など)を、解析対象のコマンド引数から確実に分離するためのものです。そのため、これは必須となります。"
+
+#: ../../doc_src/cmds/argparse.rst:133
+msgid "Option Specifications"
+msgstr "オプション仕様"
+
+#: ../../doc_src/cmds/argparse.rst:135
+msgid "Each option specification consists of:"
+msgstr "各オプション仕様は、以下の要素で構成されます:"
+
+#: ../../doc_src/cmds/argparse.rst:137
+msgid "An optional alphanumeric short flag character."
+msgstr "任意指定の英数字 1 文字による短縮フラグ。"
+
+#: ../../doc_src/cmds/argparse.rst:139
+msgid ""
+"An optional long flag name preceded by a ``/``. If neither a short flag "
+"nor long flag are present, an error is reported."
+msgstr "``/`` で始まる任意指定のロングフラグ名。短縮フラグとロングフラグのどちらも存在しない場合は、エラーが報告されます。"
+
+#: ../../doc_src/cmds/argparse.rst:141
+msgid ""
+"If there is no short flag, and the long flag name is more than one "
+"character, the ``/`` can be omitted."
+msgstr "短縮フラグがなく、かつロングフラグ名が 2 文字以上である場合は、 ``/`` を省略できます。"
+
+#: ../../doc_src/cmds/argparse.rst:143
+msgid ""
+"For backwards compatibility, if there is a short and a long flag, a ``-``"
+" can be used in place of the ``/``, if the short flag is not to be usable"
+" by users (in which case it will also not be exposed as a flag variable)."
+msgstr ""
+"後方互換性のために、短縮フラグとロングフラグがある場合、短縮フラグをユーザーが使用できないようにする(この場合、フラグ変数としても公開されません)には、"
+" ``/`` の代わりに ``-`` を使用できます。"
+
+#: ../../doc_src/cmds/argparse.rst:145
+msgid ""
+"Nothing if the flag is a boolean that takes no argument or is an integer "
+"flag, or"
+msgstr "フラグが引数を取らないブール値、または整数フラグである場合は、何も記述しません。または、"
+
+#: ../../doc_src/cmds/argparse.rst:147
+msgid ""
+"**=** if it requires a value and only the last instance of the flag is "
+"saved, or"
+msgstr "値を必須とし、かつ最後に出現したフラグの値のみを保存する場合は **=** を記述します。または、"
+
+#: ../../doc_src/cmds/argparse.rst:149
+msgid ""
+"**=?** if it takes an optional value and only the last instance of the "
+"flag is saved, or"
+msgstr "値を任意(あってもなくてもよい)とし、かつ最後に出現したフラグの値のみを保存する場合は **=?** を記述します。または、"
+
+#: ../../doc_src/cmds/argparse.rst:151
+msgid "**=+** if it requires a value and each instance of the flag is saved, or"
+msgstr "値を必須とし、かつフラグが出現するたびにすべての値を保存する場合は **=+** を記述します。または、"
+
+#: ../../doc_src/cmds/argparse.rst:153
+msgid ""
+"**=\\*** if it takes an optional value *and* each instance of the flag is"
+" saved, storing the empty string when the flag was not given a value."
+msgstr ""
+"値を任意とし、かつフラグが出現するたびにすべての値を保存する場合は、 **=\\*** "
+"を記述します。フラグに値が与えられなかった場合は、空文字列を保存します。"
+
+#: ../../doc_src/cmds/argparse.rst:155
+msgid ""
+"Optionally a ``&``, indicating that the option and any attached values "
+"are not to be saved in ``$argv`` or ``$argv_opts``. This does not affect "
+"the the ``_flag_`` variables."
+msgstr ""
+"任意で ``&`` を付けることができます。これは、そのオプションと付随する値が ``$argv`` や ``$argv_opts`` "
+"に保存されないことを示します。これは ``_flag_`` 変数には影響しません。"
+
+#: ../../doc_src/cmds/argparse.rst:157
+msgid "Nothing if the flag is a boolean that takes no argument, or"
+msgstr "フラグが引数を取らないブール値の場合は何も記述しません。または、"
+
+#: ../../doc_src/cmds/argparse.rst:159
+msgid ""
+"``!`` followed by fish script to validate the value. Typically this will "
+"be a function to run. If the exit status is zero the value for the flag "
+"is valid. If non-zero the value is invalid. Any error messages should be "
+"written to stdout (not stderr). See the section on :ref:`Flag Value "
+"Validation <flag-value-validation>` for more information."
+msgstr ""
+"``!`` に続けて、値を検証するための fish スクリプトを記述します。通常は、実行する関数を指定します。終了ステータスが 0 "
+"であればフラグの値は有効であり、 0 以外であれば無効とみなされます。エラーメッセージは(stderr ではなく) stdout "
+"に書き出す必要があります。詳細は :ref:`フラグ値の検証 <flag-value-validation>` セクションを参照してください。"
+
+#: ../../doc_src/cmds/argparse.rst:161
+msgid ""
+"See the :doc:`fish_opt <fish_opt>` command for a friendlier but more "
+"verbose way to create option specifications."
+msgstr ""
+"より冗長ではありますが、親しみやすい方法でオプション仕様を作成するには、 :doc:`fish_opt <fish_opt>` "
+"コマンドを参照してください。"
+
+#: ../../doc_src/cmds/argparse.rst:163
+msgid ""
+"If a flag is not seen when parsing the arguments then the corresponding "
+"_flag_X var(s) will not be set."
+msgstr "引数の解析時にフラグが見つからなかった場合、対応する ``_flag_X`` 変数は設定されません。"
+
+#: ../../doc_src/cmds/argparse.rst:166
+msgid "Integer flag"
+msgstr "整数フラグ"
+
+#: ../../doc_src/cmds/argparse.rst:168
+msgid ""
+"Sometimes commands take numbers directly as options, like ``foo -55``. To"
+" allow this one option spec can have the ``#`` modifier so that any "
+"integer will be understood as this flag, and the last number will be "
+"given as its value (as if ``=`` was used)."
+msgstr ""
+"``foo -55`` のように、コマンドが数値を直接オプションとして取る場合があります。これを許可するために、オプション仕様に ``#`` "
+"修飾子を付けることができます。これにより、任意の整数がこのフラグとして解釈され、最後の数値がその値として与えられます( ``=`` "
+"を使用した場合と同様の挙動になります)。"
+
+#: ../../doc_src/cmds/argparse.rst:170
+msgid ""
+"The ``#`` must follow the short flag letter (if any), and other modifiers"
+" like ``=`` are not allowed, except for ``-`` (for backwards "
+"compatibility)::"
+msgstr ""
+"``#`` は(あれば)短縮フラグ文字の直後に記述する必要があります。 ``-`` (後方互換用)を除き、 ``=`` "
+"などの他の修飾子を併用することはできません::"
+
+#: ../../doc_src/cmds/argparse.rst:174
+msgid ""
+"This does not read numbers given as ``+NNN``, only those that look like "
+"flags - ``-NNN``."
+msgstr "これは ``+NNN`` として与えられた数値は読み取らず、フラグのように見える ``-NNN`` の形式のみを読み取ります。"
+
+#: ../../doc_src/cmds/argparse.rst:177
+msgid "Note: Optional arguments"
+msgstr "Note: 任意指定の引数(Optional arguments)"
+
+#: ../../doc_src/cmds/argparse.rst:179
+msgid ""
+"An option defined with ``=?`` or ``=*`` can take optional arguments. "
+"Optional arguments have to be *directly attached* to the option they "
+"belong to."
+msgstr ""
+"``=?`` 、 ``=*`` "
+"で定義されたオプションは、任意指定の引数を取ることができます。これらの任意指定の引数は、それが属するオプションに「直接連結」されていなければなりません。"
+
+#: ../../doc_src/cmds/argparse.rst:181
+msgid ""
+"That means the argument will only be used for the option if you use it "
+"like::"
+msgstr "つまり、引数がそのオプションのものとして扱われるのは、以下のように使用した場合のみです::"
+
+#: ../../doc_src/cmds/argparse.rst:187
+msgid "but not if used like::"
+msgstr "以下のような形式では(オプションの引数としては)扱われません::"
+
+#: ../../doc_src/cmds/argparse.rst:193
+msgid ""
+"If this weren't the case, using an option without an optional argument "
+"would be difficult if you also wanted to use positional arguments."
+msgstr "もしそうでなければ、位置引数も同時に使用したい場合に、任意指定の引数を「取らない」形でそのオプションを使用することが困難になってしまいます。"
+
+#: ../../doc_src/cmds/argparse.rst:195
+msgid "For example::"
+msgstr "例::"
+
+#: ../../doc_src/cmds/argparse.rst:205
+msgid ""
+"This isn't specific to argparse but common to all things using "
+"``getopt(3)`` (if they have optional arguments at all). That ``grep`` "
+"example is how GNU grep actually behaves."
+msgstr ""
+"これは ``argparse`` に特有の動作ではなく、 ``getopt(3)`` "
+"を使用するすべてのプログラム(もし任意指定の引数をサポートしていれば)に共通する仕様です。先ほどの ``grep`` の例は、実際の GNU "
+"grep の挙動と同じです。"
+
+#: ../../doc_src/cmds/argparse.rst:210
+msgid "Flag Value Validation"
+msgstr "フラグ値の検証"
+
+#: ../../doc_src/cmds/argparse.rst:212
+msgid ""
+"Sometimes you need to validate the option values. For example, that it is"
+" a valid integer within a specific range, or an ip address, or something "
+"entirely different. You can always do this after ``argparse`` returns but"
+" you can also request that ``argparse`` perform the validation by "
+"executing arbitrary fish script. To do so append an ``!`` (exclamation-"
+"mark) then the fish script to be run. When that code is executed three "
+"vars will be defined:"
+msgstr ""
+"オプションの値の検証が必要になることがあります。例えば、特定範囲内の有効な整数であるか、IPアドレスであるか、あるいは全く別の何かであるかといった確認です。これは"
+" ``argparse`` の実行後に行うこともできますが、任意の fish スクリプトを実行することで ``argparse`` "
+"自体に検証を行わせることも可能です。そのためには、``!`` (感嘆符)に続けて実行したい fish "
+"スクリプトを記述します。そのコードが実行される際、以下の 3 つの変数が定義されます。"
+
+#: ../../doc_src/cmds/argparse.rst:214
+msgid ""
+"``_argparse_cmd`` will be set to the value of the value of the ``argparse"
+" --name`` value."
+msgstr "``_argparse_cmd`` には、 ``argparse --name`` で指定された名前が設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:216
+msgid "``_flag_name`` will be set to the short or long flag that being processed."
+msgstr "``_flag_name`` には、現在処理されている短縮フラグまたはロングフラグの名前が設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:218
+msgid ""
+"``_flag_value`` will be set to the value associated with the flag being "
+"processed."
+msgstr "``_flag_value`` には、現在処理されているフラグに関連付けられた値が設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:220
+msgid "These variables are passed to the function as local exported variables."
+msgstr "これらの変数は、ローカルでエクスポートされた変数として関数に渡されます。"
+
+#: ../../doc_src/cmds/argparse.rst:222
+msgid ""
+"The script should write any error messages to stdout, not stderr. It "
+"should return a status of zero if the flag value is valid otherwise a "
+"non-zero status to indicate it is invalid."
+msgstr ""
+"スクリプトは、エラーメッセージを stderr ではなく stdout に書き出す必要があります。フラグの値が有効であればステータス 0 "
+"を返し、無効であれば 0 以外のステータスを返してください。"
+
+#: ../../doc_src/cmds/argparse.rst:224
+msgid ""
+"Fish ships with a ``_validate_int`` function that accepts a ``--min`` and"
+" ``--max`` flag. Let's say your command accepts a ``-m`` or ``--max`` "
+"flag and the minimum allowable value is zero and the maximum is 5. You "
+"would define the option like this: ``m/max=!_validate_int --min 0 --max "
+"5``. The default if you call ``_validate_int`` without those flags is to "
+"check that the value is a valid integer with no limits on the min or max "
+"value allowed."
+msgstr ""
+"fish には、 ``--min`` と ``--max`` フラグを受け取る ``_validate_int`` "
+"関数が付属しています。例えば、あなたのコマンドが ``-m`` 、 ``--max`` フラグを受け付け、許容される最小値が 0、最大値が 5"
+" だとしましょう。その場合、オプションを次のように定義します:  ``m/max=!_validate_int --min 0 --max 5``"
+" 。これらのフラグを付けずに ``_validate_int`` "
+"を呼び出した場合のデフォルトの挙動は、最小値や最大値の制限なしに、値が有効な整数であるかどうかのみをチェックします。"
+
+#: ../../doc_src/cmds/argparse.rst:226
+msgid "Here are some examples of flag validations::"
+msgstr "フラグ値の検証例をいくつか示します::"
+
+#: ../../doc_src/cmds/argparse.rst:238
+msgid "Example OPTION_SPECs"
+msgstr "OPTION_SPEC の構成例"
+
+#: ../../doc_src/cmds/argparse.rst:240
+msgid "Some *OPTION_SPEC* examples:"
+msgstr "いくつかの *OPTION_SPEC* の例を挙げます。"
+
+#: ../../doc_src/cmds/argparse.rst:242
+msgid ""
+"``h/help`` means that both ``-h`` and ``--help`` are valid. The flag is a"
+" boolean and can be used more than once. If either flag is used then "
+"``_flag_h`` and ``_flag_help`` will be set to however either flag was "
+"seen, as many times as it was seen. So it could be set to ``-h``, ``-h`` "
+"and ``--help``, and ``count $_flag_h`` would yield \"3\"."
+msgstr ""
+"``h/help`` は、 ``-h`` と ``--help`` "
+"の両方が有効であることを意味します。このフラグはブール値であり、複数回使用できます。どちらかのフラグが使用されると、``_flag_h`` と "
+"``_flag_help`` に、フラグが出現した回数分だけその形式が設定されます。例えば、 ``-h``、 ``-h``、 ``--help``"
+" と指定された場合、 ``count $_flag_h`` は \"3\" を返します。"
+
+#: ../../doc_src/cmds/argparse.rst:244
+msgid ""
+"``help`` means that only ``--help`` is valid. The flag is a boolean and "
+"can be used more than once. If it is used then ``_flag_help`` will be set"
+" as above. Also ``h-help`` (with an arbitrary short letter) for backwards"
+" compatibility."
+msgstr ""
+"``help`` は、 ``--help`` のみが有効であることを意味します。フラグはブール値で複数回使用可能です。使用された場合 "
+"``_flag_help`` は上記と同様に設定されます。また、後方互換性のために ``h-help`` "
+"(任意の短縮文字を使用)という形式もサポートされています。"
+
+#: ../../doc_src/cmds/argparse.rst:246
+msgid ""
+"``help&`` is similar (it will *remove* ``--help`` from ``$argv``), the "
+"difference is that ``--help``` will *not* placed in ``$argv_opts``."
+msgstr ""
+"``help&`` も同様ですが( ``$argv`` から ``--help`` を「削除」します)、大きな違いは ``--help`` が "
+"``$argv_opts`` に格納「されない」点です。"
+
+#: ../../doc_src/cmds/argparse.rst:248
+msgid ""
+"``longonly=`` is a flag ``--longonly`` that requires an option, there is "
+"no short flag or even short flag variable."
+msgstr "``longonly=`` は、値を必須とする ``--longonly`` フラグです。短縮フラグは存在せず、短縮フラグ用の変数も生成されません。"
+
+#: ../../doc_src/cmds/argparse.rst:250
+msgid ""
+"``n/name=`` means that both ``-n`` and ``--name`` are valid. It requires "
+"a value and can be used at most once. If the flag is seen then "
+"``_flag_n`` and ``_flag_name`` will be set with the single mandatory "
+"value associated with the flag."
+msgstr ""
+"``n/name=`` は、 ``-n`` と ``--name`` の両方が有効であることを意味します。値を必須とし、最大 1 "
+"回まで使用できます。フラグが指定されると、そのフラグに関連付けられた唯一の必須の値が ``_flag_n`` 、 ``_flag_name`` "
+"に設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:252
+msgid ""
+"``n/name=?`` means that both ``-n`` and ``--name`` are valid. It accepts "
+"an optional value and can be used at most once. If the flag is seen then "
+"``_flag_n`` and ``_flag_name`` will be set with the value associated with"
+" the flag if one was provided else it will be set with no values."
+msgstr ""
+"``n/name=?`` は、 ``-n`` と ``--name`` の両方が有効であることを意味します。任意指定の値を許容し、最大 1 "
+"回まで使用できます。フラグが指定された際、値が提供されていればその値が、提供されていなければ値なし(空)の状態が ``_flag_n`` および "
+"``_flag_name`` に設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:254
+msgid ""
+"``n/name=*`` is similar, but the flag can be used more than once. If the "
+"flag is seen then ``_flag_n`` and ``_flag_name`` will be set with the "
+"values associated with each occurence. Each value will be the value given"
+" to the option, or the empty string if no value was given."
+msgstr ""
+"``n/name=*`` も同様ですが、フラグを複数回使用できる点が異なります。フラグが指定されるたびに、その出現に関連付けられた各値が "
+"``_flag_n`` 、 ``_flag_name`` "
+"に設定されます。各値は、オプションに与えられた値、または値が与えられなかった場合は空文字列となります。"
+
+#: ../../doc_src/cmds/argparse.rst:256
+msgid ""
+"``name=+`` means that only ``--name`` is valid. It requires a value and "
+"can be used more than once. If the flag is seen then ``_flag_name`` will "
+"be set with the values associated with each occurrence."
+msgstr ""
+"``name=+`` は、 ``--name`` "
+"のみが有効であることを意味します。値を必須とし、複数回使用できます。フラグが出現するたびに、それに関連付けられた各値が "
+"``_flag_name`` に設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:258
+msgid ""
+"``x`` means that only ``-x`` is valid. It is a boolean that can be used "
+"more than once. If it is seen then ``_flag_x`` will be set as above."
+msgstr ""
+"``x`` は、 ``-x`` のみが有効であることを意味します。これは複数回使用可能なブール値です。指定された場合、 ``_flag_x`` "
+"は上記と同様に設定されます。"
+
+#: ../../doc_src/cmds/argparse.rst:260
+msgid "``/x`` is similar, but only ``--x`` is valid (instead of ``-x``)."
+msgstr "``/x`` も同様ですが、( ``-x`` ではなく) ``--x`` のみが有効となります。"
+
+#: ../../doc_src/cmds/argparse.rst:262
+msgid ""
+"``x=``, ``x=?``, and ``x=+`` are similar to the n/name examples above but"
+" there is no long flag alternative to the short flag ``-x``."
+msgstr ""
+"``x=``、 ``x=?``、 ``x=+`` は、上記の ``n/name`` の例と同様ですが、短縮フラグ ``-x`` "
+"に対する長い形式の代替フラグが存在しません。"
+
+#: ../../doc_src/cmds/argparse.rst:264
+msgid ""
+"``#max`` (or ``#-max``) means that flags matching the regex "
+"\"^--?\\\\d+$\" are valid. When seen they are assigned to the variable "
+"``_flag_max``. This allows any valid positive or negative integer to be "
+"specified by prefixing it with a single \"-\". Many commands support this"
+" idiom. For example ``head -3 /a/file`` to emit only the first three "
+"lines of /a/file."
+msgstr ""
+"``#max`` (または ``#-max``)は、正規表現 \"^--?\\\\d+$\" "
+"にマッチするフラグが有効であることを意味します。これらが見つかると、変数 ``_flag_max`` "
+"に割り当てられます。これにより、任意の正または負の整数を、先頭に単一の \"-\" "
+"を付けて指定できるようになります。多くのコマンドがこの慣用句をサポートしています。例えば、 ``head -3 /a/file`` は "
+"/a/file の最初の 3 行だけを出力します。"
+
+#: ../../doc_src/cmds/argparse.rst:266
+msgid ""
+"``n#max`` means that flags matching the regex \"^--?\\\\d+$\" are valid. "
+"When seen they are assigned to the variables ``_flag_n`` and "
+"``_flag_max``. This allows any valid positive or negative integer to be "
+"specified by prefixing it with a single \"-\". Many commands support this"
+" idiom. For example ``head -3 /a/file`` to emit only the first three "
+"lines of /a/file. You can also specify the value using either flag: ``-n "
+"NNN`` or ``--max NNN`` in this example."
+msgstr ""
+"``n#max`` は、正規表現 \"^--?\\\\d+$\" にマッチするフラグが有効であることを意味します。これらが見つかると、変数 "
+"``_flag_n`` 、 ``_flag_max`` に割り当てられます。これにより、任意の正または負の整数を、先頭に単一の \"-\" "
+"を付けて指定できるようになります。この例では、 ``-n NNN`` 、 ``--max NNN`` "
+"のいずれかのフラグを使用して値を指定することも可能です。"
+
+#: ../../doc_src/cmds/argparse.rst:268
+msgid ""
+"``#longonly`` causes the last integer option to be stored in "
+"``_flag_longonly``."
+msgstr "``#longonly`` は、最後に出現した整数オプションを ``_flag_longonly`` に格納します。"
+
+#: ../../doc_src/cmds/argparse.rst:270
+msgid ""
+"After parsing the arguments the ``argv`` variable is set with local scope"
+" to any values not already consumed during flag processing. If there are "
+"no unbound values the variable is set but ``count $argv`` will be zero. "
+"Similarly, the ``argv_opts`` variable is set with local scope to the "
+"arguments that *were* consumed during flag processing. This allows "
+"forwarding ``$argv_opts`` to another command, together with additional "
+"arguments."
+msgstr ""
+"引数の解析後、フラグ処理中に消費されなかったすべての値が、ローカルスコープの変数 ``argv`` "
+"に設定されます。バインドされていない値がない場合でも変数は設定されますが、 ``count $argv`` は 0 "
+"になります。同様に、フラグ処理中に消費「された」引数は、ローカルスコープの変数 ``argv_opts`` "
+"に設定されます。これにより、追加の引数とともに ``$argv_opts`` を別のコマンドに転送(フォワーディング)することが可能になります。"
+
+#: ../../doc_src/cmds/argparse.rst:272
+msgid ""
+"If an error occurs during argparse processing it will exit with a non-"
+"zero status and print error messages to stderr."
+msgstr "argparse の処理中にエラーが発生した場合、0 以外のステータスで終了し、標準エラー出力(stderr)にエラーメッセージを表示します。"
+
+#: ../../doc_src/cmds/argparse.rst:275
+msgid "Examples"
+msgstr "使用例"
+
+#: ../../doc_src/cmds/argparse.rst:277
+msgid "A simple use::"
+msgstr "シンプルな使用法::"
+
+#: ../../doc_src/cmds/argparse.rst:287
+msgid ""
+"This supports one option - ``-h`` / ``--help``. Any other option is an "
+"error. If it is given it prints help and exits."
+msgstr ""
+"これは ``-h`` / ``--help`` という 1 "
+"つのオプションをサポートしています。それ以外のオプションが指定されるとエラーになります。このオプションが与えられた場合は、ヘルプを表示して終了します。"
+
+#: ../../doc_src/cmds/argparse.rst:289
+msgid "How :doc:`fish_add_path` parses its args::"
+msgstr ":doc:`fish_add_path` が引数を解析する方法::"
+
+#: ../../doc_src/cmds/argparse.rst:293
+msgid ""
+"There are a variety of boolean flags, all with long and short versions. A"
+" few of these cannot be used together, and that is what the ``-x`` flag "
+"is used for. ``-x g,U`` means that ``--global`` and ``--universal`` or "
+"their short equivalents conflict, and if they are used together you get "
+"an error. In this case you only need to give the short or long flag, not "
+"the full option specification."
+msgstr ""
+"ここにはさまざまなブール値フラグがあり、すべてに長い形式と短縮形式が存在します。これらの中には併用できないものがあり、そのために ``-x`` "
+"フラグが使用されます。``-x g,U`` は、 ``--global`` と ``--universal`` "
+"(またはそれらの短縮形式)が競合することを意味し、これらが同時に使用されるとエラーになります。この場合、完全なオプション仕様を記述する必要はなく、短縮フラグかロングフラグのいずれかを指定するだけで済みます。"
+
+#: ../../doc_src/cmds/argparse.rst:297
+msgid ""
+"After this it figures out which variable it should operate on according "
+"to the ``--path`` flag::"
+msgstr "この後、 ``--path`` フラグに従って、どの変数を操作すべきかを決定します::"
+
+#: ../../doc_src/cmds/argparse.rst:312
+msgid ""
+"An example of using ``$argv_opts`` to forward known options to another "
+"command, whilst adding new options::"
+msgstr "既知のオプションを別のコマンドに転送しつつ、新しいオプションを追加するために ``$argv_opts`` を使用する例::"
+
+#: ../../doc_src/cmds/argparse.rst:345
+msgid ""
+"The argparse call above saves all the options we do *not* want to process"
+" in ``$argv_opts``. (The ``--qwords`` and ``--bytes`` options are *not* "
+"saved there as their option spec's end in a ``~``). The code then "
+"processes the ``--qwords`` and ``--bytess`` options using the the "
+"``$_flag_OPTION`` variables, and puts the transformed options in "
+"``$argv_opts`` (which already contains all the original options, *other* "
+"than ``--qwords`` and ``--bytes``)."
+msgstr ""
+"上記の argparse 呼び出しは、処理したく「ない」すべてのオプションを ``$argv_opts`` に保存します( "
+"``--qwords`` と ``--bytes`` オプションは、オプション仕様が ``~`` "
+"で終わっているため、そこには保存されません)。その後、コードは ``$_flag_OPTION`` 変数を使用して ``--qwords`` と "
+"``--bytes`` オプションを処理し、変換後のオプションを ``$argv_opts`` に追加します(これには ``--qwords`` "
+"と ``--bytes`` 「以外」のすべての元のオプションが既に含まれています)。"
+
+#: ../../doc_src/cmds/argparse.rst:347
+msgid ""
+"Note that because the ``argparse`` call above uses ``--move-unknown`` and"
+" ``--unknown-arguments=none``, we only need to tell it the arguments to "
+"``head`` that take a value. This allows the wrapper script to accurately "
+"work out the *non*-option arguments (i.e. ``$argv``, the filenames that "
+"``head`` is to operate on). Using ``--unknown-arguments=optional`` and "
+"explicitly listing all the known options to ``head`` however would have "
+"the advantage that if ``head`` were to add new options, they could still "
+"be used with the wrapper script using the \"stuck\" form for arguments "
+"(e.g. ``-o<arg>``, or ``--opt=<arg>``)."
+msgstr ""
+"上記の ``argparse`` 呼び出しでは ``--move-unknown`` と ``--unknown-arguments=none``"
+" を使用しているため、 ``head`` "
+"の引数のうち値を取るものだけを教えるだけで済みます。これにより、ラッパースクリプトは非オプション引数(つまり、 ``head`` "
+"が操作対象とするファイル名である ``$argv`` )を正確に割り出すことができます。一方、 ``--unknown-"
+"arguments=optional`` を使用して ``head`` の既知のオプションをすべて明示的にリスト化すれば、将来 ``head`` "
+"に新しいオプションが追加された場合でも、連結形式(例:  ``-o<arg>`` や ``--opt=<arg>`` "
+")であればラッパースクリプト経由で使用できるという利点があります。"
+
+#: ../../doc_src/cmds/argparse.rst:349
+msgid ""
+"Note that the ``--strict-longopts`` is required to be able to correctly "
+"pass short options, e.g. without it ``my-head -q --bytes 10q``, will "
+"actually parse the ``-q`` as shorthand for ``--qwords``."
+msgstr ""
+"短縮オプションを正しく渡すためには ``--strict-longopts`` が必要であることに注意してください。例えば、これがないと "
+"``my-head -q --bytes 10q`` を実行した際、 ``-q`` が実際には ``--qwords`` "
+"の略称として解析されてしまいます。"
+
