@@ -70,13 +70,9 @@ merge_branch() {
 
 # @cmd poファイル更新処理
 update_po() {
-  # cp -f ./CONTRIBUTING.rst doc_src/contributing.rst
-  # cp -f ./CHANGELOG.rst doc_src/relnotes.rst
-
-  uv run sphinx-build -b gettext doc_src _build/locale
-  uv run sphinx-intl update -p _build/locale -l ja --locale-dir doc_src/locale --jobs 1
-
-  # git checkout doc_src/contributing.rst doc_src/relnotes.rst
+  # uv run sphinx-build -b gettext doc_src _build/locale
+  # uv run sphinx-intl update -p _build/locale -l ja --locale-dir doc_src/locale --jobs 1
+  uv run sphinx-build -b gettext -c doc_src doc_src _build/locale
 }
 
 eval "$(argc --argc-eval "$0" "$@")"
